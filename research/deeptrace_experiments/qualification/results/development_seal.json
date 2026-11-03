@@ -1,0 +1,8 @@
+{
+  "sealed_at_utc": "2026-10-30T06:37:43.688438+00:00",
+  "protocol_sha256": "9c15aeb8db3c6b7b6576e416a9a454bbdf4648cc74dbe101dbbf96a6f1a5abeb",
+  "development_scores_sha256": "971447a186df94c9a2b54ee6a296e904102d3fef0dc1725765f357bf4e2f9083",
+  "development_analysis_sha256": "a5754700a56fcfe627c2e1e2606ba36118c0a5f1477dde3fa9e4f387fb0974e0",
+  "prompt_or_criterion_tuning_after_development": false,
+  "qualification_response_count_at_seal": 0
+}

@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "b3b136191167d5dd875db90a46f00ca41e52ef8dd46c2e0db0f1abfd5f240ef3",
+  "cases_sha256": "291b87119bdd35a1fee226de6afe97f0eafffef3232f6e14cf21762ff4c5cff2",
+  "job_hashes": {
+    "calibration": "3ca50248e0e3006c0987dcc018a16b84ab7630b1ca088d9b313ec7f2a3686c7a",
+    "test": "f2bdc9a3f0083d75875c3680efeab8d70c2b20bb662aa1d2355cfff36d49fd24"
+  },
+  "unique_prompts": 180,
+  "logical_jobs": 180,
+  "old_exact_overlap": 0,
+  "truncation": false,
+  "max_tokens": 947
+}

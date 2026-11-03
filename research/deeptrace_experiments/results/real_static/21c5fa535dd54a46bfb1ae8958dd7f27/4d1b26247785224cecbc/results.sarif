@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "Python subprocess invocation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/network_access",
+              "name": "network_access",
+              "shortDescription": {
+                "text": "Network Access"
+              },
+              "fullDescription": {
+                "text": "Direct socket connection; JavaScript or TypeScript HTTP request"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "network_access"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "2fb32857dcb0.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 92,
+                  "endLine": 92
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0EAE447F0373DE22",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-2185ED911F1FEF63C4A736EB"
+          },
+          "properties": {
+            "candidateId": "ASB-0EAE447F0373DE22",
+            "fingerprint": "ASBFP-2185ED911F1FEF63C4A736EB",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "warning",
+          "message": {
+            "text": "command execution candidate in run_command"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ce0fd9fc9a11.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 50,
+                  "endLine": 50
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6C32D90516288A5E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F365701041B75945BC392E0B"
+          },
+          "properties": {
+            "candidateId": "ASB-6C32D90516288A5E",
+            "fingerprint": "ASBFP-F365701041B75945BC392E0B",
+            "confidence": "high",
+            "detectors": [
+              "py_subprocess"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ce0fd9fc9a11.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 150,
+                  "endLine": 150
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D58F4329ACE97CB4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FA879705DB0C40168491C2BA"
+          },
+          "properties": {
+            "candidateId": "ASB-D58F4329ACE97CB4",
+            "fingerprint": "ASBFP-FA879705DB0C40168491C2BA",
+            "confidence": "high",
+            "detectors": [
+              "socket_api"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

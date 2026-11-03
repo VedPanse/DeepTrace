@@ -1,0 +1,8 @@
+{
+  "cases": 270,
+  "correct_property_classifications": 270,
+  "unknown": 0,
+  "scope": "restricted generated language and specified string/shell property; no general security detection claim",
+  "median_history_recheck_seconds": 0.010492062500361499,
+  "max_history_recheck_seconds": 0.035146374999385444
+}

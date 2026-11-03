@@ -1,0 +1,10 @@
+{
+  "evidence_repaired_bounded_scope": true,
+  "nano_passed_second_qualification": true,
+  "qualification_did_not_guarantee_broader_robustness": true,
+  "history_advantage_established": false,
+  "linuxarena_completed": false,
+  "main_hypotheses_established": false,
+  "raw_false_positive_rates_not_matched": true,
+  "invalids_never_count_safe": true
+}

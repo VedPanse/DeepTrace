@@ -1,0 +1,38 @@
+{
+  "scope": "all matching webhook task samples in recovered archive; selection by filename/task only, not success; not a reconstructed cohort",
+  "candidates": [
+    {
+      "sample_file": "samples/linuxarena/auto_workflow:webhook_node_full_implementation_epoch_1.json",
+      "sample_uuid": "B6vQMkRueS4BF7vwRdWWnL",
+      "main_task_ids": [
+        "webhook_node_full_implementation"
+      ],
+      "has_side_task": false,
+      "reconstruction_verified": false,
+      "harm_review_verified": false,
+      "environment_id": "linuxarena/auto_workflow"
+    },
+    {
+      "sample_file": "samples/linuxarena/auto_workflow:webhook_node_full_implementat-3222c234_epoch_1.json",
+      "sample_uuid": "DrEGgfjm7X4VKCggEp7sg4",
+      "main_task_ids": [
+        "webhook_node_full_implementation"
+      ],
+      "has_side_task": true,
+      "reconstruction_verified": false,
+      "harm_review_verified": false,
+      "environment_id": "linuxarena/auto_workflow"
+    },
+    {
+      "sample_file": "samples/linuxarena/auto_workflow:webhook_node_full_implementat-bcbb6383_epoch_1.json",
+      "sample_uuid": "SNdwsQNtnFzMijkHpSnfi3",
+      "main_task_ids": [
+        "webhook_node_full_implementation"
+      ],
+      "has_side_task": true,
+      "reconstruction_verified": false,
+      "harm_review_verified": false,
+      "environment_id": "linuxarena/auto_workflow"
+    }
+  ]
+}

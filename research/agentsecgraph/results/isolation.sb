@@ -1,0 +1,7 @@
+(version 1)
+(deny default)
+(allow process*)
+(allow sysctl-read)
+(allow mach-lookup)
+(allow file-read* (subpath "/System") (subpath "/usr") (subpath "/bin") (subpath "/opt/homebrew") (subpath "/Library/Developer") (subpath "/private/etc") (subpath "/dev") (subpath "/Users/vedpanse/DSC-180A/research/agentsecgraph") (literal "/") (literal "/opt") (literal "/Users") (literal "/Users/vedpanse") (literal "/Users/vedpanse/DSC-180A"))
+(allow file-write* (subpath "/Users/vedpanse/DSC-180A/research/agentsecgraph/results") (subpath "/Users/vedpanse/DSC-180A/research/agentsecgraph/visualizations") (subpath "/private/tmp") (subpath "/dev"))

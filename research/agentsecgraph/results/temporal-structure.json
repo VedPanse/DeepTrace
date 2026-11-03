@@ -1,0 +1,32 @@
+[
+  {
+    "version": "A",
+    "nodes_edges_sha256": "2e48c5fbce9e73531da7e8399f84d15441b49d6383b4fee7cb1f3b2a86f2cf82",
+    "dependency_paths": []
+  },
+  {
+    "version": "B",
+    "nodes_edges_sha256": "2e48c5fbce9e73531da7e8399f84d15441b49d6383b4fee7cb1f3b2a86f2cf82",
+    "dependency_paths": []
+  },
+  {
+    "version": "C",
+    "nodes_edges_sha256": "ea99eeda045190fba05a5d3e4295ca54ef4293edc827322b749aa1f1a9039cee",
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "command"
+      ]
+    ]
+  },
+  {
+    "version": "D",
+    "nodes_edges_sha256": "da6ee26117313eb6f3eb51ec72a51b55e05f5a0ec6c4c9429eece672e34820a9",
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "command"
+      ]
+    ]
+  }
+]

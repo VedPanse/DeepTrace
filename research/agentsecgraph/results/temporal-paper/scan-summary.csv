@@ -1,0 +1,5 @@
+sample_id,repo,total_candidates,browser_control,command_execution,credential_access,database_access,dynamic_code_execution,external_tool_invocation,filesystem_delete,filesystem_read,filesystem_write,message_or_email_send,network_access,permission_or_auth_change
+TEMPA,synthetic/temporal-A,1,0,1,0,0,0,0,0,0,0,0,0,0
+TEMPB,synthetic/temporal-B,1,0,1,0,0,0,0,0,0,0,0,0,0
+TEMPC,synthetic/temporal-C,1,0,1,0,0,0,0,0,0,0,0,0,0
+TEMPD,synthetic/temporal-D,1,0,1,0,0,0,0,0,0,0,0,0,0

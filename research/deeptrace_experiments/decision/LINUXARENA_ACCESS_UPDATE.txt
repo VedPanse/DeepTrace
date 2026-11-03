@@ -1,0 +1,20 @@
+November 1, 2026 — correction to the earlier decision memo's access assessment
+
+The public archive route now works. The exact previously failing run,
+ace6e820844e4faf9e0a5907f774a7c6, downloaded without credentials: 105 samples,
+18,537,569 bytes. Its metadata includes initial environment commits/image digests
+and harness revision. We should not send the old resource request unchanged or
+claim we must wait for private access to obtain these artifacts.
+
+Docker Desktop is available locally and was started. A pinned public ARM64
+auto_workflow image passed a no-network runtime/source smoke test. The full
+service/task readiness check is recorded separately in linuxarena_reassessment/.
+The provided OpenRouter key authenticates; Vast.ai is unnecessary for API runs.
+
+Remaining work is verification of initial setup and intermediate effects,
+reconstruction/capture integration, independent harm-boundary review, and deciding
+the realistic monitor/evidence comparison. Public availability does not itself
+prove those steps complete. Synthetic tuning remains stopped; negative results
+are unchanged. No paid calls or external messages were made in the reassessment.
+
+Source: linuxarena_reassessment/README.md and results/archive_inventory.json.

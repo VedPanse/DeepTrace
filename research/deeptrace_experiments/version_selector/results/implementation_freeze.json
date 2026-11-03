@@ -1,0 +1,12 @@
+{
+  "scope": "bounded development implementation; no fresh evaluation authorized or performed",
+  "sha256": {
+    "version_selector/scripts/selector.py": "b536bbee3d8618553fcd52bdaa97c84c3bca8c32831104ef9187d2ab2ec14d5b",
+    "version_selector/scripts/validate.py": "fa80646ca67ae1eb06c3efe62703cbfd80bf5f420f752099936461f09532864a",
+    "version_selector/README.md": "e38ba123a39731fc3735fa8775cfa5dc1edd585f89430a5ff52574f725c25b63",
+    "version_selector/results/validation.json": "c2ea014726b65e038a8a7344cad87dc2e84590c749af8dc845c41951fe4bba99",
+    "qualification/scripts/evidence.py": "b07aeb8854d2340db5572eb334e2ca8a32fd947b3f523014083b45b4cbeb8847",
+    "continuation/scripts/symbolic.py": "9bca20035b15df5ba480014d0608bbe7dc33d00cd1f3d8e6a0e9a28fcb868849",
+    "scripts/fixture_interpreter.py": "8ef2c8805540d77f2c3fe5ed8175aa8cfbfdf01c6609eea9dd9b54185ed9172b"
+  }
+}

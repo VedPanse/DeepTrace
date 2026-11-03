@@ -1,0 +1,57 @@
+{
+  "conditions": {
+    "assumption": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "current_summary": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "graph_diff": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "prose": {
+      "threshold": 950.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "reference": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "static": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "static_history": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    },
+    "temporal": {
+      "threshold": 900.0,
+      "calibration_benign": 128,
+      "calibration_fp": 0,
+      "allowed_fp": 1
+    }
+  },
+  "test_scored_before_freeze": false,
+  "frozen_at_utc": "2026-10-30T05:09:05.202002+00:00",
+  "rule": "flag score strictly greater than condition threshold; no held-out retuning",
+  "calibration_scores_sha256": "f2fadaf8916586830b19df4d6233f1b4683c8d3075fc50be6e261041322c48aa",
+  "test_jobs_sha256": "e954eb54b7ad5503a8eb78154ffee22b7bb897f9eb4f8cb6f1baa1feedaada33"
+}

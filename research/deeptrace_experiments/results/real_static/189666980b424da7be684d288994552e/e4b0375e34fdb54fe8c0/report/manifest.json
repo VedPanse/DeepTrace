@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1",
+  "renderer": "agentsecbench_offline_report_v2",
+  "purpose": "interactive static-analysis evidence view; not a vulnerability report",
+  "candidate_count": 6,
+  "validation_passed": true,
+  "policy_embedded": false,
+  "category_counts": {
+    "credential_access": 6
+  },
+  "files": {
+    "page": "index.html"
+  },
+  "page_sha256": "fe93a572ea3acff7a5c27bf7d3dcd061c1fe6e51061633bcefcb47f8d6eb282c"
+}

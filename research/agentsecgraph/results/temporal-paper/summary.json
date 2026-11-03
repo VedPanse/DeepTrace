@@ -1,0 +1,67 @@
+{
+  "schema_version": "2.0.0-draft",
+  "generator": "security_adg_def_use_v2",
+  "analysis_mode": "v2_5",
+  "split": "all_corpus",
+  "graph_count": 4,
+  "repository_count": 4,
+  "source_file_count": 4,
+  "analysis_engines": {
+    "python_ast_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": 4
+  },
+  "engine_stats": {
+    "python_ast_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": {
+      "graphs": 4,
+      "with_source": 2,
+      "with_guard": 4,
+      "dependency_paths": 2
+    }
+  },
+  "limitation_counts": {},
+  "source_candidate_categories": {
+    "command_execution": 2
+  },
+  "framework_counts": {},
+  "graphs_with_framework_evidence": 0,
+  "graphs_with_def_use_source": 2,
+  "graphs_with_related_guard": 4,
+  "graphs_with_dependency_path": 2,
+  "total_dependency_paths": 2,
+  "label_inputs_used": false,
+  "held_out_used": false,
+  "held_out_labels_used": false,
+  "execution_metrics": {
+    "wall_seconds": 0.021311,
+    "process_peak_rss_bytes": 29605888,
+    "python_peak_allocated_bytes": null,
+    "memory_metric_scope": "Python allocations in this process; not total RSS",
+    "memory_profiling_enabled": false,
+    "profiling_overhead_included": false,
+    "per_repository": [
+      {
+        "sample_id": "TEMPA",
+        "repo": "synthetic/temporal-A",
+        "graph_count": 1,
+        "wall_seconds": 0.006078
+      },
+      {
+        "sample_id": "TEMPB",
+        "repo": "synthetic/temporal-B",
+        "graph_count": 1,
+        "wall_seconds": 0.005098
+      },
+      {
+        "sample_id": "TEMPC",
+        "repo": "synthetic/temporal-C",
+        "graph_count": 1,
+        "wall_seconds": 0.00471
+      },
+      {
+        "sample_id": "TEMPD",
+        "repo": "synthetic/temporal-D",
+        "graph_count": 1,
+        "wall_seconds": 0.004849
+      }
+    ]
+  }
+}

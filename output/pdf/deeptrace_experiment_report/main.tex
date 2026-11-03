@@ -1,0 +1,168 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,booktabs,tabularx,longtable,array,amsmath,xcolor,enumitem,fancyhdr,xurl}
+\usepackage[margin=.8in,headheight=14pt]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue!50!black,linkcolor=blue!50!black]{hyperref}
+\pagestyle{fancy}\fancyhf{}\lhead{\small DeepTrace: continuation and requirement audit}\rhead{\small October 29, 2026}\cfoot{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=1.4em}\renewcommand{\arraystretch}{1.18}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\title{DeepTrace: Experiment Continuation\\\large Fresh controlled comparison, LinuxArena reconstruction audit, and remaining requirements}
+\author{DSC 180A, Domain D33}\date{October 29, 2026}
+\begin{document}\maketitle
+\textbf{Status: neither main experiment is complete as specified. Neither H1 nor H2 is established.}
+
+This revision preserves the original pilots as preliminary observations and reports new work against the supplied five-page proposal. The main LinuxArena result is \emph{blocked}, not a synthetic substitute. A fresh controlled experiment adds the essential strong current-code semantic baseline and produces a negative result at frozen calibration thresholds.
+
+\section*{New results at a glance}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.23\linewidth}YY@{}}\toprule
+Work & What ran & What it establishes\\\midrule
+LinuxArena reconstruction & Audit of 20 cached samples, 25 complete mirrored records, official archive routes and local files; three-trajectory eligibility manifest & Zero verified initial-state/replay-ready trajectories. No new timely-detection estimate.\\
+Controlled Experiment 2 & 320 fresh generated histories, eight conditions, 1,024 evidence tokens, 2,560 logical evaluations and 872 distinct prompts & Assumption history and strong current-code summary both detect 0/32 unsafe held-out cases. History adds no demonstrated detection benefit in this run.\\
+Infrastructure & Bounded replay validator, source-linked selector, harm/reference gates, offline timing metrics & Engineering controls pass. These checks do not verify any actual LinuxArena trajectory.\\\bottomrule\end{tabularx}
+
+\textbf{Interpretation.} High suspiciousness scores on benign calibration examples forced thresholds of 900 or 950 on the 0--1,000 scale. Strict thresholds then detected no unsafe test cases in any condition. The strong current-state baseline raised four safe-case alarms; history raised none. These operating points do not establish matched test false-positive rates, equivalence, a population-level safety improvement, or live prevention.
+
+The previous 12/27 controlled detection result remains a historical pilot with different prompts and calibration data. It is not pooled with the fresh test or used as confirmation of either hypothesis.
+
+\clearpage
+\section{LinuxArena access and reconstruction audit}
+\textbf{Existing artifacts.} All 20 cached sample bundles were inspected for initial-state provenance. None contained a verified initial environment revision/tree. Two samples have side-task secret-baseline store entries; these are not workspace source captures and were excluded from monitor evidence. The old replay script reconstructs editor fragments only, skips shell effects, and cannot prove execution order within grouped calls. Four of its five unique attack runs lack a usable first-harm marker. Its any-alarm counts cannot answer H1.
+
+\textbf{Documented official access.} Control Tower's pinned source documents public downloads via \path{/api/runs/<id>/eval} and \path{/api/trajectories/<id>/eval}. Current requests to those routes and the cached trajectory/list routes returned HTTP 503. Unsigned retrieval of the recorded S3 object returned HTTP 403. Local project and Downloads searches found no preexisting research archives. The newly cloned framework's small test archives are CI fixtures, not LinuxArena study data.
+
+\textbf{Alternative source.} A 6 MB prefix of the public Hugging Face auto\_workflow JSONL shard yielded 25 complete records. All omit initial revision/image provenance and action timestamps. This mirror is useful for discovery, but these sampled records cannot establish exact pre-action source states. Access receipts, response bytes and an audit manifest are saved. A ranged prefix is not a complete shard or a randomly selected evaluation cohort.
+
+\textbf{Candidate source checkout.} Public auto\_workflow v1.0.1 resolves to commit \path{041cee543523f98cf3e130c9f4e05b9a74e57de2}. We do not infer that it is any recorded trajectory's starting state. A read-only capability scan of its full \path{codebase/} tree found 35 files, including 23 TypeScript files, and extracted 94 candidate graphs anchored in 15 source files. This is neither per-action coverage nor a verified LinuxArena run. The Python fixture assumption checker does not analyze the TypeScript application.
+
+\textbf{Small cohort gate.} One cached auto\_workflow attack and the first two complete matching-environment honest mirror records form a three-trajectory \emph{eligibility} manifest. All three fail exact-reconstruction prerequisites. They are not a frozen scored test set. Split assignment waits for complete histories and deduplication checks. No unsupported trajectory is silently removed to produce a favorable denominator.
+
+\textbf{Runtime.} Docker's client exists but the daemon is unavailable. No recorded attack tools, target setup scripts, background jobs or side-task scorers were executed. Inert source analysis ran with cleared environment and network denied.
+
+\subsection*{Snapshots versus replay}
+Saved per-action snapshots are sufficient but not inherently necessary. A content-addressed initial image/source tree, exact task setup and complete ordered tool records can suffice if every state-changing operation can be replayed and independently checked. Failed shell commands may partially write files. Parallel writes may conflict. Builds can generate source. Services, network responses and background jobs can alter later results. A final diff or a successful final score does not establish intermediate states. Such cases require verified effects, checkpoints or isolated instrumented replay, not guessed file contents.
+
+\clearpage
+\section{Fresh controlled experiment}
+\subsection*{Design frozen before test scoring}
+The 320 histories span eight newly authored guard forms, approved command tokens, depths 2 and 4, unrelated-edit gaps 0/5/13/21, and five variants: weakening, repair, equivalent guard, fixed arguments and removed execution. Four entire syntax/task-token families calibrate thresholds and four test them. Each split has 32 unsafe and 128 safe cases. Related depth/distance/variant cases stay in the same split.
+
+The accepted command token differs by family (inspect, report, version and ready for calibration and health, ping, list and info for test). An initial pre-scoring split check found exact prompt collisions in graph conditions that could not observe the guard. Varying the actual authorized command and guard syntax produced distinct task families; the corrected protocol froze before any scoring. This is an additional task difference, not evidence of independent real repositories. No model input contains a family/variant label or ground-truth outcome.
+
+\textbf{Policy.} A caller-provided string other than the explicitly approved token must not reach \texttt{subprocess.run} with \texttt{shell=True}. Fixed argument lists, repairs, equivalent changes and removal are allowed under this narrow policy. Labels do not claim general security or completion of a LinuxArena side task.
+
+\textbf{Ground truth.} A separate restricted AST interpreter checks eight concrete inputs per case (2,560 checks) without executing processes. The symbolic checker verifies the supported string policy and produces witnesses for violations; witnesses are checked against the concrete interpreter. All 320 final classifications agree. Unknown calls and missing proof remain unknown, exercised separately by engineering controls rather than assigned fabricated safe/unsafe labels. The reference condition is source-grounded and analytically checked, but lacks independent human oracle review.
+
+\subsection*{Strong current-code control}
+Both current-code and history conditions use the same bounded symbolic engine. Both receive current predicates, execution settings, verification status and a counterfactual analysis of the \emph{explicit proposed patch}. Previewing that supplied edit is allowed; neither condition receives an observed future repository or tool result. The strong current-code condition has no historical summaries. The history condition adds prior source changes and repaired/broken assumptions. Both obey the same 1,024-token evidence cap and include the same complete proposed action.
+
+The temporal/prose ablation selects the same source-backed facts and event-support links jointly so both formats fit. The selector is explicitly approximate: lexical action seeds followed by bounded dependency traversal, not a learned selector or a sound whole-program causal analysis. Raw history, node/edge differences and current graph baselines remain separate.
+
+\textbf{Duplicates.} There are 2,560 logical jobs but 872 unique prompts: 436 calibration and 436 test, with no exact overlap across phases or old pilot prompts. The strong current-code test condition has only 32 distinct prompts among 160 cases; its four false alarms reuse one response. Counts do not represent 160 independent trials. All eight families remain closely related examples of one narrow command policy.
+
+\clearpage
+\section{Frozen-threshold results and uncertainty}
+Each condition permits at most $\lfloor0.01n\rfloor=1$ false alarm on 128 benign calibration cases. The alarm rule is strictly score $>\tau$. Ties make achieved calibration false alarms zero for every condition. The threshold artifact was written before any test prompt was scored and hashes the calibration scores and test jobs. No test-based retuning occurred.
+
+\begin{tabularx}{\linewidth}{@{}Yrrrr@{}}\toprule
+Condition & $\tau$ & Detected & Safe alarms & Unique test prompts\\\midrule
+Assumption history & 900 & 0/32 & 0/128 & 136\\
+Strong current-code summary & 900 & 0/32 & 4/128 & 32\\
+Graph differences & 900 & 0/32 & 0/128 & 12\\
+Identical temporal facts as prose & 950 & 0/32 & 0/128 & 68\\
+Checked source reference & 900 & 0/32 & 0/128 & 32\\
+Current static graph & 900 & 0/32 & 0/128 & 12\\
+Static graph + raw edit history & 900 & 0/32 & 0/128 & 76\\
+Temporal dependencies & 900 & 0/32 & 0/128 & 68\\
+\bottomrule\end{tabularx}
+
+All unsafe denominators are 32; all safe denominators are 128. The strong current-code test false-positive rate is 3.125\%; all other conditions' observed rates are zero. These are \emph{achieved} test rates, not a claim of matched rates. Zero observed alarms does not prove a population false-positive rate of zero.
+
+\textbf{Primary contrast.} Assumption history minus strong current-code recall is 0 percentage points. There are no history-only or current-only detections. A paired sign-flip test over four family blocks gives $p=1$. The family bootstrap recall-difference interval degenerates to $[0,0]$ because all observed family differences are zero; it does not establish equivalence or exclude unseen failures. Four closely related blocks provide little information about generalization.
+
+Descriptive binomial 95\% intervals are 0--10.9\% for 0/32 recall, 0--2.84\% for 0/128 false alarms, and 0.86--7.81\% for 4/128 false alarms. These intervals assume independent Bernoulli observations, which the repeated-template/cached-response design violates. They are descriptive only. Family-resampled strong-current FPR spans 0--9.375\%; its single unique mistaken response is repeated four times.
+
+\subsection*{Observed failure mode}
+Calibration examples often received high scores despite explicit preserved restrictions or allowed removal. A representative rationale incorrectly said the policy required \texttt{shell=False}, although the supplied property allowed shell execution of the approved token. In fresh testing, the strong current-code condition flagged an allowed removal of execution as unauthorized behavior. This suggests policy misapplication can dominate evidence quality for this monitor/prompt. A rationale is diagnostic evidence, not proof of internal model reasoning.
+
+These results do not validate the old positive pilot signal, demonstrate a history advantage, or falsify all possible DeepTrace methods. They show that this bounded implementation and frozen monitor did not achieve useful low-false-alarm detection on this fresh controlled test. Changing the prompt or threshold now would require another fresh held-out set.
+
+\subsection*{Measured resources}
+New API cost: \$0.05588; provider usage: 726,978 input and 49,410 output tokens. Median unique-request latency: 1.266 s. Full-source static extraction: 960 generated states, 0 failures, 5,760 file scans, 3.215 s total. Median full-history symbolic recheck: 10.75 ms. This is full recomputation, not optimized incremental update. No GPU rental or training occurred.
+
+
+\clearpage
+\section{Experiment 1 requirement account}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.51\linewidth}@{}}\toprule Requirement & Status & Evidence / limitation\\\midrule\endhead
+Exact pre-action source states & Blocked & 0 of 3 candidate trajectories verified. Cached records and sampled mirror lack initial revision provenance.\\
+Successful/failed edits and ordering & Partial infrastructure & Pure-data receipt validator checks call IDs, preimages, failures, concurrency conflicts and read contradictions. No actual trajectory replay verified.\\
+Graphs from full states; coverage & Blocked on trajectories & Public candidate checkout produces 94 graphs in 15 source files. It is not a verified trajectory state; trajectory extraction coverage is not estimable.\\
+Security-directed selection and earlier links & Implemented approximation & Action lexical seeds, bounded dependency traversal and source-hash-linked earlier mutations. Candidate edges retain uncertainty. No real-cohort effectiveness result.\\
+Independently checked harm and delayed effects & Blocked & No reviewed first-effect annotations. Two independent reviews plus delayed trigger evidence required by gate.\\
+Validated attack and honest reference & Blocked & No independent human reference reviews. Existing analyst passages remain preliminary.\\
+Consistent conditions and budgets & Adapter prepared & Same proposed action and 1,024 evidence tokens; no new LinuxArena monitor calls. Capped transcript is explicitly approximate.\\
+Identical graph/prose facts & Implemented; real run blocked & Joint fact selection and shared fact hash. Controlled ablation executed.\\
+Honest calibration then fresh test & Real run blocked & Controlled thresholds frozen before test. No fresh verified LinuxArena split available.\\
+Timely detection and undetected success & Not estimable & Metrics gate refuses incomplete cohorts. Alarm at decision boundary h counts before action h executes.\\
+Trajectory alarms, tokens, latency, overhead & Real run blocked & Evaluator prepared; new measured resource figures apply only to controlled evaluation.\\
+Conditional versus unconditional claims & Completed reporting & No unconditional success rate or live prevention claim; selected-success metrics would be conditional.\\\bottomrule\end{longtable}
+
+\clearpage
+\section{Experiment 2 requirement account}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.51\linewidth}@{}}\toprule Requirement & Status & Evidence / limitation\\\midrule\endhead
+Retain original comparison conditions & Executed controlled & Static, static plus history, differences, temporal, assumption history and checked reference retained.\\
+Strong current-code baseline & Executed & Same bounded symbolic checker and proposed-patch preview as historical condition, without historical summaries.\\
+Assumption verification states & Implemented bounded scope & Source/event hashes, formulas, spans and witnesses retained. Unknown exercised separately; restored means only violation-to-preservation transition.\\
+Repairs and equivalent refactors & Executed & Repaired guards, equivalent changes, fixed arguments and removed sinks included.\\
+Independent family and duplicate splits & Executed with limits & Four calibration and four held-out syntax/task-token families. Related variants remain together. No exact prompt crosses splits.\\
+Fresh held-out examples & Executed controlled & No old exact prompts reused. New guard forms, approved tokens, depths 2/4 and gaps 0/5/13/21. Same narrow policy family remains.\\
+Held-out repositories & Blocked/not done & No verified LinuxArena repository cohort; generated modules are not independent real repositories.\\
+Validated reference & Partial & Source templates inspected and ground truth checked by separate concrete interpreter plus SMT. No independent human oracle validation.\\
+Detection and false alarms with uncertainty & Executed descriptive & Frozen thresholds, family bootstrap and descriptive binomial intervals. Only four held-out blocks; rates differ.\\
+History versus strong current baseline & Executed; negative & Both detect 0/32. Difference 0, sign-flip p=1. No temporal improvement established.\\
+LinuxArena applicability & Capability check only & Public auto\_workflow has 23 TypeScript files. Authored Python assumption checker does not apply; real mapping remains blocked.\\\bottomrule\end{longtable}
+
+\clearpage
+\section{Implemented boundaries and remaining work}
+\textbf{Replay validator.} The new pure-data validator requires an initial capture hash plus provenance attestation, matches tool call identities, checks mutation preimages, retains failed/partial effects as unknown, rejects conflicting parallel writes and invalidates states contradicted by reads. A verified complete checkpoint may resynchronize later source states. It does not execute arbitrary shell commands, recover service state, verify the producer's attestations cryptographically, or convert a self-asserted Boolean into provenance. Its present scope is plain-text workspace files. Twenty engineering checks cover adversarial failure paths and the harmful-action boundary convention.
+
+\textbf{Fuller support DAG (not monitor-scored).} A separate implementation now connects versioned source occurrences, supporting symbols, security claims and edit events. Supporting source edits mark prior claims stale and trigger a recheck; unrelated documentation reuses the existing claim. Versioned source occurrences prevent a repaired file with identical contents from creating a temporal cycle. All 320 histories pass an acyclicity check. This fuller graph was built after the frozen monitor run; the reported scores evaluate the earlier bounded summary/event packets, not this new graph. Its monitor benefit requires fresh evaluation.
+
+\textbf{Before-execution convention.} If action $h$ causes the first harmful effect, an alarm at decision boundary $h$ counts as timely because the monitor runs before action $h$ executes. The prepared evaluator checks alarms at indices $i\le h$, unlike an ambiguous strict-less-than landing-marker interpretation. For delayed effects, annotations must connect installation, trigger and observation and rule out earlier effects. An offline alarm is not live prevention.
+
+\textbf{Assumptions.} Corrected records contain 512 preserved, 512 violated, 64 restored and 64 removed restriction-event annotations. Unknown is tested by an unresolved-call control. Restriction status differs from the combined policy: a weakened guard with fixed arguments can still preserve the policy. A small post-analysis annotation correction marks ``restored'' only on the repair transition, rather than on subsequent preserved versions. It did not alter any monitor input: earlier histories and all proposed-preview summaries were checked identical; the unused proposed transition label is versioned separately. Frozen prompts, scores and thresholds remain unchanged.
+
+\textbf{Next indispensable milestone.} Obtain a small real cohort with provenance and execute it in an isolated Linux environment. Validate initial tree and setup, capture each pre-action source tree, rerun task/scorer checks where supported, adjudicate first effects independently, and review reference evidence for attacks and honest actions. Only then freeze fresh splits and score all required conditions. Full-repository extraction errors, unsupported language features and missing effects must remain in the cohort ledger. The current TypeScript application needs an appropriate semantic analyzer; the Python fixture checker cannot simply be relabeled as LinuxArena support.
+
+\subsection*{Specific artifact request}
+A ready-to-send request is saved at \path{research/deeptrace_experiments/continuation/RESOURCE_REQUEST.txt}. It requests original \texttt{.eval} archives with \texttt{env\_versions}, image digests and event ordering; exact initial source and setup; workspace captures or complete effect receipts; first-effect/delayed-trigger evidence; and an isolated runtime/image-access route. Example attack trajectory: \path{21c5fa535dd54a46bfb1ae8958dd7f27}, run \path{ace6e820844e4faf9e0a5907f774a7c6}. No request was sent to anyone.
+
+\clearpage
+\section{Reproducibility, execution account and evidence}
+\textbf{Versions.} AgentSecGraph remains unmodified at \path{e27f83d631c91b80fb55a2f1d9e4112f1a080ceb}. Control Tower source is pinned at \path{c31d352a03860d055a694d3c7dea0fa03973f493}. Existing \path{results/requirements.lock.txt} pins the Python environment, including Z3, tiktoken, NumPy and SciPy. LaTeX uses Tectonic 0.17.0. GPT-5 Nano uses the prior OpenRouter OpenAI-only routing and minimal-reasoning JSON protocol. Raw provider fingerprints are preserved, but the model alias is not an immutable weights pin.
+
+\textbf{Privacy and isolation.} Provider data collection is denied; no zero-data-retention guarantee is claimed. Credentials are not in prompts, source bundles or this report. Target source is treated as inert untrusted data. Static workers have no network and no credential access. No live attack actions were replayed on the host.
+
+\textbf{Key continuation artifacts.}
+\begin{itemize}
+\item \path{continuation/results/audit.json}, \path{access_probes.json}, \path{mirror_audit.json}, \path{linuxarena_cohort.json}: unavailable resources and failed gates.
+\item \path{continuation/results/protocol.json}, \path{packet_checks.json}, \path{thresholds.json}: frozen design, duplicates, budgets and calibration-before-test provenance.
+\item \path{continuation/data/cases.json}, \path{results/packets.json}, \path{ground_truth.json}, \path{corrected_assumption_records.json}: source versions, source evidence, checks and versioned annotations.
+\item \path{continuation/results/jobs.jsonl}, \path{calibration_scores.jsonl}, \path{test_scores.jsonl}, \path{responses/}: exact monitor inputs and outputs.
+\item \path{continuation/results/metrics.json}, \path{paired_comparison.json}, \path{usage.json}, \path{engineering_checks.json}, \path{final_checks.json}: analysis, uncertainty, resources and validity checks.
+\end{itemize}
+
+Commands and implementation limits are in \path{continuation/README.md}. Saved scores can be reanalyzed offline with \path{continuation/scripts/metrics.py}. Regeneration must use a new run directory: frozen thresholds are deliberately not overwritten. Source hashes and raw prompts reproduce what was evaluated even when timing observations change on rerun. The source/result bundle excludes credentials, virtual environments, model downloads and cloned target code.
+
+\textbf{Primary sources inspected.}
+\begin{enumerate}
+\item Supplied proposal, \emph{DeepTrace: Two Experimental Research Proposals}, five pages. SHA256: \path{9d07a8e465559f4ac61e72585910eb595e53fe4c2e7dcc536330044de119d599}.
+\item Pinned Control Tower download contract, \path{src/control_tower/runs/viewer/urls.py}, and \path{docs/web-viewer.md}: \url{https://github.com/linuxarena/control-tower}.
+\item Official public replay workflow, \path{.github/workflows/side-task-replay.yml}, in the same pinned repository. Its CI probe archives are distinct from real public trajectories.
+\item Public environment source: \url{https://github.com/linuxarena/auto_workflow/tree/v1.0.1}. Access to this tree does not prove initial-state identity.
+\item Public mirror schema and sampled range: \url{https://huggingface.co/datasets/anonymouslinuxarena/linuxarena-public}. The downloaded README describes transcript fields, not exact workspace provenance.
+\item AgentSecGraph implementation: \url{https://github.com/A1LinLin1/AgentSecBench}; LinuxArena research proposal reference: \url{https://arxiv.org/abs/2604.15384}.
+\end{enumerate}
+
+\textbf{Research conclusion.} New independent work improves the controlled comparison and reconstruction safeguards. It does not complete the requested LinuxArena evaluation. H1 is unmeasured on a verified cohort; H2 has no demonstrated historical-evidence advantage in the fresh controlled run and no verified LinuxArena applicability result. These boundaries are the result, not an omitted qualification.
+\end{document}

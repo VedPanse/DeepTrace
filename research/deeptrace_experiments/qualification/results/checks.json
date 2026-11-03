@@ -1,0 +1,19 @@
+{
+  "negative_pilot_files_unchanged": true,
+  "protocol_unchanged_after_development_seal": true,
+  "development_scores_unchanged_after_seal": true,
+  "qualification_released_after_development_seal": true,
+  "development_jobs_match_frozen_hash": true,
+  "qualification_jobs_match_frozen_hash": true,
+  "development_qualification_prompt_disjoint": true,
+  "same_messages_for_both_models": true,
+  "complete_176_primary_responses": true,
+  "no_policy_verdict_in_evidence": true,
+  "all_mandatory_evidence_fits_without_truncation": true,
+  "no_labels_in_messages": true,
+  "bounded_reference_agrees_all_known_cases": true,
+  "unknown_restriction_preserves_known_argument_and_shell": true,
+  "invalid_not_silently_safe": true,
+  "denominator_includes_all_cases": true,
+  "credentials_not_in_artifacts": true
+}

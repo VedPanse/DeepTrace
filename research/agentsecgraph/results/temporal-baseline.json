@@ -1,0 +1,11 @@
+{
+  "agentsecbench_version": "0.2.0",
+  "claim_boundary": "accepted historical static candidates; not vulnerability adjudications",
+  "finding_count": 1,
+  "fingerprints": [
+    "ASBFP-4B93DCDD12078D28CB77E3AE"
+  ],
+  "kind": "agentsecbench_baseline",
+  "schema_version": "1.0",
+  "unique_fingerprint_count": 1
+}

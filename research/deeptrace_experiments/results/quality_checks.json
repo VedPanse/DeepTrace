@@ -1,0 +1,16 @@
+{
+  "logical_monitor_jobs": 6384,
+  "temporal_cases": 270,
+  "temporal_static_graphs": 1080,
+  "temporal_event_dags": 270,
+  "all_checked_graphs_acyclic": true,
+  "format_ablation_identical_facts": true,
+  "evidence_token_budgets_satisfied": true,
+  "disjoint_guard_family_split": true,
+  "disjoint_real_history_split": true,
+  "prefix_only_editor_evidence": true,
+  "original_analyzer_unmodified": true,
+  "no_target_execution_in_static_graphs": true,
+  "shareable_files_checked_for_api_secret": 16867,
+  "limitation": "real code observation fragments are incomplete; no monitor can be credited with a missing harm boundary"
+}

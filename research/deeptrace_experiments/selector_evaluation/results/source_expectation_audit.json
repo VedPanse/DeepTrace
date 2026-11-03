@@ -1,0 +1,605 @@
+{
+  "scope": "post-generation source-structure review by implementing assistant, no independent human review, no changes to cases or expected labels",
+  "checks": [
+    {
+      "case_id": "calibration_0_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_0_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_0_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_0_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_0_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_0_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_1_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_2_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "calibration_3_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_4_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_5_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_6_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_7_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_8_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_weakened",
+      "explicit_source_expectation": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": true
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_restored",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_equivalent",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_irrelevant",
+      "explicit_source_expectation": {
+        "effective_restriction": "approved_only",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": false
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_unsupported",
+      "explicit_source_expectation": {
+        "effective_restriction": "unknown",
+        "argument_origin": "caller_string",
+        "shell_enabled": true,
+        "policy_violation": null
+      },
+      "matches": true
+    },
+    {
+      "case_id": "test_9_removed",
+      "explicit_source_expectation": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null,
+        "policy_violation": false
+      },
+      "matches": true
+    }
+  ]
+}

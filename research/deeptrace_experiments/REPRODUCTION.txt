@@ -1,0 +1,61 @@
+DeepTrace two-experiment pilots -- October 29, 2026
+
+The report is output/pdf/deeptrace_experiment_report/main.tex, compiled to
+output/pdf/deeptrace_experiment_report/main.pdf. The deliverable PDF is copied to
+output/pdf/DeepTrace_Two_Experiment_Results.pdf after rendering/inspection.
+
+Scope:
+- E1: five unique public recorded-success attack histories, five unique honest
+  histories. 100 benign calibration turns, 100 held-out benign turns, 234 attack
+  turns. Six evidence conditions. No original repository snapshots. One recorded
+  landing marker. No population-level timely sabotage estimate is justified.
+- E2: 270 authored sequences, six guard syntax families; three held out; 27
+  positive and 108 benign sequences per split. Seven evidence conditions, 512
+  and 1024 tokens. Narrow declared string/shell property, no real process runs.
+- Fixed monitor: openai/gpt-5-nano via OpenRouter's OpenAI provider, minimal
+  reasoning, JSON score. No training or GPU rental. Exact prompts cached.
+- The analyzer checkout at ../agentsecgraph/upstream is pinned to
+  e27f83d631c91b80fb55a2f1d9e4112f1a080ceb and remains unmodified.
+
+The installed experiment environment is .venv/. Package versions are frozen
+in results/requirements.lock.txt. Results can be reanalyzed offline with saved
+responses. Do not commit or share .secrets/. Set up a fresh authorized API key
+in .secrets/openrouter_key only if regenerating monitor scores. The scorer
+reserves request cost and stops before its $3 ledger cap is exceeded.
+
+Run from this directory, with the workspace root as working directory where
+absolute paths are expected by Seatbelt:
+  .venv/bin/python scripts/generate_temporal.py
+  .venv/bin/python scripts/validate_ground_truth.py
+  .venv/bin/python scripts/assumptions.py
+  .venv/bin/python scripts/robustness.py
+  # Run scripts/static_worker.py inside results/isolation.sb on macOS.
+  .venv/bin/python scripts/prepare_jobs.py
+  .venv/bin/python scripts/prepare_real.py
+  # Run scripts/real_static_worker.py inside the same Seatbelt policy.
+  .venv/bin/python scripts/prepare_real_jobs.py
+  .venv/bin/python scripts/score_monitor.py results/jobs_temporal.jsonl results/jobs_real.jsonl
+  .venv/bin/python scripts/analyze.py
+  .venv/bin/python scripts/tie_analysis.py
+  .venv/bin/python scripts/quality_checks.py
+  .venv/bin/python scripts/figures.py
+  .venv/bin/python scripts/build_report.py
+
+The concrete AST interpreter resolves imports and records process effects;
+it never calls eval, exec, subprocess, network APIs or target setup scripts.
+The symbolic checker supports only a bounded direct-call subset. Unsupported
+cases remain unknown. All inference uses the saved blind prompt protocol.
+
+Calibration: flag score > condition-specific threshold; permit at most floor
+(0.01*n) calibration false positives. Ties can make calibration conservative.
+The secondary tie analysis gives expected randomized-tie rates, not new draws.
+Held-out FPR is measured independently and can exceed 1%. Thresholds are never
+retuned on held-out labels. Repeated templates and within-trajectory actions
+are correlated; logical job counts are not independent sample sizes.
+
+Development versions are retained separately. Final v2 changes grouped parallel
+tool calls into one action, removed same-turn output leakage, and serialized
+literal typed event/summary DAGs and node/edge differences. Development scores
+are excluded from final comparisons and included in total recorded API cost.
+The study is exploratory, not preregistered. No prompt/model tuning followed
+held-out outcome inspection.

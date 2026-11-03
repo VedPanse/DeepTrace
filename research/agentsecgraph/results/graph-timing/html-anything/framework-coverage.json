@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "active_adapter_count": 7,
+  "adapter_status_counts": {
+    "not_observed": 7
+  },
+  "source_file_count": 127,
+  "framework_signal_file_count": 0,
+  "framework_modeled_file_count": 0,
+  "candidate_file_count": 37,
+  "candidate_files_with_framework_context": 0,
+  "generic_candidate_file_count": 37,
+  "generic_candidate_files": [
+    "cli/src/agents-invoke.ts",
+    "cli/src/config.ts",
+    "cli/src/index.ts",
+    "cli/src/skills-loader.ts",
+    "e2e/playwright.config.ts",
+    "e2e/scripts/playwright.ts",
+    "e2e/ui/deploy-control.spec.ts",
+    "e2e/ui/export-menu.test.ts",
+    "e2e/ui/host-validation.spec.ts",
+    "next/src/app/page.tsx",
+    "next/src/components/deploy-control.tsx",
+    "next/src/components/preview-pane.tsx",
+    "next/src/components/settings-modal.tsx",
+    "next/src/components/welcome-modal.tsx",
+    "next/src/lib/agents/detect.ts",
+    "next/src/lib/agents/invoke.ts",
+    "next/src/lib/deck.ts",
+    "next/src/lib/deploy/config.ts",
+    "next/src/lib/deploy/url-check.ts",
+    "next/src/lib/deploy/vercel.ts",
+    "next/src/lib/export/deck.ts",
+    "next/src/lib/export/markdown-roundtrip.ts",
+    "next/src/lib/hyperframes.ts",
+    "next/src/lib/skills/__tests__/api.test.ts",
+    "next/src/lib/skills/__tests__/cross-device.test.ts",
+    "next/src/lib/skills/__tests__/install-rejections.test.ts",
+    "next/src/lib/skills/__tests__/install.test.ts",
+    "next/src/lib/skills/__tests__/loader-merge.test.ts",
+    "next/src/lib/skills/__tests__/preflight.test.ts",
+    "next/src/lib/skills/install.ts",
+    "next/src/lib/skills/registry.ts",
+    "next/src/lib/templates/index.ts",
+    "next/src/lib/templates/loader.ts",
+    "next/src/lib/use-convert.ts",
+    "next/src/lib/use-deploy.ts",
+    "next/src/lib/use-draft.ts",
+    "scripts/guard.ts"
+  ],
+  "generic_candidate_files_truncated": false,
+  "fallback_framework_counts": {},
+  "parse_failures": [],
+  "adapters": [
+    {
+      "adapter_id": "mcp",
+      "name": "MCP",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "langchain",
+      "name": "LangChain",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "crewai",
+      "name": "CrewAI",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "openai-agents",
+      "name": "OpenAI Agents SDK",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "semantic-kernel",
+      "name": "Semantic Kernel",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "autogen",
+      "name": "AutoGen",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "llamaindex",
+      "name": "LlamaIndex",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    }
+  ],
+  "interpretation": {
+    "modeled": "framework evidence is attached to at least one candidate graph",
+    "signal_only": "repository text matched a framework signal, but no candidate graph received framework evidence",
+    "not_observed": "no source or candidate pattern for this adapter was observed in scanned files",
+    "generic_candidate_file": "the file has candidates but no framework context; generic operation analysis still applies"
+  },
+  "claim_boundary": "Coverage diagnostics describe observed static signals and graph evidence; they do not establish complete framework support or absence of agent behavior."
+}

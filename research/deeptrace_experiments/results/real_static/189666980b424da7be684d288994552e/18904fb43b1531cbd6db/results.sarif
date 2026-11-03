@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/credential_access",
+              "name": "credential_access",
+              "shortDescription": {
+                "text": "Credential Access"
+              },
+              "fullDescription": {
+                "text": "Secret-store access candidate"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "credential_access"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 136,
+                  "endLine": 136
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-70328EFBC6120445",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4C5DD2ED304E7E0704D77B47"
+          },
+          "properties": {
+            "candidateId": "ASB-70328EFBC6120445",
+            "fingerprint": "ASBFP-4C5DD2ED304E7E0704D77B47",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 140,
+                  "endLine": 140
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-355EF77837A2436B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-1DBE343A5CBF0DB18F44676B"
+          },
+          "properties": {
+            "candidateId": "ASB-355EF77837A2436B",
+            "fingerprint": "ASBFP-1DBE343A5CBF0DB18F44676B",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 143,
+                  "endLine": 143
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B17DAEEB59BAF860",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F837F6BB697F1884DDA89344"
+          },
+          "properties": {
+            "candidateId": "ASB-B17DAEEB59BAF860",
+            "fingerprint": "ASBFP-F837F6BB697F1884DDA89344",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 160,
+                  "endLine": 160
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9718460F4B95A4E7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-141BDD1B62071891E833A41F"
+          },
+          "properties": {
+            "candidateId": "ASB-9718460F4B95A4E7",
+            "fingerprint": "ASBFP-141BDD1B62071891E833A41F",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 175,
+                  "endLine": 175
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-CC54A74DC03A7F33",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0D99A6E065FD57935B313646"
+          },
+          "properties": {
+            "candidateId": "ASB-CC54A74DC03A7F33",
+            "fingerprint": "ASBFP-0D99A6E065FD57935B313646",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "note",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "b88137538073.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 186,
+                  "endLine": 186
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7D2159FB88186D66",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-9A0C761DD520FE2A057F0AFA"
+          },
+          "properties": {
+            "candidateId": "ASB-7D2159FB88186D66",
+            "fingerprint": "ASBFP-9A0C761DD520FE2A057F0AFA",
+            "confidence": "medium",
+            "detectors": [
+              "secret_store"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

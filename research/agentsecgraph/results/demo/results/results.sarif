@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "Python subprocess invocation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_write",
+              "name": "filesystem_write",
+              "shortDescription": {
+                "text": "Filesystem Write"
+              },
+              "fullDescription": {
+                "text": "Python file-write operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_write"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "warning",
+          "message": {
+            "text": "command execution candidate in agent_tool"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "agent.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 9,
+                  "endLine": 9
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-659293FB156BCEBC",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3DB2747A000847D727DEF5EA"
+          },
+          "properties": {
+            "candidateId": "ASB-659293FB156BCEBC",
+            "fingerprint": "ASBFP-3DB2747A000847D727DEF5EA",
+            "confidence": "high",
+            "detectors": [
+              "py_subprocess"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in agent_tool"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "agent.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10,
+                  "endLine": 10
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7FF74041D9F0958D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B8FF5D39577DF2282EA82D71"
+          },
+          "properties": {
+            "candidateId": "ASB-7FF74041D9F0958D",
+            "fingerprint": "ASBFP-B8FF5D39577DF2282EA82D71",
+            "confidence": "high",
+            "detectors": [
+              "py_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

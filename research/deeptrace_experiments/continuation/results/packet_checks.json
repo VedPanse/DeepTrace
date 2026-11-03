@@ -1,0 +1,13 @@
+{
+  "jobs": 2560,
+  "unique_prompts": 872,
+  "split_overlap": 0,
+  "old_prompt_overlap": 0,
+  "max_evidence_tokens": 1024,
+  "calibration_unique": 436,
+  "test_unique": 436,
+  "model_conditions_hidden": true,
+  "whole_current_action_retained": true,
+  "source_preview": "Only the supplied proposed patch is analyzed, never observed future output.",
+  "jobs_sha256": "a9a076bf956701029e8341d164d3bbd9b37842cb24ec3c462f3f0d6b1b908201"
+}

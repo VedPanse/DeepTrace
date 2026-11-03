@@ -1,0 +1,1469 @@
+[
+  {
+    "case": "html-anything",
+    "candidate_id": "ASB-98B547DA6B6F8405",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"<module>\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"medium\",\"detectors\":[\"js_child_process\"],\"evidence_lines\":[509],\"evidence_snippets\":[{\"line\":509,\"text\":\"        child = spawn(bin, argv, {\"}],\"id\":\"n2\",\"name\":\"spawn\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      }
+    ],
+    "compact_atom_tokens": 214,
+    "whole_graph_json_tokens": 597,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "magentic-ui",
+    "candidate_id": "ASB-F8D7E421C8E3EDCD",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[54],\"evidence_snippets\":[{\"line\":54,\"text\":\"        result = subprocess.run(\"}],\"id\":\"n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "node:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"n5\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"cmd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n5"
+        ]
+      },
+      {
+        "id": "node:n6",
+        "kind": "input_source",
+        "text": "{\"id\":\"n6\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"cwd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n6"
+        ]
+      },
+      {
+        "id": "node:n7",
+        "kind": "input_source",
+        "text": "{\"id\":\"n7\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"extra_env\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n7"
+        ]
+      },
+      {
+        "id": "node:n8",
+        "kind": "input_source",
+        "text": "{\"id\":\"n8\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"timeout\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n8"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n5",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:5",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n6\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n6",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:6",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n6\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n6",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:7",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n7\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n7",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:8",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n7\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n7",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:9",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n8\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n8",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:10",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n8\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n8",
+          "n4"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"cmd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:1",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"cwd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:2",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"extra_env\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:3",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"timeout\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 519,
+    "whole_graph_json_tokens": 931,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "mini-swe-agent",
+    "candidate_id": "ASB-B9939207E2EA1DDA",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[116],\"evidence_snippets\":[{\"line\":116,\"text\":\"            result = subprocess.run(\"}],\"id\":\"n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "node:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"n5\",\"line\":101,\"source_type\":\"function_parameter\",\"symbol\":\"cwd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n5"
+        ]
+      },
+      {
+        "id": "node:n6",
+        "kind": "input_source",
+        "text": "{\"id\":\"n6\",\"line\":101,\"source_type\":\"function_parameter\",\"symbol\":\"timeout\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n6"
+        ]
+      },
+      {
+        "id": "node:n7",
+        "kind": "guard_candidate",
+        "text": "{\"confidence\":\"structural\",\"effectiveness\":\"unconfirmed_static_candidate\",\"id\":\"n7\",\"kind\":\"preceding_related_assert\",\"line\":105,\"symbols\":[\"self\"],\"type\":\"guard_candidate\"}",
+        "nodes": [
+          "n7"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n5",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:5",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n6\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n6",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:6",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n6\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n6",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:7",
+        "kind": "may_guard",
+        "text": "{\"from\":\"n7\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"may_guard\"}",
+        "nodes": [
+          "n7",
+          "n2"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"cmd\",\"cwd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:1",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"timeout\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 429,
+    "whole_graph_json_tokens": 833,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "cross_file_direct",
+    "candidate_id": "ASB-3CB51E1A5A0F0455",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[4],\"evidence_snippets\":[{\"line\":4,\"text\":\"    return subprocess.run(value)\"}],\"id\":\"n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "node:n5",
+        "kind": "input_source",
+        "text": "{\"adapter_id\":\"mcp\",\"call_depth\":1,\"dependency_path\":[\"subprocess.run\",\"value\",\"agent.py:run\",\"command\"],\"entrypoint_symbol\":\"run\",\"entrypoint_type\":\"tool_definition\",\"file\":\"agent.py\",\"framework\":\"MCP\",\"id\":\"n5\",\"interprocedural\":true,\"line\":6,\"source_type\":\"agent_tool_parameter\",\"symbol\":\"command\",\"trust\":\"agent_or_external_caller\",\"type\":\"input_source\",\"via_call_line\":7}",
+        "nodes": [
+          "n5"
+        ]
+      },
+      {
+        "id": "node:n6",
+        "kind": "program_symbol",
+        "text": "{\"evidence\":\"project_call_index_candidate\",\"id\":\"n6\",\"name\":\"agent.py:run\",\"role\":\"interprocedural_call_chain\",\"type\":\"program_symbol\"}",
+        "nodes": [
+          "n6"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n5",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:5",
+        "kind": "flows_through",
+        "text": "{\"from\":\"n5\",\"status\":\"project_call_candidate\",\"to\":\"n6\",\"type\":\"flows_through\"}",
+        "nodes": [
+          "n5",
+          "n6"
+        ]
+      },
+      {
+        "id": "edge:6",
+        "kind": "flows_through",
+        "text": "{\"from\":\"n6\",\"status\":\"project_call_candidate\",\"to\":\"n2\",\"type\":\"flows_through\"}",
+        "nodes": [
+          "n6",
+          "n2"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"value\",\"agent.py:run\",\"command\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 436,
+    "whole_graph_json_tokens": 824,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "small-auth-app",
+    "candidate_id": "ASB-0FD132A099F898CD",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"audit\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"network_access\",\"confidence\":\"high\",\"detectors\":[\"js_http_client\"],\"evidence_lines\":[6],\"evidence_snippets\":[{\"line\":6,\"text\":\"  return fetch(endpoint, { method: \\\"POST\\\", body: payload });\"}],\"id\":\"n2\",\"name\":\"fetch\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"remote_network\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "node:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"n5\",\"line\":3,\"source_type\":\"function_parameter\",\"symbol\":\"payload\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n5"
+        ]
+      },
+      {
+        "id": "node:n6",
+        "kind": "guard_candidate",
+        "text": "{\"confidence\":\"lexical\",\"effectiveness\":\"unconfirmed_static_candidate\",\"id\":\"n6\",\"kind\":\"preceding_related_if\",\"line\":4,\"symbols\":[\"settings\"],\"type\":\"guard_candidate\"}",
+        "nodes": [
+          "n6"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n5",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "edge:5",
+        "kind": "may_guard",
+        "text": "{\"from\":\"n6\",\"status\":\"lexical\",\"to\":\"n2\",\"type\":\"may_guard\"}",
+        "nodes": [
+          "n6",
+          "n2"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"fetch\",\"payload\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 350,
+    "whole_graph_json_tokens": 735,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "parameter_overwrite",
+    "candidate_id": "ASB-F312D8AF20924B26",
+    "atoms": [
+      {
+        "id": "node:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"n1\",\"name\":\"run\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "n1"
+        ]
+      },
+      {
+        "id": "node:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[5],\"evidence_snippets\":[{\"line\":5,\"text\":\"    return subprocess.run(command)\"}],\"id\":\"n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "n2"
+        ]
+      },
+      {
+        "id": "node:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "n3"
+        ]
+      },
+      {
+        "id": "node:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "n4"
+        ]
+      },
+      {
+        "id": "node:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"n5\",\"line\":3,\"source_type\":\"function_parameter\",\"symbol\":\"command\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "n5"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"n1\",\"status\":\"structural\",\"to\":\"n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "n1",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"n2\",\"status\":\"category_semantics\",\"to\":\"n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "n4",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "n5",
+          "n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cross",
+        "text": "{\"from\":\"n5\",\"status\":\"local_static_candidate\",\"to\":\"n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"subprocess.run\",\"command\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 290,
+    "whole_graph_json_tokens": 658,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  },
+  {
+    "case": "pooled-six",
+    "candidate_id": "POOLED-SIX-OPERATIONS",
+    "atoms": [
+      {
+        "id": "node:p0:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p0:n1\",\"name\":\"<module>\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p0:n1"
+        ]
+      },
+      {
+        "id": "node:p0:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"medium\",\"detectors\":[\"js_child_process\"],\"evidence_lines\":[509],\"evidence_snippets\":[{\"line\":509,\"text\":\"        child = spawn(bin, argv, {\"}],\"id\":\"p0:n2\",\"name\":\"spawn\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p0:n2"
+        ]
+      },
+      {
+        "id": "node:p0:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p0:n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p0:n3"
+        ]
+      },
+      {
+        "id": "node:p0:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p0:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p0:n4"
+        ]
+      },
+      {
+        "id": "node:p1:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p1:n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p1:n1"
+        ]
+      },
+      {
+        "id": "node:p1:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[54],\"evidence_snippets\":[{\"line\":54,\"text\":\"        result = subprocess.run(\"}],\"id\":\"p1:n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "node:p1:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p1:n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p1:n3"
+        ]
+      },
+      {
+        "id": "node:p1:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p1:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p1:n4"
+        ]
+      },
+      {
+        "id": "node:p1:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"p1:n5\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"cmd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p1:n5"
+        ]
+      },
+      {
+        "id": "node:p1:n6",
+        "kind": "input_source",
+        "text": "{\"id\":\"p1:n6\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"cwd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p1:n6"
+        ]
+      },
+      {
+        "id": "node:p1:n7",
+        "kind": "input_source",
+        "text": "{\"id\":\"p1:n7\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"extra_env\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p1:n7"
+        ]
+      },
+      {
+        "id": "node:p1:n8",
+        "kind": "input_source",
+        "text": "{\"id\":\"p1:n8\",\"line\":45,\"source_type\":\"function_parameter\",\"symbol\":\"timeout\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p1:n8"
+        ]
+      },
+      {
+        "id": "node:p2:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p2:n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p2:n1"
+        ]
+      },
+      {
+        "id": "node:p2:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[116],\"evidence_snippets\":[{\"line\":116,\"text\":\"            result = subprocess.run(\"}],\"id\":\"p2:n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "node:p2:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p2:n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p2:n3"
+        ]
+      },
+      {
+        "id": "node:p2:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p2:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p2:n4"
+        ]
+      },
+      {
+        "id": "node:p2:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"p2:n5\",\"line\":101,\"source_type\":\"function_parameter\",\"symbol\":\"cwd\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p2:n5"
+        ]
+      },
+      {
+        "id": "node:p2:n6",
+        "kind": "input_source",
+        "text": "{\"id\":\"p2:n6\",\"line\":101,\"source_type\":\"function_parameter\",\"symbol\":\"timeout\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p2:n6"
+        ]
+      },
+      {
+        "id": "node:p2:n7",
+        "kind": "guard_candidate",
+        "text": "{\"confidence\":\"structural\",\"effectiveness\":\"unconfirmed_static_candidate\",\"id\":\"p2:n7\",\"kind\":\"preceding_related_assert\",\"line\":105,\"symbols\":[\"self\"],\"type\":\"guard_candidate\"}",
+        "nodes": [
+          "p2:n7"
+        ]
+      },
+      {
+        "id": "node:p3:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p3:n1\",\"name\":\"execute\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p3:n1"
+        ]
+      },
+      {
+        "id": "node:p3:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[4],\"evidence_snippets\":[{\"line\":4,\"text\":\"    return subprocess.run(value)\"}],\"id\":\"p3:n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p3:n2"
+        ]
+      },
+      {
+        "id": "node:p3:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p3:n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p3:n3"
+        ]
+      },
+      {
+        "id": "node:p3:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p3:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p3:n4"
+        ]
+      },
+      {
+        "id": "node:p3:n5",
+        "kind": "input_source",
+        "text": "{\"adapter_id\":\"mcp\",\"call_depth\":1,\"dependency_path\":[\"subprocess.run\",\"value\",\"agent.py:run\",\"command\"],\"entrypoint_symbol\":\"run\",\"entrypoint_type\":\"tool_definition\",\"file\":\"agent.py\",\"framework\":\"MCP\",\"id\":\"p3:n5\",\"interprocedural\":true,\"line\":6,\"source_type\":\"agent_tool_parameter\",\"symbol\":\"command\",\"trust\":\"agent_or_external_caller\",\"type\":\"input_source\",\"via_call_line\":7}",
+        "nodes": [
+          "p3:n5"
+        ]
+      },
+      {
+        "id": "node:p3:n6",
+        "kind": "program_symbol",
+        "text": "{\"evidence\":\"project_call_index_candidate\",\"id\":\"p3:n6\",\"name\":\"agent.py:run\",\"role\":\"interprocedural_call_chain\",\"type\":\"program_symbol\"}",
+        "nodes": [
+          "p3:n6"
+        ]
+      },
+      {
+        "id": "node:p4:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p4:n1\",\"name\":\"audit\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p4:n1"
+        ]
+      },
+      {
+        "id": "node:p4:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"network_access\",\"confidence\":\"high\",\"detectors\":[\"js_http_client\"],\"evidence_lines\":[6],\"evidence_snippets\":[{\"line\":6,\"text\":\"  return fetch(endpoint, { method: \\\"POST\\\", body: payload });\"}],\"id\":\"p4:n2\",\"name\":\"fetch\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p4:n2"
+        ]
+      },
+      {
+        "id": "node:p4:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p4:n3\",\"target_class\":\"remote_network\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p4:n3"
+        ]
+      },
+      {
+        "id": "node:p4:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p4:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p4:n4"
+        ]
+      },
+      {
+        "id": "node:p4:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"p4:n5\",\"line\":3,\"source_type\":\"function_parameter\",\"symbol\":\"payload\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p4:n5"
+        ]
+      },
+      {
+        "id": "node:p4:n6",
+        "kind": "guard_candidate",
+        "text": "{\"confidence\":\"lexical\",\"effectiveness\":\"unconfirmed_static_candidate\",\"id\":\"p4:n6\",\"kind\":\"preceding_related_if\",\"line\":4,\"symbols\":[\"settings\"],\"type\":\"guard_candidate\"}",
+        "nodes": [
+          "p4:n6"
+        ]
+      },
+      {
+        "id": "node:p5:n1",
+        "kind": "agent_or_program_symbol",
+        "text": "{\"agent_relevance\":\"unknown\",\"framework_evidence\":[],\"frameworks\":[],\"id\":\"p5:n1\",\"name\":\"run\",\"type\":\"agent_or_program_symbol\"}",
+        "nodes": [
+          "p5:n1"
+        ]
+      },
+      {
+        "id": "node:p5:n2",
+        "kind": "security_sensitive_operation",
+        "text": "{\"category\":\"command_execution\",\"confidence\":\"high\",\"detectors\":[\"py_subprocess\"],\"evidence_lines\":[5],\"evidence_snippets\":[{\"line\":5,\"text\":\"    return subprocess.run(command)\"}],\"id\":\"p5:n2\",\"name\":\"subprocess.run\",\"type\":\"security_sensitive_operation\"}",
+        "nodes": [
+          "p5:n2"
+        ]
+      },
+      {
+        "id": "node:p5:n3",
+        "kind": "external_effect",
+        "text": "{\"confirmation\":\"unconfirmed_static_candidate\",\"id\":\"p5:n3\",\"target_class\":\"process_or_shell\",\"type\":\"external_effect\"}",
+        "nodes": [
+          "p5:n3"
+        ]
+      },
+      {
+        "id": "node:p5:n4",
+        "kind": "trust_boundary",
+        "text": "{\"boundary\":\"less_trusted_input_to_security_sensitive_effect\",\"crossed\":\"unconfirmed_static_candidate\",\"id\":\"p5:n4\",\"type\":\"trust_boundary\"}",
+        "nodes": [
+          "p5:n4"
+        ]
+      },
+      {
+        "id": "node:p5:n5",
+        "kind": "input_source",
+        "text": "{\"id\":\"p5:n5\",\"line\":3,\"source_type\":\"function_parameter\",\"symbol\":\"command\",\"trust\":\"unknown\",\"type\":\"input_source\"}",
+        "nodes": [
+          "p5:n5"
+        ]
+      },
+      {
+        "id": "edge:0",
+        "kind": "contains",
+        "text": "{\"from\":\"p0:n1\",\"status\":\"structural\",\"to\":\"p0:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p0:n1",
+          "p0:n2"
+        ]
+      },
+      {
+        "id": "edge:1",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p0:n2\",\"status\":\"category_semantics\",\"to\":\"p0:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p0:n2",
+          "p0:n3"
+        ]
+      },
+      {
+        "id": "edge:2",
+        "kind": "reaches",
+        "text": "{\"from\":\"p0:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p0:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p0:n4",
+          "p0:n2"
+        ]
+      },
+      {
+        "id": "edge:3",
+        "kind": "contains",
+        "text": "{\"from\":\"p1:n1\",\"status\":\"structural\",\"to\":\"p1:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p1:n1",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:4",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p1:n2\",\"status\":\"category_semantics\",\"to\":\"p1:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p1:n2",
+          "p1:n3"
+        ]
+      },
+      {
+        "id": "edge:5",
+        "kind": "reaches",
+        "text": "{\"from\":\"p1:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p1:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p1:n4",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:6",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p1:n5\",\"status\":\"local_static_candidate\",\"to\":\"p1:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p1:n5",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:7",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p1:n5\",\"status\":\"local_static_candidate\",\"to\":\"p1:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p1:n5",
+          "p1:n4"
+        ]
+      },
+      {
+        "id": "edge:8",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p1:n6\",\"status\":\"local_static_candidate\",\"to\":\"p1:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p1:n6",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:9",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p1:n6\",\"status\":\"local_static_candidate\",\"to\":\"p1:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p1:n6",
+          "p1:n4"
+        ]
+      },
+      {
+        "id": "edge:10",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p1:n7\",\"status\":\"local_static_candidate\",\"to\":\"p1:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p1:n7",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:11",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p1:n7\",\"status\":\"local_static_candidate\",\"to\":\"p1:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p1:n7",
+          "p1:n4"
+        ]
+      },
+      {
+        "id": "edge:12",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p1:n8\",\"status\":\"local_static_candidate\",\"to\":\"p1:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p1:n8",
+          "p1:n2"
+        ]
+      },
+      {
+        "id": "edge:13",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p1:n8\",\"status\":\"local_static_candidate\",\"to\":\"p1:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p1:n8",
+          "p1:n4"
+        ]
+      },
+      {
+        "id": "edge:14",
+        "kind": "contains",
+        "text": "{\"from\":\"p2:n1\",\"status\":\"structural\",\"to\":\"p2:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p2:n1",
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "edge:15",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p2:n2\",\"status\":\"category_semantics\",\"to\":\"p2:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p2:n2",
+          "p2:n3"
+        ]
+      },
+      {
+        "id": "edge:16",
+        "kind": "reaches",
+        "text": "{\"from\":\"p2:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p2:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p2:n4",
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "edge:17",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p2:n5\",\"status\":\"local_static_candidate\",\"to\":\"p2:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p2:n5",
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "edge:18",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p2:n5\",\"status\":\"local_static_candidate\",\"to\":\"p2:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p2:n5",
+          "p2:n4"
+        ]
+      },
+      {
+        "id": "edge:19",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p2:n6\",\"status\":\"local_static_candidate\",\"to\":\"p2:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p2:n6",
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "edge:20",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p2:n6\",\"status\":\"local_static_candidate\",\"to\":\"p2:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p2:n6",
+          "p2:n4"
+        ]
+      },
+      {
+        "id": "edge:21",
+        "kind": "may_guard",
+        "text": "{\"from\":\"p2:n7\",\"status\":\"structural\",\"to\":\"p2:n2\",\"type\":\"may_guard\"}",
+        "nodes": [
+          "p2:n7",
+          "p2:n2"
+        ]
+      },
+      {
+        "id": "edge:22",
+        "kind": "contains",
+        "text": "{\"from\":\"p3:n1\",\"status\":\"structural\",\"to\":\"p3:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p3:n1",
+          "p3:n2"
+        ]
+      },
+      {
+        "id": "edge:23",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p3:n2\",\"status\":\"category_semantics\",\"to\":\"p3:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p3:n2",
+          "p3:n3"
+        ]
+      },
+      {
+        "id": "edge:24",
+        "kind": "reaches",
+        "text": "{\"from\":\"p3:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p3:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p3:n4",
+          "p3:n2"
+        ]
+      },
+      {
+        "id": "edge:25",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p3:n5\",\"status\":\"local_static_candidate\",\"to\":\"p3:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p3:n5",
+          "p3:n2"
+        ]
+      },
+      {
+        "id": "edge:26",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p3:n5\",\"status\":\"local_static_candidate\",\"to\":\"p3:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p3:n5",
+          "p3:n4"
+        ]
+      },
+      {
+        "id": "edge:27",
+        "kind": "flows_through",
+        "text": "{\"from\":\"p3:n5\",\"status\":\"project_call_candidate\",\"to\":\"p3:n6\",\"type\":\"flows_through\"}",
+        "nodes": [
+          "p3:n5",
+          "p3:n6"
+        ]
+      },
+      {
+        "id": "edge:28",
+        "kind": "flows_through",
+        "text": "{\"from\":\"p3:n6\",\"status\":\"project_call_candidate\",\"to\":\"p3:n2\",\"type\":\"flows_through\"}",
+        "nodes": [
+          "p3:n6",
+          "p3:n2"
+        ]
+      },
+      {
+        "id": "edge:29",
+        "kind": "contains",
+        "text": "{\"from\":\"p4:n1\",\"status\":\"structural\",\"to\":\"p4:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p4:n1",
+          "p4:n2"
+        ]
+      },
+      {
+        "id": "edge:30",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p4:n2\",\"status\":\"category_semantics\",\"to\":\"p4:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p4:n2",
+          "p4:n3"
+        ]
+      },
+      {
+        "id": "edge:31",
+        "kind": "reaches",
+        "text": "{\"from\":\"p4:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p4:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p4:n4",
+          "p4:n2"
+        ]
+      },
+      {
+        "id": "edge:32",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p4:n5\",\"status\":\"local_static_candidate\",\"to\":\"p4:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p4:n5",
+          "p4:n2"
+        ]
+      },
+      {
+        "id": "edge:33",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p4:n5\",\"status\":\"local_static_candidate\",\"to\":\"p4:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p4:n5",
+          "p4:n4"
+        ]
+      },
+      {
+        "id": "edge:34",
+        "kind": "may_guard",
+        "text": "{\"from\":\"p4:n6\",\"status\":\"lexical\",\"to\":\"p4:n2\",\"type\":\"may_guard\"}",
+        "nodes": [
+          "p4:n6",
+          "p4:n2"
+        ]
+      },
+      {
+        "id": "edge:35",
+        "kind": "contains",
+        "text": "{\"from\":\"p5:n1\",\"status\":\"structural\",\"to\":\"p5:n2\",\"type\":\"contains\"}",
+        "nodes": [
+          "p5:n1",
+          "p5:n2"
+        ]
+      },
+      {
+        "id": "edge:36",
+        "kind": "may_cause",
+        "text": "{\"from\":\"p5:n2\",\"status\":\"category_semantics\",\"to\":\"p5:n3\",\"type\":\"may_cause\"}",
+        "nodes": [
+          "p5:n2",
+          "p5:n3"
+        ]
+      },
+      {
+        "id": "edge:37",
+        "kind": "reaches",
+        "text": "{\"from\":\"p5:n4\",\"status\":\"unconfirmed_static_candidate\",\"to\":\"p5:n2\",\"type\":\"reaches\"}",
+        "nodes": [
+          "p5:n4",
+          "p5:n2"
+        ]
+      },
+      {
+        "id": "edge:38",
+        "kind": "may_data_depend_on",
+        "text": "{\"from\":\"p5:n5\",\"status\":\"local_static_candidate\",\"to\":\"p5:n2\",\"type\":\"may_data_depend_on\"}",
+        "nodes": [
+          "p5:n5",
+          "p5:n2"
+        ]
+      },
+      {
+        "id": "edge:39",
+        "kind": "may_cross",
+        "text": "{\"from\":\"p5:n5\",\"status\":\"local_static_candidate\",\"to\":\"p5:n4\",\"type\":\"may_cross\"}",
+        "nodes": [
+          "p5:n5",
+          "p5:n4"
+        ]
+      },
+      {
+        "id": "path:0",
+        "kind": "dependency_path",
+        "text": "[\"magentic-ui\",\"subprocess.run\",\"cmd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:1",
+        "kind": "dependency_path",
+        "text": "[\"magentic-ui\",\"subprocess.run\",\"cwd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:2",
+        "kind": "dependency_path",
+        "text": "[\"magentic-ui\",\"subprocess.run\",\"extra_env\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:3",
+        "kind": "dependency_path",
+        "text": "[\"magentic-ui\",\"subprocess.run\",\"timeout\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:4",
+        "kind": "dependency_path",
+        "text": "[\"mini-swe-agent\",\"subprocess.run\",\"cmd\",\"cwd\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:5",
+        "kind": "dependency_path",
+        "text": "[\"mini-swe-agent\",\"subprocess.run\",\"timeout\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:6",
+        "kind": "dependency_path",
+        "text": "[\"cross_file_direct\",\"subprocess.run\",\"value\",\"agent.py:run\",\"command\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:7",
+        "kind": "dependency_path",
+        "text": "[\"small-auth-app\",\"fetch\",\"payload\"]",
+        "nodes": []
+      },
+      {
+        "id": "path:8",
+        "kind": "dependency_path",
+        "text": "[\"parameter_overwrite\",\"subprocess.run\",\"command\"]",
+        "nodes": []
+      }
+    ],
+    "compact_atom_tokens": 2362,
+    "whole_graph_json_tokens": 2406,
+    "token_estimator": "ceil(unicode character count / 4), applied to complete selected evidence string"
+  }
+]

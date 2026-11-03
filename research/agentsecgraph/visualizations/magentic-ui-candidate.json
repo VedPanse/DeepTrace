@@ -1,0 +1,246 @@
+{
+  "analysis": {
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "cmd"
+      ],
+      [
+        "subprocess.run",
+        "cwd"
+      ],
+      [
+        "subprocess.run",
+        "extra_env"
+      ],
+      [
+        "subprocess.run",
+        "timeout"
+      ]
+    ],
+    "engine": "python_backward_slice_product_v1",
+    "framework_evidence": [],
+    "interprocedural": {
+      "callsites_indexed": 7082,
+      "enabled": true,
+      "expanded_sources": 0,
+      "frameworks": [],
+      "functions_indexed": 1619,
+      "language": "python",
+      "max_depth": 6,
+      "parse_failures": [],
+      "python_files_indexed": 162,
+      "target_function": "src/magentic_ui/sandbox/_null.py::NullSandbox.execute"
+    },
+    "limitations": [
+      "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+      "project call propagation is Python-only and resolves direct local imports/calls"
+    ],
+    "operation_line": 54
+  },
+  "candidate_id": "ASB-F8D7E421C8E3EDCD",
+  "claim_boundary": "candidate graph; inferred dependencies and guards require review and are not vulnerability claims",
+  "edges": [
+    {
+      "from": "n1",
+      "status": "structural",
+      "to": "n2",
+      "type": "contains"
+    },
+    {
+      "from": "n2",
+      "status": "category_semantics",
+      "to": "n3",
+      "type": "may_cause"
+    },
+    {
+      "from": "n4",
+      "status": "unconfirmed_static_candidate",
+      "to": "n2",
+      "type": "reaches"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n6",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n6",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n7",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n7",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n8",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n8",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    }
+  ],
+  "generator": "agentsecbench_security_adg_product_v1",
+  "graph_id": "SADG-ASB-F8D7E421C8E3EDCD",
+  "nodes": [
+    {
+      "agent_relevance": "unknown",
+      "framework_evidence": [],
+      "frameworks": [],
+      "id": "n1",
+      "name": "execute",
+      "type": "agent_or_program_symbol"
+    },
+    {
+      "category": "command_execution",
+      "confidence": "high",
+      "detectors": [
+        "py_subprocess"
+      ],
+      "evidence_lines": [
+        54
+      ],
+      "evidence_snippets": [
+        {
+          "line": 54,
+          "text": "        result = subprocess.run("
+        }
+      ],
+      "id": "n2",
+      "name": "subprocess.run",
+      "type": "security_sensitive_operation"
+    },
+    {
+      "confirmation": "unconfirmed_static_candidate",
+      "id": "n3",
+      "target_class": "process_or_shell",
+      "type": "external_effect"
+    },
+    {
+      "boundary": "less_trusted_input_to_security_sensitive_effect",
+      "crossed": "unconfirmed_static_candidate",
+      "id": "n4",
+      "type": "trust_boundary"
+    },
+    {
+      "id": "n5",
+      "line": 45,
+      "source_type": "function_parameter",
+      "symbol": "cmd",
+      "trust": "unknown",
+      "type": "input_source"
+    },
+    {
+      "id": "n6",
+      "line": 45,
+      "source_type": "function_parameter",
+      "symbol": "cwd",
+      "trust": "unknown",
+      "type": "input_source"
+    },
+    {
+      "id": "n7",
+      "line": 45,
+      "source_type": "function_parameter",
+      "symbol": "extra_env",
+      "trust": "unknown",
+      "type": "input_source"
+    },
+    {
+      "id": "n8",
+      "line": 45,
+      "source_type": "function_parameter",
+      "symbol": "timeout",
+      "trust": "unknown",
+      "type": "input_source"
+    }
+  ],
+  "provenance": {
+    "evidence_hash_verified": true,
+    "file": "src/magentic_ui/sandbox/_null.py",
+    "finding_fingerprint": "ASBFP-CAE000162A788C2C55D73FC9",
+    "label_inputs_used": false,
+    "line_end": 54,
+    "line_start": 54,
+    "scan_root": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/magentic-ui",
+    "source_execution_used": false
+  },
+  "schema_version": "1.0",
+  "views": {
+    "plain_adg": {
+      "edges": [
+        "contains",
+        "may_cause"
+      ],
+      "nodes": [
+        "n1",
+        "n2",
+        "n3"
+      ]
+    },
+    "security_adg": {
+      "dependency_paths": 4,
+      "edges": [
+        "contains",
+        "may_cause",
+        "reaches",
+        "may_data_depend_on",
+        "may_cross",
+        "may_data_depend_on",
+        "may_cross",
+        "may_data_depend_on",
+        "may_cross",
+        "may_data_depend_on",
+        "may_cross"
+      ],
+      "frameworks": [],
+      "guard_candidates": 0,
+      "interprocedural_nodes": 0,
+      "nodes": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "source_candidates": 4
+    },
+    "sink_only": {
+      "edges": [],
+      "nodes": [
+        "n2"
+      ]
+    }
+  }
+}

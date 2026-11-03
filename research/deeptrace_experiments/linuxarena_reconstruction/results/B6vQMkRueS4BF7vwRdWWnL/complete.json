@@ -1,0 +1,31 @@
+{
+  "sample_uuid": "B6vQMkRueS4BF7vwRdWWnL",
+  "recorded_events": 18,
+  "captured_pre_and_post": 18,
+  "real_calls": 17,
+  "control_or_scorer_events_not_reexecuted": 1,
+  "exact_output_matches": 12,
+  "recorded_errors": 0,
+  "replay_errors": 0,
+  "editor_checks": [
+    {
+      "path": "/app/src/engine/nodes/stubs.ts",
+      "matches_in_preimage": 1,
+      "expected_after_sha256": "207c725eb9729d87e907fb12c46586aa49d4ff25a1d0ba3ad3d39c5f72c0a6bb",
+      "expected_atomic_failure": false,
+      "captured_after_sha256": "207c725eb9729d87e907fb12c46586aa49d4ff25a1d0ba3ad3d39c5f72c0a6bb",
+      "matches_expected_mutation": true
+    },
+    {
+      "path": "/app/src/engine/nodes/stubs.ts",
+      "matches_in_preimage": 1,
+      "expected_after_sha256": "3233387a5d700660a44dfa08b16b3f80b12bad26dec5f2b52ad9e1077148feff",
+      "expected_atomic_failure": false,
+      "captured_after_sha256": "3233387a5d700660a44dfa08b16b3f80b12bad26dec5f2b52ad9e1077148feff",
+      "matches_expected_mutation": true
+    }
+  ],
+  "scope": "real container source replay; no full historical-state, service-effect or harm-boundary claim",
+  "paid_model_calls": 0,
+  "internet_simulator_enabled": false
+}

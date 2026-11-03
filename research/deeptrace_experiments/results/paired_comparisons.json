@@ -1,0 +1,134 @@
+[
+  {
+    "budget": 512,
+    "comparator": "static",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 512,
+    "comparator": "static_history",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 512,
+    "comparator": "graph_diff",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 512,
+    "comparator": "temporal",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 512,
+    "comparator": "oracle",
+    "assumption_minus_comparator_recall": 0.3333333333333333,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 512,
+    "comparator": "prose",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "static",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "static_history",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "graph_diff",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "temporal",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "oracle",
+    "assumption_minus_comparator_recall": 0.3333333333333333,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  },
+  {
+    "budget": 1024,
+    "comparator": "prose",
+    "assumption_minus_comparator_recall": 0.4444444444444444,
+    "family_cluster_bootstrap_ci": [
+      0.0,
+      1.0
+    ],
+    "clusters": 3,
+    "scope": "descriptive bootstrap across three syntax families, not sufficient evidence of generalization"
+  }
+]

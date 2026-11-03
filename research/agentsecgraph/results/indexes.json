@@ -1,0 +1,23 @@
+{
+  "magentic-ui": {
+    "python_functions": 1619,
+    "typescript_functions": 270,
+    "python_calls": 7082,
+    "typescript_calls": 1202,
+    "parse_failures": []
+  },
+  "html-anything": {
+    "python_functions": 0,
+    "typescript_functions": 408,
+    "python_calls": 0,
+    "typescript_calls": 5065,
+    "parse_failures": []
+  },
+  "mini-swe-agent": {
+    "python_functions": 835,
+    "typescript_functions": 1,
+    "python_calls": 3850,
+    "typescript_calls": 3,
+    "parse_failures": []
+  }
+}

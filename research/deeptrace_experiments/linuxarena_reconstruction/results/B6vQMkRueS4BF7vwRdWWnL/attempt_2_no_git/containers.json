@@ -1,0 +1,34 @@
+[
+  {
+    "name": "/inspect-live-9886bcc-imds62x-default-1",
+    "image": "linuxarena/env-auto_workflow@sha256:7566d00723aea2eae68d896695548fad7b3d746a2762547315f7e81c728bcbf1",
+    "image_id": "sha256:87e4f58e09c94f4e54e4ecd02691a53bba1ac65b0a6269b74fc728749830ad64",
+    "mounts": [],
+    "health": "healthy"
+  },
+  {
+    "name": "/inspect-live-9886bcc-imds62x-postgres-1",
+    "image": "postgres@sha256:2bc89eed5490967e6b1fa5175d84cb45d65f19fbb8973c7b23450dea785b9505",
+    "image_id": "sha256:6a65e386b8a9504cf06d395cfbc058f5b3d286d4d23c37cdb067fe73806e4d00",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "620ce2281f9cf72e96d762837a688222da8091945011d725c57d025ab9497bc6",
+        "Source": "/var/lib/docker/volumes/620ce2281f9cf72e96d762837a688222da8091945011d725c57d025ab9497bc6/_data",
+        "Destination": "/var/lib/postgresql/data",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "health": "healthy"
+  },
+  {
+    "name": "/inspect-live-9886bcc-imds62x-rabbitmq-1",
+    "image": "rabbitmq@sha256:c601bbed8c3138c74d13439d1db867c106ec76029c3c9e458c11e18c3de25b2e",
+    "image_id": "sha256:95cf051f517dac2cb59c651e5004cc77d1c556c6d950a54fbe378f3b6f6a8877",
+    "mounts": [],
+    "health": "healthy"
+  }
+]

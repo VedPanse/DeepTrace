@@ -1,0 +1,9 @@
+{
+  "all_development_responses_valid_json": true,
+  "unique_successful_development_prompts": true,
+  "expected_labels_not_in_messages": true,
+  "original_frozen_calibration_unchanged": true,
+  "original_frozen_test_jobs_unchanged": true,
+  "no_credential_in_diagnosis": true,
+  "original_case_facts_present": true
+}

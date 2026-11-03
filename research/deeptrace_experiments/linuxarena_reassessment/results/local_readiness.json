@@ -1,0 +1,140 @@
+{
+  "recorded_at": "2026-11-02T06:55:14.030577+00:00",
+  "session": "54f42be0",
+  "public_environment": "linuxarena/auto_workflow",
+  "legitimate_task": "webhook_node_full_implementation",
+  "harness_commit": "0faf35e034ff3c89802d0b456c11ab215149fa0a",
+  "setting_commit": "e183a57b77526b709413a7fb3e762597c9938701",
+  "environment_commit": "b7f3e189ebf436ccb783d1e6e12faf360baf5b9a",
+  "dependency_lock_sha256": "10f1a935cf38830f1012787910eb887a4fbfd1d3e40d344f9f112d950cb2a27a",
+  "containers": [
+    {
+      "name": "/inspect-live-54f42be-i2tjem2-default-1",
+      "image_config": "linuxarena/env-auto_workflow@sha256:6894de9f192927526d334fc1a89ca0dd2531bf833805d1e7117811e87a6ea3e5",
+      "image_id": "sha256:2760e0f020ec6a1ef74a83a479e76d01260f3734fee50283e6e2c4a278964423",
+      "state": "running",
+      "health": "healthy",
+      "health_log": [
+        {
+          "Start": "2026-11-02T06:55:04.905836256Z",
+          "End": "2026-11-02T06:55:04.955118798Z",
+          "ExitCode": 0,
+          "Output": "{\"status\":\"healthy\",\"timestamp\":\"2026-11-02T06:55:04.953Z\"}"
+        },
+        {
+          "Start": "2026-11-02T06:55:06.96150334Z",
+          "End": "2026-11-02T06:55:07.014421299Z",
+          "ExitCode": 0,
+          "Output": "{\"status\":\"healthy\",\"timestamp\":\"2026-11-02T06:55:07.012Z\"}"
+        },
+        {
+          "Start": "2026-11-02T06:55:09.016359966Z",
+          "End": "2026-11-02T06:55:09.039550925Z",
+          "ExitCode": 0,
+          "Output": "{\"status\":\"healthy\",\"timestamp\":\"2026-11-02T06:55:09.038Z\"}"
+        },
+        {
+          "Start": "2026-11-02T06:55:11.045469801Z",
+          "End": "2026-11-02T06:55:11.095446134Z",
+          "ExitCode": 0,
+          "Output": "{\"status\":\"healthy\",\"timestamp\":\"2026-11-02T06:55:11.093Z\"}"
+        },
+        {
+          "Start": "2026-11-02T06:55:13.097761135Z",
+          "End": "2026-11-02T06:55:13.143162968Z",
+          "ExitCode": 0,
+          "Output": "{\"status\":\"healthy\",\"timestamp\":\"2026-11-02T06:55:13.142Z\"}"
+        }
+      ]
+    },
+    {
+      "name": "/inspect-live-54f42be-i2tjem2-postgres-1",
+      "image_config": "postgres@sha256:2bc89eed5490967e6b1fa5175d84cb45d65f19fbb8973c7b23450dea785b9505",
+      "image_id": "sha256:6a65e386b8a9504cf06d395cfbc058f5b3d286d4d23c37cdb067fe73806e4d00",
+      "state": "running",
+      "health": "healthy",
+      "health_log": [
+        {
+          "Start": "2026-11-02T06:55:03.995600881Z",
+          "End": "2026-11-02T06:55:04.047349089Z",
+          "ExitCode": 0,
+          "Output": "127.0.0.1:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:06.053514298Z",
+          "End": "2026-11-02T06:55:06.116134382Z",
+          "ExitCode": 0,
+          "Output": "127.0.0.1:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:08.120374132Z",
+          "End": "2026-11-02T06:55:08.187966341Z",
+          "ExitCode": 0,
+          "Output": "127.0.0.1:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:10.192391675Z",
+          "End": "2026-11-02T06:55:10.26202455Z",
+          "ExitCode": 0,
+          "Output": "127.0.0.1:5432 - accepting connections\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:12.267321593Z",
+          "End": "2026-11-02T06:55:12.313534551Z",
+          "ExitCode": 0,
+          "Output": "127.0.0.1:5432 - accepting connections\n"
+        }
+      ]
+    },
+    {
+      "name": "/inspect-live-54f42be-i2tjem2-rabbitmq-1",
+      "image_config": "rabbitmq@sha256:c601bbed8c3138c74d13439d1db867c106ec76029c3c9e458c11e18c3de25b2e",
+      "image_id": "sha256:95cf051f517dac2cb59c651e5004cc77d1c556c6d950a54fbe378f3b6f6a8877",
+      "state": "running",
+      "health": "healthy",
+      "health_log": [
+        {
+          "Start": "2026-11-02T06:54:48.003171679Z",
+          "End": "2026-11-02T06:54:48.215224429Z",
+          "ExitCode": 0,
+          "Output": "Ping succeeded\n"
+        },
+        {
+          "Start": "2026-11-02T06:54:53.21606875Z",
+          "End": "2026-11-02T06:54:53.428797834Z",
+          "ExitCode": 0,
+          "Output": "Ping succeeded\n"
+        },
+        {
+          "Start": "2026-11-02T06:54:58.430007378Z",
+          "End": "2026-11-02T06:54:58.64963467Z",
+          "ExitCode": 0,
+          "Output": "Ping succeeded\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:03.65064613Z",
+          "End": "2026-11-02T06:55:03.865179005Z",
+          "ExitCode": 0,
+          "Output": "Ping succeeded\n"
+        },
+        {
+          "Start": "2026-11-02T06:55:08.869385758Z",
+          "End": "2026-11-02T06:55:09.091876758Z",
+          "ExitCode": 0,
+          "Output": "Ping succeeded\n"
+        }
+      ]
+    }
+  ],
+  "real_docker_not_simulated": true,
+  "internet_simulator_enabled": false,
+  "direct_internet_enabled": false,
+  "model_calls": 0,
+  "paid_cost": 0,
+  "per_action_capture_integrated": false,
+  "experiment_complete": false,
+  "api_health": {
+    "status": "healthy",
+    "timestamp": "2026-11-02T06:56:20.189Z"
+  }
+}

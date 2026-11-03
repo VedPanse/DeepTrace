@@ -1,0 +1,531 @@
+[
+  {
+    "case": "parameter_overwrite",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-F312D8AF20924B26",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 3,
+            "source_type": "function_parameter",
+            "symbol": "command",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "command"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 1,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 1,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 5
+        }
+      }
+    ]
+  },
+  {
+    "case": "local_overwrite",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-C848F9907771F9DD",
+        "operation": "subprocess.run",
+        "sources": [],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 1,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 1,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 6
+        }
+      }
+    ]
+  },
+  {
+    "case": "cross_file_direct",
+    "fixture_files": [
+      "helper.py",
+      "agent.py"
+    ],
+    "graph_count": 3,
+    "command_graphs": [
+      {
+        "id": "ASB-3CB51E1A5A0F0455",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "adapter_id": "mcp",
+            "call_depth": 1,
+            "dependency_path": [
+              "subprocess.run",
+              "value",
+              "agent.py:run",
+              "command"
+            ],
+            "entrypoint_symbol": "run",
+            "entrypoint_type": "tool_definition",
+            "file": "agent.py",
+            "framework": "MCP",
+            "id": "n5",
+            "interprocedural": true,
+            "line": 6,
+            "source_type": "agent_tool_parameter",
+            "symbol": "command",
+            "trust": "agent_or_external_caller",
+            "type": "input_source",
+            "via_call_line": 7
+          }
+        ],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "value",
+              "agent.py:run",
+              "command"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1+python_interprocedural_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 3,
+            "enabled": true,
+            "expanded_sources": 1,
+            "frameworks": [
+              "MCP"
+            ],
+            "functions_indexed": 2,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 2,
+            "target_function": "helper.py::execute"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 4
+        }
+      }
+    ]
+  },
+  {
+    "case": "cross_file_local_alias",
+    "fixture_files": [
+      "helper.py",
+      "agent.py"
+    ],
+    "graph_count": 3,
+    "command_graphs": [
+      {
+        "id": "ASB-3CB51E1A5A0F0455",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 3,
+            "source_type": "function_parameter",
+            "symbol": "value",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "value"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 3,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 2,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 2,
+            "target_function": "helper.py::execute"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 4
+        }
+      }
+    ]
+  },
+  {
+    "case": "early_return_guard",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-C848F9907771F9DD",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 3,
+            "source_type": "function_parameter",
+            "symbol": "command",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "command"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 2,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 1,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 6
+        }
+      }
+    ]
+  },
+  {
+    "case": "enclosing_guard",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-F312D8AF20924B26",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 3,
+            "source_type": "function_parameter",
+            "symbol": "command",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [
+          {
+            "confidence": "structural",
+            "effectiveness": "unconfirmed_static_candidate",
+            "id": "n6",
+            "kind": "dominating_if",
+            "line": 4,
+            "symbols": [
+              "command"
+            ],
+            "type": "guard_candidate"
+          }
+        ],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "command"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 1,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 1,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 5
+        }
+      }
+    ]
+  },
+  {
+    "case": "dynamic_dispatch",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 0,
+    "command_graphs": []
+  },
+  {
+    "case": "config_return",
+    "fixture_files": [
+      "case.py",
+      "config.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-C848F9907771F9DD",
+        "operation": "subprocess.run",
+        "sources": [],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 3,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 2,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 2,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 6
+        }
+      }
+    ]
+  },
+  {
+    "case": "js_multiline",
+    "fixture_files": [
+      "case.ts"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-102F498D76D932BC",
+        "operation": "exec",
+        "sources": [],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [],
+          "engine": "typescript_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 0,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "javascript_typescript",
+            "max_depth": 6,
+            "target_function": "case.ts::run",
+            "typescript_files_indexed": 1
+          },
+          "limitations": [
+            "bounded lexical slice; control flow, aliases, and runtime dispatch may be incomplete",
+            "project call propagation resolves direct local ES/CommonJS imports and named functions; dynamic dispatch remains unresolved"
+          ],
+          "operation_line": 2
+        }
+      }
+    ]
+  },
+  {
+    "case": "js_singleline",
+    "fixture_files": [
+      "case.ts"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-102F498D76D932BC",
+        "operation": "exec",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 1,
+            "source_type": "function_parameter",
+            "symbol": "command",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "exec",
+              "command"
+            ]
+          ],
+          "engine": "typescript_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 1,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "javascript_typescript",
+            "max_depth": 6,
+            "target_function": "case.ts::run",
+            "typescript_files_indexed": 1
+          },
+          "limitations": [
+            "bounded lexical slice; control flow, aliases, and runtime dispatch may be incomplete",
+            "project call propagation resolves direct local ES/CommonJS imports and named functions; dynamic dispatch remains unresolved"
+          ],
+          "operation_line": 2
+        }
+      }
+    ]
+  },
+  {
+    "case": "recursion",
+    "fixture_files": [
+      "case.py"
+    ],
+    "graph_count": 1,
+    "command_graphs": [
+      {
+        "id": "ASB-C848F9907771F9DD",
+        "operation": "subprocess.run",
+        "sources": [
+          {
+            "id": "n5",
+            "line": 3,
+            "source_type": "function_parameter",
+            "symbol": "command",
+            "trust": "unknown",
+            "type": "input_source"
+          }
+        ],
+        "guards": [
+          {
+            "confidence": "structural",
+            "effectiveness": "unconfirmed_static_candidate",
+            "id": "n6",
+            "kind": "dominating_if",
+            "line": 4,
+            "symbols": [
+              "command"
+            ],
+            "type": "guard_candidate"
+          }
+        ],
+        "analysis": {
+          "dependency_paths": [
+            [
+              "subprocess.run",
+              "command"
+            ]
+          ],
+          "engine": "python_backward_slice_product_v1",
+          "framework_evidence": [],
+          "interprocedural": {
+            "callsites_indexed": 2,
+            "enabled": true,
+            "expanded_sources": 0,
+            "frameworks": [],
+            "functions_indexed": 1,
+            "language": "python",
+            "max_depth": 6,
+            "parse_failures": [],
+            "python_files_indexed": 1,
+            "target_function": "case.py::run"
+          },
+          "limitations": [
+            "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+            "project call propagation is Python-only and resolves direct local imports/calls"
+          ],
+          "operation_line": 6
+        }
+      }
+    ]
+  },
+  {
+    "case": "small-auth-app",
+    "fixture_files": [
+      "config.ts",
+      "auth.ts",
+      "app.ts"
+    ],
+    "graph_count": 2,
+    "command_graphs": []
+  }
+]

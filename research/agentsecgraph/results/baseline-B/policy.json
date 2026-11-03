@@ -1,0 +1,35 @@
+{
+  "baseline_configured": true,
+  "baseline_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/temporal-baseline.json",
+  "blocking_category_counts": {},
+  "blocking_findings": 0,
+  "claim_boundary": "workflow classification of static candidates; not vulnerability adjudication",
+  "existing_findings": 1,
+  "expired_suppressions": [],
+  "findings": [
+    {
+      "baseline_status": "existing",
+      "blocking": false,
+      "category": "command_execution",
+      "confidence": "high",
+      "finding_id": "ASB-91B0DAF032842D57",
+      "fingerprint": "ASBFP-4B93DCDD12078D28CB77E3AE",
+      "line": 6,
+      "path": "agent.py",
+      "policy_match": true,
+      "suppressed": false,
+      "suppression_id": null
+    }
+  ],
+  "new_findings": 0,
+  "new_unsuppressed_findings": 0,
+  "policy_filters": {
+    "blocking_categories": [],
+    "minimum_confidence": "medium"
+  },
+  "schema_version": "1.0",
+  "status": "completed",
+  "suppressed_findings": 0,
+  "suppressions_file": null,
+  "total_findings": 1
+}

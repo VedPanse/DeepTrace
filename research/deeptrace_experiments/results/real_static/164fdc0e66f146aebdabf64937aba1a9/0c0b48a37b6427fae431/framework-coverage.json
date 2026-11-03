@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "active_adapter_count": 7,
+  "adapter_status_counts": {
+    "not_observed": 7
+  },
+  "source_file_count": 2,
+  "framework_signal_file_count": 0,
+  "framework_modeled_file_count": 0,
+  "candidate_file_count": 0,
+  "candidate_files_with_framework_context": 0,
+  "generic_candidate_file_count": 0,
+  "generic_candidate_files": [],
+  "generic_candidate_files_truncated": false,
+  "fallback_framework_counts": {},
+  "parse_failures": [
+    "afd2f7abe768.py"
+  ],
+  "adapters": [
+    {
+      "adapter_id": "mcp",
+      "name": "MCP",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "langchain",
+      "name": "LangChain",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "crewai",
+      "name": "CrewAI",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "openai-agents",
+      "name": "OpenAI Agents SDK",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "semantic-kernel",
+      "name": "Semantic Kernel",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "autogen",
+      "name": "AutoGen",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    },
+    {
+      "adapter_id": "llamaindex",
+      "name": "LlamaIndex",
+      "origin": "builtin",
+      "languages": [
+        "python",
+        "javascript_typescript"
+      ],
+      "status": "not_observed",
+      "signal_file_count": 0,
+      "signal_files": [],
+      "signal_files_truncated": false,
+      "modeled_file_count": 0,
+      "modeled_files": [],
+      "modeled_files_truncated": false,
+      "modeled_candidate_count": 0
+    }
+  ],
+  "interpretation": {
+    "modeled": "framework evidence is attached to at least one candidate graph",
+    "signal_only": "repository text matched a framework signal, but no candidate graph received framework evidence",
+    "not_observed": "no source or candidate pattern for this adapter was observed in scanned files",
+    "generic_candidate_file": "the file has candidates but no framework context; generic operation analysis still applies"
+  },
+  "claim_boundary": "Coverage diagnostics describe observed static signals and graph evidence; they do not establish complete framework support or absence of agent behavior."
+}

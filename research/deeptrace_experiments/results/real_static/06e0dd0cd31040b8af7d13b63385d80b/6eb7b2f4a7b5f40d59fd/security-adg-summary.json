@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "generator": "agentsecbench_security_adg_product_v1",
+  "interprocedural_enabled": true,
+  "graph_count": 0,
+  "graphs_with_dependency_path": 0,
+  "graphs_with_guard_candidate": 0,
+  "graphs_with_framework_evidence": 0,
+  "graphs_with_interprocedural_source": 0,
+  "project_index": {
+    "python_files_indexed": 5,
+    "functions_indexed": 6,
+    "callsites_indexed": 27,
+    "parse_failures": [
+      "9fa7de70010f.py"
+    ],
+    "typescript_files_indexed": 0,
+    "typescript_functions_indexed": 0,
+    "typescript_callsites_indexed": 0
+  },
+  "framework_counts": {}
+}

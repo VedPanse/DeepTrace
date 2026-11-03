@@ -1,0 +1,136 @@
+{
+  "analysis": {
+    "dependency_paths": [],
+    "engine": "typescript_backward_slice_product_v1",
+    "framework_evidence": [],
+    "interprocedural": {
+      "callsites_indexed": 5065,
+      "enabled": true,
+      "expanded_sources": 0,
+      "frameworks": [],
+      "functions_indexed": 408,
+      "language": "javascript_typescript",
+      "max_depth": 6,
+      "target_function": "cli/src/agents-invoke.ts::safeClose",
+      "typescript_files_indexed": 127
+    },
+    "limitations": [
+      "bounded lexical slice; control flow, aliases, and runtime dispatch may be incomplete",
+      "project call propagation resolves direct local ES/CommonJS imports and named functions; dynamic dispatch remains unresolved"
+    ],
+    "operation_line": 509
+  },
+  "candidate_id": "ASB-98B547DA6B6F8405",
+  "claim_boundary": "candidate graph; inferred dependencies and guards require review and are not vulnerability claims",
+  "edges": [
+    {
+      "from": "n1",
+      "status": "structural",
+      "to": "n2",
+      "type": "contains"
+    },
+    {
+      "from": "n2",
+      "status": "category_semantics",
+      "to": "n3",
+      "type": "may_cause"
+    },
+    {
+      "from": "n4",
+      "status": "unconfirmed_static_candidate",
+      "to": "n2",
+      "type": "reaches"
+    }
+  ],
+  "generator": "agentsecbench_security_adg_product_v1",
+  "graph_id": "SADG-ASB-98B547DA6B6F8405",
+  "nodes": [
+    {
+      "agent_relevance": "unknown",
+      "framework_evidence": [],
+      "frameworks": [],
+      "id": "n1",
+      "name": "<module>",
+      "type": "agent_or_program_symbol"
+    },
+    {
+      "category": "command_execution",
+      "confidence": "medium",
+      "detectors": [
+        "js_child_process"
+      ],
+      "evidence_lines": [
+        509
+      ],
+      "evidence_snippets": [
+        {
+          "line": 509,
+          "text": "        child = spawn(bin, argv, {"
+        }
+      ],
+      "id": "n2",
+      "name": "spawn",
+      "type": "security_sensitive_operation"
+    },
+    {
+      "confirmation": "unconfirmed_static_candidate",
+      "id": "n3",
+      "target_class": "process_or_shell",
+      "type": "external_effect"
+    },
+    {
+      "boundary": "less_trusted_input_to_security_sensitive_effect",
+      "crossed": "unconfirmed_static_candidate",
+      "id": "n4",
+      "type": "trust_boundary"
+    }
+  ],
+  "provenance": {
+    "evidence_hash_verified": true,
+    "file": "cli/src/agents-invoke.ts",
+    "finding_fingerprint": "ASBFP-E02C9AC16E826D84E599AC69",
+    "label_inputs_used": false,
+    "line_end": 509,
+    "line_start": 509,
+    "scan_root": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/html-anything",
+    "source_execution_used": false
+  },
+  "schema_version": "1.0",
+  "views": {
+    "plain_adg": {
+      "edges": [
+        "contains",
+        "may_cause"
+      ],
+      "nodes": [
+        "n1",
+        "n2",
+        "n3"
+      ]
+    },
+    "security_adg": {
+      "dependency_paths": 0,
+      "edges": [
+        "contains",
+        "may_cause",
+        "reaches"
+      ],
+      "frameworks": [],
+      "guard_candidates": 0,
+      "interprocedural_nodes": 0,
+      "nodes": [
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ],
+      "source_candidates": 0
+    },
+    "sink_only": {
+      "edges": [],
+      "nodes": [
+        "n2"
+      ]
+    }
+  }
+}

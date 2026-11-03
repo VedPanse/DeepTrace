@@ -1,0 +1,207 @@
+{
+  "analysis": {
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "value",
+        "agent.py:run",
+        "command"
+      ]
+    ],
+    "engine": "python_backward_slice_product_v1+python_interprocedural_v1",
+    "framework_evidence": [],
+    "interprocedural": {
+      "callsites_indexed": 3,
+      "enabled": true,
+      "expanded_sources": 1,
+      "frameworks": [
+        "MCP"
+      ],
+      "functions_indexed": 2,
+      "language": "python",
+      "max_depth": 6,
+      "parse_failures": [],
+      "python_files_indexed": 2,
+      "target_function": "helper.py::execute"
+    },
+    "limitations": [
+      "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+      "project call propagation is Python-only and resolves direct local imports/calls"
+    ],
+    "operation_line": 4
+  },
+  "candidate_id": "ASB-3CB51E1A5A0F0455",
+  "claim_boundary": "candidate graph; inferred dependencies and guards require review and are not vulnerability claims",
+  "edges": [
+    {
+      "from": "n1",
+      "status": "structural",
+      "to": "n2",
+      "type": "contains"
+    },
+    {
+      "from": "n2",
+      "status": "category_semantics",
+      "to": "n3",
+      "type": "may_cause"
+    },
+    {
+      "from": "n4",
+      "status": "unconfirmed_static_candidate",
+      "to": "n2",
+      "type": "reaches"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n5",
+      "status": "project_call_candidate",
+      "to": "n6",
+      "type": "flows_through"
+    },
+    {
+      "from": "n6",
+      "status": "project_call_candidate",
+      "to": "n2",
+      "type": "flows_through"
+    }
+  ],
+  "generator": "agentsecbench_security_adg_product_v1",
+  "graph_id": "SADG-ASB-3CB51E1A5A0F0455",
+  "nodes": [
+    {
+      "agent_relevance": "unknown",
+      "framework_evidence": [],
+      "frameworks": [],
+      "id": "n1",
+      "name": "execute",
+      "type": "agent_or_program_symbol"
+    },
+    {
+      "category": "command_execution",
+      "confidence": "high",
+      "detectors": [
+        "py_subprocess"
+      ],
+      "evidence_lines": [
+        4
+      ],
+      "evidence_snippets": [
+        {
+          "line": 4,
+          "text": "    return subprocess.run(value)"
+        }
+      ],
+      "id": "n2",
+      "name": "subprocess.run",
+      "type": "security_sensitive_operation"
+    },
+    {
+      "confirmation": "unconfirmed_static_candidate",
+      "id": "n3",
+      "target_class": "process_or_shell",
+      "type": "external_effect"
+    },
+    {
+      "boundary": "less_trusted_input_to_security_sensitive_effect",
+      "crossed": "unconfirmed_static_candidate",
+      "id": "n4",
+      "type": "trust_boundary"
+    },
+    {
+      "adapter_id": "mcp",
+      "call_depth": 1,
+      "dependency_path": [
+        "subprocess.run",
+        "value",
+        "agent.py:run",
+        "command"
+      ],
+      "entrypoint_symbol": "run",
+      "entrypoint_type": "tool_definition",
+      "file": "agent.py",
+      "framework": "MCP",
+      "id": "n5",
+      "interprocedural": true,
+      "line": 6,
+      "source_type": "agent_tool_parameter",
+      "symbol": "command",
+      "trust": "agent_or_external_caller",
+      "type": "input_source",
+      "via_call_line": 7
+    },
+    {
+      "evidence": "project_call_index_candidate",
+      "id": "n6",
+      "name": "agent.py:run",
+      "role": "interprocedural_call_chain",
+      "type": "program_symbol"
+    }
+  ],
+  "provenance": {
+    "evidence_hash_verified": true,
+    "file": "helper.py",
+    "finding_fingerprint": "ASBFP-DCB206D80576D99B58F21410",
+    "label_inputs_used": false,
+    "line_end": 4,
+    "line_start": 4,
+    "scan_root": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/fixtures/cross_file_direct",
+    "source_execution_used": false
+  },
+  "schema_version": "1.0",
+  "views": {
+    "plain_adg": {
+      "edges": [
+        "contains",
+        "may_cause"
+      ],
+      "nodes": [
+        "n1",
+        "n2",
+        "n3"
+      ]
+    },
+    "security_adg": {
+      "dependency_paths": 1,
+      "edges": [
+        "contains",
+        "may_cause",
+        "reaches",
+        "may_data_depend_on",
+        "may_cross",
+        "flows_through",
+        "flows_through"
+      ],
+      "frameworks": [
+        "MCP"
+      ],
+      "guard_candidates": 0,
+      "interprocedural_nodes": 1,
+      "nodes": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6"
+      ],
+      "source_candidates": 1
+    },
+    "sink_only": {
+      "edges": [],
+      "nodes": [
+        "n2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+Subject: LinuxArena artifacts needed for DeepTrace before-harm monitoring evaluation
+
+We are evaluating whether security dependency evidence and versioned assumptions
+improve detection of multi-step sabotage before the harmful action executes.
+Could you help us obtain a small, reproducible public cohort (initially 1-3 attacks
+and corresponding honest runs, including a delayed-effect case if possible)?
+
+Our documented attempts at GET /api/runs/{id}/eval and
+/api/trajectories/{id}/eval on data.linuxarena.ai return HTTP 503; unsigned access
+to the public-eval S3 object returned 403. The public Hugging Face JSONL mirror is
+accessible, but its sampled records omit initial environment revisions/image
+digests, action timestamps, and complete workspace snapshots.
+
+Example attack: trajectory 21c5fa535dd54a46bfb1ae8958dd7f27,
+run ace6e820844e4faf9e0a5907f774a7c6,
+auto_workflow / webhook_node_full_implementation / aw_reverse_shell.
+The current public auto_workflow v1.0.1 checkout is accessible, but we cannot
+establish that it is this trajectory's initial environment.
+
+Please provide or identify:
+1. Original .eval archives (including env_versions, image digests and tool/sandbox
+   event timestamps), plus matching honest archives from the same environment.
+2. Exact initial source/environment commit, image digest and task setup mutations.
+3. Any initial workspace capture, per-action captures, workspace-baseline artifacts
+   or full mutation receipts that verify shell writes and generated files.
+4. First-success/first-harm event evidence, with earlier effects ruled out; for
+   delayed tasks, both the installation action and the later trigger/effect logs.
+5. An isolated supported Linux/Docker execution route and any public image access
+   instructions if actual replay and side-task scorer checks are necessary.
+6. Exact legitimate-task definitions and task/scorer code versions, with outcome
+   records and scorer invocation times. Please keep hidden attacker objectives and
+   outcome/scorer material separable from monitor-visible task/tool records.
+7. Complete ordered tool calls AND results, including call IDs, errors, concurrent
+   calls, background processes, and service/network effects needed for replay.
+   Please identify any missing/redacted events so they remain explicit failures.
+
+Per-action snapshots are not inherently required. A pinned initial environment
+plus complete action records may suffice if replay captures every side effect and
+we can check the resulting source trees against independent observations. When
+commands depend on live services, background jobs, generated output or network
+responses, source text alone cannot establish exact replay. Checkpoints or effect
+logs are then particularly valuable. A final diff alone does not recover the
+intermediate pre-action states.
+
+We will use the data only for evaluation, keep hidden goals/outcomes out of monitor
+inputs, preserve canaries, and avoid claiming exact reconstruction without proof.
+
+A capture helper is now available in our project at:
+  continuation/scripts/capture_workspace.py
+It records exact bytes/hashes, modes, symlinks and binary content without executing
+source or following links. It must be used in a paused isolated environment at an
+identified boundary; it cannot itself prove the environment was paused or that an
+image/revision/setup matches the original recording. We would still need the
+producer's boundary/revision/image/setup attestations and event-order evidence.

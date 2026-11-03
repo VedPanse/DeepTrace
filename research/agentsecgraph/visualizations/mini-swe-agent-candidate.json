@@ -1,0 +1,212 @@
+{
+  "analysis": {
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "cmd",
+        "cwd"
+      ],
+      [
+        "subprocess.run",
+        "timeout"
+      ]
+    ],
+    "engine": "python_backward_slice_product_v1",
+    "framework_evidence": [],
+    "interprocedural": {
+      "callsites_indexed": 3850,
+      "enabled": true,
+      "expanded_sources": 0,
+      "frameworks": [],
+      "functions_indexed": 835,
+      "language": "python",
+      "max_depth": 6,
+      "parse_failures": [],
+      "python_files_indexed": 113,
+      "target_function": "src/minisweagent/environments/docker.py::DockerEnvironment.execute"
+    },
+    "limitations": [
+      "intraprocedural static slice; aliases and runtime dispatch may be incomplete",
+      "project call propagation is Python-only and resolves direct local imports/calls"
+    ],
+    "operation_line": 116
+  },
+  "candidate_id": "ASB-B9939207E2EA1DDA",
+  "claim_boundary": "candidate graph; inferred dependencies and guards require review and are not vulnerability claims",
+  "edges": [
+    {
+      "from": "n1",
+      "status": "structural",
+      "to": "n2",
+      "type": "contains"
+    },
+    {
+      "from": "n2",
+      "status": "category_semantics",
+      "to": "n3",
+      "type": "may_cause"
+    },
+    {
+      "from": "n4",
+      "status": "unconfirmed_static_candidate",
+      "to": "n2",
+      "type": "reaches"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n5",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n6",
+      "status": "local_static_candidate",
+      "to": "n2",
+      "type": "may_data_depend_on"
+    },
+    {
+      "from": "n6",
+      "status": "local_static_candidate",
+      "to": "n4",
+      "type": "may_cross"
+    },
+    {
+      "from": "n7",
+      "status": "structural",
+      "to": "n2",
+      "type": "may_guard"
+    }
+  ],
+  "generator": "agentsecbench_security_adg_product_v1",
+  "graph_id": "SADG-ASB-B9939207E2EA1DDA",
+  "nodes": [
+    {
+      "agent_relevance": "unknown",
+      "framework_evidence": [],
+      "frameworks": [],
+      "id": "n1",
+      "name": "execute",
+      "type": "agent_or_program_symbol"
+    },
+    {
+      "category": "command_execution",
+      "confidence": "high",
+      "detectors": [
+        "py_subprocess"
+      ],
+      "evidence_lines": [
+        116
+      ],
+      "evidence_snippets": [
+        {
+          "line": 116,
+          "text": "            result = subprocess.run("
+        }
+      ],
+      "id": "n2",
+      "name": "subprocess.run",
+      "type": "security_sensitive_operation"
+    },
+    {
+      "confirmation": "unconfirmed_static_candidate",
+      "id": "n3",
+      "target_class": "process_or_shell",
+      "type": "external_effect"
+    },
+    {
+      "boundary": "less_trusted_input_to_security_sensitive_effect",
+      "crossed": "unconfirmed_static_candidate",
+      "id": "n4",
+      "type": "trust_boundary"
+    },
+    {
+      "id": "n5",
+      "line": 101,
+      "source_type": "function_parameter",
+      "symbol": "cwd",
+      "trust": "unknown",
+      "type": "input_source"
+    },
+    {
+      "id": "n6",
+      "line": 101,
+      "source_type": "function_parameter",
+      "symbol": "timeout",
+      "trust": "unknown",
+      "type": "input_source"
+    },
+    {
+      "confidence": "structural",
+      "effectiveness": "unconfirmed_static_candidate",
+      "id": "n7",
+      "kind": "preceding_related_assert",
+      "line": 105,
+      "symbols": [
+        "self"
+      ],
+      "type": "guard_candidate"
+    }
+  ],
+  "provenance": {
+    "evidence_hash_verified": true,
+    "file": "src/minisweagent/environments/docker.py",
+    "finding_fingerprint": "ASBFP-F8836E1241225A7A59055AE7",
+    "label_inputs_used": false,
+    "line_end": 116,
+    "line_start": 116,
+    "scan_root": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/mini-swe-agent",
+    "source_execution_used": false
+  },
+  "schema_version": "1.0",
+  "views": {
+    "plain_adg": {
+      "edges": [
+        "contains",
+        "may_cause"
+      ],
+      "nodes": [
+        "n1",
+        "n2",
+        "n3"
+      ]
+    },
+    "security_adg": {
+      "dependency_paths": 2,
+      "edges": [
+        "contains",
+        "may_cause",
+        "reaches",
+        "may_data_depend_on",
+        "may_cross",
+        "may_data_depend_on",
+        "may_cross",
+        "may_guard"
+      ],
+      "frameworks": [],
+      "guard_candidates": 1,
+      "interprocedural_nodes": 0,
+      "nodes": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ],
+      "source_candidates": 2
+    },
+    "sink_only": {
+      "edges": [],
+      "nodes": [
+        "n2"
+      ]
+    }
+  }
+}

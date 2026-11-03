@@ -1,0 +1,2896 @@
+[
+  {
+    "candidate_id": "SB-DT0003-00082",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0003-00082",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "execute"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "execute"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0003-00082",
+    "view": "security_adg",
+    "width": 2156,
+    "height": 689,
+    "boxes": {
+      "n9": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "cmd"
+        ]
+      },
+      "n10": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "cwd"
+        ]
+      },
+      "n11": {
+        "x": 1084.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "extra_env"
+        ]
+      },
+      "n12": {
+        "x": 1432.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "timeout"
+        ]
+      },
+      "n2": {
+        "x": 910.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      },
+      "n3": {
+        "x": 910.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "execute"
+        ]
+      },
+      "n8": {
+        "x": 1828,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "execute"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n8",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n9",
+        "type": "input_source",
+        "label": "cmd"
+      },
+      {
+        "id": "n10",
+        "type": "input_source",
+        "label": "cwd"
+      },
+      {
+        "id": "n11",
+        "type": "input_source",
+        "label": "extra_env"
+      },
+      {
+        "id": "n12",
+        "type": "input_source",
+        "label": "timeout"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n8",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n9",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n9",
+        "status": "local_def_use_candidate",
+        "to": "n8",
+        "type": "may_cross"
+      },
+      {
+        "from": "n10",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n10",
+        "status": "local_def_use_candidate",
+        "to": "n8",
+        "type": "may_cross"
+      },
+      {
+        "from": "n11",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n11",
+        "status": "local_def_use_candidate",
+        "to": "n8",
+        "type": "may_cross"
+      },
+      {
+        "from": "n12",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n12",
+        "status": "local_def_use_candidate",
+        "to": "n8",
+        "type": "may_cross"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 1328,
+    "right_x": 1828,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            910.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            1052.0,
+            346
+          ],
+          [
+            1052.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n8",
+        "to": "n2",
+        "points": [
+          [
+            1828,
+            198.0
+          ],
+          [
+            1812,
+            198.0
+          ],
+          [
+            1812,
+            313.5
+          ],
+          [
+            1194.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n9",
+        "to": "n2",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            313.5
+          ],
+          [
+            910.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n9",
+        "to": "n8",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1812,
+            237
+          ],
+          [
+            1812,
+            198.0
+          ],
+          [
+            1828,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n10",
+        "to": "n2",
+        "points": [
+          [
+            878.0,
+            221
+          ],
+          [
+            878.0,
+            313.5
+          ],
+          [
+            910.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n10",
+        "to": "n8",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            237
+          ],
+          [
+            1812,
+            237
+          ],
+          [
+            1812,
+            198.0
+          ],
+          [
+            1828,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n11",
+        "to": "n2",
+        "points": [
+          [
+            1084.0,
+            188.5
+          ],
+          [
+            1068.0,
+            188.5
+          ],
+          [
+            1068.0,
+            265
+          ],
+          [
+            1052.0,
+            265
+          ],
+          [
+            1052.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n11",
+        "to": "n8",
+        "points": [
+          [
+            1368.0,
+            188.5
+          ],
+          [
+            1384.0,
+            188.5
+          ],
+          [
+            1384.0,
+            237
+          ],
+          [
+            1812,
+            237
+          ],
+          [
+            1812,
+            198.0
+          ],
+          [
+            1828,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "points": [
+          [
+            1432.0,
+            188.5
+          ],
+          [
+            1416.0,
+            188.5
+          ],
+          [
+            1416.0,
+            313.5
+          ],
+          [
+            1194.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n8",
+        "points": [
+          [
+            1716.0,
+            188.5
+          ],
+          [
+            1732.0,
+            188.5
+          ],
+          [
+            1732.0,
+            198.0
+          ],
+          [
+            1828,
+            198.0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0002-00007",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.Popen"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.Popen"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0002-00007",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.Popen"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "_run"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "_run"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.Popen"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0002-00007",
+    "view": "security_adg",
+    "width": 1808,
+    "height": 677,
+    "boxes": {
+      "n13": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "command"
+        ]
+      },
+      "n14": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "cwd"
+        ]
+      },
+      "n15": {
+        "x": 1084.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "env"
+        ]
+      },
+      "n2": {
+        "x": 736.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.Popen"
+        ]
+      },
+      "n3": {
+        "x": 736.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "_run"
+        ]
+      },
+      "n12": {
+        "x": 1480,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "_run"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.Popen"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n12",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n13",
+        "type": "input_source",
+        "label": "command"
+      },
+      {
+        "id": "n14",
+        "type": "input_source",
+        "label": "cwd"
+      },
+      {
+        "id": "n15",
+        "type": "input_source",
+        "label": "env"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 980,
+    "right_x": 1480,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            736.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            878.0,
+            346
+          ],
+          [
+            878.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "points": [
+          [
+            1480,
+            198.0
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1464,
+            313.5
+          ],
+          [
+            1020.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n2",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            313.5
+          ],
+          [
+            736.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n12",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1464,
+            237
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "points": [
+          [
+            878.0,
+            221
+          ],
+          [
+            878.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n12",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            237
+          ],
+          [
+            1464,
+            237
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n2",
+        "points": [
+          [
+            1084.0,
+            188.5
+          ],
+          [
+            1068.0,
+            188.5
+          ],
+          [
+            1068.0,
+            313.5
+          ],
+          [
+            1020.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n12",
+        "points": [
+          [
+            1368.0,
+            188.5
+          ],
+          [
+            1384.0,
+            188.5
+          ],
+          [
+            1384.0,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0003-00087",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "shlex.quote"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "shlex.quote"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0003-00087",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "shlex.quote"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "_search_cmd"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "_search_cmd"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "shlex.quote"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0003-00087",
+    "view": "security_adg",
+    "width": 1808,
+    "height": 677,
+    "boxes": {
+      "n13": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "func"
+        ]
+      },
+      "n14": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "args"
+        ]
+      },
+      "n15": {
+        "x": 1084.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "tools_dir"
+        ]
+      },
+      "n2": {
+        "x": 736.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "shlex.quote"
+        ]
+      },
+      "n3": {
+        "x": 736.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "_search_cmd"
+        ]
+      },
+      "n12": {
+        "x": 1480,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "_search_cmd"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "shlex.quote"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n12",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n13",
+        "type": "input_source",
+        "label": "func"
+      },
+      {
+        "id": "n14",
+        "type": "input_source",
+        "label": "args"
+      },
+      {
+        "id": "n15",
+        "type": "input_source",
+        "label": "tools_dir"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 980,
+    "right_x": 1480,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            736.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            878.0,
+            346
+          ],
+          [
+            878.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "points": [
+          [
+            1480,
+            198.0
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1464,
+            313.5
+          ],
+          [
+            1020.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n2",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            313.5
+          ],
+          [
+            736.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n12",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1464,
+            237
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "points": [
+          [
+            878.0,
+            221
+          ],
+          [
+            878.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n12",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            237
+          ],
+          [
+            1464,
+            237
+          ],
+          [
+            1464,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n2",
+        "points": [
+          [
+            1084.0,
+            188.5
+          ],
+          [
+            1068.0,
+            188.5
+          ],
+          [
+            1068.0,
+            313.5
+          ],
+          [
+            1020.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n12",
+        "points": [
+          [
+            1368.0,
+            188.5
+          ],
+          [
+            1384.0,
+            188.5
+          ],
+          [
+            1384.0,
+            198.0
+          ],
+          [
+            1480,
+            198.0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0002-00005",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0002-00005",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "execute"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "execute"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0002-00005",
+    "view": "security_adg",
+    "width": 1460,
+    "height": 671,
+    "boxes": {
+      "n15": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "cwd"
+        ]
+      },
+      "n16": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "timeout"
+        ]
+      },
+      "n2": {
+        "x": 562.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "subprocess.run"
+        ]
+      },
+      "n3": {
+        "x": 562.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "execute"
+        ]
+      },
+      "n14": {
+        "x": 1132,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      },
+      "n17": {
+        "x": 1132,
+        "y": 308,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "preceding_assert"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "execute"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "subprocess.run"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n14",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n15",
+        "type": "input_source",
+        "label": "cwd"
+      },
+      {
+        "id": "n16",
+        "type": "input_source",
+        "label": "timeout"
+      },
+      {
+        "id": "n17",
+        "type": "guard_candidate",
+        "label": "preceding_assert"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n15",
+        "status": "local_def_use_candidate",
+        "to": "n14",
+        "type": "may_cross"
+      },
+      {
+        "from": "n16",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n16",
+        "status": "local_def_use_candidate",
+        "to": "n14",
+        "type": "may_cross"
+      },
+      {
+        "from": "n17",
+        "status": "def_use_related",
+        "to": "n2",
+        "type": "may_guard"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 632,
+    "right_x": 1132,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            704.0,
+            346
+          ],
+          [
+            704.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "points": [
+          [
+            1132,
+            198.0
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1116,
+            313.5
+          ],
+          [
+            846.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n2",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n15",
+        "to": "n14",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1116,
+            237
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n16",
+        "to": "n2",
+        "points": [
+          [
+            736.0,
+            188.5
+          ],
+          [
+            720.0,
+            188.5
+          ],
+          [
+            720.0,
+            265
+          ],
+          [
+            704.0,
+            265
+          ],
+          [
+            704.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n16",
+        "to": "n14",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n17",
+        "to": "n2",
+        "points": [
+          [
+            1132,
+            340.5
+          ],
+          [
+            1116,
+            340.5
+          ],
+          [
+            1116,
+            313.5
+          ],
+          [
+            846.0,
+            313.5
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0001-00038",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0001-00038",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "tarGzDir"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "tarGzDir"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0001-00038",
+    "view": "security_adg",
+    "width": 1460,
+    "height": 665,
+    "boxes": {
+      "n13": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "dir"
+        ]
+      },
+      "n14": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "outPath"
+        ]
+      },
+      "n2": {
+        "x": 562.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      },
+      "n3": {
+        "x": 562.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "tarGzDir"
+        ]
+      },
+      "n12": {
+        "x": 1132,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "tarGzDir"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n12",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n13",
+        "type": "input_source",
+        "label": "dir"
+      },
+      {
+        "id": "n14",
+        "type": "input_source",
+        "label": "outPath"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 632,
+    "right_x": 1132,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            704.0,
+            346
+          ],
+          [
+            704.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "points": [
+          [
+            1132,
+            198.0
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1116,
+            313.5
+          ],
+          [
+            846.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n2",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n12",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1116,
+            237
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "points": [
+          [
+            736.0,
+            188.5
+          ],
+          [
+            720.0,
+            188.5
+          ],
+          [
+            720.0,
+            265
+          ],
+          [
+            704.0,
+            265
+          ],
+          [
+            704.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n12",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0001-00039",
+    "view": "sink_only",
+    "width": 1112,
+    "height": 422,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      }
+    ],
+    "edges": [],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": []
+  },
+  {
+    "candidate_id": "SB-DT0001-00039",
+    "view": "plain_adg",
+    "width": 1112,
+    "height": 510,
+    "boxes": {
+      "n2": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      },
+      "n3": {
+        "x": 388.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "tarGzDir"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "tarGzDir"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 284,
+    "right_x": 784,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            388.0,
+            188.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            281
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "candidate_id": "SB-DT0001-00039",
+    "view": "security_adg",
+    "width": 1460,
+    "height": 665,
+    "boxes": {
+      "n13": {
+        "x": 388.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "dir"
+        ]
+      },
+      "n14": {
+        "x": 736.0,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "outPath"
+        ]
+      },
+      "n2": {
+        "x": 562.0,
+        "y": 281,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "spawn"
+        ]
+      },
+      "n3": {
+        "x": 562.0,
+        "y": 406,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "process_or_shell"
+        ]
+      },
+      "n1": {
+        "x": 44,
+        "y": 156,
+        "width": 284,
+        "height": 65,
+        "lines": [
+          "tarGzDir"
+        ]
+      },
+      "n12": {
+        "x": 1132,
+        "y": 156,
+        "width": 284,
+        "height": 84,
+        "lines": [
+          "less_trusted_input_to_security_",
+          "sensitive_effect"
+        ]
+      }
+    },
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "agent_or_program_symbol",
+        "label": "tarGzDir"
+      },
+      {
+        "id": "n2",
+        "type": "security_sensitive_operation",
+        "label": "spawn"
+      },
+      {
+        "id": "n3",
+        "type": "external_effect",
+        "label": "process_or_shell"
+      },
+      {
+        "id": "n12",
+        "type": "trust_boundary",
+        "label": "less_trusted_input_to_security_sensitive_effect"
+      },
+      {
+        "id": "n13",
+        "type": "input_source",
+        "label": "dir"
+      },
+      {
+        "id": "n14",
+        "type": "input_source",
+        "label": "outPath"
+      }
+    ],
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "type": "contains"
+      },
+      {
+        "from": "n2",
+        "status": "category_semantics",
+        "to": "n3",
+        "type": "may_cause"
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "type": "reaches"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n13",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n2",
+        "type": "may_data_depend_on"
+      },
+      {
+        "from": "n14",
+        "status": "local_def_use_candidate",
+        "to": "n12",
+        "type": "may_cross"
+      }
+    ],
+    "cyclic_nodes": [],
+    "centre_x": 388,
+    "centre_width": 632,
+    "right_x": 1132,
+    "routes": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "points": [
+          [
+            328,
+            188.5
+          ],
+          [
+            344,
+            188.5
+          ],
+          [
+            344,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "points": [
+          [
+            704.0,
+            346
+          ],
+          [
+            704.0,
+            406
+          ]
+        ]
+      },
+      {
+        "from": "n12",
+        "to": "n2",
+        "points": [
+          [
+            1132,
+            198.0
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1116,
+            313.5
+          ],
+          [
+            846.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n2",
+        "points": [
+          [
+            530.0,
+            221
+          ],
+          [
+            530.0,
+            313.5
+          ],
+          [
+            562.0,
+            313.5
+          ]
+        ]
+      },
+      {
+        "from": "n13",
+        "to": "n12",
+        "points": [
+          [
+            672.0,
+            188.5
+          ],
+          [
+            688.0,
+            188.5
+          ],
+          [
+            688.0,
+            237
+          ],
+          [
+            1116,
+            237
+          ],
+          [
+            1116,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n2",
+        "points": [
+          [
+            736.0,
+            188.5
+          ],
+          [
+            720.0,
+            188.5
+          ],
+          [
+            720.0,
+            265
+          ],
+          [
+            704.0,
+            265
+          ],
+          [
+            704.0,
+            281
+          ]
+        ]
+      },
+      {
+        "from": "n14",
+        "to": "n12",
+        "points": [
+          [
+            1020.0,
+            188.5
+          ],
+          [
+            1036.0,
+            188.5
+          ],
+          [
+            1036.0,
+            198.0
+          ],
+          [
+            1132,
+            198.0
+          ]
+        ]
+      }
+    ]
+  }
+]

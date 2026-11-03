@@ -1,0 +1,405 @@
+[
+  {
+    "case": "config_return",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [],
+      "guards": [],
+      "dependency_paths": [],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "cross_file_direct",
+    "file": "helper.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 4,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "value",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "value"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "cross_file_local_alias",
+    "file": "helper.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 4,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "value",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "value"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "early_return_guard",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "command"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "enclosing_guard",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 5,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [
+        {
+          "line": 4,
+          "kind": "dominating_if",
+          "symbols": [
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "command"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "js_multiline",
+    "file": "case.ts",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "typescript_backward_slice_v1",
+      "operation_line": 2,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 1,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [],
+      "dependency_paths": [
+        [
+          "operation",
+          "command"
+        ]
+      ],
+      "limitations": [
+        "lexical TypeScript analysis does not prove control-flow dominance or aliasing"
+      ],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "js_singleline",
+    "file": "case.ts",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "typescript_backward_slice_v1",
+      "operation_line": 2,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 1,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [],
+      "dependency_paths": [
+        [
+          "operation",
+          "command"
+        ]
+      ],
+      "limitations": [
+        "lexical TypeScript analysis does not prove control-flow dominance or aliasing"
+      ],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "local_overwrite",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [],
+      "guards": [],
+      "dependency_paths": [],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "parameter_overwrite",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 5,
+      "sources": [],
+      "guards": [],
+      "dependency_paths": [],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "recursion",
+    "file": "case.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [
+        {
+          "line": 4,
+          "kind": "dominating_if",
+          "symbols": [
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "command"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "small-auth-app",
+    "file": "app.ts",
+    "category": "network_access",
+    "analysis": {
+      "engine": "typescript_backward_slice_v1",
+      "operation_line": 6,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "payload",
+          "line": 3,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [
+        {
+          "line": 4,
+          "kind": "preceding_related_if",
+          "symbols": [
+            "settings"
+          ],
+          "confidence": "lexical"
+        }
+      ],
+      "dependency_paths": [
+        [
+          "operation",
+          "payload"
+        ]
+      ],
+      "limitations": [
+        "lexical TypeScript analysis does not prove control-flow dominance or aliasing"
+      ],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "temporal-A",
+    "file": "agent.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [],
+      "guards": [
+        {
+          "line": 5,
+          "kind": "dominating_if",
+          "symbols": [
+            "allowed",
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "temporal-B",
+    "file": "agent.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [],
+      "guards": [
+        {
+          "line": 5,
+          "kind": "dominating_if",
+          "symbols": [
+            "allowed",
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "temporal-C",
+    "file": "agent.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 4,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [
+        {
+          "line": 5,
+          "kind": "dominating_if",
+          "symbols": [
+            "allowed",
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "command"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  },
+  {
+    "case": "temporal-D",
+    "file": "agent.py",
+    "category": "command_execution",
+    "analysis": {
+      "engine": "python_ast_v1",
+      "operation_line": 6,
+      "sources": [
+        {
+          "source_type": "function_parameter",
+          "symbol": "command",
+          "line": 4,
+          "trust": "unknown"
+        }
+      ],
+      "guards": [
+        {
+          "line": 5,
+          "kind": "dominating_if",
+          "symbols": [
+            "allowed",
+            "command"
+          ],
+          "confidence": "structural"
+        }
+      ],
+      "dependency_paths": [
+        [
+          "subprocess.run",
+          "command"
+        ]
+      ],
+      "limitations": [],
+      "framework_evidence": []
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "valid": true,
+  "graph_count": 2,
+  "unique_candidates": 2,
+  "node_type_graph_counts": {
+    "agent_or_program_symbol": 2,
+    "external_effect": 2,
+    "input_source": 2,
+    "security_sensitive_operation": 2,
+    "trust_boundary": 2
+  },
+  "error_count": 0,
+  "errors": []
+}

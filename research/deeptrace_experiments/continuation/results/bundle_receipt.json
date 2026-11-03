@@ -1,0 +1,8 @@
+{
+  "path": "/Users/vedpanse/DSC-180A/output/pdf/DeepTrace_Continuation_Source_and_Results.zip",
+  "bytes": 27897547,
+  "sha256": "1f55521a699e28ae93402497efee594cb18f0dec811782f028b5b7f80c2c114b",
+  "files": 15669,
+  "credentials_excluded": true,
+  "scope": "continuation plus shared interpreter, settings, locked dependencies and original pilot metrics; cloned analyzer repos obtainable at recorded commits; cached original trajectories not redistributed here"
+}

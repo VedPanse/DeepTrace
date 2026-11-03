@@ -1,0 +1,46 @@
+{
+  "checked_date_local": "2026-10-21",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.03014v1",
+      "role": "paper method sections 3.2\u20133.5; limitations 5.3; availability and appendices"
+    },
+    {
+      "url": "https://github.com/A1LinLin1/AgentSecBench",
+      "commit": "e27f83d631c91b80fb55a2f1d9e4112f1a080ceb",
+      "role": "primary implementation and tests"
+    },
+    {
+      "url": "https://arxiv.org/html/2604.15384v2",
+      "role": "monitor shallow-tracing motivation"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.01640",
+      "role": "framework-aware graph-analysis overlap"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.22724",
+      "role": "temporal causal agent-defense overlap"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.10749",
+      "role": "runtime causal attribution overlap"
+    },
+    {
+      "url": "https://arxiv.org/abs/2310.05736",
+      "role": "budget compression overlap"
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.12968",
+      "role": "compression overlap"
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.18529",
+      "role": "modular taint checking overlap"
+    },
+    {
+      "url": "https://fbinfer.com/docs/1.1.0/steps-for-ci/",
+      "role": "incremental static-analysis prior art"
+    }
+  ]
+}

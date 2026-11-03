@@ -1,0 +1,1262 @@
+[
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 9,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 6,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "assumption",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "oracle",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 512,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 9,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 4,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 6,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "assumption",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "graph_diff",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 3,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "oracle",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 1,
+    "benign_n": 36,
+    "fp": 1
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "prose",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "static_history",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "conjunction",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "length_guard",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "family",
+    "value": "negation",
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 1,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 3,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "depth",
+    "value": 5,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 2
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 0,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 24,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 3
+  },
+  {
+    "condition": "temporal",
+    "budget": 1024,
+    "dimension": "gap",
+    "value": 8,
+    "positive_n": 9,
+    "tp": 0,
+    "benign_n": 36,
+    "fp": 0
+  }
+]

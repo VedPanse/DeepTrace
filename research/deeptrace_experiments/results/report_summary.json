@@ -1,0 +1,14 @@
+{
+  "logical_evaluations": 6384,
+  "unique_primary_prompts": 2657,
+  "all_recorded_api_responses": 5482,
+  "total_recorded_cost_including_development_and_probe_usd": 0.60041687,
+  "primary_prompt_tokens": 4799883,
+  "primary_completion_tokens": 155764,
+  "median_latency_seconds": 1.127207792000263,
+  "e1_empty_graph_boundaries": 366,
+  "e1_boundaries": 434,
+  "e2_assumption_512_recall": 0.4444444444444444,
+  "e2_assumption_512_test_fpr": 0.027777777777777776,
+  "hypotheses_confirmed": false
+}

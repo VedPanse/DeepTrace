@@ -1,0 +1,3406 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/credential_access",
+              "name": "credential_access",
+              "shortDescription": {
+                "text": "Credential Access"
+              },
+              "fullDescription": {
+                "text": "Credential-like environment access"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "credential_access"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/database_access",
+              "name": "database_access",
+              "shortDescription": {
+                "text": "Database Access"
+              },
+              "fullDescription": {
+                "text": "Database client or query API reference"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "database_access"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_read",
+              "name": "filesystem_read",
+              "shortDescription": {
+                "text": "Filesystem Read"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript file-read operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_read"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/network_access",
+              "name": "network_access",
+              "shortDescription": {
+                "text": "Network Access"
+              },
+              "fullDescription": {
+                "text": "Direct socket connection; JavaScript or TypeScript HTTP request"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "network_access"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/middleware/auth.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "endLine": 2
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D3E76A11EE7732B3",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-82540338E7BB9E498AAF4E4B"
+          },
+          "properties": {
+            "candidateId": "ASB-D3E76A11EE7732B3",
+            "fingerprint": "ASBFP-82540338E7BB9E498AAF4E4B",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/middleware/auth.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-EF75EE876C5E09FB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-41DAB59A1937728D8B9ACB54"
+          },
+          "properties": {
+            "candidateId": "ASB-EF75EE876C5E09FB",
+            "fingerprint": "ASBFP-41DAB59A1937728D8B9ACB54",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in authMiddleware"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/middleware/auth.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 35,
+                  "endLine": 35
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C8E098007EDCABC7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-91D55B86A263BCA414D989C6"
+          },
+          "properties": {
+            "candidateId": "ASB-C8E098007EDCABC7",
+            "fingerprint": "ASBFP-91D55B86A263BCA414D989C6",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "endLine": 2
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3C3500FAC014E056",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-1C9C1DBB123EA732758C894F"
+          },
+          "properties": {
+            "candidateId": "ASB-3C3500FAC014E056",
+            "fingerprint": "ASBFP-1C9C1DBB123EA732758C894F",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C63D360CCE7DEC2C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3D8C68960CD5FAF1CFB5FBC0"
+          },
+          "properties": {
+            "candidateId": "ASB-C63D360CCE7DEC2C",
+            "fingerprint": "ASBFP-3D8C68960CD5FAF1CFB5FBC0",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-34A54659C11206D9",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AAC48CC7F771835630C5FA15"
+          },
+          "properties": {
+            "candidateId": "ASB-34A54659C11206D9",
+            "fingerprint": "ASBFP-AAC48CC7F771835630C5FA15",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-BDF5E9C924770E05",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B259BDDA63A0A120176DDF73"
+          },
+          "properties": {
+            "candidateId": "ASB-BDF5E9C924770E05",
+            "fingerprint": "ASBFP-B259BDDA63A0A120176DDF73",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 74,
+                  "endLine": 74
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-702D68FC0B29117C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FC3BB1656DD574C70D61B64D"
+          },
+          "properties": {
+            "candidateId": "ASB-702D68FC0B29117C",
+            "fingerprint": "ASBFP-FC3BB1656DD574C70D61B64D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 106,
+                  "endLine": 106
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-54C67B7AB4D05F7E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB"
+          },
+          "properties": {
+            "candidateId": "ASB-54C67B7AB4D05F7E",
+            "fingerprint": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 152,
+                  "endLine": 152
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A85072C7A3219B17",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB"
+          },
+          "properties": {
+            "candidateId": "ASB-A85072C7A3219B17",
+            "fingerprint": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 174,
+                  "endLine": 174
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-CFDF36CA5D01D930",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BB773379236FBC09E1AF26E5"
+          },
+          "properties": {
+            "candidateId": "ASB-CFDF36CA5D01D930",
+            "fingerprint": "ASBFP-BB773379236FBC09E1AF26E5",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 208,
+                  "endLine": 208
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-77443AC17DBF23AF",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB"
+          },
+          "properties": {
+            "candidateId": "ASB-77443AC17DBF23AF",
+            "fingerprint": "ASBFP-FC2DCF4BD1DE5CBD3730C3DB",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 221,
+                  "endLine": 221
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2D19C6CD4BED28E7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-ACCE35F98A82B6DB08E600AC"
+          },
+          "properties": {
+            "candidateId": "ASB-2D19C6CD4BED28E7",
+            "fingerprint": "ASBFP-ACCE35F98A82B6DB08E600AC",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "endLine": 2
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DDFC7D64EDE2E741",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-33EC9106D25CC092357A5B1D"
+          },
+          "properties": {
+            "candidateId": "ASB-DDFC7D64EDE2E741",
+            "fingerprint": "ASBFP-33EC9106D25CC092357A5B1D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "endLine": 8
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-52AD5BA230E6712C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-39B745C8DFF1D231B21B7989"
+          },
+          "properties": {
+            "candidateId": "ASB-52AD5BA230E6712C",
+            "fingerprint": "ASBFP-39B745C8DFF1D231B21B7989",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logAudit"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 17,
+                  "endLine": 17
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-44FE646601D5E990",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-1CD4A4E2FF00FF7E0716F752"
+          },
+          "properties": {
+            "candidateId": "ASB-44FE646601D5E990",
+            "fingerprint": "ASBFP-1CD4A4E2FF00FF7E0716F752",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logAudit"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 33,
+                  "endLine": 33
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F5D1EB9B42BE1A4A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7F7C440134F672A4826488F5"
+          },
+          "properties": {
+            "candidateId": "ASB-F5D1EB9B42BE1A4A",
+            "fingerprint": "ASBFP-7F7C440134F672A4826488F5",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 58,
+                  "endLine": 58
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6EE4691DCAE14BFA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BEC4308B8ACB584678D80E90"
+          },
+          "properties": {
+            "candidateId": "ASB-6EE4691DCAE14BFA",
+            "fingerprint": "ASBFP-BEC4308B8ACB584678D80E90",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 91,
+                  "endLine": 91
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8F236C2E2AADEBFB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E3B6E36379E05D5C5CD2E9EA"
+          },
+          "properties": {
+            "candidateId": "ASB-8F236C2E2AADEBFB",
+            "fingerprint": "ASBFP-E3B6E36379E05D5C5CD2E9EA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 121,
+                  "endLine": 121
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-877A85F1F9E5CB50",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E7AE0109BA12C700397499DE"
+          },
+          "properties": {
+            "candidateId": "ASB-877A85F1F9E5CB50",
+            "fingerprint": "ASBFP-E7AE0109BA12C700397499DE",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 133,
+                  "endLine": 133
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B2B787E5B34C5EB2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E168F5B9FDF2906F3F09E65D"
+          },
+          "properties": {
+            "candidateId": "ASB-B2B787E5B34C5EB2",
+            "fingerprint": "ASBFP-E168F5B9FDF2906F3F09E65D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 162,
+                  "endLine": 162
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0B1298E3894B6AF6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E7AE0109BA12C700397499DE"
+          },
+          "properties": {
+            "candidateId": "ASB-0B1298E3894B6AF6",
+            "fingerprint": "ASBFP-E7AE0109BA12C700397499DE",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 174,
+                  "endLine": 174
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1E566F14329DBF1E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E168F5B9FDF2906F3F09E65D"
+          },
+          "properties": {
+            "candidateId": "ASB-1E566F14329DBF1E",
+            "fingerprint": "ASBFP-E168F5B9FDF2906F3F09E65D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 196,
+                  "endLine": 196
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E68FC0D245A96F87",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BEC4308B8ACB584678D80E90"
+          },
+          "properties": {
+            "candidateId": "ASB-E68FC0D245A96F87",
+            "fingerprint": "ASBFP-BEC4308B8ACB584678D80E90",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/routes/workflows.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 209,
+                  "endLine": 209
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3D845DB2C7DCBDD3",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-048E187534440C2FCBE70BE8"
+          },
+          "properties": {
+            "candidateId": "ASB-3D845DB2C7DCBDD3",
+            "fingerprint": "ASBFP-048E187534440C2FCBE70BE8",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/engine/nodes/http.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "endLine": 45
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8CB1BBB81D2D97C7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-899851E217F222D454CF26AD"
+          },
+          "properties": {
+            "candidateId": "ASB-8CB1BBB81D2D97C7",
+            "fingerprint": "ASBFP-899851E217F222D454CF26AD",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/entrypoint.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 23,
+                  "endLine": 23
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-120CC4E87B1BC452",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-774B55AC062EF726C56B1350"
+          },
+          "properties": {
+            "candidateId": "ASB-120CC4E87B1BC452",
+            "fingerprint": "ASBFP-774B55AC062EF726C56B1350",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/entrypoint.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 26,
+                  "endLine": 26
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1490DBBAB91F5BDB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3CE86B97C7812422B13B4B60"
+          },
+          "properties": {
+            "candidateId": "ASB-1490DBBAB91F5BDB",
+            "fingerprint": "ASBFP-3CE86B97C7812422B13B4B60",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/entrypoint.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-21D8B4BBF1B9C8F6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7A0ADDC0F42E9476BB1BAC5B"
+          },
+          "properties": {
+            "candidateId": "ASB-21D8B4BBF1B9C8F6",
+            "fingerprint": "ASBFP-7A0ADDC0F42E9476BB1BAC5B",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "warning",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/lib/broker.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 7,
+                  "endLine": 7
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-ED340A50436796EA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FE3F49D97D8AE20C73B57C1A"
+          },
+          "properties": {
+            "candidateId": "ASB-ED340A50436796EA",
+            "fingerprint": "ASBFP-FE3F49D97D8AE20C73B57C1A",
+            "confidence": "high",
+            "detectors": [
+              "environment_secret"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "warning",
+          "message": {
+            "text": "credential access candidate in getEncryptionKey"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/lib/secrets.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6B38E7096CB732CA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-2DFD198D9A1CDA6083245414"
+          },
+          "properties": {
+            "candidateId": "ASB-6B38E7096CB732CA",
+            "fingerprint": "ASBFP-2DFD198D9A1CDA6083245414",
+            "confidence": "high",
+            "detectors": [
+              "environment_secret"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/restart.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 30,
+                  "endLine": 30
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-82F0C287715B9A4A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-20D4FC2E153FD91E3BE218E8"
+          },
+          "properties": {
+            "candidateId": "ASB-82F0C287715B9A4A",
+            "fingerprint": "ASBFP-20D4FC2E153FD91E3BE218E8",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/restart.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2123DBED7F2F36AA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EC5BC66B6B20039EF70858AB"
+          },
+          "properties": {
+            "candidateId": "ASB-2123DBED7F2F36AA",
+            "fingerprint": "ASBFP-EC5BC66B6B20039EF70858AB",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/restart.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E76E8190D32F6912",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7293947EF0128F0F7EE84346"
+          },
+          "properties": {
+            "candidateId": "ASB-E76E8190D32F6912",
+            "fingerprint": "ASBFP-7293947EF0128F0F7EE84346",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/restart.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "endLine": 66
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5CE5DCC003BEDB21",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6827E6B2A98313B0D910EEA4"
+          },
+          "properties": {
+            "candidateId": "ASB-5CE5DCC003BEDB21",
+            "fingerprint": "ASBFP-6827E6B2A98313B0D910EEA4",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/restart.sh",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 69,
+                  "endLine": 69
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C454648EFC41B071",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BF57C764C78467D7352C5201"
+          },
+          "properties": {
+            "candidateId": "ASB-C454648EFC41B071",
+            "fingerprint": "ASBFP-BF57C764C78467D7352C5201",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-074945C8E23C2177",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7E58CE45A6A0B4B377F0646E"
+          },
+          "properties": {
+            "candidateId": "ASB-074945C8E23C2177",
+            "fingerprint": "ASBFP-7E58CE45A6A0B4B377F0646E",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8FC4CADB0FF5F53E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FB0D370FFC4113A9A8BAB7D4"
+          },
+          "properties": {
+            "candidateId": "ASB-8FC4CADB0FF5F53E",
+            "fingerprint": "ASBFP-FB0D370FFC4113A9A8BAB7D4",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10,
+                  "endLine": 10
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-317925DFD148EB0B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-74E85B4298D9B8C6AA488BCF"
+          },
+          "properties": {
+            "candidateId": "ASB-317925DFD148EB0B",
+            "fingerprint": "ASBFP-74E85B4298D9B8C6AA488BCF",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 11,
+                  "endLine": 11
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A520F194D0BFB78B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E830BD44C26922FC22C8292E"
+          },
+          "properties": {
+            "candidateId": "ASB-A520F194D0BFB78B",
+            "fingerprint": "ASBFP-E830BD44C26922FC22C8292E",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 12,
+                  "endLine": 12
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D2D27D5E91CBB621",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C60691B9C871F64F07E15424"
+          },
+          "properties": {
+            "candidateId": "ASB-D2D27D5E91CBB621",
+            "fingerprint": "ASBFP-C60691B9C871F64F07E15424",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 13,
+                  "endLine": 13
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C00A493CE54F451E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-41E27BDEA64FAA3E5F3CC8DF"
+          },
+          "properties": {
+            "candidateId": "ASB-C00A493CE54F451E",
+            "fingerprint": "ASBFP-41E27BDEA64FAA3E5F3CC8DF",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 14,
+                  "endLine": 14
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D4312393B51AEBB0",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-1918D9CC41788308C0C44C18"
+          },
+          "properties": {
+            "candidateId": "ASB-D4312393B51AEBB0",
+            "fingerprint": "ASBFP-1918D9CC41788308C0C44C18",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 15,
+                  "endLine": 15
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-708001A240C25602",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-CADC1FA06E5557152B96ABB2"
+          },
+          "properties": {
+            "candidateId": "ASB-708001A240C25602",
+            "fingerprint": "ASBFP-CADC1FA06E5557152B96ABB2",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 18,
+                  "endLine": 18
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5D57DEFAF8893541",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-CB02557CAA8E875B089106FF"
+          },
+          "properties": {
+            "candidateId": "ASB-5D57DEFAF8893541",
+            "fingerprint": "ASBFP-CB02557CAA8E875B089106FF",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 19,
+                  "endLine": 19
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0EB62E8A7B048716",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C9F39AB1DA584CE3E59FAFD6"
+          },
+          "properties": {
+            "candidateId": "ASB-0EB62E8A7B048716",
+            "fingerprint": "ASBFP-C9F39AB1DA584CE3E59FAFD6",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 20,
+                  "endLine": 20
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8C91B52056974F95",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4B9DB184A6856D2273738413"
+          },
+          "properties": {
+            "candidateId": "ASB-8C91B52056974F95",
+            "fingerprint": "ASBFP-4B9DB184A6856D2273738413",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 21,
+                  "endLine": 21
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-19C3C6EA8F2A47B6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5CFE73E9D86BE4B39514CC31"
+          },
+          "properties": {
+            "candidateId": "ASB-19C3C6EA8F2A47B6",
+            "fingerprint": "ASBFP-5CFE73E9D86BE4B39514CC31",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 22,
+                  "endLine": 22
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-646677B00C148299",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-DB9CB1621971D48293D952FF"
+          },
+          "properties": {
+            "candidateId": "ASB-646677B00C148299",
+            "fingerprint": "ASBFP-DB9CB1621971D48293D952FF",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 23,
+                  "endLine": 23
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-678982EB0FEA8624",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-827161D27742AEA0726C1129"
+          },
+          "properties": {
+            "candidateId": "ASB-678982EB0FEA8624",
+            "fingerprint": "ASBFP-827161D27742AEA0726C1129",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 26,
+                  "endLine": 26
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2E415E6C1DD01F13",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A7E8EEF55A6688EC9F31B467"
+          },
+          "properties": {
+            "candidateId": "ASB-2E415E6C1DD01F13",
+            "fingerprint": "ASBFP-A7E8EEF55A6688EC9F31B467",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-552A6B245D2489E8",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-89AE5274668F8F22AF913754"
+          },
+          "properties": {
+            "candidateId": "ASB-552A6B245D2489E8",
+            "fingerprint": "ASBFP-89AE5274668F8F22AF913754",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 43,
+                  "endLine": 43
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-612CD33B0F080BD5",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BC544B03385306EB1A24DAA8"
+          },
+          "properties": {
+            "candidateId": "ASB-612CD33B0F080BD5",
+            "fingerprint": "ASBFP-BC544B03385306EB1A24DAA8",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 53,
+                  "endLine": 53
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-CAB9560FA241AB9C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F246D6E5BAEAB5753216E50D"
+          },
+          "properties": {
+            "candidateId": "ASB-CAB9560FA241AB9C",
+            "fingerprint": "ASBFP-F246D6E5BAEAB5753216E50D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 63,
+                  "endLine": 63
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6BD4471B1E838977",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-48B0E0548445199232E68869"
+          },
+          "properties": {
+            "candidateId": "ASB-6BD4471B1E838977",
+            "fingerprint": "ASBFP-48B0E0548445199232E68869",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 76,
+                  "endLine": 76
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-4FFDDDFDA55161A4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-4FFDDDFDA55161A4",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 92,
+                  "endLine": 92
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-55A325645485E7A4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-55A325645485E7A4",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 115,
+                  "endLine": 115
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3AFDB439BCCA6E1F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-3AFDB439BCCA6E1F",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 136,
+                  "endLine": 136
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DB8094727A733470",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-DB8094727A733470",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 161,
+                  "endLine": 161
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2C7B221923697910",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-2C7B221923697910",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 188,
+                  "endLine": 188
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-45F28A1F301335B2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-45F28A1F301335B2",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 209,
+                  "endLine": 209
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-FDA647A382EB3C55",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-FDA647A382EB3C55",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 232,
+                  "endLine": 232
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E876241FF06850B9",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E73E4CDA3E810D2746B4ECA"
+          },
+          "properties": {
+            "candidateId": "ASB-E876241FF06850B9",
+            "fingerprint": "ASBFP-0E73E4CDA3E810D2746B4ECA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/seed.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 262,
+                  "endLine": 262
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A80918CE783F7C41",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-00C0E91F3E04E301C73615DA"
+          },
+          "properties": {
+            "candidateId": "ASB-A80918CE783F7C41",
+            "fingerprint": "ASBFP-00C0E91F3E04E301C73615DA",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B650CA8CB8B13B0A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7B89229F208792DCE8D0225A"
+          },
+          "properties": {
+            "candidateId": "ASB-B650CA8CB8B13B0A",
+            "fingerprint": "ASBFP-7B89229F208792DCE8D0225A",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1B314EE98B2B5A52",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-21E3FDD4C8B189AE4D125D0F"
+          },
+          "properties": {
+            "candidateId": "ASB-1B314EE98B2B5A52",
+            "fingerprint": "ASBFP-21E3FDD4C8B189AE4D125D0F",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logSecretAccess"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-903F95D09FFE453C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A223146A00A421AA2CA255E2"
+          },
+          "properties": {
+            "candidateId": "ASB-903F95D09FFE453C",
+            "fingerprint": "ASBFP-A223146A00A421AA2CA255E2",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logWorkflowExecution"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 70,
+                  "endLine": 70
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-27385FF79D94DE20",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F1546B44EB955DAA8AA06E70"
+          },
+          "properties": {
+            "candidateId": "ASB-27385FF79D94DE20",
+            "fingerprint": "ASBFP-F1546B44EB955DAA8AA06E70",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logWorkflowCRUD"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 101,
+                  "endLine": 101
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-162EA70B9AA05B03",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A35B38C4EC70ABC6EBA0C496"
+          },
+          "properties": {
+            "candidateId": "ASB-162EA70B9AA05B03",
+            "fingerprint": "ASBFP-A35B38C4EC70ABC6EBA0C496",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in logAuthEvent"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/audit.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 130,
+                  "endLine": 130
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D8AF7C2983E62071",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C61D5639AD1C15DA173443E1"
+          },
+          "properties": {
+            "candidateId": "ASB-D8AF7C2983E62071",
+            "fingerprint": "ASBFP-C61D5639AD1C15DA173443E1",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D4A91D55B9FE8506",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-CA5712048C8FD8B328B6C341"
+          },
+          "properties": {
+            "candidateId": "ASB-D4A91D55B9FE8506",
+            "fingerprint": "ASBFP-CA5712048C8FD8B328B6C341",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B9C9BDD5EE437F28",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EE47EB2B976F9E69A323E289"
+          },
+          "properties": {
+            "candidateId": "ASB-B9C9BDD5EE437F28",
+            "fingerprint": "ASBFP-EE47EB2B976F9E69A323E289",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in scanTeamWorkflows"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 44,
+                  "endLine": 44
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D5669A26BC92A2F6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-053ACC3659497E1E2DF1D210"
+          },
+          "properties": {
+            "candidateId": "ASB-D5669A26BC92A2F6",
+            "fingerprint": "ASBFP-053ACC3659497E1E2DF1D210",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in syncWorkflow"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 73,
+                  "endLine": 73
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-ABAC6A459E84C74D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4DFC03EA837088CA1B9FDBF1"
+          },
+          "properties": {
+            "candidateId": "ASB-ABAC6A459E84C74D",
+            "fingerprint": "ASBFP-4DFC03EA837088CA1B9FDBF1",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in syncWorkflow"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 82,
+                  "endLine": 82
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F4DC1FDA22F3FFCB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-35396A1AD992AAA92A190DC6"
+          },
+          "properties": {
+            "candidateId": "ASB-F4DC1FDA22F3FFCB",
+            "fingerprint": "ASBFP-35396A1AD992AAA92A190DC6",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in syncWorkflow"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 94,
+                  "endLine": 94
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-4A621F516DAD263C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-42B6AF149C5FE001E0F0C14E"
+          },
+          "properties": {
+            "candidateId": "ASB-4A621F516DAD263C",
+            "fingerprint": "ASBFP-42B6AF149C5FE001E0F0C14E",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in syncAllTeams"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/git-sync.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 113,
+                  "endLine": 113
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B4DFDAEDE683DF8F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AC127CBD16D58772C79697B0"
+          },
+          "properties": {
+            "candidateId": "ASB-B4DFDAEDE683DF8F",
+            "fingerprint": "ASBFP-AC127CBD16D58772C79697B0",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-47595B3B6EC480D3",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E1F1ED99A05E4F68983FBB32"
+          },
+          "properties": {
+            "candidateId": "ASB-47595B3B6EC480D3",
+            "fingerprint": "ASBFP-E1F1ED99A05E4F68983FBB32",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-709D36840146498A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C5198A9133890D91CC3C300D"
+          },
+          "properties": {
+            "candidateId": "ASB-709D36840146498A",
+            "fingerprint": "ASBFP-C5198A9133890D91CC3C300D",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in startServices"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B41ACAC72F0E6F4A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-41884EFDD98DFE0B59BCA6CE"
+          },
+          "properties": {
+            "candidateId": "ASB-B41ACAC72F0E6F4A",
+            "fingerprint": "ASBFP-41884EFDD98DFE0B59BCA6CE",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in startServices"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 38,
+                  "endLine": 38
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-77DE8941C56A90CB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-41884EFDD98DFE0B59BCA6CE"
+          },
+          "properties": {
+            "candidateId": "ASB-77DE8941C56A90CB",
+            "fingerprint": "ASBFP-41884EFDD98DFE0B59BCA6CE",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/scheduler.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3B6E66A3C97557FF",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-050835D57E0E0F5ECF30715B"
+          },
+          "properties": {
+            "candidateId": "ASB-3B6E66A3C97557FF",
+            "fingerprint": "ASBFP-050835D57E0E0F5ECF30715B",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/scheduler.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0E19275BC6DEB699",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B5B7C7069363BDA0C5494700"
+          },
+          "properties": {
+            "candidateId": "ASB-0E19275BC6DEB699",
+            "fingerprint": "ASBFP-B5B7C7069363BDA0C5494700",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in checkAndExecuteWorkflows"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/scheduler.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 92,
+                  "endLine": 92
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-113F40BF04B3B08B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4BE42008376C324D7BD30267"
+          },
+          "properties": {
+            "candidateId": "ASB-113F40BF04B3B08B",
+            "fingerprint": "ASBFP-4BE42008376C324D7BD30267",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in checkAndExecuteWorkflows"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/services/scheduler.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 117,
+                  "endLine": 117
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-4D4AC8818C19858F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-85157CEF1711CBFB7CE333D7"
+          },
+          "properties": {
+            "candidateId": "ASB-4D4AC8818C19858F",
+            "fingerprint": "ASBFP-85157CEF1711CBFB7CE333D7",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in main"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/wait_for_rabbitmq.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 40,
+                  "endLine": 40
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6F75C90F7A176B37",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C348B64004F88536734C2B5F"
+          },
+          "properties": {
+            "candidateId": "ASB-6F75C90F7A176B37",
+            "fingerprint": "ASBFP-C348B64004F88536734C2B5F",
+            "confidence": "high",
+            "detectors": [
+              "socket_api"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8E89CA5009986ACD",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-718E9A24AC24A5CABE25A4DD"
+          },
+          "properties": {
+            "candidateId": "ASB-8E89CA5009986ACD",
+            "fingerprint": "ASBFP-718E9A24AC24A5CABE25A4DD",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 6,
+                  "endLine": 6
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7EA353F8B6D9419C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-425100DC18A80C2C426F5FB9"
+          },
+          "properties": {
+            "candidateId": "ASB-7EA353F8B6D9419C",
+            "fingerprint": "ASBFP-425100DC18A80C2C426F5FB9",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in processWorkflowExecution"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 22,
+                  "endLine": 22
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F636B3CD5B51600B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EDE31C0FA4CFDDD639A30B05"
+          },
+          "properties": {
+            "candidateId": "ASB-F636B3CD5B51600B",
+            "fingerprint": "ASBFP-EDE31C0FA4CFDDD639A30B05",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in processWorkflowExecution"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C14094648FA7BB53",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AD5E78E314342178DA7FFBD6"
+          },
+          "properties": {
+            "candidateId": "ASB-C14094648FA7BB53",
+            "fingerprint": "ASBFP-AD5E78E314342178DA7FFBD6",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 48,
+                  "endLine": 48
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8649BCBE3B779E47",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E8071497B70172AEE18B54B7"
+          },
+          "properties": {
+            "candidateId": "ASB-8649BCBE3B779E47",
+            "fingerprint": "ASBFP-E8071497B70172AEE18B54B7",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 62,
+                  "endLine": 62
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-406811ADA5C6EEA4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E8071497B70172AEE18B54B7"
+          },
+          "properties": {
+            "candidateId": "ASB-406811ADA5C6EEA4",
+            "fingerprint": "ASBFP-E8071497B70172AEE18B54B7",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 104,
+                  "endLine": 104
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-4850D0EAD749BBEA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E3BA30D9040DACA48D0E075A"
+          },
+          "properties": {
+            "candidateId": "ASB-4850D0EAD749BBEA",
+            "fingerprint": "ASBFP-E3BA30D9040DACA48D0E075A",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/database_access",
+          "level": "note",
+          "message": {
+            "text": "database access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/worker/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 110,
+                  "endLine": 110
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F3468FF26894858C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E3BA30D9040DACA48D0E075A"
+          },
+          "properties": {
+            "candidateId": "ASB-F3468FF26894858C",
+            "fingerprint": "ASBFP-E3BA30D9040DACA48D0E075A",
+            "confidence": "medium",
+            "detectors": [
+              "database_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

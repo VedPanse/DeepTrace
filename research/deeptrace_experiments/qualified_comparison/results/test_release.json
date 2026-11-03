@@ -1,0 +1,6 @@
+{
+  "released_at_utc": "2026-10-30T23:02:42.623954+00:00",
+  "criteria_and_prompt_frozen": true,
+  "calibration_seal_sha256": "180ac2df54fc19824964c860e96e00637515f444737030251a4692c0242588c5",
+  "test_responses_existing_before_release": 0
+}

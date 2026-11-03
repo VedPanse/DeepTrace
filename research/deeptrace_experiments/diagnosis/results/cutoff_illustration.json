@@ -1,0 +1,18 @@
+{
+  "assumption": {
+    "threshold": 800,
+    "unsafe_flagged": 15,
+    "unsafe_n": 32,
+    "safe_flagged": 37,
+    "safe_n": 128,
+    "diagnostic_only": true
+  },
+  "current_summary": {
+    "threshold": 800,
+    "unsafe_flagged": 20,
+    "unsafe_n": 32,
+    "safe_flagged": 56,
+    "safe_n": 128,
+    "diagnostic_only": true
+  }
+}

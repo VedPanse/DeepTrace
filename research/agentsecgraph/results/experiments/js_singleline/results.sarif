@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript process invocation candidate"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in run"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "case.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "endLine": 2
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-102F498D76D932BC",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-17F926BE1BCDEFE0E941EDF9"
+          },
+          "properties": {
+            "candidateId": "ASB-102F498D76D932BC",
+            "fingerprint": "ASBFP-17F926BE1BCDEFE0E941EDF9",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

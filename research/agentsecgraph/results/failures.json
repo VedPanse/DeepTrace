@@ -1,0 +1,32 @@
+[
+  {
+    "stage": "container availability",
+    "outcome": "Docker daemon unavailable; used tested macOS Seatbelt instead"
+  },
+  {
+    "stage": "initial sandbox",
+    "outcome": "Python realpath required /opt ancestor metadata; allowed /opt literal without exposing user home"
+  },
+  {
+    "stage": "first product test run",
+    "outcome": "31 temporary-directory read errors out of 36 tests; TMPDIR moved under research results; subsequent 36 passed",
+    "log": "upstream-tests.log"
+  },
+  {
+    "stage": "legacy validation",
+    "outcome": "all_corpus invocation rejected actual development-tagged rows; rerun expected-split development valid",
+    "log": "paper/validation-all-corpus-failure.log"
+  },
+  {
+    "stage": "baseline CLI",
+    "outcome": "initial --findings argument invalid; changed to positional findings input; final B/D policy files exist"
+  },
+  {
+    "stage": "published corpus reproduction",
+    "outcome": "Original dataset/corpus_manifest.csv and frozen source trees absent in public checkout; original corpus metrics not reproduced"
+  },
+  {
+    "stage": "monitor evaluation",
+    "outcome": "Not run; no detection, attack success, precision or recall claims"
+  }
+]

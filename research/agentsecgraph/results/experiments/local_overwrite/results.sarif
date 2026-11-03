@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "Python subprocess invocation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "warning",
+          "message": {
+            "text": "command execution candidate in run"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "case.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 6,
+                  "endLine": 6
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C848F9907771F9DD",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-9837A6072B8AE8CC510688F9"
+          },
+          "properties": {
+            "candidateId": "ASB-C848F9907771F9DD",
+            "fingerprint": "ASBFP-9837A6072B8AE8CC510688F9",
+            "confidence": "high",
+            "detectors": [
+              "py_subprocess"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

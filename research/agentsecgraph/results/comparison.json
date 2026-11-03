@@ -1,0 +1,137 @@
+[
+  {
+    "repository": "html-anything",
+    "files_scanned": 127,
+    "candidate_files": 37,
+    "file_coverage_fraction": 0.29133858267716534,
+    "product_candidates": 130,
+    "paper_candidates": 130,
+    "product_nodes": 576,
+    "product_edges": 490,
+    "paper_nodes": 603,
+    "paper_edges": 527,
+    "product_dependency_graphs": 39,
+    "paper_dependency_graphs": 46,
+    "product_guard_graphs": 11,
+    "paper_guard_graphs": 24,
+    "interprocedural_source_graphs": 0,
+    "wall_seconds": 0.889343667000503,
+    "peak_rss_bytes": 34619392,
+    "acyclic_graphs": 130,
+    "node_types": {
+      "agent_or_program_symbol": 130,
+      "security_sensitive_operation": 130,
+      "external_effect": 130,
+      "trust_boundary": 130,
+      "input_source": 44,
+      "guard_candidate": 12
+    },
+    "edge_types": {
+      "contains": 130,
+      "may_cause": 130,
+      "reaches": 130,
+      "may_data_depend_on": 44,
+      "may_cross": 44,
+      "may_guard": 12
+    },
+    "operation_categories": {
+      "browser_control": 22,
+      "command_execution": 26,
+      "filesystem_delete": 12,
+      "filesystem_read": 23,
+      "filesystem_write": 27,
+      "network_access": 20
+    }
+  },
+  {
+    "repository": "magentic-ui",
+    "files_scanned": 344,
+    "candidate_files": 64,
+    "file_coverage_fraction": 0.18604651162790697,
+    "product_candidates": 256,
+    "paper_candidates": 256,
+    "product_nodes": 1214,
+    "product_edges": 1113,
+    "paper_nodes": 1179,
+    "paper_edges": 1044,
+    "product_dependency_graphs": 127,
+    "paper_dependency_graphs": 107,
+    "product_guard_graphs": 28,
+    "paper_guard_graphs": 26,
+    "interprocedural_source_graphs": 0,
+    "wall_seconds": 5.558672791999925,
+    "peak_rss_bytes": 84393984,
+    "acyclic_graphs": 256,
+    "node_types": {
+      "agent_or_program_symbol": 256,
+      "security_sensitive_operation": 256,
+      "external_effect": 256,
+      "trust_boundary": 256,
+      "guard_candidate": 35,
+      "input_source": 155
+    },
+    "edge_types": {
+      "contains": 256,
+      "may_cause": 256,
+      "reaches": 256,
+      "may_guard": 35,
+      "may_data_depend_on": 155,
+      "may_cross": 155
+    },
+    "operation_categories": {
+      "browser_control": 78,
+      "command_execution": 14,
+      "credential_access": 1,
+      "database_access": 19,
+      "external_tool_invocation": 22,
+      "filesystem_delete": 5,
+      "filesystem_read": 16,
+      "filesystem_write": 95,
+      "network_access": 6
+    }
+  },
+  {
+    "repository": "mini-swe-agent",
+    "files_scanned": 115,
+    "candidate_files": 37,
+    "file_coverage_fraction": 0.3217391304347826,
+    "product_candidates": 123,
+    "paper_candidates": 123,
+    "product_nodes": 571,
+    "product_edges": 519,
+    "paper_nodes": 570,
+    "paper_edges": 517,
+    "product_dependency_graphs": 57,
+    "paper_dependency_graphs": 56,
+    "product_guard_graphs": 8,
+    "paper_guard_graphs": 8,
+    "interprocedural_source_graphs": 0,
+    "wall_seconds": 1.4588298329999816,
+    "peak_rss_bytes": 52903936,
+    "acyclic_graphs": 123,
+    "node_types": {
+      "agent_or_program_symbol": 123,
+      "security_sensitive_operation": 123,
+      "external_effect": 123,
+      "trust_boundary": 123,
+      "input_source": 71,
+      "guard_candidate": 8
+    },
+    "edge_types": {
+      "contains": 123,
+      "may_cause": 123,
+      "reaches": 123,
+      "may_data_depend_on": 71,
+      "may_cross": 71,
+      "may_guard": 8
+    },
+    "operation_categories": {
+      "command_execution": 30,
+      "credential_access": 35,
+      "filesystem_delete": 4,
+      "filesystem_read": 1,
+      "filesystem_write": 48,
+      "network_access": 5
+    }
+  }
+]

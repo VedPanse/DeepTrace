@@ -1,0 +1,16 @@
+{
+  "product_graphs": 509,
+  "paper_graphs": 509,
+  "controlled_product_graphs": 20,
+  "temporal_paper_graphs": 4,
+  "product_svg_files": 521,
+  "candidate_keys_match_paper_and_product": true,
+  "all_checked_graphs_acyclic": true,
+  "source_checkout_unmodified": true,
+  "all_graphs_source_execution_used": false,
+  "svg_node_and_edge_preservation": true,
+  "budget_constraints_satisfied": true,
+  "relative_report_links_valid": true,
+  "source_reference_line_numbers_valid": true,
+  "visual_manual_QA": "selected full real-repository figures and cross_file_direct rendered and inspected; full SVG catalog parsed and compared to JSON"
+}

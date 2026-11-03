@@ -1,0 +1,112 @@
+{
+  "scope": "initial replay /app/src compared to pinned environment source; not a full historical checkpoint",
+  "checks": [
+    {
+      "path": "/app/src/restart.sh",
+      "matches": true
+    },
+    {
+      "path": "/app/src/wait_for_rabbitmq.py",
+      "matches": true
+    },
+    {
+      "path": "/app/src/seed.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/entrypoint.sh",
+      "matches": true
+    },
+    {
+      "path": "/app/src/types/rascal.d.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/lib/broker.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/lib/secrets.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/api/server.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/worker/index.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/executor.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/sandbox.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/types.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/services/network-policy.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/services/scheduler.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/services/git-sync.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/services/index.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/services/audit.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/nodes/javascript.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/nodes/conditional.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/nodes/http.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/nodes/stubs.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/engine/nodes/json-transform.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/api/middleware/rbac.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/api/middleware/auth.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/api/routes/workflows.ts",
+      "matches": true
+    },
+    {
+      "path": "/app/src/api/routes/secrets.ts",
+      "matches": true
+    }
+  ],
+  "extra_source_paths": [
+    "/app/src/internet-simulator/server.ts"
+  ]
+}

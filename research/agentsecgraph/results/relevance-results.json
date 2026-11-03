@@ -1,0 +1,3002 @@
+[
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 512,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 1024,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 2048,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "cross_file_direct",
+    "budget": 4096,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 3,
+    "extractable_reference_facts": 3,
+    "preserved_reference_facts": 3,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 512,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 1024,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 2048,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "small-auth-app",
+    "budget": 4096,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 6,
+    "extractable_reference_facts": 2,
+    "preserved_reference_facts": 2,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 512,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 1024,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 2048,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "all_truncated",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "nearest",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "shortest_paths",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "security_endpoints",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 1,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 2,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 3,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 4,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 5,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 6,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 7,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 8,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 9,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 10,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 11,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 12,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 13,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 14,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 15,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 16,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 17,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 18,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "random",
+    "seed": 19,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "complete evidence-atom support"
+  },
+  {
+    "case": "parameter_overwrite",
+    "budget": 4096,
+    "method": "text_summary",
+    "seed": 0,
+    "reference_fact_count": 2,
+    "extractable_reference_facts": 1,
+    "preserved_reference_facts": 1,
+    "score_scope": "coarse atom mapping only; text summaries are not credited as equal semantic fidelity"
+  }
+]

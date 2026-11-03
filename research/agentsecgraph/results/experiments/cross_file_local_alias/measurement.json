@@ -1,0 +1,42 @@
+{
+  "wall_seconds": 0.006022415999723307,
+  "peak_rss_bytes": 26148864,
+  "rss_platform": "macOS bytes",
+  "summary": {
+    "schema_version": "1.0",
+    "status": "completed",
+    "scan_root": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/fixtures/cross_file_local_alias",
+    "candidate_granularity": "line",
+    "files_considered": 2,
+    "files_scanned": 2,
+    "files_skipped_size": 0,
+    "files_skipped_binary": 0,
+    "files_skipped_pattern": 0,
+    "directories_pruned": 0,
+    "candidate_count": 3,
+    "category_counts": {
+      "command_execution": 1,
+      "external_tool_invocation": 2
+    },
+    "claim_boundary": "static candidates are review targets, not vulnerability claims",
+    "findings_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/findings.jsonl",
+    "security_adg_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/security-adg.jsonl",
+    "validation_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/validation.json",
+    "report_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/report/index.html",
+    "report_manifest_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/report/manifest.json",
+    "sarif_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/results.sarif",
+    "framework_coverage_file": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/experiments/cross_file_local_alias/framework-coverage.json",
+    "configuration_file": null,
+    "framework_adapter_count": 7,
+    "framework_signal_file_count": 1,
+    "framework_modeled_file_count": 1,
+    "generic_candidate_file_count": 1,
+    "interprocedural_enabled": true,
+    "graph_count": 3,
+    "graphs_with_dependency_path": 1,
+    "graphs_with_guard_candidate": 0,
+    "graphs_with_framework_evidence": 1,
+    "graphs_with_interprocedural_source": 0,
+    "wall_seconds": 0.00588
+  }
+}

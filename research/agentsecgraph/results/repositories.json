@@ -1,0 +1,24 @@
+{
+  "analyzer": {
+    "url": "https://github.com/A1LinLin1/AgentSecBench",
+    "commit": "e27f83d631c91b80fb55a2f1d9e4112f1a080ceb",
+    "path": "upstream"
+  },
+  "targets": [
+    {
+      "url": "https://github.com/nexu-io/html-anything",
+      "commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+      "path": "targets/html-anything"
+    },
+    {
+      "url": "https://github.com/SWE-agent/mini-swe-agent",
+      "commit": "04d809ceab9df28f9adaed044884180159172930",
+      "path": "targets/mini-swe-agent"
+    },
+    {
+      "url": "https://github.com/microsoft/magentic-ui",
+      "commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+      "path": "targets/magentic-ui"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "archive": "/Users/vedpanse/DSC-180A/output/deeptrace_meeting/DeepTrace_Selector_Evaluation.zip",
+  "sha256": "6fe2e0754522dbb7159423f9752a0c34ee2177b0ec3760e651b9d87d99a7556e",
+  "files": 213,
+  "new_model_calls_unique": 180,
+  "new_study_accounted_cost_usd": 0.0125825,
+  "negative_result": true
+}

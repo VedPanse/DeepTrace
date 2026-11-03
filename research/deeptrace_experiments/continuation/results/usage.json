@@ -1,0 +1,15 @@
+{
+  "unique_responses": 872,
+  "new_cost_usd": 0.0558825,
+  "prompt_tokens": 726978,
+  "completion_tokens": 49410,
+  "median_latency_seconds": 1.266451479500006,
+  "static_extraction_seconds": 3.21519404600042,
+  "static_states": 960,
+  "static_failures": 0,
+  "static_source_files_scanned": 5760,
+  "median_full_history_summary_seconds": 0.01075068749999275,
+  "summary_update_implementation": "full history recheck; not optimized incremental invalidation",
+  "new_logical_jobs": 2560,
+  "uncertainty_warning": "within-family variants and repeated prompts are dependent; binomial intervals are descriptive; bootstrap has only four blocks and can be degenerate"
+}

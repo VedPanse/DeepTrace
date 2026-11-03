@@ -1,0 +1,49 @@
+{
+  "status": "negative pilot; inspected data remain development only",
+  "files": [
+    {
+      "path": "continuation/results/protocol.json",
+      "sha256": "aea4150ceaa40942455fe9e2dcbf323d88ad8412bbb88b45dbf3484ba7964e36"
+    },
+    {
+      "path": "continuation/results/thresholds.json",
+      "sha256": "36b276f6c9673797ac06a32cb7aece035743cc3204584342278470833389471e"
+    },
+    {
+      "path": "continuation/results/jobs.jsonl",
+      "sha256": "a9a076bf956701029e8341d164d3bbd9b37842cb24ec3c462f3f0d6b1b908201"
+    },
+    {
+      "path": "continuation/results/calibration_scores.jsonl",
+      "sha256": "f2fadaf8916586830b19df4d6233f1b4683c8d3075fc50be6e261041322c48aa"
+    },
+    {
+      "path": "continuation/results/test_scores.jsonl",
+      "sha256": "8922e8cc899c50ea41346d649f7047ee1f94910ad85842497e6b67f2ff0f55df"
+    },
+    {
+      "path": "continuation/results/metrics.json",
+      "sha256": "d5e9ff7d2f5cb367e0a2fa055586ed140062c908d53820fafc01d53c94902a64"
+    },
+    {
+      "path": "continuation/results/paired_comparison.json",
+      "sha256": "ef03fd777a07633670610d9b1c57a25bf3cef7027ea1f5eb763dbe4edb3b413c"
+    },
+    {
+      "path": "diagnosis/results/score_diagnostics.json",
+      "sha256": "b1bc0a06c31c46bb1d28491de851c923ceec1f9157df5cf4cb28dc164c687ba5"
+    },
+    {
+      "path": "diagnosis/results/development_jobs.jsonl",
+      "sha256": "d6d3508784126fcc07307e7b52f2efdf0c0043955ec433d56f8591a6379dac46"
+    },
+    {
+      "path": "diagnosis/results/development_responses.jsonl",
+      "sha256": "28188f9273805b0ae1a9c031bddc724f2e014f5dda42640d263a67574aafb56d"
+    },
+    {
+      "path": "diagnosis/results/probe_diagnosis.json",
+      "sha256": "0aa4d768935d8c63e388b85b03ab203146a9317035afb23a7fcba661edff0396"
+    }
+  ]
+}

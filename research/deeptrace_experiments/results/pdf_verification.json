@@ -1,0 +1,9 @@
+{
+  "pages": 10,
+  "out_of_page_characters": [],
+  "all_pages_rendered_and_visually_inspected": true,
+  "tectonic_compile_success": true,
+  "desktop_latex_compile_success": true,
+  "source_format": "LaTeX",
+  "tex_engine_warnings_after_layout_repair": false
+}

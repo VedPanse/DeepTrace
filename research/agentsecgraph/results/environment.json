@@ -1,0 +1,29 @@
+{
+  "python": "3.13.6 (main, Aug  6 2025, 13:05:20) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "analyzer_commit": "e27f83d631c91b80fb55a2f1d9e4112f1a080ceb",
+  "url": "https://github.com/A1LinLin1/AgentSecBench",
+  "target_manifest": [
+    {
+      "sample_id": "DT0001",
+      "repo": "nexu-io/html-anything",
+      "git_commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+      "repository_path": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/html-anything",
+      "experiment_split": "development"
+    },
+    {
+      "sample_id": "DT0002",
+      "repo": "SWE-agent/mini-swe-agent",
+      "git_commit": "04d809ceab9df28f9adaed044884180159172930",
+      "repository_path": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/mini-swe-agent",
+      "experiment_split": "development"
+    },
+    {
+      "sample_id": "DT0003",
+      "repo": "microsoft/magentic-ui",
+      "git_commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+      "repository_path": "/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/magentic-ui",
+      "experiment_split": "development"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "all_2560_jobs_scored": true,
+  "no_exact_prompt_overlap_across_splits": true,
+  "calibration_unchanged_after_freeze": true,
+  "test_jobs_unchanged_after_freeze": true,
+  "actual_whole_action_retained": true,
+  "evidence_budgets": true,
+  "family_groups_disjoint": true,
+  "same_fact_hash_both_formats": true,
+  "source_spans_match": true,
+  "linuxarena_not_mislabeled_complete": true,
+  "upstream_unchanged": true,
+  "no_credentials_in_deliverable_inputs": true,
+  "hidden_conditions_and_labels": true
+}

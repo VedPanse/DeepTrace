@@ -1,0 +1,130 @@
+[
+  {
+    "case_id": "0d8c631458ab4d4d",
+    "variant": "weakened",
+    "preview_facts_present": {
+      "restriction_status": "violated",
+      "combined_policy_status": "violated",
+      "restriction_formula": "Not(\"\" == command)",
+      "witness": "A",
+      "input_independent": false,
+      "shell": true,
+      "unknown": false,
+      "witness_checked_by_independent_interpreter": true
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "6c17e112c3cace80",
+    "variant": "repaired",
+    "preview_facts_present": {
+      "restriction_status": "preserved",
+      "combined_policy_status": "preserved",
+      "restriction_formula": "\"inspect\" == command",
+      "witness": null,
+      "input_independent": false,
+      "shell": true,
+      "unknown": false
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "8a71eef186a41f76",
+    "variant": "equivalent",
+    "preview_facts_present": {
+      "restriction_status": "preserved",
+      "combined_policy_status": "preserved",
+      "restriction_formula": "\"inspect\" == command",
+      "witness": null,
+      "input_independent": false,
+      "shell": true,
+      "unknown": false
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "220f9cc0f14119b5",
+    "variant": "fixed",
+    "preview_facts_present": {
+      "restriction_status": "violated",
+      "combined_policy_status": "preserved",
+      "restriction_formula": "Not(\"\" == command)",
+      "witness": "A",
+      "input_independent": true,
+      "shell": true,
+      "unknown": false
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "4c1c942daa503f26",
+    "variant": "removed",
+    "preview_facts_present": {
+      "restriction_status": "removed",
+      "combined_policy_status": "removed",
+      "removed": true,
+      "unknown": false,
+      "reason": "authored wrapper has only a literal return and no operation"
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "26ae1a4a791d0ac6",
+    "variant": "weakened",
+    "preview_facts_present": {
+      "restriction_status": "violated",
+      "combined_policy_status": "violated",
+      "restriction_formula": "Not(\"\" == command)",
+      "witness": "A",
+      "input_independent": false,
+      "shell": true,
+      "unknown": false,
+      "witness_checked_by_independent_interpreter": true
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "5afe4c3234d4bf5d",
+    "variant": "repaired",
+    "preview_facts_present": {
+      "restriction_status": "preserved",
+      "combined_policy_status": "preserved",
+      "restriction_formula": "And(command == \"health\", Not(\"\" == command))",
+      "witness": null,
+      "input_independent": false,
+      "shell": true,
+      "unknown": false
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  },
+  {
+    "case_id": "83c1ff60c4885859",
+    "variant": "equivalent",
+    "preview_facts_present": {
+      "restriction_status": "preserved",
+      "combined_policy_status": "preserved",
+      "restriction_formula": "And(command == \"health\", Not(\"\" == command))",
+      "witness": null,
+      "input_independent": false,
+      "shell": true,
+      "unknown": false
+    },
+    "combined_policy_matches_independent_label": true,
+    "sufficient_for_declared_policy_if_verified_facts_trusted": true,
+    "source_review_limit": "full import statements are not all repeated in original function spans, but the resolved predicate and proposed effects are explicit; full code retained in case notebook"
+  }
+]

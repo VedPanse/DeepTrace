@@ -1,0 +1,17 @@
+{
+  "scope": "public v1.0.1 capability check only; not a verified recorded trajectory state",
+  "repository_commit": "041cee543523f98cf3e130c9f4e05b9a74e57de2",
+  "files": 35,
+  "languages": {
+    ".py": 1,
+    ".ts": 23,
+    ".js": 0,
+    ".go": 0,
+    ".sh": 2
+  },
+  "graphs": 94,
+  "graph_source_files": 15,
+  "seconds": 0.13492974999999774,
+  "real_assumption_checker": "unsupported: authored Python runner/policy grammar does not analyze this TypeScript application",
+  "graph_semantics": "candidate extraction; no soundness or completeness guarantee"
+}

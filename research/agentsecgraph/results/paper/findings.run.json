@@ -1,0 +1,42 @@
+{
+  "manifest": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/manifest.csv",
+  "scanned_at_utc": "2026-10-22T01:09:22.432497+00:00",
+  "manifest_repositories": 3,
+  "scanned_repositories": 3,
+  "skipped": [],
+  "failures": [],
+  "candidate_count": 509,
+  "candidate_granularity": "line",
+  "frozen_corpus_modified": false,
+  "execution_metrics": {
+    "wall_seconds": 1.86205,
+    "process_peak_rss_bytes": 80904192,
+    "python_peak_allocated_bytes": null,
+    "memory_metric_scope": "Python allocations in this process; not total RSS",
+    "memory_profiling_enabled": false,
+    "profiling_overhead_included": false,
+    "per_repository": [
+      {
+        "sample_id": "DT0001",
+        "repo": "nexu-io/html-anything",
+        "status": "completed",
+        "candidate_count": 130,
+        "wall_seconds": 0.45916
+      },
+      {
+        "sample_id": "DT0002",
+        "repo": "SWE-agent/mini-swe-agent",
+        "status": "completed",
+        "candidate_count": 123,
+        "wall_seconds": 0.324128
+      },
+      {
+        "sample_id": "DT0003",
+        "repo": "microsoft/magentic-ui",
+        "status": "completed",
+        "candidate_count": 256,
+        "wall_seconds": 1.076078
+      }
+    ]
+  }
+}

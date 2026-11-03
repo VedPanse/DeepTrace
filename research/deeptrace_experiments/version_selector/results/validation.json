@@ -1,0 +1,78 @@
+{
+  "scope": "development engineering validation, not independently human-validated or a detection evaluation",
+  "histories": [
+    {
+      "history": "weakened",
+      "current": "all_inputs",
+      "selected_restriction_transitions": [
+        "violated"
+      ],
+      "tokens": 568,
+      "checks_passed": true
+    },
+    {
+      "history": "restored",
+      "current": "approved_only",
+      "selected_restriction_transitions": [
+        "violated",
+        "restored"
+      ],
+      "tokens": 842,
+      "checks_passed": true
+    },
+    {
+      "history": "irrelevant",
+      "current": "approved_only",
+      "selected_restriction_transitions": [],
+      "tokens": 155,
+      "checks_passed": true
+    },
+    {
+      "history": "equivalent",
+      "current": "approved_only",
+      "selected_restriction_transitions": [],
+      "tokens": 155,
+      "checks_passed": true
+    },
+    {
+      "history": "unknown",
+      "current": "unknown",
+      "selected_restriction_transitions": [
+        "unknown"
+      ],
+      "tokens": 580,
+      "checks_passed": true
+    },
+    {
+      "history": "removed",
+      "current": "no_execution",
+      "selected_restriction_transitions": [
+        "removed"
+      ],
+      "tokens": 687,
+      "checks_passed": true
+    },
+    {
+      "history": "unknown_repaired",
+      "current": "approved_only",
+      "selected_restriction_transitions": [
+        "preserved"
+      ],
+      "tokens": 570,
+      "checks_passed": true
+    },
+    {
+      "history": "cycles",
+      "current": "approved_only",
+      "selected_restriction_transitions": [
+        "violated",
+        "restored"
+      ],
+      "tokens": 842,
+      "checks_passed": true
+    }
+  ],
+  "changed_import_unknown": true,
+  "budget_failure_checked": true,
+  "new_model_calls": 0
+}

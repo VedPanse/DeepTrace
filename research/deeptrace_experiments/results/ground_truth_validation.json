@@ -1,0 +1,8 @@
+{
+  "cases": 270,
+  "concrete_runs": 1620,
+  "labels_changed": 0,
+  "all_matches": true,
+  "interpreter": "full source files, resolved direct imports, whitelisted Python AST, process calls recorded instead of executed",
+  "label_access": "concrete interpreter does not read case variant names or frozen labels while evaluating source"
+}

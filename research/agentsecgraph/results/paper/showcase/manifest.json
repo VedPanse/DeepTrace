@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.1",
+  "renderer": "layered_evidence_svg_v2",
+  "purpose": "interactive static-analysis evidence view; not a vulnerability report",
+  "source_graphs": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/paper/security-adg.jsonl",
+  "source_sha256": "3a2bd8f1464ef80768b5e91576380a96990d85b1951f5da27de9b2656863a5a5",
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "candidate_id": "SB-DT0003-00082",
+      "repo": "microsoft/magentic-ui",
+      "commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+      "file": "src/magentic_ui/sandbox/_null.py"
+    },
+    {
+      "candidate_id": "SB-DT0002-00007",
+      "repo": "SWE-agent/mini-swe-agent",
+      "commit": "04d809ceab9df28f9adaed044884180159172930",
+      "file": "src/minisweagent/environments/local.py"
+    },
+    {
+      "candidate_id": "SB-DT0003-00087",
+      "repo": "microsoft/magentic-ui",
+      "commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+      "file": "src/magentic_ui/teams/omniagent/_registry.py"
+    },
+    {
+      "candidate_id": "SB-DT0002-00005",
+      "repo": "SWE-agent/mini-swe-agent",
+      "commit": "04d809ceab9df28f9adaed044884180159172930",
+      "file": "src/minisweagent/environments/docker.py"
+    },
+    {
+      "candidate_id": "SB-DT0001-00038",
+      "repo": "nexu-io/html-anything",
+      "commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+      "file": "next/src/lib/skills/__tests__/api.test.ts"
+    },
+    {
+      "candidate_id": "SB-DT0001-00039",
+      "repo": "nexu-io/html-anything",
+      "commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+      "file": "next/src/lib/skills/__tests__/cross-device.test.ts"
+    }
+  ],
+  "files": {
+    "page": "index.html",
+    "figures": [
+      "figures/01-SB-DT0003-00082-sink_only.svg",
+      "figures/01-SB-DT0003-00082-plain_adg.svg",
+      "figures/01-SB-DT0003-00082-security_adg.svg",
+      "figures/02-SB-DT0002-00007-sink_only.svg",
+      "figures/02-SB-DT0002-00007-plain_adg.svg",
+      "figures/02-SB-DT0002-00007-security_adg.svg",
+      "figures/03-SB-DT0003-00087-sink_only.svg",
+      "figures/03-SB-DT0003-00087-plain_adg.svg",
+      "figures/03-SB-DT0003-00087-security_adg.svg",
+      "figures/04-SB-DT0002-00005-sink_only.svg",
+      "figures/04-SB-DT0002-00005-plain_adg.svg",
+      "figures/04-SB-DT0002-00005-security_adg.svg",
+      "figures/05-SB-DT0001-00038-sink_only.svg",
+      "figures/05-SB-DT0001-00038-plain_adg.svg",
+      "figures/05-SB-DT0001-00038-security_adg.svg",
+      "figures/06-SB-DT0001-00039-sink_only.svg",
+      "figures/06-SB-DT0001-00039-plain_adg.svg",
+      "figures/06-SB-DT0001-00039-security_adg.svg"
+    ],
+    "layout": "layout.json"
+  }
+}

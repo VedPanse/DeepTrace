@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/credential_access",
+              "name": "credential_access",
+              "shortDescription": {
+                "text": "Credential Access"
+              },
+              "fullDescription": {
+                "text": "Credential-like environment access"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "credential_access"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_read",
+              "name": "filesystem_read",
+              "shortDescription": {
+                "text": "Filesystem Read"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript file-read operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_read"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_write",
+              "name": "filesystem_write",
+              "shortDescription": {
+                "text": "Filesystem Write"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript file-write operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_write"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/credential_access",
+          "level": "warning",
+          "message": {
+            "text": "credential access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 22,
+                  "endLine": 22
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9F69AB5074613302",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-05E33EB0DAC359C5C3C19C47"
+          },
+          "properties": {
+            "candidateId": "ASB-9F69AB5074613302",
+            "fingerprint": "ASBFP-05E33EB0DAC359C5C3C19C47",
+            "confidence": "high",
+            "detectors": [
+              "environment_secret"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in loadBackupPassword"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-31A0DE916994A35A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-8AEA348D5ED7416355A61592"
+          },
+          "properties": {
+            "candidateId": "ASB-31A0DE916994A35A",
+            "fingerprint": "ASBFP-8AEA348D5ED7416355A61592",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in encryptFile"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 135,
+                  "endLine": 135
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E5948FD4855D490F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AB70020782A415E056696A74"
+          },
+          "properties": {
+            "candidateId": "ASB-E5948FD4855D490F",
+            "fingerprint": "ASBFP-AB70020782A415E056696A74",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in encryptFile"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 137,
+                  "endLine": 137
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-98A0B0C8CA8450BE",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-33B85F7F1F42282F8E186AF7"
+          },
+          "properties": {
+            "candidateId": "ASB-98A0B0C8CA8450BE",
+            "fingerprint": "ASBFP-33B85F7F1F42282F8E186AF7",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in decryptFile"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 148,
+                  "endLine": 148
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8DFB52E75AFD0B1B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3EE105E01934FA4FA50D801C"
+          },
+          "properties": {
+            "candidateId": "ASB-8DFB52E75AFD0B1B",
+            "fingerprint": "ASBFP-3EE105E01934FA4FA50D801C",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in decryptFile"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "508f0f831953.js",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 150,
+                  "endLine": 150
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-FA6F6BE02F74F1CE",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FB368BA25644940E7067E117"
+          },
+          "properties": {
+            "candidateId": "ASB-FA6F6BE02F74F1CE",
+            "fingerprint": "ASBFP-FB368BA25644940E7067E117",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

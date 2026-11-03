@@ -1,0 +1,5 @@
+upstream/
+targets/
+**/__pycache__/
+results/tmp/
+results/fixtures/temporal-history/.git/

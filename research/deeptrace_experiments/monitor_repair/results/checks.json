@@ -1,0 +1,15 @@
+{
+  "criteria_unchanged_from_first_qualification": true,
+  "protocol_unchanged_after_development": true,
+  "development_scores_unchanged": true,
+  "development_jobs_frozen": true,
+  "qualification_jobs_frozen": true,
+  "same_evidence_both_models": true,
+  "no_cross_split_exact_duplicates": true,
+  "all_176_primary_results_saved": true,
+  "all_facts_fit_budget": true,
+  "reference_verdict_not_supplied": true,
+  "all_references_recheck": true,
+  "no_qualification_calls_before_release": true,
+  "negative_pilot_unchanged": true
+}

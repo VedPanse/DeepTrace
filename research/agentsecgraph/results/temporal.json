@@ -1,0 +1,48 @@
+[
+  {
+    "version": "A",
+    "commit": "37d9c9af988725326bef017f05985203f72b1118",
+    "canonical_graph_sha256": "b8bbd0ff708e40130886b4eceb76fb4d669c446dcf71292adcf984b430276339",
+    "candidate_id": "ASB-91B0DAF032842D57",
+    "source_count": 0,
+    "guard_count": 1,
+    "dependency_paths": []
+  },
+  {
+    "version": "B",
+    "commit": "7b7910600255d74f5fc75a09f9e5ff2116282ad3",
+    "canonical_graph_sha256": "c6e8073dd937e05abc7ba3221201c7686531a3f97d5d8e0d637b1a6ff7cb516f",
+    "candidate_id": "ASB-91B0DAF032842D57",
+    "source_count": 0,
+    "guard_count": 1,
+    "dependency_paths": []
+  },
+  {
+    "version": "C",
+    "commit": "cb86ecff2d73f4e157102d6b0be168916bae60bd",
+    "canonical_graph_sha256": "0672409368187cf69cc9fc5142a57bb3dcac27e3ace8b0958b24620c221e7969",
+    "candidate_id": "ASB-91B0DAF032842D57",
+    "source_count": 1,
+    "guard_count": 1,
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "command"
+      ]
+    ]
+  },
+  {
+    "version": "D",
+    "commit": "f2feb6dc43601ea98d282b04f678119e47398b0a",
+    "canonical_graph_sha256": "6956f167bd938ab72623173949215b114a3b32376facd3f0bf18942c286d5fa2",
+    "candidate_id": "ASB-91B0DAF032842D57",
+    "source_count": 1,
+    "guard_count": 1,
+    "dependency_paths": [
+      [
+        "subprocess.run",
+        "command"
+      ]
+    ]
+  }
+]

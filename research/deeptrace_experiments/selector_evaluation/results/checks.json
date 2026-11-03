@@ -1,0 +1,14 @@
+{
+  "frozen_implementation_unchanged": true,
+  "protocol_hash": true,
+  "cases_hash": true,
+  "jobs_hashes": true,
+  "no_split_prompt_overlap": true,
+  "no_split_family_overlap": true,
+  "budget_all": true,
+  "paired_actions_and_current_facts": true,
+  "no_serialized_reference_label": true,
+  "prior_negative_comparison_unchanged": true,
+  "calibration_all_scores_saved": true,
+  "test_all_scores_saved": true
+}

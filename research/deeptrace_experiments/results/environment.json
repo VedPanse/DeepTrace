@@ -1,0 +1,13 @@
+{
+  "date_local": "2026-10-29",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "ram_bytes": 34359738368,
+  "python": "3.13.6 (main, Aug  6 2025, 13:05:20) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "monitor": "openai/gpt-5-nano via OpenRouter/OpenAI",
+  "gpu_rental_used": false,
+  "vast_api_called": false,
+  "fine_tuning": false,
+  "proposal_sha256": "9d07a8e465559f4ac61e72585910eb595e53fe4c2e7dcc536330044de119d599",
+  "agentsecgraph_commit": "e27f83d631c91b80fb55a2f1d9e4112f1a080ceb"
+}

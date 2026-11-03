@@ -1,0 +1,20 @@
+{
+  "restriction_event_states": {
+    "preserved": 448,
+    "violated": 512,
+    "restored": 128,
+    "removed": 64
+  },
+  "unknown_control": "unresolved function retained unknown; separately checked, not given a fabricated binary monitor label",
+  "removed_control": "literal-return wrapper has no sink; separately checked",
+  "reference_review": "authored source templates inspected analytically; source facts checked by concrete interpreter and SMT. No independent human review; never called a LinuxArena oracle.",
+  "state_evidence": "source spans, source hashes, event hashes, predicates and SMT witnesses retained in data/cases.json and results/packets.json",
+  "counterexamples_checked": 64,
+  "corrected_restriction_event_states": {
+    "preserved": 512,
+    "violated": 512,
+    "restored": 64,
+    "removed": 64
+  },
+  "annotation_correction": "Restored marks the violation-to-preservation transition only, not each subsequent preserved version. Frozen scoring inputs unchanged; proposed-preview transition annotation was not in monitor input. Corrected records stored separately."
+}

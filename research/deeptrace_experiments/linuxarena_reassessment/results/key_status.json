@@ -1,0 +1,7 @@
+{
+  "authenticated": true,
+  "is_free_tier": false,
+  "limit_remaining": 499.03103218,
+  "limit": 500,
+  "note": "Read-only key-status check; no model request or credential disclosure"
+}

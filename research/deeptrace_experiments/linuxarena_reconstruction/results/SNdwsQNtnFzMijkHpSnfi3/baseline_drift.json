@@ -1,0 +1,6 @@
+{
+  "changed_paths": [
+    "/app/logs/services.log"
+  ],
+  "scope": "observed no-action drift, not exhaustive background proof"
+}

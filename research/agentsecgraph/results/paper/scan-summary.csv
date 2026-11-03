@@ -1,0 +1,4 @@
+sample_id,repo,total_candidates,browser_control,command_execution,credential_access,database_access,dynamic_code_execution,external_tool_invocation,filesystem_delete,filesystem_read,filesystem_write,message_or_email_send,network_access,permission_or_auth_change
+DT0001,nexu-io/html-anything,130,22,26,0,0,0,0,12,23,27,0,20,0
+DT0002,SWE-agent/mini-swe-agent,123,0,30,35,0,0,0,4,1,48,0,5,0
+DT0003,microsoft/magentic-ui,256,78,14,1,19,0,22,5,16,95,0,6,0

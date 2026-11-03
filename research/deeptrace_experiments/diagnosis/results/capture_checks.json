@@ -1,0 +1,7 @@
+{
+  "external_symlink_not_followed": true,
+  "binary_bytes_retained_not_silently_dropped": true,
+  "capture_does_not_assert_verified_provenance": true,
+  "size_limit_fails_whole_capture": true,
+  "manifest_content_hash_checkable": true
+}

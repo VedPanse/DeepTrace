@@ -1,0 +1,2747 @@
+{
+  "warning": "DIAGNOSTIC REUSE OF INSPECTED DATA. Not a fresh held-out result. No new model calls.",
+  "continuation": {
+    "calibration": {
+      "assumption": {
+        "cases": 160,
+        "unique_prompts": 136,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.6488037109375,
+        "auc_unique_prompt_label_pairs": 0.5988581730769231,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "140.0": 1,
+              "150.0": 2,
+              "180.0": 2,
+              "200.0": 4,
+              "250.0": 15,
+              "300.0": 5,
+              "320.0": 2,
+              "350.0": 1,
+              "400.0": 5,
+              "520.0": 1,
+              "600.0": 6,
+              "650.0": 7,
+              "700.0": 18,
+              "750.0": 11,
+              "800.0": 17,
+              "850.0": 11,
+              "900.0": 20
+            },
+            "min": 140.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "250.0": 1,
+              "400.0": 1,
+              "650.0": 3,
+              "700.0": 3,
+              "720.0": 1,
+              "750.0": 2,
+              "780.0": 1,
+              "800.0": 9,
+              "850.0": 7,
+              "900.0": 4
+            },
+            "min": 250.0,
+            "median": 800.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.125,
+            "fpr": 0.15625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.34375,
+            "fpr": 0.2421875
+          },
+          {
+            "threshold": 780.0,
+            "tpr": 0.625,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.65625,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 720.0,
+            "tpr": 0.71875,
+            "fpr": 0.4609375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.75,
+            "fpr": 0.4609375
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.84375,
+            "fpr": 0.6015625
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.9375,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 520.0,
+            "tpr": 0.9375,
+            "fpr": 0.703125
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 0.9375,
+            "fpr": 0.7109375
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 0.96875,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 320.0,
+            "tpr": 0.96875,
+            "fpr": 0.7578125
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.96875,
+            "fpr": 0.7734375
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.96875,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.9296875
+          },
+          {
+            "threshold": 180.0,
+            "tpr": 1.0,
+            "fpr": 0.9609375
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.9765625
+          },
+          {
+            "threshold": 140.0,
+            "tpr": 1.0,
+            "fpr": 0.9921875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "current_summary": {
+        "cases": 160,
+        "unique_prompts": 32,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.57421875,
+        "auc_unique_prompt_label_pairs": 0.5859375,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "150.0": 4,
+              "180.0": 4,
+              "600.0": 8,
+              "700.0": 12,
+              "720.0": 4,
+              "750.0": 8,
+              "800.0": 52,
+              "850.0": 12,
+              "900.0": 24
+            },
+            "min": 150.0,
+            "median": 800.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "700.0": 4,
+              "750.0": 8,
+              "800.0": 4,
+              "850.0": 8,
+              "900.0": 8
+            },
+            "min": 700.0,
+            "median": 825.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.25,
+            "fpr": 0.1875
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.5,
+            "fpr": 0.28125
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.625,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 720.0,
+            "tpr": 0.875,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.875,
+            "fpr": 0.78125
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 1.0,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 180.0,
+            "tpr": 1.0,
+            "fpr": 0.9375
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "graph_diff": {
+        "cases": 160,
+        "unique_prompts": 12,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.453125,
+        "auc_unique_prompt_label_pairs": 0.4375,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "150.0": 8,
+              "300.0": 8,
+              "350.0": 16,
+              "400.0": 16,
+              "600.0": 8,
+              "700.0": 16,
+              "750.0": 8,
+              "800.0": 8,
+              "850.0": 32,
+              "900.0": 8
+            },
+            "min": 150.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "350.0": 8,
+              "400.0": 8,
+              "700.0": 8,
+              "850.0": 8
+            },
+            "min": 350.0,
+            "median": 550.0,
+            "max": 850.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.0,
+            "fpr": 0.0625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.25,
+            "fpr": 0.3125
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.25,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.25,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.5,
+            "fpr": 0.5625
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 0.5,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 0.75,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 1.0,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.9375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "prose": {
+        "cases": 160,
+        "unique_prompts": 68,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.5205078125,
+        "auc_unique_prompt_label_pairs": 0.5234375,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "120.0": 2,
+              "140.0": 2,
+              "150.0": 2,
+              "200.0": 4,
+              "300.0": 6,
+              "450.0": 2,
+              "600.0": 6,
+              "650.0": 4,
+              "700.0": 22,
+              "750.0": 22,
+              "800.0": 26,
+              "900.0": 28,
+              "950.0": 2
+            },
+            "min": 120.0,
+            "median": 750.0,
+            "max": 950.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "250.0": 2,
+              "300.0": 2,
+              "600.0": 2,
+              "700.0": 4,
+              "750.0": 6,
+              "800.0": 10,
+              "900.0": 6
+            },
+            "min": 250.0,
+            "median": 775.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 950.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.015625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.1875,
+            "fpr": 0.234375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.5,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.6875,
+            "fpr": 0.609375
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.8125,
+            "fpr": 0.78125
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.8125,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 450.0,
+            "tpr": 0.875,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.875,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.9375,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.953125
+          },
+          {
+            "threshold": 140.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": 120.0,
+            "tpr": 1.0,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "reference": {
+        "cases": 160,
+        "unique_prompts": 32,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.56640625,
+        "auc_unique_prompt_label_pairs": 0.6015625,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "100.0": 4,
+              "150.0": 8,
+              "200.0": 8,
+              "220.0": 4,
+              "250.0": 8,
+              "300.0": 8,
+              "350.0": 4,
+              "700.0": 24,
+              "800.0": 24,
+              "850.0": 4,
+              "900.0": 32
+            },
+            "min": 100.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "600.0": 8,
+              "700.0": 8,
+              "800.0": 4,
+              "850.0": 8,
+              "900.0": 4
+            },
+            "min": 600.0,
+            "median": 750.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.125,
+            "fpr": 0.25
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.375,
+            "fpr": 0.28125
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5,
+            "fpr": 0.46875
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.75,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 1.0,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 1.0,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 1.0,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 220.0,
+            "tpr": 1.0,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.84375
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.90625
+          },
+          {
+            "threshold": 100.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "static": {
+        "cases": 160,
+        "unique_prompts": 12,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.578125,
+        "auc_unique_prompt_label_pairs": 0.6041666666666666,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "120.0": 8,
+              "350.0": 8,
+              "550.0": 24,
+              "600.0": 8,
+              "700.0": 24,
+              "750.0": 8,
+              "800.0": 16,
+              "850.0": 16,
+              "900.0": 16
+            },
+            "min": 120.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "550.0": 8,
+              "700.0": 8,
+              "800.0": 8,
+              "900.0": 8
+            },
+            "min": 550.0,
+            "median": 750.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.25,
+            "fpr": 0.125
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.25,
+            "fpr": 0.25
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.5,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.75,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 550.0,
+            "tpr": 0.75,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 1.0,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 120.0,
+            "tpr": 1.0,
+            "fpr": 0.9375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "static_history": {
+        "cases": 160,
+        "unique_prompts": 76,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.4775390625,
+        "auc_unique_prompt_label_pairs": 0.4775390625,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "150.0": 2,
+              "200.0": 8,
+              "250.0": 6,
+              "300.0": 8,
+              "400.0": 6,
+              "550.0": 2,
+              "600.0": 12,
+              "650.0": 4,
+              "700.0": 30,
+              "750.0": 12,
+              "800.0": 18,
+              "850.0": 2,
+              "900.0": 18
+            },
+            "min": 150.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "150.0": 4,
+              "250.0": 2,
+              "300.0": 2,
+              "520.0": 2,
+              "700.0": 12,
+              "800.0": 6,
+              "900.0": 4
+            },
+            "min": 150.0,
+            "median": 700.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.125,
+            "fpr": 0.140625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.125,
+            "fpr": 0.15625
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.3125,
+            "fpr": 0.296875
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.3125,
+            "fpr": 0.390625
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.6875,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.6875,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 550.0,
+            "tpr": 0.6875,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 520.0,
+            "tpr": 0.6875,
+            "fpr": 0.765625
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 0.75,
+            "fpr": 0.765625
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.75,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.8125,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.875,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 0.875,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "temporal": {
+        "cases": 160,
+        "unique_prompts": 68,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.27978515625,
+        "auc_unique_prompt_label_pairs": 0.3137019230769231,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "200.0": 6,
+              "230.0": 2,
+              "250.0": 4,
+              "300.0": 4,
+              "400.0": 2,
+              "650.0": 2,
+              "700.0": 28,
+              "750.0": 6,
+              "800.0": 22,
+              "850.0": 4,
+              "900.0": 48
+            },
+            "min": 200.0,
+            "median": 800.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "200.0": 2,
+              "250.0": 4,
+              "300.0": 4,
+              "450.0": 2,
+              "600.0": 2,
+              "700.0": 8,
+              "750.0": 2,
+              "800.0": 6,
+              "900.0": 2
+            },
+            "min": 200.0,
+            "median": 700.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.0625,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.0625,
+            "fpr": 0.40625
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.25,
+            "fpr": 0.578125
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.3125,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.5625,
+            "fpr": 0.84375
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.5625,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 450.0,
+            "tpr": 0.625,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 0.6875,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.6875,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.8125,
+            "fpr": 0.90625
+          },
+          {
+            "threshold": 230.0,
+            "tpr": 0.9375,
+            "fpr": 0.9375
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.9375,
+            "fpr": 0.953125
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      }
+    },
+    "test": {
+      "assumption": {
+        "cases": 160,
+        "unique_prompts": 136,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.6329345703125,
+        "auc_unique_prompt_label_pairs": 0.5802283653846154,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "120.0": 1,
+              "150.0": 3,
+              "200.0": 2,
+              "220.0": 1,
+              "250.0": 4,
+              "300.0": 6,
+              "450.0": 1,
+              "600.0": 5,
+              "650.0": 5,
+              "700.0": 20,
+              "720.0": 1,
+              "750.0": 17,
+              "800.0": 25,
+              "825.0": 1,
+              "850.0": 16,
+              "900.0": 20
+            },
+            "min": 120.0,
+            "median": 750.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "140.0": 1,
+              "680.0": 1,
+              "700.0": 3,
+              "720.0": 1,
+              "750.0": 1,
+              "780.0": 1,
+              "800.0": 9,
+              "820.0": 1,
+              "850.0": 9,
+              "860.0": 1,
+              "900.0": 4
+            },
+            "min": 140.0,
+            "median": 800.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 860.0,
+            "tpr": 0.125,
+            "fpr": 0.15625
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.15625,
+            "fpr": 0.15625
+          },
+          {
+            "threshold": 825.0,
+            "tpr": 0.4375,
+            "fpr": 0.28125
+          },
+          {
+            "threshold": 820.0,
+            "tpr": 0.4375,
+            "fpr": 0.2890625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.46875,
+            "fpr": 0.2890625
+          },
+          {
+            "threshold": 780.0,
+            "tpr": 0.75,
+            "fpr": 0.484375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.78125,
+            "fpr": 0.484375
+          },
+          {
+            "threshold": 720.0,
+            "tpr": 0.8125,
+            "fpr": 0.6171875
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.84375,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 680.0,
+            "tpr": 0.9375,
+            "fpr": 0.78125
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.96875,
+            "fpr": 0.78125
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.96875,
+            "fpr": 0.8203125
+          },
+          {
+            "threshold": 450.0,
+            "tpr": 0.96875,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.96875,
+            "fpr": 0.8671875
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.96875,
+            "fpr": 0.9140625
+          },
+          {
+            "threshold": 220.0,
+            "tpr": 0.96875,
+            "fpr": 0.9453125
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.96875,
+            "fpr": 0.953125
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 0.96875,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": 140.0,
+            "tpr": 0.96875,
+            "fpr": 0.9921875
+          },
+          {
+            "threshold": 120.0,
+            "tpr": 1.0,
+            "fpr": 0.9921875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "current_summary": {
+        "cases": 160,
+        "unique_prompts": 32,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.646484375,
+        "auc_unique_prompt_label_pairs": 0.640625,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "120.0": 4,
+              "600.0": 8,
+              "700.0": 28,
+              "750.0": 4,
+              "800.0": 28,
+              "850.0": 16,
+              "900.0": 36,
+              "950.0": 4
+            },
+            "min": 120.0,
+            "median": 800.0,
+            "max": 950.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "750.0": 4,
+              "800.0": 8,
+              "850.0": 4,
+              "900.0": 16
+            },
+            "min": 750.0,
+            "median": 875.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 950.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.03125
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.5,
+            "fpr": 0.3125
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.625,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.875,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 1.0,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 1.0,
+            "fpr": 0.90625
+          },
+          {
+            "threshold": 120.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "graph_diff": {
+        "cases": 160,
+        "unique_prompts": 12,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.5546875,
+        "auc_unique_prompt_label_pairs": 0.5729166666666666,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "200.0": 24,
+              "300.0": 8,
+              "650.0": 8,
+              "700.0": 32,
+              "750.0": 8,
+              "800.0": 32,
+              "900.0": 16
+            },
+            "min": 200.0,
+            "median": 700.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "200.0": 8,
+              "700.0": 8,
+              "800.0": 8,
+              "900.0": 8
+            },
+            "min": 200.0,
+            "median": 750.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.25,
+            "fpr": 0.125
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.5,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.75,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.75,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.75,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "prose": {
+        "cases": 160,
+        "unique_prompts": 68,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.48583984375,
+        "auc_unique_prompt_label_pairs": 0.43028846153846156,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "150.0": 2,
+              "200.0": 2,
+              "250.0": 16,
+              "260.0": 2,
+              "400.0": 2,
+              "420.0": 2,
+              "600.0": 10,
+              "650.0": 4,
+              "700.0": 16,
+              "750.0": 8,
+              "800.0": 14,
+              "850.0": 8,
+              "900.0": 42
+            },
+            "min": 150.0,
+            "median": 775.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "300.0": 6,
+              "700.0": 6,
+              "750.0": 6,
+              "800.0": 8,
+              "900.0": 6
+            },
+            "min": 300.0,
+            "median": 750.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.1875,
+            "fpr": 0.328125
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.1875,
+            "fpr": 0.390625
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.4375,
+            "fpr": 0.5
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.625,
+            "fpr": 0.5625
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.8125,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.8125,
+            "fpr": 0.71875
+          },
+          {
+            "threshold": 420.0,
+            "tpr": 0.8125,
+            "fpr": 0.796875
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 0.8125,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.8125,
+            "fpr": 0.828125
+          },
+          {
+            "threshold": 260.0,
+            "tpr": 1.0,
+            "fpr": 0.828125
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 1.0,
+            "fpr": 0.84375
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "reference": {
+        "cases": 160,
+        "unique_prompts": 32,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.568359375,
+        "auc_unique_prompt_label_pairs": 0.5963541666666666,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "60.0": 4,
+              "150.0": 8,
+              "200.0": 12,
+              "250.0": 4,
+              "400.0": 4,
+              "450.0": 8,
+              "700.0": 4,
+              "750.0": 8,
+              "800.0": 28,
+              "850.0": 8,
+              "900.0": 40
+            },
+            "min": 60.0,
+            "median": 800.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "700.0": 12,
+              "750.0": 4,
+              "850.0": 4,
+              "900.0": 12
+            },
+            "min": 700.0,
+            "median": 800.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.375,
+            "fpr": 0.3125
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.5,
+            "fpr": 0.375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.5,
+            "fpr": 0.59375
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.625,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 450.0,
+            "tpr": 1.0,
+            "fpr": 0.6875
+          },
+          {
+            "threshold": 400.0,
+            "tpr": 1.0,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 1.0,
+            "fpr": 0.78125
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.90625
+          },
+          {
+            "threshold": 60.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "static": {
+        "cases": 160,
+        "unique_prompts": 12,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.4453125,
+        "auc_unique_prompt_label_pairs": 0.4270833333333333,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "200.0": 16,
+              "250.0": 16,
+              "300.0": 24,
+              "600.0": 8,
+              "700.0": 8,
+              "850.0": 24,
+              "900.0": 32
+            },
+            "min": 200.0,
+            "median": 650.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "200.0": 8,
+              "250.0": 8,
+              "850.0": 8,
+              "900.0": 8
+            },
+            "min": 200.0,
+            "median": 550.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.25,
+            "fpr": 0.25
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5,
+            "fpr": 0.4375
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.5,
+            "fpr": 0.5
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.5,
+            "fpr": 0.5625
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.5,
+            "fpr": 0.75
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.75,
+            "fpr": 0.875
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "static_history": {
+        "cases": 160,
+        "unique_prompts": 76,
+        "ambiguous_prompt_hashes": 4,
+        "auc_case_weighted": 0.46630859375,
+        "auc_unique_prompt_label_pairs": 0.46630859375,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "150.0": 2,
+              "180.0": 2,
+              "200.0": 2,
+              "250.0": 4,
+              "300.0": 2,
+              "320.0": 2,
+              "350.0": 2,
+              "600.0": 2,
+              "650.0": 6,
+              "700.0": 30,
+              "750.0": 20,
+              "800.0": 22,
+              "850.0": 10,
+              "900.0": 22
+            },
+            "min": 150.0,
+            "median": 750.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "250.0": 2,
+              "300.0": 2,
+              "650.0": 4,
+              "700.0": 6,
+              "750.0": 8,
+              "800.0": 4,
+              "900.0": 6
+            },
+            "min": 250.0,
+            "median": 750.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.1875,
+            "fpr": 0.171875
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.1875,
+            "fpr": 0.25
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.3125,
+            "fpr": 0.421875
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5625,
+            "fpr": 0.578125
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.75,
+            "fpr": 0.8125
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.875,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 0.875,
+            "fpr": 0.875
+          },
+          {
+            "threshold": 320.0,
+            "tpr": 0.875,
+            "fpr": 0.890625
+          },
+          {
+            "threshold": 300.0,
+            "tpr": 0.875,
+            "fpr": 0.90625
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.9375,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 1.0,
+            "fpr": 0.953125
+          },
+          {
+            "threshold": 180.0,
+            "tpr": 1.0,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 1.0,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      },
+      "temporal": {
+        "cases": 160,
+        "unique_prompts": 68,
+        "ambiguous_prompt_hashes": 0,
+        "auc_case_weighted": 0.3115234375,
+        "auc_unique_prompt_label_pairs": 0.30408653846153844,
+        "distributions": {
+          "0": {
+            "n": 128,
+            "histogram": {
+              "110.0": 2,
+              "200.0": 2,
+              "250.0": 6,
+              "600.0": 8,
+              "700.0": 26,
+              "750.0": 4,
+              "780.0": 2,
+              "800.0": 26,
+              "900.0": 52
+            },
+            "min": 110.0,
+            "median": 800.0,
+            "max": 900.0
+          },
+          "1": {
+            "n": 32,
+            "histogram": {
+              "150.0": 4,
+              "250.0": 2,
+              "350.0": 4,
+              "600.0": 2,
+              "650.0": 2,
+              "700.0": 2,
+              "750.0": 6,
+              "800.0": 4,
+              "850.0": 2,
+              "900.0": 4
+            },
+            "min": 150.0,
+            "median": 725.0,
+            "max": 900.0
+          }
+        },
+        "roc": [
+          {
+            "threshold": "inf",
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 900.0,
+            "tpr": 0.0,
+            "fpr": 0.0
+          },
+          {
+            "threshold": 850.0,
+            "tpr": 0.125,
+            "fpr": 0.40625
+          },
+          {
+            "threshold": 800.0,
+            "tpr": 0.1875,
+            "fpr": 0.40625
+          },
+          {
+            "threshold": 780.0,
+            "tpr": 0.3125,
+            "fpr": 0.609375
+          },
+          {
+            "threshold": 750.0,
+            "tpr": 0.3125,
+            "fpr": 0.625
+          },
+          {
+            "threshold": 700.0,
+            "tpr": 0.5,
+            "fpr": 0.65625
+          },
+          {
+            "threshold": 650.0,
+            "tpr": 0.5625,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 600.0,
+            "tpr": 0.625,
+            "fpr": 0.859375
+          },
+          {
+            "threshold": 350.0,
+            "tpr": 0.6875,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 250.0,
+            "tpr": 0.8125,
+            "fpr": 0.921875
+          },
+          {
+            "threshold": 200.0,
+            "tpr": 0.875,
+            "fpr": 0.96875
+          },
+          {
+            "threshold": 150.0,
+            "tpr": 0.875,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": 110.0,
+            "tpr": 1.0,
+            "fpr": 0.984375
+          },
+          {
+            "threshold": "-inf",
+            "tpr": 1.0,
+            "fpr": 1.0
+          }
+        ],
+        "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+      }
+    }
+  },
+  "old_pilot_1024_test_separate": {
+    "assumption": {
+      "cases": 135,
+      "unique_prompts": 45,
+      "ambiguous_prompt_hashes": 0,
+      "auc_case_weighted": 0.8101851851851852,
+      "auc_unique_prompt_label_pairs": 0.8101851851851852,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "120.0": 3,
+            "240.0": 3,
+            "250.0": 6,
+            "260.0": 6,
+            "320.0": 3,
+            "350.0": 3,
+            "420.0": 9,
+            "520.0": 12,
+            "580.0": 3,
+            "600.0": 3,
+            "640.0": 3,
+            "650.0": 24,
+            "700.0": 6,
+            "720.0": 9,
+            "750.0": 12,
+            "780.0": 3
+          },
+          "min": 120.0,
+          "median": 645.0,
+          "max": 780.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "640.0": 3,
+            "650.0": 6,
+            "720.0": 6,
+            "760.0": 6,
+            "820.0": 6
+          },
+          "min": 640.0,
+          "median": 720.0,
+          "max": 820.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 820.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 780.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 760.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.027777777777777776
+        },
+        {
+          "threshold": 750.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.027777777777777776
+        },
+        {
+          "threshold": 720.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.1388888888888889
+        },
+        {
+          "threshold": 700.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.2222222222222222
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.2777777777777778
+        },
+        {
+          "threshold": 640.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.5
+        },
+        {
+          "threshold": 600.0,
+          "tpr": 1.0,
+          "fpr": 0.5277777777777778
+        },
+        {
+          "threshold": 580.0,
+          "tpr": 1.0,
+          "fpr": 0.5555555555555556
+        },
+        {
+          "threshold": 520.0,
+          "tpr": 1.0,
+          "fpr": 0.5833333333333334
+        },
+        {
+          "threshold": 420.0,
+          "tpr": 1.0,
+          "fpr": 0.6944444444444444
+        },
+        {
+          "threshold": 350.0,
+          "tpr": 1.0,
+          "fpr": 0.7777777777777778
+        },
+        {
+          "threshold": 320.0,
+          "tpr": 1.0,
+          "fpr": 0.8055555555555556
+        },
+        {
+          "threshold": 260.0,
+          "tpr": 1.0,
+          "fpr": 0.8333333333333334
+        },
+        {
+          "threshold": 250.0,
+          "tpr": 1.0,
+          "fpr": 0.8888888888888888
+        },
+        {
+          "threshold": 240.0,
+          "tpr": 1.0,
+          "fpr": 0.9444444444444444
+        },
+        {
+          "threshold": 120.0,
+          "tpr": 1.0,
+          "fpr": 0.9722222222222222
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "graph_diff": {
+      "cases": 135,
+      "unique_prompts": 2,
+      "ambiguous_prompt_hashes": 1,
+      "auc_case_weighted": 0.375,
+      "auc_unique_prompt_label_pairs": 0.25,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "210.0": 81,
+            "650.0": 27
+          },
+          "min": 210.0,
+          "median": 210.0,
+          "max": 650.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "210.0": 27
+          },
+          "min": 210.0,
+          "median": 210.0,
+          "max": 210.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 210.0,
+          "tpr": 0.0,
+          "fpr": 0.25
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "oracle": {
+      "cases": 135,
+      "unique_prompts": 42,
+      "ambiguous_prompt_hashes": 0,
+      "auc_case_weighted": 0.7484567901234568,
+      "auc_unique_prompt_label_pairs": 0.7441077441077442,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "140.0": 3,
+            "200.0": 3,
+            "210.0": 3,
+            "250.0": 9,
+            "300.0": 3,
+            "320.0": 6,
+            "500.0": 3,
+            "520.0": 6,
+            "540.0": 6,
+            "600.0": 6,
+            "650.0": 12,
+            "680.0": 3,
+            "700.0": 15,
+            "720.0": 6,
+            "750.0": 18,
+            "780.0": 3,
+            "820.0": 3
+          },
+          "min": 140.0,
+          "median": 650.0,
+          "max": 820.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "640.0": 3,
+            "650.0": 6,
+            "700.0": 3,
+            "750.0": 6,
+            "780.0": 3,
+            "800.0": 3,
+            "820.0": 3
+          },
+          "min": 640.0,
+          "median": 750.0,
+          "max": 820.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 820.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 800.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.027777777777777776
+        },
+        {
+          "threshold": 780.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.027777777777777776
+        },
+        {
+          "threshold": 750.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.05555555555555555
+        },
+        {
+          "threshold": 720.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.2222222222222222
+        },
+        {
+          "threshold": 700.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.2777777777777778
+        },
+        {
+          "threshold": 680.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.4166666666666667
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.4444444444444444
+        },
+        {
+          "threshold": 640.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.5555555555555556
+        },
+        {
+          "threshold": 600.0,
+          "tpr": 1.0,
+          "fpr": 0.5555555555555556
+        },
+        {
+          "threshold": 540.0,
+          "tpr": 1.0,
+          "fpr": 0.6111111111111112
+        },
+        {
+          "threshold": 520.0,
+          "tpr": 1.0,
+          "fpr": 0.6666666666666666
+        },
+        {
+          "threshold": 500.0,
+          "tpr": 1.0,
+          "fpr": 0.7222222222222222
+        },
+        {
+          "threshold": 320.0,
+          "tpr": 1.0,
+          "fpr": 0.75
+        },
+        {
+          "threshold": 300.0,
+          "tpr": 1.0,
+          "fpr": 0.8055555555555556
+        },
+        {
+          "threshold": 250.0,
+          "tpr": 1.0,
+          "fpr": 0.8333333333333334
+        },
+        {
+          "threshold": 210.0,
+          "tpr": 1.0,
+          "fpr": 0.9166666666666666
+        },
+        {
+          "threshold": 200.0,
+          "tpr": 1.0,
+          "fpr": 0.9444444444444444
+        },
+        {
+          "threshold": 140.0,
+          "tpr": 1.0,
+          "fpr": 0.9722222222222222
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "prose": {
+      "cases": 135,
+      "unique_prompts": 45,
+      "ambiguous_prompt_hashes": 0,
+      "auc_case_weighted": 0.5185185185185185,
+      "auc_unique_prompt_label_pairs": 0.5185185185185185,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "65.0": 3,
+            "150.0": 3,
+            "210.0": 3,
+            "220.0": 3,
+            "250.0": 12,
+            "260.0": 3,
+            "280.0": 3,
+            "300.0": 3,
+            "320.0": 3,
+            "350.0": 6,
+            "420.0": 9,
+            "450.0": 3,
+            "520.0": 3,
+            "550.0": 3,
+            "600.0": 3,
+            "620.0": 3,
+            "650.0": 24,
+            "680.0": 3,
+            "700.0": 6,
+            "750.0": 9
+          },
+          "min": 65.0,
+          "median": 485.0,
+          "max": 750.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "250.0": 3,
+            "300.0": 3,
+            "320.0": 3,
+            "420.0": 3,
+            "450.0": 3,
+            "520.0": 3,
+            "630.0": 3,
+            "700.0": 3,
+            "750.0": 3
+          },
+          "min": 250.0,
+          "median": 450.0,
+          "max": 750.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 750.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 700.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.08333333333333333
+        },
+        {
+          "threshold": 680.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.1388888888888889
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.16666666666666666
+        },
+        {
+          "threshold": 630.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.3888888888888889
+        },
+        {
+          "threshold": 620.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.3888888888888889
+        },
+        {
+          "threshold": 600.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.4166666666666667
+        },
+        {
+          "threshold": 550.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.4444444444444444
+        },
+        {
+          "threshold": 520.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.4722222222222222
+        },
+        {
+          "threshold": 450.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.5
+        },
+        {
+          "threshold": 420.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.5277777777777778
+        },
+        {
+          "threshold": 350.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.6111111111111112
+        },
+        {
+          "threshold": 320.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.6666666666666666
+        },
+        {
+          "threshold": 300.0,
+          "tpr": 0.7777777777777778,
+          "fpr": 0.6944444444444444
+        },
+        {
+          "threshold": 280.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.7222222222222222
+        },
+        {
+          "threshold": 260.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.75
+        },
+        {
+          "threshold": 250.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.7777777777777778
+        },
+        {
+          "threshold": 220.0,
+          "tpr": 1.0,
+          "fpr": 0.8888888888888888
+        },
+        {
+          "threshold": 210.0,
+          "tpr": 1.0,
+          "fpr": 0.9166666666666666
+        },
+        {
+          "threshold": 150.0,
+          "tpr": 1.0,
+          "fpr": 0.9444444444444444
+        },
+        {
+          "threshold": 65.0,
+          "tpr": 1.0,
+          "fpr": 0.9722222222222222
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "static": {
+      "cases": 135,
+      "unique_prompts": 2,
+      "ambiguous_prompt_hashes": 1,
+      "auc_case_weighted": 0.375,
+      "auc_unique_prompt_label_pairs": 0.25,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "620.0": 81,
+            "680.0": 27
+          },
+          "min": 620.0,
+          "median": 620.0,
+          "max": 680.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "620.0": 27
+          },
+          "min": 620.0,
+          "median": 620.0,
+          "max": 620.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 680.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 620.0,
+          "tpr": 0.0,
+          "fpr": 0.25
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "static_history": {
+      "cases": 135,
+      "unique_prompts": 36,
+      "ambiguous_prompt_hashes": 1,
+      "auc_case_weighted": 0.5216049382716049,
+      "auc_unique_prompt_label_pairs": 0.5095238095238095,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "200.0": 9,
+            "250.0": 3,
+            "380.0": 3,
+            "520.0": 3,
+            "560.0": 3,
+            "620.0": 3,
+            "650.0": 12,
+            "660.0": 3,
+            "680.0": 12,
+            "700.0": 21,
+            "720.0": 6,
+            "750.0": 9,
+            "780.0": 15,
+            "800.0": 3,
+            "820.0": 3
+          },
+          "min": 200.0,
+          "median": 700.0,
+          "max": 820.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "640.0": 3,
+            "650.0": 6,
+            "680.0": 3,
+            "700.0": 9,
+            "760.0": 3,
+            "820.0": 3
+          },
+          "min": 640.0,
+          "median": 700.0,
+          "max": 820.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 820.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 800.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.027777777777777776
+        },
+        {
+          "threshold": 780.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.05555555555555555
+        },
+        {
+          "threshold": 760.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.19444444444444445
+        },
+        {
+          "threshold": 750.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.19444444444444445
+        },
+        {
+          "threshold": 720.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.2777777777777778
+        },
+        {
+          "threshold": 700.0,
+          "tpr": 0.2222222222222222,
+          "fpr": 0.3333333333333333
+        },
+        {
+          "threshold": 680.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.5277777777777778
+        },
+        {
+          "threshold": 660.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.6388888888888888
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.6666666666666666
+        },
+        {
+          "threshold": 640.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.7777777777777778
+        },
+        {
+          "threshold": 620.0,
+          "tpr": 1.0,
+          "fpr": 0.7777777777777778
+        },
+        {
+          "threshold": 560.0,
+          "tpr": 1.0,
+          "fpr": 0.8055555555555556
+        },
+        {
+          "threshold": 520.0,
+          "tpr": 1.0,
+          "fpr": 0.8333333333333334
+        },
+        {
+          "threshold": 380.0,
+          "tpr": 1.0,
+          "fpr": 0.8611111111111112
+        },
+        {
+          "threshold": 250.0,
+          "tpr": 1.0,
+          "fpr": 0.8888888888888888
+        },
+        {
+          "threshold": 200.0,
+          "tpr": 1.0,
+          "fpr": 0.9166666666666666
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    },
+    "temporal": {
+      "cases": 135,
+      "unique_prompts": 45,
+      "ambiguous_prompt_hashes": 0,
+      "auc_case_weighted": 0.43209876543209874,
+      "auc_unique_prompt_label_pairs": 0.43209876543209874,
+      "distributions": {
+        "0": {
+          "n": 108,
+          "histogram": {
+            "180.0": 3,
+            "240.0": 3,
+            "250.0": 21,
+            "260.0": 3,
+            "280.0": 3,
+            "300.0": 3,
+            "320.0": 6,
+            "350.0": 3,
+            "400.0": 3,
+            "420.0": 15,
+            "520.0": 3,
+            "550.0": 3,
+            "600.0": 9,
+            "650.0": 21,
+            "700.0": 3,
+            "750.0": 6
+          },
+          "min": 180.0,
+          "median": 420.0,
+          "max": 750.0
+        },
+        "1": {
+          "n": 27,
+          "histogram": {
+            "65.0": 3,
+            "210.0": 6,
+            "250.0": 3,
+            "400.0": 3,
+            "600.0": 3,
+            "650.0": 6,
+            "700.0": 3
+          },
+          "min": 65.0,
+          "median": 400.0,
+          "max": 700.0
+        }
+      },
+      "roc": [
+        {
+          "threshold": "inf",
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 750.0,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "threshold": 700.0,
+          "tpr": 0.0,
+          "fpr": 0.05555555555555555
+        },
+        {
+          "threshold": 650.0,
+          "tpr": 0.1111111111111111,
+          "fpr": 0.08333333333333333
+        },
+        {
+          "threshold": 600.0,
+          "tpr": 0.3333333333333333,
+          "fpr": 0.2777777777777778
+        },
+        {
+          "threshold": 550.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.3611111111111111
+        },
+        {
+          "threshold": 520.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.3888888888888889
+        },
+        {
+          "threshold": 420.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.4166666666666667
+        },
+        {
+          "threshold": 400.0,
+          "tpr": 0.4444444444444444,
+          "fpr": 0.5555555555555556
+        },
+        {
+          "threshold": 350.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.5833333333333334
+        },
+        {
+          "threshold": 320.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.6111111111111112
+        },
+        {
+          "threshold": 300.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.6666666666666666
+        },
+        {
+          "threshold": 280.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.6944444444444444
+        },
+        {
+          "threshold": 260.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.7222222222222222
+        },
+        {
+          "threshold": 250.0,
+          "tpr": 0.5555555555555556,
+          "fpr": 0.75
+        },
+        {
+          "threshold": 240.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.9444444444444444
+        },
+        {
+          "threshold": 210.0,
+          "tpr": 0.6666666666666666,
+          "fpr": 0.9722222222222222
+        },
+        {
+          "threshold": 180.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 0.9722222222222222
+        },
+        {
+          "threshold": 65.0,
+          "tpr": 0.8888888888888888,
+          "fpr": 1.0
+        },
+        {
+          "threshold": "-inf",
+          "tpr": 1.0,
+          "fpr": 1.0
+        }
+      ],
+      "interpretation": "diagnostic reuse, correlated variants; unique-prompt-label pairs can share a response across classes"
+    }
+  }
+}

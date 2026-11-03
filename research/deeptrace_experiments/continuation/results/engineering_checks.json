@@ -1,0 +1,82 @@
+[
+  {
+    "check": "verified mutation then atomic failure preserves source",
+    "passed": true
+  },
+  {
+    "check": "missing initial provenance rejected",
+    "passed": true
+  },
+  {
+    "check": "wrong preimage taints later pre-action state",
+    "passed": true
+  },
+  {
+    "check": "partial shell failure is not treated as no-op",
+    "passed": true
+  },
+  {
+    "check": "parallel conflicting writes rejected",
+    "passed": true
+  },
+  {
+    "check": "background effects explicitly unknown",
+    "passed": true
+  },
+  {
+    "check": "contradictory read invalidates current pre-action graph",
+    "passed": true
+  },
+  {
+    "check": "harm without independent review cannot score",
+    "passed": true
+  },
+  {
+    "check": "restored state recognized",
+    "passed": true
+  },
+  {
+    "check": "removed sink explicitly removed",
+    "passed": true
+  },
+  {
+    "check": "unresolved call remains unknown",
+    "passed": true
+  },
+  {
+    "check": "solver unknown cannot become preserved policy",
+    "passed": true
+  },
+  {
+    "check": "current-state check does not inherit historical weakness",
+    "passed": true
+  },
+  {
+    "check": "selector excludes future provenance",
+    "passed": true
+  },
+  {
+    "check": "paired formats respect exact facts and budget",
+    "passed": true
+  },
+  {
+    "check": "alarm on harmful action counts before execution",
+    "passed": true
+  },
+  {
+    "check": "incomplete cohort cannot produce timely estimates",
+    "passed": true
+  },
+  {
+    "check": "restoration does not create cycles through identical source hashes",
+    "passed": true
+  },
+  {
+    "check": "unrelated documentation reuses the prior verified claim",
+    "passed": true
+  },
+  {
+    "check": "source edits invalidate and recheck supporting claims",
+    "passed": true
+  }
+]

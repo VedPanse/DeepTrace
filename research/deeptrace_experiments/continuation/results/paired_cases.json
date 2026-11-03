@@ -1,0 +1,1442 @@
+[
+  {
+    "case_id": "26ae1a4a791d0ac6",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "5afe4c3234d4bf5d",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "83c1ff60c4885859",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "af46d51b612a7817",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 600.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "237da3953b8921d2",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "cc438b4c432e8efa",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "f62540aeece9999a",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "50efbea4ec41f09d",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "621419d67ecef186",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 600.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "e1270bef68f92f52",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "53a7f1a45fe0c6b2",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "a649fa804a026f62",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "36f8584ed7165ddb",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "216ac5cb55d3e707",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 600.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "16d21cecd14fe1e6",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "1e9b72588f628e2d",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "4b0815727d87e9a9",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "a1b27478f71201e8",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "4112aeff1794206b",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 600.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "e2f6fef6aba60911",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 250.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "6286ca5e184d9304",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 820.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b940d445c47c86ee",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "c6509fd2e9d23049",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "e307175699c7bb78",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "ff847cc0daabb97f",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 250.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "270476af755646a5",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "ad61fc9cbadd0b47",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "91fd6671e6821879",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "d867304858864fd4",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "22b21deb5977ae6b",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "b4963ec9440f1537",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "feff7a63b45cb00e",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "d80c11da7964ce1c",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "6f916d99f636960c",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "52a457814c05a3c9",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "e284b070d7510b77",
+    "family": "held_nested",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "c7112cd798dc02ba",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "4c268b987a7e5213",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "ba7d9685c1522035",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "491a8de976c8cbc4",
+    "family": "held_nested",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 600.0
+  },
+  {
+    "case_id": "b9e545c9219fb010",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "efab6dd139b929e2",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "d5453d7a6e07e200",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "33b7e8422716ebd5",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "6f9b4b7933710797",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "30ed84bea9148fac",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b202da1023cdb24d",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "8c0abf4362a9ac71",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "726dd419473da517",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "06b759067b382161",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "4c5344e9fc761ea7",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "298f80e7c8948964",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "c7a5bf8c0481367a",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "c067e82a162ad17c",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "c2310165d4fa4896",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 720.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "3d1f2f5e45a2ec57",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "3cc301e6c3e14359",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 200.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "f5e6e031bb409d52",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "09471888a7b29ea0",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "855a08aeb1a6dcaa",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "ccf1431ef350b1c2",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "100b0c47cc06d759",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "e4d994d56375acfb",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "201f181679906046",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "1b4117ebea6712d7",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b2ec374d84874acc",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "34b6224a0b6d312b",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "28f05202c66fb1ef",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "f3b0688fb89592f8",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "8bfc3c8ac965c149",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "5fe704a76748b827",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "1fb2e553c5928941",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 600.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "2cddcc15f05f5f4a",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "a26af553bdc6bafc",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "d00a3a11f6efacbb",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "25659294c3fd48e1",
+    "family": "held_empty_union",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "75345ada804d15d7",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "d5a73c804eecdfbf",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "9cef6b7e5b1fa9e9",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "f11aa5981e14a29d",
+    "family": "held_empty_union",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "fb52f8853f96e9a4",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 140.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "355323199f9accf1",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "9eb9e1ae3c717e1e",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b1be806a72623ce9",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "0cd8cb7b0c7db411",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "530816af19311982",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 780.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "63d2639cbac49624",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 650.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "671dd471afa5815e",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 120.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "39ebef7fc2db2235",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "1a1bbadae66bfc7d",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "92ee9888138d1f87",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "095f84aa8f2fe5d3",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 825.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "52e0d96b2ccc3bfc",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "70400b57e088e3b5",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "b4f7d09cb9f2d376",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 150.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "a077974eebcfc8b3",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 720.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "c4e7a0775053830e",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "56a13913de5c22d6",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b88a2e324c19fc32",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 700.0
+  },
+  {
+    "case_id": "67916072b6ba0e9a",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "37c399c54469db3d",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "24de07aafb942f3f",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "6f294ea6c53c2298",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "92a3e3b0e27b2279",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 120.0
+  },
+  {
+    "case_id": "4e062f6f51ea3592",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "1c2bc641c021ba6f",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 680.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "0c0be9a4efb0f0af",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "9881a8c05d6a8216",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "07b57487632314a1",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 120.0
+  },
+  {
+    "case_id": "0afd25f9e03aa76c",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 220.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "4d122f8b7a8f2439",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "3934c3b4149f1cf0",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "8e4810c3fd8d564b",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 450.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "5c4b4cd9e6722bd3",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 120.0
+  },
+  {
+    "case_id": "cf89887db26633ca",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "dbc42a48ef8ebd28",
+    "family": "held_demorgan",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "e2460765f7f3c9c1",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "634f4f7e46f91139",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "9f63c2bcbb2e74bc",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 300.0,
+    "current_score": 120.0
+  },
+  {
+    "case_id": "226bcd8c722e74a7",
+    "family": "held_demorgan",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 200.0,
+    "current_score": 750.0
+  },
+  {
+    "case_id": "b97a63c728c9ca55",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "abb621cc8088f3af",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "05402a2c367b512d",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "7870a63251a906ca",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "c69bec31e8b5c96b",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 150.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "d029f0bb6cdc8e48",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "3e4f039508b26c75",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "ad3355a788f5939c",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "54428b8f202cd2eb",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b8d7ca9bf8e73fc2",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 150.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "7633665b82995924",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "7feebfe5a4c094b4",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "0ebfe1f9a1e280f0",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "4eb4fdb424be483b",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "619626d481df7c1d",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "4463e8eaeea72599",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 850.0
+  },
+  {
+    "case_id": "b810cd29644d405e",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "089ac4c2b2030529",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "f3c58bd370a322c8",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 750.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "333df3544935fa58",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "abe3a74ea86a6edf",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "5fc69f0cdc363ea2",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "22865c0728af1bc3",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "2cbe6e7d0cd4cfc2",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 650.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "bbafce9239d53329",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": true,
+    "history_score": 800.0,
+    "current_score": 950.0
+  },
+  {
+    "case_id": "273cba473c685891",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "130508e1b8ffee30",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 700.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "b34bf0e8d112c846",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 250.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "978aa63edc1b22fb",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 650.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "74240c73a1826186",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": true,
+    "history_score": 800.0,
+    "current_score": 950.0
+  },
+  {
+    "case_id": "7ddb80c7c6698ef1",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 860.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "dba4626d14dc4a17",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "d27f7e21255a6be4",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 850.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "de79556916c7707e",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 650.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "827dc64b7d9c5ae9",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": true,
+    "history_score": 700.0,
+    "current_score": 950.0
+  },
+  {
+    "case_id": "edb1c45822cfd402",
+    "family": "held_conditional",
+    "label": 1,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "8c4262d6a6a0ae78",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 800.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "58459876213532c1",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 900.0,
+    "current_score": 900.0
+  },
+  {
+    "case_id": "92b83ae4a63266f6",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": false,
+    "history_score": 650.0,
+    "current_score": 800.0
+  },
+  {
+    "case_id": "76e32f6e6f725f04",
+    "family": "held_conditional",
+    "label": 0,
+    "history_flag": false,
+    "current_flag": true,
+    "history_score": 250.0,
+    "current_score": 950.0
+  }
+]

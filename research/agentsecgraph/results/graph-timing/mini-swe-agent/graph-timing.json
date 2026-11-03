@@ -1,0 +1,8 @@
+{
+  "graph_construction_seconds": 1.141416250000475,
+  "peak_rss_after_graph_bytes": 50528256,
+  "total_seconds": 1.548607957999593,
+  "candidates": 123,
+  "instrumentation": "one wrapper around build_graphs, including project indexes; no algorithm changes",
+  "memory_scope": "process peak RSS through graph stage, includes scanning/imports, not isolated graph allocation"
+}

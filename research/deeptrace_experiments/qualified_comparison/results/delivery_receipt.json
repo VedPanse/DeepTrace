@@ -1,0 +1,12 @@
+{
+  "presentation": "/Users/vedpanse/DSC-180A/output/deeptrace_meeting/DeepTrace_Meeting_Final.pptx",
+  "presentation_sha256": "7547a69cb5bbc231c4e6aee0bbd0f31552b21bb3c2e0e0712e58a591c797dc17",
+  "slides": 6,
+  "speaker_notes": 6,
+  "research_package": "/Users/vedpanse/DSC-180A/output/deeptrace_meeting/DeepTrace_Meeting_Research_Package.zip",
+  "package_bytes": 2792164,
+  "package_sha256": "bf7a288b9fcc1370b76c445a1b64a5ce573148e4a594a8c0876b866505884885",
+  "files": 878,
+  "package_scope": "new studies plus shared bounded analysis code; earlier frozen-pilot artifacts remain in the project/prior source packages",
+  "credential_scan_passed": true
+}

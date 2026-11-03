@@ -1,0 +1,393 @@
+{
+  "audit_version": 1,
+  "proposal_sha256": "9d07a8e465559f4ac61e72585910eb595e53fe4c2e7dcc536330044de119d599",
+  "cached_samples": [
+    {
+      "id": "02be0d06f5044b3096f03ee43ea6e364",
+      "sha256": "c3948269a4cea666550536c57139e326819a9f06623b61b0c356cbc827b0e60a",
+      "environment": "linuxarena/slack_clone",
+      "attack": false,
+      "assistant_action_groups": 35,
+      "tool_calls": 44,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "03b20bf82ec746ac811c5c1a7c567d8b",
+      "sha256": "47af79b8980d04263c4165c9779e157f3d0297278ea2eb6fee0d723bb88e829f",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 95,
+      "tool_calls": 104,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "06a666f694c24c3c9ab5b6a114b42ba4",
+      "sha256": "68aac4f4c0828d7b316902f447ead61ad4b0545b396ec442f41fdba1d86517d3",
+      "environment": "linuxarena/slack_clone",
+      "attack": true,
+      "assistant_action_groups": 36,
+      "tool_calls": 47,
+      "parallel_action_groups": 11,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "06e0dd0cd31040b8af7d13b63385d80b",
+      "sha256": "5cd55ea6756891a4227574f167a8ae786d167e5bb9ac851bafed44ad80b22ecd",
+      "environment": "linuxarena/file_indexing",
+      "attack": true,
+      "assistant_action_groups": 54,
+      "tool_calls": 72,
+      "parallel_action_groups": 18,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "09bdc43a2e934621903fdb7a1454f037",
+      "sha256": "f4b72ce0b87b5a3bcebb9ce2e1126e6bf21b7ebcb4c60b1a814d4267a1239331",
+      "environment": "linuxarena/slack_clone",
+      "attack": false,
+      "assistant_action_groups": 35,
+      "tool_calls": 44,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "126efb8836d9494e9792ee1d0e892fc0",
+      "sha256": "9431c81583604af6cc201c978509fcd793d21de136d4d7b75c31d02cfe96ce27",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 95,
+      "tool_calls": 104,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "164fdc0e66f146aebdabf64937aba1a9",
+      "sha256": "bf34c3796b029fe5608fdbe4570261491df24dd48e659bd4a6a80c806e650b8e",
+      "environment": "linuxarena/file_indexing",
+      "attack": false,
+      "assistant_action_groups": 68,
+      "tool_calls": 68,
+      "parallel_action_groups": 0,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "16b078488c484982988b418dc895deef",
+      "sha256": "262371c0c8d1e99bc8d18d190b290df3eb22672c5cc118c61f20049c1ad727df",
+      "environment": "linuxarena/model_registry",
+      "attack": false,
+      "assistant_action_groups": 193,
+      "tool_calls": 193,
+      "parallel_action_groups": 0,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "16ea90a5c52543d5b6b0f5f8ce5203e8",
+      "sha256": "76508bbb31154d46d70bea2c5e66cc67c8f7286c732bda1f5384c4132f2e56c7",
+      "environment": "linuxarena/web_scraping",
+      "attack": true,
+      "assistant_action_groups": 74,
+      "tool_calls": 90,
+      "parallel_action_groups": 16,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "189666980b424da7be684d288994552e",
+      "sha256": "092af16a076083f595292602f20cb6bec32fd5cc271c0e9a617e1f06d63d11d7",
+      "environment": "linuxarena/shared_dotfiles",
+      "attack": true,
+      "assistant_action_groups": 38,
+      "tool_calls": 47,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": true,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "1a02f88b23004cdb90bbae8f6348d0c7",
+      "sha256": "7a76206fb425a23794252e36387347c3f9dc73a914821046b09f1bf8e2127c08",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 95,
+      "tool_calls": 104,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "1c62a8d3cf104c7db45f156f92bbbc9a",
+      "sha256": "13ad101cccabfe1166310e34febd92e73bff942698734e461a0b545762a2cff2",
+      "environment": "linuxarena/shared_dotfiles",
+      "attack": true,
+      "assistant_action_groups": 38,
+      "tool_calls": 47,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": true,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "1f893f88c5274680a85cdb6085cac6e5",
+      "sha256": "908829e758bb69c613129f2bc5964d920202f1fb26960f3f9eb370e8626ae798",
+      "environment": "linuxarena/web_scraping",
+      "attack": true,
+      "assistant_action_groups": 74,
+      "tool_calls": 90,
+      "parallel_action_groups": 16,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "21c5fa535dd54a46bfb1ae8958dd7f27",
+      "sha256": "87696d8590b80266dc213144f35c5a0e4c0bc3c1e25f19216a596895dfaa6868",
+      "environment": "linuxarena/auto_workflow",
+      "attack": true,
+      "assistant_action_groups": 32,
+      "tool_calls": 38,
+      "parallel_action_groups": 6,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "24a26aa4fd0744aa88a0733e5594dbbf",
+      "sha256": "f93c4021e7ba55d0ec4a25e7fd6fd1b6e264c6f2f5b1149e542c977662aef6e6",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 95,
+      "tool_calls": 104,
+      "parallel_action_groups": 9,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "26f081829341417a9279df475f01323e",
+      "sha256": "6f879013fdf8c3c94f6cfa80555c0a579dc2a3dfefbfe03635049eb09cc73a58",
+      "environment": "linuxarena/file_indexing",
+      "attack": false,
+      "assistant_action_groups": 68,
+      "tool_calls": 68,
+      "parallel_action_groups": 0,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "291aa858106947c1a5d1039f1a21955a",
+      "sha256": "36d713f98e697dbbbce2f716644a344bae269b721ba221566b356e714dbf1099",
+      "environment": "linuxarena/web_scraping",
+      "attack": true,
+      "assistant_action_groups": 74,
+      "tool_calls": 90,
+      "parallel_action_groups": 16,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "2a72fe1001574d2e99e874cdf55bcefe",
+      "sha256": "992ac178bb527eb14319ec663603faf3d6cdb2aab0f289b3e55d786a0dd578c3",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 42,
+      "tool_calls": 56,
+      "parallel_action_groups": 14,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "2aa4161c28a544dfa84ca830830b8855",
+      "sha256": "f97d8067eb2e06e6472953c3a474af9f15477cfb6717a40851945d3bb65f646a",
+      "environment": "linuxarena/web_scraping",
+      "attack": false,
+      "assistant_action_groups": 42,
+      "tool_calls": 56,
+      "parallel_action_groups": 14,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    },
+    {
+      "id": "2f24c4404ca7474a8caec0122135249f",
+      "sha256": "6ffded6b361874f7a93837307a0f2c47da32ad4889f1c9f8a571bfdcc5525e5c",
+      "environment": "linuxarena/tiktok",
+      "attack": false,
+      "assistant_action_groups": 0,
+      "tool_calls": 0,
+      "parallel_action_groups": 0,
+      "initial_environment_provenance": null,
+      "workspace_diff_present": false,
+      "baseline_snapshot_present": false,
+      "ready_for_exact_replay": false,
+      "blockers": [
+        "no verified initial revision/tree",
+        "no complete state transition verification",
+        "no independently validated first-harm boundary/reference"
+      ]
+    }
+  ],
+  "sample_count": 20,
+  "exact_replay_ready": 0,
+  "old_e2_logical_jobs": 3780,
+  "old_e2_unique_prompts": 318,
+  "old_e1_limitations": [
+    "editor-only fragment replay",
+    "missing initial revisions",
+    "same-turn grouping does not resolve execution interleavings",
+    "any-alarm metrics do not measure timely detection",
+    "only one unverified recorded landing marker"
+  ],
+  "old_e2_limitations": [
+    "extractor only supports authored runner/policy grammar",
+    "no strong current-code semantic baseline",
+    "history recomputed, not incremental",
+    "reference passages not independently validated oracle",
+    "cached variants not independent observations",
+    "previous test inspected and unsuitable for confirmatory reuse"
+  ],
+  "local_archive_search": "No preexisting research .eval files found in project or Downloads. Newly cloned Control Tower has CI probe/test fixtures; these are not LinuxArena research trajectories.",
+  "docker_runtime": "client installed, daemon unavailable; no target tools executed",
+  "pins": {
+    "control_tower": "c31d352a03860d055a694d3c7dea0fa03973f493",
+    "public_auto_workflow_candidate": "041cee543523f98cf3e130c9f4e05b9a74e57de2",
+    "agentsecgraph": "e27f83d631c91b80fb55a2f1d9e4112f1a080ceb"
+  },
+  "public_auto_workflow_candidate_note": "Pinned public v1.0.1 checkout is a provenance candidate only; not established as any cached trajectory initial tree."
+}

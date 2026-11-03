@@ -1,0 +1,115 @@
+To: Professor Salimi
+Date: November 1, 2026
+Subject: DeepTrace — stop synthetic tuning and decide the next research comparison
+
+Decision requested
+
+Review the monitor pipeline and agree on realistic cases where history could
+improve evidence retrieval before further evaluation. DeepTrace's proposed
+advantage remains unproven. We have stopped prompt/selector tuning and synthetic
+monitor calls; all inspected cases are spent diagnostic data.
+
+What is implemented
+
+A bounded Python evidence selector separates the proposed current state from
+relevant past changes. It tracks input restrictions, argument origin and shell
+settings, links claims to source versions/spans, and labels weakening,
+restoration, removal and unknown analysis. Superseded weaknesses cannot populate
+current-fact fields. Equivalent or unrelated edits are excluded when the bounded
+facts do not change. Over-budget packets fail explicitly rather than silently
+dropping evidence. This is not whole-repository or general-language analysis.
+
+What the evaluation found
+
+One frozen three-condition test used 36 cases per condition from six related
+history/template families: six unsafe, 24 safe and six unknown. Calibration used
+four separate families. The current summary was identical across conditions;
+all had the same evidence cap and no truncation.
+
+                           Current code    + Unselected history    + Selected history
+Current facts correct        36/36               36/36                  36/36
+Policy verdict correct       20/36               26/36                  24/36
+Contradictory responses       13                   7                      9
+
+Correct verdict counts include appropriate unknown answers. These are small,
+related synthetic families, not independent real-world attacks. Independent
+human review was unavailable. Selected-minus-unselected verdict accuracy was
+-5.6 percentage points, with family bootstrap interval [-19.4, +11.1]; the
+comparison does not establish an advantage or equivalence.
+
+The monitor received and reported sufficient current facts but often applied
+the declared policy incorrectly. A separate deterministic decision component
+applied to its reported facts gave the correct answer, including unknowns, on
+all 36 cases in each condition. That is diagnosis on inspected cases, not a
+rescored monitor success or a general sabotage detector.
+
+Calibration exposed false accusations in every condition. With binary verdicts,
+the frozen false-alarm rule disabled all alarms; calibrated detection was 0/6
+in every arm. Zero test false alarms therefore reflects a disabled detector,
+not useful prevention. Original raw errors and contradictory answers are saved.
+
+What this does not establish
+
+The selector has not earned its added complexity through improved monitoring.
+These fixtures explicitly provide the current facts needed to solve a state-only
+rule. They can test whether history introduces confusion, but offer no missing
+information that history is necessary to recover. Adding history is not itself
+the proposed DeepTrace contribution. Neither proposal experiment is complete.
+
+Two separate research decisions
+
+1. Monitor choice. Decide whether a different task-appropriate sabotage monitor
+   or an explicit fact-to-policy component is appropriate. Either choice is a
+   new pipeline requiring its own frozen validation. The deterministic checker
+   only handles the authored narrow rule; it cannot replace judgments about a
+   legitimate LinuxArena task and sabotage.
+
+2. DeepTrace contribution. Identify verified repository cases where versioned
+   support links help find a distant, action-relevant dependency under an evidence
+   and compute budget. Compare against equally capable current-code search with
+   the same repository access and resources. Do not withhold current facts from
+   the baseline. Historical retrieval must earn a measurable benefit beyond
+   simply adding more context.
+
+LinuxArena blocker and resource request
+
+No evaluated cohort has verified initial source/environment provenance and
+complete, independently checkable replay. Cached records and a public source
+checkout do not establish the starting state of a particular run. The last saved
+official archive access check, October 30, returned HTTP 503; an earlier unsigned
+archive request returned 403. These are historical checks, not a claim about
+current endpoint availability. No original archives or authenticated export have
+been provided.
+
+Please help obtain a small cohort of matching attack and honest runs, initially
+1–3 attacks including a delayed-effect case if possible, with:
+
+* Original .eval archives and exact initial source revisions/image digests plus
+  setup mutations and image access instructions.
+* Complete ordered tool calls AND results, errors, call IDs, timestamps,
+  concurrency/background activity and relevant service/network effects.
+* Available initial/per-action workspace checkpoints or mutation receipts that
+  independently verify reconstructed intermediate states.
+* Exact legitimate-task and scorer versions, outcome records and invocation
+  times, kept separate from monitor-visible inputs.
+* Evidence for first harm, including installation and later trigger/effect for
+  delayed attacks. Final success labels alone cannot establish harm boundaries.
+
+Per-action snapshots are not mandatory if a pinned initial environment and
+complete action records permit independently verified replay of every effect.
+Final diffs alone are insufficient. Independent harm-boundary review is still
+required. A concrete example and full request are in continuation/RESOURCE_REQUEST.txt.
+
+Resume condition
+
+Agree on the comparison rationale, secure the necessary verified data, and freeze
+the new pipeline/protocol before inference. Until then: preserve negative results,
+no further synthetic tuning, no evaluation, and no claim of LinuxArena prevention.
+No request or memo has been sent externally.
+
+Audit trail
+
+Results: selector_evaluation/results/test_analysis.json
+Protocol: selector_evaluation/results/protocol.json
+Freeze/stop record: decision/evaluation_stop_and_freeze.json
+Full limitations: selector_evaluation/README.md

@@ -1,0 +1,148 @@
+{
+  "schema_version": "2.0.0-draft",
+  "generator": "security_adg_def_use_v2",
+  "analysis_mode": "v2_5",
+  "split": "all_corpus",
+  "graph_count": 509,
+  "repository_count": 3,
+  "source_file_count": 138,
+  "analysis_engines": {
+    "python_ast_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": 370,
+    "typescript_backward_slice_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": 139
+  },
+  "engine_stats": {
+    "python_ast_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": {
+      "graphs": 370,
+      "with_source": 162,
+      "with_guard": 31,
+      "dependency_paths": 190
+    },
+    "typescript_backward_slice_v1_parameter_precedence_overwrite_sink_exclusion_framework_adaptive_v2_5": {
+      "graphs": 139,
+      "with_source": 47,
+      "with_guard": 27,
+      "dependency_paths": 55
+    }
+  },
+  "limitation_counts": {
+    "lexical TypeScript analysis does not prove control-flow dominance or aliasing": 139,
+    "no_call_on_evidence_line": 98
+  },
+  "source_candidate_categories": {
+    "browser_control": 2,
+    "command_execution": 39,
+    "credential_access": 1,
+    "database_access": 1,
+    "filesystem_delete": 2,
+    "filesystem_read": 20,
+    "filesystem_write": 135,
+    "network_access": 9
+  },
+  "framework_counts": {},
+  "graphs_with_framework_evidence": 0,
+  "graphs_with_def_use_source": 209,
+  "graphs_with_related_guard": 58,
+  "graphs_with_dependency_path": 209,
+  "total_dependency_paths": 245,
+  "label_inputs_used": false,
+  "held_out_used": false,
+  "held_out_labels_used": false,
+  "execution_metrics": {
+    "wall_seconds": 2.134241,
+    "process_peak_rss_bytes": 94748672,
+    "python_peak_allocated_bytes": null,
+    "memory_metric_scope": "Python allocations in this process; not total RSS",
+    "memory_profiling_enabled": false,
+    "profiling_overhead_included": false,
+    "per_repository": [
+      {
+        "sample_id": "DT0002",
+        "repo": "SWE-agent/mini-swe-agent",
+        "graph_count": 123,
+        "wall_seconds": 0.517619
+      },
+      {
+        "sample_id": "DT0003",
+        "repo": "microsoft/magentic-ui",
+        "graph_count": 256,
+        "wall_seconds": 1.438068
+      },
+      {
+        "sample_id": "DT0001",
+        "repo": "nexu-io/html-anything",
+        "graph_count": 130,
+        "wall_seconds": 0.169022
+      }
+    ]
+  },
+  "showcase": {
+    "schema_version": "1.1",
+    "renderer": "layered_evidence_svg_v2",
+    "purpose": "interactive static-analysis evidence view; not a vulnerability report",
+    "source_graphs": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/paper/security-adg.jsonl",
+    "source_sha256": "3a2bd8f1464ef80768b5e91576380a96990d85b1951f5da27de9b2656863a5a5",
+    "candidate_count": 6,
+    "candidates": [
+      {
+        "candidate_id": "SB-DT0003-00082",
+        "repo": "microsoft/magentic-ui",
+        "commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+        "file": "src/magentic_ui/sandbox/_null.py"
+      },
+      {
+        "candidate_id": "SB-DT0002-00007",
+        "repo": "SWE-agent/mini-swe-agent",
+        "commit": "04d809ceab9df28f9adaed044884180159172930",
+        "file": "src/minisweagent/environments/local.py"
+      },
+      {
+        "candidate_id": "SB-DT0003-00087",
+        "repo": "microsoft/magentic-ui",
+        "commit": "d3c9d13c39288257286a66daabf7c5b5fb72ee69",
+        "file": "src/magentic_ui/teams/omniagent/_registry.py"
+      },
+      {
+        "candidate_id": "SB-DT0002-00005",
+        "repo": "SWE-agent/mini-swe-agent",
+        "commit": "04d809ceab9df28f9adaed044884180159172930",
+        "file": "src/minisweagent/environments/docker.py"
+      },
+      {
+        "candidate_id": "SB-DT0001-00038",
+        "repo": "nexu-io/html-anything",
+        "commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+        "file": "next/src/lib/skills/__tests__/api.test.ts"
+      },
+      {
+        "candidate_id": "SB-DT0001-00039",
+        "repo": "nexu-io/html-anything",
+        "commit": "975fb3bcb98f1777781fb4c738902d36e32c8c46",
+        "file": "next/src/lib/skills/__tests__/cross-device.test.ts"
+      }
+    ],
+    "files": {
+      "page": "index.html",
+      "figures": [
+        "figures/01-SB-DT0003-00082-sink_only.svg",
+        "figures/01-SB-DT0003-00082-plain_adg.svg",
+        "figures/01-SB-DT0003-00082-security_adg.svg",
+        "figures/02-SB-DT0002-00007-sink_only.svg",
+        "figures/02-SB-DT0002-00007-plain_adg.svg",
+        "figures/02-SB-DT0002-00007-security_adg.svg",
+        "figures/03-SB-DT0003-00087-sink_only.svg",
+        "figures/03-SB-DT0003-00087-plain_adg.svg",
+        "figures/03-SB-DT0003-00087-security_adg.svg",
+        "figures/04-SB-DT0002-00005-sink_only.svg",
+        "figures/04-SB-DT0002-00005-plain_adg.svg",
+        "figures/04-SB-DT0002-00005-security_adg.svg",
+        "figures/05-SB-DT0001-00038-sink_only.svg",
+        "figures/05-SB-DT0001-00038-plain_adg.svg",
+        "figures/05-SB-DT0001-00038-security_adg.svg",
+        "figures/06-SB-DT0001-00039-sink_only.svg",
+        "figures/06-SB-DT0001-00039-plain_adg.svg",
+        "figures/06-SB-DT0001-00039-security_adg.svg"
+      ],
+      "layout": "layout.json"
+    }
+  }
+}

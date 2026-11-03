@@ -1,0 +1,4710 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/browser_control",
+              "name": "browser_control",
+              "shortDescription": {
+                "text": "Browser Control"
+              },
+              "fullDescription": {
+                "text": "Browser automation framework reference"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "browser_control"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript process invocation candidate"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_delete",
+              "name": "filesystem_delete",
+              "shortDescription": {
+                "text": "Filesystem Delete"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript filesystem deletion candidate"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "medium",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_delete"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_read",
+              "name": "filesystem_read",
+              "shortDescription": {
+                "text": "Filesystem Read"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript file-read operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_read"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/filesystem_write",
+              "name": "filesystem_write",
+              "shortDescription": {
+                "text": "Filesystem Write"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript file-write operation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "filesystem_write"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/network_access",
+              "name": "network_access",
+              "shortDescription": {
+                "text": "Network Access"
+              },
+              "fullDescription": {
+                "text": "JavaScript or TypeScript HTTP request"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "network_access"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/agents-invoke.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 509,
+                  "endLine": 509
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-98B547DA6B6F8405",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E02C9AC16E826D84E599AC69"
+          },
+          "properties": {
+            "candidateId": "ASB-98B547DA6B6F8405",
+            "fingerprint": "ASBFP-E02C9AC16E826D84E599AC69",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in loadConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 23,
+                  "endLine": 23
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-60B4071946E47484",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-BA3D8CB08F4EB06A677166BD"
+          },
+          "properties": {
+            "candidateId": "ASB-60B4071946E47484",
+            "fingerprint": "ASBFP-BA3D8CB08F4EB06A677166BD",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in saveConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 35,
+                  "endLine": 35
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-ED57C73DEFE9B4AA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A407A90D17B0E2752E5E457C"
+          },
+          "properties": {
+            "candidateId": "ASB-ED57C73DEFE9B4AA",
+            "fingerprint": "ASBFP-A407A90D17B0E2752E5E457C",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 305,
+                  "endLine": 305
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-FAB0104B56D58615",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F5C9F920F6EFC18CB286EE18"
+          },
+          "properties": {
+            "candidateId": "ASB-FAB0104B56D58615",
+            "fingerprint": "ASBFP-F5C9F920F6EFC18CB286EE18",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 332,
+                  "endLine": 332
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6A2C43AD984A7927",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-34DB68565C705AE357E11786"
+          },
+          "properties": {
+            "candidateId": "ASB-6A2C43AD984A7927",
+            "fingerprint": "ASBFP-34DB68565C705AE357E11786",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 460,
+                  "endLine": 460
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E72FB03849138DCD",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7B0173563854BBABA077F439"
+          },
+          "properties": {
+            "candidateId": "ASB-E72FB03849138DCD",
+            "fingerprint": "ASBFP-7B0173563854BBABA077F439",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 613,
+                  "endLine": 613
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-016F1FD715A89443",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-34DB68565C705AE357E11786"
+          },
+          "properties": {
+            "candidateId": "ASB-016F1FD715A89443",
+            "fingerprint": "ASBFP-34DB68565C705AE357E11786",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/skills-loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 63,
+                  "endLine": 63
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D3B712B803568D5B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-43823175731A27DD83C15FA3"
+          },
+          "properties": {
+            "candidateId": "ASB-D3B712B803568D5B",
+            "fingerprint": "ASBFP-43823175731A27DD83C15FA3",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/skills-loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 69,
+                  "endLine": 69
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-80D53FCFADF37F3E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-2F308F328AC920CA4A99C44F"
+          },
+          "properties": {
+            "candidateId": "ASB-80D53FCFADF37F3E",
+            "fingerprint": "ASBFP-2F308F328AC920CA4A99C44F",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/skills-loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 88,
+                  "endLine": 88
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-89F3A57B002AEA8C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-53CFC1DB2B17D2A497F65A84"
+          },
+          "properties": {
+            "candidateId": "ASB-89F3A57B002AEA8C",
+            "fingerprint": "ASBFP-53CFC1DB2B17D2A497F65A84",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in safeRead"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cli/src/skills-loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 122,
+                  "endLine": 122
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-18B52EBD427C2995",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-11F60FFA111A2956FAC66AB5"
+          },
+          "properties": {
+            "candidateId": "ASB-18B52EBD427C2995",
+            "fingerprint": "ASBFP-11F60FFA111A2956FAC66AB5",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/playwright.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7BAFB4BCC417973D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B10A855FC6C2EA8A3DE45C2D"
+          },
+          "properties": {
+            "candidateId": "ASB-7BAFB4BCC417973D",
+            "fingerprint": "ASBFP-B10A855FC6C2EA8A3DE45C2D",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/playwright.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 18,
+                  "endLine": 18
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6C16975FB37AD5A7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-540420B717EC3591E2A328CD"
+          },
+          "properties": {
+            "candidateId": "ASB-6C16975FB37AD5A7",
+            "fingerprint": "ASBFP-540420B717EC3591E2A328CD",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/playwright.config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 24,
+                  "endLine": 24
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-86854D033509E8C8",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-540420B717EC3591E2A328CD"
+          },
+          "properties": {
+            "candidateId": "ASB-86854D033509E8C8",
+            "fingerprint": "ASBFP-540420B717EC3591E2A328CD",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 20,
+                  "endLine": 20
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-10B6FE4FB49C9FFE",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D029422916104C5CC8CA1267"
+          },
+          "properties": {
+            "candidateId": "ASB-10B6FE4FB49C9FFE",
+            "fingerprint": "ASBFP-D029422916104C5CC8CA1267",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in cleanArtifacts"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-AA40E69E6F7F1BA1",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AB010759606B4CD6AF53FE3E"
+          },
+          "properties": {
+            "candidateId": "ASB-AA40E69E6F7F1BA1",
+            "fingerprint": "ASBFP-AB010759606B4CD6AF53FE3E",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in cleanArtifacts"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 38,
+                  "endLine": 38
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-966170BF0EEDBE6C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A979394A823BEB37A5C21B22"
+          },
+          "properties": {
+            "candidateId": "ASB-966170BF0EEDBE6C",
+            "fingerprint": "ASBFP-A979394A823BEB37A5C21B22",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in cleanArtifacts"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-352DD78AFADF14B3",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-CE28A7F43FF761956FAC7D10"
+          },
+          "properties": {
+            "candidateId": "ASB-352DD78AFADF14B3",
+            "fingerprint": "ASBFP-CE28A7F43FF761956FAC7D10",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in printUsage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "endLine": 45
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B169640C81D2DA63",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A4F3C74DF4A70775334829B1"
+          },
+          "properties": {
+            "candidateId": "ASB-B169640C81D2DA63",
+            "fingerprint": "ASBFP-A4F3C74DF4A70775334829B1",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in printUsage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/scripts/playwright.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 48,
+                  "endLine": 48
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0D982734A518E779",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5CC17488E843C4683C567668"
+          },
+          "properties": {
+            "candidateId": "ASB-0D982734A518E779",
+            "fingerprint": "ASBFP-5CC17488E843C4683C567668",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/ui/deploy-control.spec.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A89C4C62A731918F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-67A919E60E05BBF051573938"
+          },
+          "properties": {
+            "candidateId": "ASB-A89C4C62A731918F",
+            "fingerprint": "ASBFP-67A919E60E05BBF051573938",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/ui/export-menu.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E5E168774CD9B512",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-75B8472AC59F5F20C00A10C3"
+          },
+          "properties": {
+            "candidateId": "ASB-E5E168774CD9B512",
+            "fingerprint": "ASBFP-75B8472AC59F5F20C00A10C3",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/ui/export-menu.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 252,
+                  "endLine": 252
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-158145809F3C9A3D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0E26C728E4C85A8E4599DB1A"
+          },
+          "properties": {
+            "candidateId": "ASB-158145809F3C9A3D",
+            "fingerprint": "ASBFP-0E26C728E4C85A8E4599DB1A",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "e2e/ui/host-validation.spec.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 18,
+                  "endLine": 18
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-09D91BA469BE0217",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-07F1D053C38178F2E2AC6549"
+          },
+          "properties": {
+            "candidateId": "ASB-09D91BA469BE0217",
+            "fingerprint": "ASBFP-07F1D053C38178F2E2AC6549",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/app/page.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 43,
+                  "endLine": 43
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B808CA8D64C76F5E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4DC552C54D5D51B34F329ECC"
+          },
+          "properties": {
+            "candidateId": "ASB-B808CA8D64C76F5E",
+            "fingerprint": "ASBFP-4DC552C54D5D51B34F329ECC",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in DeployControl"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/deploy-control.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 61,
+                  "endLine": 61
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D7427333D85CB9A8",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-83BA104B58237235F932D2D7"
+          },
+          "properties": {
+            "candidateId": "ASB-D7427333D85CB9A8",
+            "fingerprint": "ASBFP-83BA104B58237235F932D2D7",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in PreviewPane"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/preview-pane.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 67,
+                  "endLine": 67
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-78FF02BEB3985983",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-92D6A63505DE9D9A3E30C862"
+          },
+          "properties": {
+            "candidateId": "ASB-78FF02BEB3985983",
+            "fingerprint": "ASBFP-92D6A63505DE9D9A3E30C862",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in AgentSection"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 171,
+                  "endLine": 171
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0286314C35A84AF6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-470CEA501A6E10E8D489B805"
+          },
+          "properties": {
+            "candidateId": "ASB-0286314C35A84AF6",
+            "fingerprint": "ASBFP-470CEA501A6E10E8D489B805",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in VercelDeployConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 597,
+                  "endLine": 597
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-24331D5F173F4131",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-856E6E9A321AECCAA1FF20C9"
+          },
+          "properties": {
+            "candidateId": "ASB-24331D5F173F4131",
+            "fingerprint": "ASBFP-856E6E9A321AECCAA1FF20C9",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 620,
+                  "endLine": 620
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B7967A0D8779B3F4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C0F59E684648BD50F37BC327"
+          },
+          "properties": {
+            "candidateId": "ASB-B7967A0D8779B3F4",
+            "fingerprint": "ASBFP-C0F59E684648BD50F37BC327",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 644,
+                  "endLine": 644
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E8CA45577B3DCD14",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C0F59E684648BD50F37BC327"
+          },
+          "properties": {
+            "candidateId": "ASB-E8CA45577B3DCD14",
+            "fingerprint": "ASBFP-C0F59E684648BD50F37BC327",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in MarketplaceSection"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 791,
+                  "endLine": 791
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9B4F5488F52812D9",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A734CA6C2A56BD734EDED40E"
+          },
+          "properties": {
+            "candidateId": "ASB-9B4F5488F52812D9",
+            "fingerprint": "ASBFP-A734CA6C2A56BD734EDED40E",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 813,
+                  "endLine": 813
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-667B621D393383CA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D3E798C92077D2595A954D14"
+          },
+          "properties": {
+            "candidateId": "ASB-667B621D393383CA",
+            "fingerprint": "ASBFP-D3E798C92077D2595A954D14",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/settings-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 850,
+                  "endLine": 850
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-06A57F9E1D1B04C0",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-38082C00442CFE1EA5F83E2C"
+          },
+          "properties": {
+            "candidateId": "ASB-06A57F9E1D1B04C0",
+            "fingerprint": "ASBFP-38082C00442CFE1EA5F83E2C",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in WelcomeModal"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/components/welcome-modal.tsx",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 109,
+                  "endLine": 109
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-4FE32061AC4A94BC",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-57BA680B95852CA6CF1CE023"
+          },
+          "properties": {
+            "candidateId": "ASB-4FE32061AC4A94BC",
+            "fingerprint": "ASBFP-57BA680B95852CA6CF1CE023",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in resolveOpenclawAgentId"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/agents/detect.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 389,
+                  "endLine": 389
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9719C7568695FAE8",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D60EA1B632BC49239D9B0E67"
+          },
+          "properties": {
+            "candidateId": "ASB-9719C7568695FAE8",
+            "fingerprint": "ASBFP-D60EA1B632BC49239D9B0E67",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/agents/invoke.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 175,
+                  "endLine": 175
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7F887F83409E3506",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A5F2293878A55F0DC6B4EABC"
+          },
+          "properties": {
+            "candidateId": "ASB-7F887F83409E3506",
+            "fingerprint": "ASBFP-A5F2293878A55F0DC6B4EABC",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in pick"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deck.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 47,
+                  "endLine": 47
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2AA71FF9CDB04200",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-AF46B9DC00BA0CFC76DA47AA"
+          },
+          "properties": {
+            "candidateId": "ASB-2AA71FF9CDB04200",
+            "fingerprint": "ASBFP-AF46B9DC00BA0CFC76DA47AA",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseDeck"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deck.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 94,
+                  "endLine": 94
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DC2765AD203A7156",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EDA5F0C328EE312C5ACE3D49"
+          },
+          "properties": {
+            "candidateId": "ASB-DC2765AD203A7156",
+            "fingerprint": "ASBFP-EDA5F0C328EE312C5ACE3D49",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in writeDeployConfigFile"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 95,
+                  "endLine": 95
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A4D75F6061A57F4D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-46C6C9C03B1C416F0E830054"
+          },
+          "properties": {
+            "candidateId": "ASB-A4D75F6061A57F4D",
+            "fingerprint": "ASBFP-46C6C9C03B1C416F0E830054",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in readVercelConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 110,
+                  "endLine": 110
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D6D6C5916DFA5C64",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-778B96239CDB7DC22E86F3A1"
+          },
+          "properties": {
+            "candidateId": "ASB-D6D6C5916DFA5C64",
+            "fingerprint": "ASBFP-778B96239CDB7DC22E86F3A1",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in readCloudflarePagesConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 128,
+                  "endLine": 128
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-33C98060A136EE6E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A52DE4C8410025B65172FD6A"
+          },
+          "properties": {
+            "candidateId": "ASB-33C98060A136EE6E",
+            "fingerprint": "ASBFP-A52DE4C8410025B65172FD6A",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in clearDeployConfig"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/config.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 229,
+                  "endLine": 229
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C9B610F9A0788505",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-50A44CF2A2F3E6434440D9EE"
+          },
+          "properties": {
+            "candidateId": "ASB-C9B610F9A0788505",
+            "fingerprint": "ASBFP-50A44CF2A2F3E6434440D9EE",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in requestDeploymentUrl"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/url-check.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 61,
+                  "endLine": 61
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5B680CACD51E54B2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3182F8674C2B7737FB4F8B4A"
+          },
+          "properties": {
+            "candidateId": "ASB-5B680CACD51E54B2",
+            "fingerprint": "ASBFP-3182F8674C2B7737FB4F8B4A",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in disableVercelDeploymentProtection"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/vercel.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 118,
+                  "endLine": 118
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-187FFF535C22BF65",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-06BFEC5A4814E0E1A24AD875"
+          },
+          "properties": {
+            "candidateId": "ASB-187FFF535C22BF65",
+            "fingerprint": "ASBFP-06BFEC5A4814E0E1A24AD875",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in pollVercelDeployment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/vercel.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 149,
+                  "endLine": 149
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-AED2060863129BE5",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-30D3BF113CDDA1385E5B9E9A"
+          },
+          "properties": {
+            "candidateId": "ASB-AED2060863129BE5",
+            "fingerprint": "ASBFP-30D3BF113CDDA1385E5B9E9A",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in deployToVercel"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/deploy/vercel.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 194,
+                  "endLine": 194
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3649C2841CDA737A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-70B64B380E665D4EB4B28BAF"
+          },
+          "properties": {
+            "candidateId": "ASB-3649C2841CDA737A",
+            "fingerprint": "ASBFP-70B64B380E665D4EB4B28BAF",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in exportDeckPptx"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/export/deck.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 97,
+                  "endLine": 97
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-FF965F9BDF6075BB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C6D1BDE78CE170D7FFC54766"
+          },
+          "properties": {
+            "candidateId": "ASB-FF965F9BDF6075BB",
+            "fingerprint": "ASBFP-C6D1BDE78CE170D7FFC54766",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in exportDeckPrint"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/export/deck.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 117,
+                  "endLine": 117
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2D14963C5F4515CA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-48956726D7F393FF518F01B9"
+          },
+          "properties": {
+            "candidateId": "ASB-2D14963C5F4515CA",
+            "fingerprint": "ASBFP-48956726D7F393FF518F01B9",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in exportDeckPrint"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/export/deck.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 125,
+                  "endLine": 125
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9CE73BC089149948",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-511086BDB66724C112F1F9D6"
+          },
+          "properties": {
+            "candidateId": "ASB-9CE73BC089149948",
+            "fingerprint": "ASBFP-511086BDB66724C112F1F9D6",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in backtickFence"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/export/markdown-roundtrip.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 282,
+                  "endLine": 282
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5A1096BC6ABA8C25",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-58F1E0E8BF12C917E60D968F"
+          },
+          "properties": {
+            "candidateId": "ASB-5A1096BC6ABA8C25",
+            "fingerprint": "ASBFP-58F1E0E8BF12C917E60D968F",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in pick"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/hyperframes.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 60,
+                  "endLine": 60
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-847D6EACB1E35045",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E8E3C1FD19946A01E5AE8DB5"
+          },
+          "properties": {
+            "candidateId": "ASB-847D6EACB1E35045",
+            "fingerprint": "ASBFP-E8E3C1FD19946A01E5AE8DB5",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in extractOpeningTag"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/hyperframes.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 82,
+                  "endLine": 82
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-CFE797B2D532B7A5",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-51CF049AFB5C0F73B47A7C1A"
+          },
+          "properties": {
+            "candidateId": "ASB-CFE797B2D532B7A5",
+            "fingerprint": "ASBFP-51CF049AFB5C0F73B47A7C1A",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseInlineMarker"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/hyperframes.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 110,
+                  "endLine": 110
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-87D09E93B434CC49",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-287E445BE4AAD80DE8080DDE"
+          },
+          "properties": {
+            "candidateId": "ASB-87D09E93B434CC49",
+            "fingerprint": "ASBFP-287E445BE4AAD80DE8080DDE",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseHyperframes"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/hyperframes.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 147,
+                  "endLine": 147
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D2B2C7CE1F4DF9BF",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-326F15F38056B1F45E451B8C"
+          },
+          "properties": {
+            "candidateId": "ASB-D2B2C7CE1F4DF9BF",
+            "fingerprint": "ASBFP-326F15F38056B1F45E451B8C",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in tarGzDir"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/api.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5AEFE495A5337F07",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-42528B355238ED133CE92B6D"
+          },
+          "properties": {
+            "candidateId": "ASB-5AEFE495A5337F07",
+            "fingerprint": "ASBFP-42528B355238ED133CE92B6D",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in tarGzDir"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/api.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 57,
+                  "endLine": 57
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-69C182A5927A09EF",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-F380E89CD2D78A6C984AB0FC"
+          },
+          "properties": {
+            "candidateId": "ASB-69C182A5927A09EF",
+            "fingerprint": "ASBFP-F380E89CD2D78A6C984AB0FC",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildOkTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/api.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 64,
+                  "endLine": 64
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-6D25C8AC607DE2BA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-2F091E55922AE771D9B87EC1"
+          },
+          "properties": {
+            "candidateId": "ASB-6D25C8AC607DE2BA",
+            "fingerprint": "ASBFP-2F091E55922AE771D9B87EC1",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in buildOkTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/api.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 67,
+                  "endLine": 67
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-09B6D995017C8496",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6EFFBD8F660A4C9D6C3E749D"
+          },
+          "properties": {
+            "candidateId": "ASB-09B6D995017C8496",
+            "fingerprint": "ASBFP-6EFFBD8F660A4C9D6C3E749D",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in tarGzDir"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/cross-device.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B8930A78D01558E7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6387ABDD24AACA5F47166719"
+          },
+          "properties": {
+            "candidateId": "ASB-B8930A78D01558E7",
+            "fingerprint": "ASBFP-6387ABDD24AACA5F47166719",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in fakeFetch"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/cross-device.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 83,
+                  "endLine": 83
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-68A90B245CACA789",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-9F9F4F33B1733EAA9C288455"
+          },
+          "properties": {
+            "candidateId": "ASB-68A90B245CACA789",
+            "fingerprint": "ASBFP-9F9F4F33B1733EAA9C288455",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/cross-device.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 90,
+                  "endLine": 90
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0892932FF16C87D2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D47D23171D0856B92428DE09"
+          },
+          "properties": {
+            "candidateId": "ASB-0892932FF16C87D2",
+            "fingerprint": "ASBFP-D47D23171D0856B92428DE09",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in buildTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/cross-device.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 93,
+                  "endLine": 93
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-25348B5164BE5DCB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-37B85D40E16C1E0CB8A1442D"
+          },
+          "properties": {
+            "candidateId": "ASB-25348B5164BE5DCB",
+            "fingerprint": "ASBFP-37B85D40E16C1E0CB8A1442D",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in tarGzDir"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0D1EC91765989DA6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-795D5E10D00378F922B100C4"
+          },
+          "properties": {
+            "candidateId": "ASB-0D1EC91765989DA6",
+            "fingerprint": "ASBFP-795D5E10D00378F922B100C4",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 81,
+                  "endLine": 81
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2BF7437D4348CCE4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D1D4A43F1029D825A06F339C"
+          },
+          "properties": {
+            "candidateId": "ASB-2BF7437D4348CCE4",
+            "fingerprint": "ASBFP-D1D4A43F1029D825A06F339C",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in buildTarballWith"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 90,
+                  "endLine": 90
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-868946479DF067F1",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-D7578AD14D0B35B69D6918F5"
+          },
+          "properties": {
+            "candidateId": "ASB-868946479DF067F1",
+            "fingerprint": "ASBFP-D7578AD14D0B35B69D6918F5",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildTarballWith"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 96,
+                  "endLine": 96
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7BED1A5041A2B0A4",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E5D628789ED025FA01A17294"
+          },
+          "properties": {
+            "candidateId": "ASB-7BED1A5041A2B0A4",
+            "fingerprint": "ASBFP-E5D628789ED025FA01A17294",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildTarballWith"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 107,
+                  "endLine": 107
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-760A5596BE7F4D71",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-9A69F23F3DBD5EC5CD87F5F1"
+          },
+          "properties": {
+            "candidateId": "ASB-760A5596BE7F4D71",
+            "fingerprint": "ASBFP-9A69F23F3DBD5EC5CD87F5F1",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 117,
+                  "endLine": 117
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7509F7FE3A053BA0",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EA3BA3E609929029700EE845"
+          },
+          "properties": {
+            "candidateId": "ASB-7509F7FE3A053BA0",
+            "fingerprint": "ASBFP-EA3BA3E609929029700EE845",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 118,
+                  "endLine": 118
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F8F1AC55BF898C30",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B7D311622ACD3D6E624EDBF9"
+          },
+          "properties": {
+            "candidateId": "ASB-F8F1AC55BF898C30",
+            "fingerprint": "ASBFP-B7D311622ACD3D6E624EDBF9",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 132,
+                  "endLine": 132
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-AC32096DD17D66F0",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3C9A23C71913FC3B440F47BC"
+          },
+          "properties": {
+            "candidateId": "ASB-AC32096DD17D66F0",
+            "fingerprint": "ASBFP-3C9A23C71913FC3B440F47BC",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 163,
+                  "endLine": 163
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-80D71CD3A87A156C",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EA3BA3E609929029700EE845"
+          },
+          "properties": {
+            "candidateId": "ASB-80D71CD3A87A156C",
+            "fingerprint": "ASBFP-EA3BA3E609929029700EE845",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 182,
+                  "endLine": 182
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B3F903CAB14C3D6E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EA3BA3E609929029700EE845"
+          },
+          "properties": {
+            "candidateId": "ASB-B3F903CAB14C3D6E",
+            "fingerprint": "ASBFP-EA3BA3E609929029700EE845",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 190,
+                  "endLine": 190
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DC1668FCDF620638",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-36C99B1A760DA96279F6E7AC"
+          },
+          "properties": {
+            "candidateId": "ASB-DC1668FCDF620638",
+            "fingerprint": "ASBFP-36C99B1A760DA96279F6E7AC",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 200,
+                  "endLine": 200
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0A675C2635E0E5C7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0734A98B42D8772BCC85B2A5"
+          },
+          "properties": {
+            "candidateId": "ASB-0A675C2635E0E5C7",
+            "fingerprint": "ASBFP-0734A98B42D8772BCC85B2A5",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 218,
+                  "endLine": 218
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DDE72256B06D911F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-95E11034882A0666417520A3"
+          },
+          "properties": {
+            "candidateId": "ASB-DDE72256B06D911F",
+            "fingerprint": "ASBFP-95E11034882A0666417520A3",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in tarGzDir"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 35,
+                  "endLine": 35
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-7FCD8433065390D7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5BD3600A63D863840FEEF8EC"
+          },
+          "properties": {
+            "candidateId": "ASB-7FCD8433065390D7",
+            "fingerprint": "ASBFP-5BD3600A63D863840FEEF8EC",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildSingleSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 59,
+                  "endLine": 59
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C255C98A0F045D97",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A39B2A91E33A4260AA694783"
+          },
+          "properties": {
+            "candidateId": "ASB-C255C98A0F045D97",
+            "fingerprint": "ASBFP-A39B2A91E33A4260AA694783",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildSingleSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 60,
+                  "endLine": 60
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-08906116A9AC871A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A7B274697B74D8B46760F681"
+          },
+          "properties": {
+            "candidateId": "ASB-08906116A9AC871A",
+            "fingerprint": "ASBFP-A7B274697B74D8B46760F681",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildSingleSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 61,
+                  "endLine": 61
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-253DD3B9AF48F727",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-77C2C62AD760F4AE3F952C01"
+          },
+          "properties": {
+            "candidateId": "ASB-253DD3B9AF48F727",
+            "fingerprint": "ASBFP-77C2C62AD760F4AE3F952C01",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in buildSingleSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 64,
+                  "endLine": 64
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-5A020A8A8F0CEFE6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7F44BF30293933AC7004BD56"
+          },
+          "properties": {
+            "candidateId": "ASB-5A020A8A8F0CEFE6",
+            "fingerprint": "ASBFP-7F44BF30293933AC7004BD56",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildMultiSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 72,
+                  "endLine": 72
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-CEC0BDAA6A4D7D46",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B109E3361F0BC6FC9777565C"
+          },
+          "properties": {
+            "candidateId": "ASB-CEC0BDAA6A4D7D46",
+            "fingerprint": "ASBFP-B109E3361F0BC6FC9777565C",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in buildMultiSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 73,
+                  "endLine": 73
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8501BFA911501F32",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-11D2612C342E7E2DFE862615"
+          },
+          "properties": {
+            "candidateId": "ASB-8501BFA911501F32",
+            "fingerprint": "ASBFP-11D2612C342E7E2DFE862615",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in buildMultiSkillFixture"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 80,
+                  "endLine": 80
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A8F891524AA2E220",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-922AD425E93959C379DD6490"
+          },
+          "properties": {
+            "candidateId": "ASB-A8F891524AA2E220",
+            "fingerprint": "ASBFP-922AD425E93959C379DD6490",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in fakeFetch"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 112,
+                  "endLine": 112
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-EFBBE994BAFDDD57",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-583834CB8EA082A7D6B80D31"
+          },
+          "properties": {
+            "candidateId": "ASB-EFBBE994BAFDDD57",
+            "fingerprint": "ASBFP-583834CB8EA082A7D6B80D31",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 129,
+                  "endLine": 129
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1B95941F3AB00BDB",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-65AB7CCDB4DD28E6B4536174"
+          },
+          "properties": {
+            "candidateId": "ASB-1B95941F3AB00BDB",
+            "fingerprint": "ASBFP-65AB7CCDB4DD28E6B4536174",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 179,
+                  "endLine": 179
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9A420F8C9D4DD3A6",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6831792AFB502C4B1CCDE4D8"
+          },
+          "properties": {
+            "candidateId": "ASB-9A420F8C9D4DD3A6",
+            "fingerprint": "ASBFP-6831792AFB502C4B1CCDE4D8",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/install.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 182,
+                  "endLine": 182
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-59F2C2BB81BF58FC",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-45BD85C858019A00F77B8362"
+          },
+          "properties": {
+            "candidateId": "ASB-59F2C2BB81BF58FC",
+            "fingerprint": "ASBFP-45BD85C858019A00F77B8362",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/loader-merge.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41,
+                  "endLine": 41
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-806C3173FE02FD8E",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A8312BD5D728B33FF21A4766"
+          },
+          "properties": {
+            "candidateId": "ASB-806C3173FE02FD8E",
+            "fingerprint": "ASBFP-A8312BD5D728B33FF21A4766",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/loader-merge.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 46,
+                  "endLine": 46
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C8909F56285959A0",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B9CB283908F7253B42D750C6"
+          },
+          "properties": {
+            "candidateId": "ASB-C8909F56285959A0",
+            "fingerprint": "ASBFP-B9CB283908F7253B42D750C6",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/loader-merge.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 52,
+                  "endLine": 52
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1D0BB3A92A36821D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6E109E2C95659774BA08F1D9"
+          },
+          "properties": {
+            "candidateId": "ASB-1D0BB3A92A36821D",
+            "fingerprint": "ASBFP-6E109E2C95659774BA08F1D9",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in fakeFetchWithTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/preflight.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 94,
+                  "endLine": 94
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-83E3B44EA237B45B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A26F1D71F3033B1C369FA017"
+          },
+          "properties": {
+            "candidateId": "ASB-83E3B44EA237B45B",
+            "fingerprint": "ASBFP-A26F1D71F3033B1C369FA017",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/preflight.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 163,
+                  "endLine": 163
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D3EB01B11C340803",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-6035AA209F787C5A76467F38"
+          },
+          "properties": {
+            "candidateId": "ASB-D3EB01B11C340803",
+            "fingerprint": "ASBFP-6035AA209F787C5A76467F38",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/preflight.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 170,
+                  "endLine": 170
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-55CF98EE48A3E046",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-9C1EF2A35D663D5C20A38936"
+          },
+          "properties": {
+            "candidateId": "ASB-55CF98EE48A3E046",
+            "fingerprint": "ASBFP-9C1EF2A35D663D5C20A38936",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/__tests__/preflight.test.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 174,
+                  "endLine": 174
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-773DB957AC70CFF2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E6995F78809E01CF0FC2DFD0"
+          },
+          "properties": {
+            "candidateId": "ASB-773DB957AC70CFF2",
+            "fingerprint": "ASBFP-E6995F78809E01CF0FC2DFD0",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseGitHubSpec"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 70,
+                  "endLine": 70
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-01091E942B7D54EC",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-ADCF5773BF3A4CAB032DF0E8"
+          },
+          "properties": {
+            "candidateId": "ASB-01091E942B7D54EC",
+            "fingerprint": "ASBFP-ADCF5773BF3A4CAB032DF0E8",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseGitHubSpec"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 83,
+                  "endLine": 83
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-A765F5AE419E9C91",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-2401AC7698B2B156B6DC69CF"
+          },
+          "properties": {
+            "candidateId": "ASB-A765F5AE419E9C91",
+            "fingerprint": "ASBFP-2401AC7698B2B156B6DC69CF",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in downloadTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 146,
+                  "endLine": 146
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-0C2A0235490DDC52",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E91254F91677ED3761C2CBBA"
+          },
+          "properties": {
+            "candidateId": "ASB-0C2A0235490DDC52",
+            "fingerprint": "ASBFP-E91254F91677ED3761C2CBBA",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in preflightTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 167,
+                  "endLine": 167
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-52024F6BB114962B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-1B4547641594B8172BD2869A"
+          },
+          "properties": {
+            "candidateId": "ASB-52024F6BB114962B",
+            "fingerprint": "ASBFP-1B4547641594B8172BD2869A",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in extractTarball"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 246,
+                  "endLine": 246
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-44EA7FE7A005F837",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FE1C0EBB54DBF6E815AF1AE9"
+          },
+          "properties": {
+            "candidateId": "ASB-44EA7FE7A005F837",
+            "fingerprint": "ASBFP-FE1C0EBB54DBF6E815AF1AE9",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in copyValidatedSkill"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 338,
+                  "endLine": 338
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DF4FAE2459527C2A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-FDA4B3B045BC69A63A063FBA"
+          },
+          "properties": {
+            "candidateId": "ASB-DF4FAE2459527C2A",
+            "fingerprint": "ASBFP-FDA4B3B045BC69A63A063FBA",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in copyValidatedSkill"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 348,
+                  "endLine": 348
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-66E56E3E2E87181A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C156C73DB5D86022FF192D3A"
+          },
+          "properties": {
+            "candidateId": "ASB-66E56E3E2E87181A",
+            "fingerprint": "ASBFP-C156C73DB5D86022FF192D3A",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_write",
+          "level": "warning",
+          "message": {
+            "text": "filesystem write candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 446,
+                  "endLine": 446
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-917C585F14B27912",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5085AAB918B3BEF352205963"
+          },
+          "properties": {
+            "candidateId": "ASB-917C585F14B27912",
+            "fingerprint": "ASBFP-5085AAB918B3BEF352205963",
+            "confidence": "high",
+            "detectors": [
+              "js_file_write"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 471,
+                  "endLine": 471
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-B3CA127DB64FDC1D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C9F20DAA69B052D8CB82FE90"
+          },
+          "properties": {
+            "candidateId": "ASB-B3CA127DB64FDC1D",
+            "fingerprint": "ASBFP-C9F20DAA69B052D8CB82FE90",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 478,
+                  "endLine": 478
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1626BEB4A45C878F",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-979B905B528962B55DF3BAE8"
+          },
+          "properties": {
+            "candidateId": "ASB-1626BEB4A45C878F",
+            "fingerprint": "ASBFP-979B905B528962B55DF3BAE8",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 479,
+                  "endLine": 479
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C4B9006921DF44E7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-EA256A5E30E611C97A237878"
+          },
+          "properties": {
+            "candidateId": "ASB-C4B9006921DF44E7",
+            "fingerprint": "ASBFP-EA256A5E30E611C97A237878",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_delete",
+          "level": "note",
+          "message": {
+            "text": "filesystem delete candidate in uninstallPackage"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/install.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 492,
+                  "endLine": 492
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F23C76A7AB3AE7A2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B4DC96F056DA8E4506CD6622"
+          },
+          "properties": {
+            "candidateId": "ASB-F23C76A7AB3AE7A2",
+            "fingerprint": "ASBFP-B4DC96F056DA8E4506CD6622",
+            "confidence": "medium",
+            "detectors": [
+              "js_file_delete"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in readPackageManifest"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/skills/registry.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 66,
+                  "endLine": 66
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F31E52B8B357CE32",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E041104CF48DFA3E57230CE0"
+          },
+          "properties": {
+            "candidateId": "ASB-F31E52B8B357CE32",
+            "fingerprint": "ASBFP-E041104CF48DFA3E57230CE0",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in fetchTemplates"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 42,
+                  "endLine": 42
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-C857E027790D47AE",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-76BA6D708408FC64D6BEBE14"
+          },
+          "properties": {
+            "candidateId": "ASB-C857E027790D47AE",
+            "fingerprint": "ASBFP-76BA6D708408FC64D6BEBE14",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in fetchTemplateExample"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/index.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 121,
+                  "endLine": 121
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2B9297FD6849A69B",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-39DE932DACD90259F1ECC714"
+          },
+          "properties": {
+            "candidateId": "ASB-2B9297FD6849A69B",
+            "fingerprint": "ASBFP-39DE932DACD90259F1ECC714",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 95,
+                  "endLine": 95
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-ECB96D434794EB3D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B977E1DC2D7DE28D771CC3D6"
+          },
+          "properties": {
+            "candidateId": "ASB-ECB96D434794EB3D",
+            "fingerprint": "ASBFP-B977E1DC2D7DE28D771CC3D6",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 101,
+                  "endLine": 101
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-299297772823D90A",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-53F3B9AD20A9FF8ED499BD21"
+          },
+          "properties": {
+            "candidateId": "ASB-299297772823D90A",
+            "fingerprint": "ASBFP-53F3B9AD20A9FF8ED499BD21",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "note",
+          "message": {
+            "text": "command execution candidate in parseFrontmatter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 120,
+                  "endLine": 120
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9C1D9A95772A2A02",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-0AA6DEFA778D2838AA28C490"
+          },
+          "properties": {
+            "candidateId": "ASB-9C1D9A95772A2A02",
+            "fingerprint": "ASBFP-0AA6DEFA778D2838AA28C490",
+            "confidence": "medium",
+            "detectors": [
+              "js_child_process"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in safeRead"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/templates/loader.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 154,
+                  "endLine": 154
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2D67D2354A27AA20",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7FBA9A35D3E993EBC880626D"
+          },
+          "properties": {
+            "candidateId": "ASB-2D67D2354A27AA20",
+            "fingerprint": "ASBFP-7FBA9A35D3E993EBC880626D",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/use-convert.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 132,
+                  "endLine": 132
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3C8CFC6C2B2DC863",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-A8B449F3ADC08C0D78464570"
+          },
+          "properties": {
+            "candidateId": "ASB-3C8CFC6C2B2DC863",
+            "fingerprint": "ASBFP-A8B449F3ADC08C0D78464570",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in useDeploy"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/use-deploy.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 68,
+                  "endLine": 68
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DECC51906B09224D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-30A404B52558650CEB2223A9"
+          },
+          "properties": {
+            "candidateId": "ASB-DECC51906B09224D",
+            "fingerprint": "ASBFP-30A404B52558650CEB2223A9",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/network_access",
+          "level": "warning",
+          "message": {
+            "text": "network access candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "next/src/lib/use-draft.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 65,
+                  "endLine": 65
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F5F3AF570037D2E3",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5C853E1DD8E1B8E11CF5F8B8"
+          },
+          "properties": {
+            "candidateId": "ASB-F5F3AF570037D2E3",
+            "fingerprint": "ASBFP-5C853E1DD8E1B8E11CF5F8B8",
+            "confidence": "high",
+            "detectors": [
+              "js_http_client"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in requireText"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 45,
+                  "endLine": 45
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-972F1D0C52FD5831",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-ED849CCB4D3BD491525082B6"
+          },
+          "properties": {
+            "candidateId": "ASB-972F1D0C52FD5831",
+            "fingerprint": "ASBFP-ED849CCB4D3BD491525082B6",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/filesystem_read",
+          "level": "warning",
+          "message": {
+            "text": "filesystem read candidate in readJson"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 58,
+                  "endLine": 58
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-ADBB523DEA98A8CD",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-722BFAF03047BB42D7FA3EB7"
+          },
+          "properties": {
+            "candidateId": "ASB-ADBB523DEA98A8CD",
+            "fingerprint": "ASBFP-722BFAF03047BB42D7FA3EB7",
+            "confidence": "high",
+            "detectors": [
+              "js_file_read"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in readJson"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 80,
+                  "endLine": 80
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-1567011109082CEA",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-E869A07A87BF38F0BD81EF68"
+          },
+          "properties": {
+            "candidateId": "ASB-1567011109082CEA",
+            "fingerprint": "ASBFP-E869A07A87BF38F0BD81EF68",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 97,
+                  "endLine": 97
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2D5FA82572B1EA80",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-B888E624DEE2B21890955D77"
+          },
+          "properties": {
+            "candidateId": "ASB-2D5FA82572B1EA80",
+            "fingerprint": "ASBFP-B888E624DEE2B21890955D77",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 104,
+                  "endLine": 104
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-DCA274607C5B9C00",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-C91D56354C34185088594865"
+          },
+          "properties": {
+            "candidateId": "ASB-DCA274607C5B9C00",
+            "fingerprint": "ASBFP-C91D56354C34185088594865",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 105,
+                  "endLine": 105
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-2AE848114CFE0A09",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4B6B24B25594D7DD83A1BF3E"
+          },
+          "properties": {
+            "candidateId": "ASB-2AE848114CFE0A09",
+            "fingerprint": "ASBFP-4B6B24B25594D7DD83A1BF3E",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 159,
+                  "endLine": 159
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-40DE86E58C72C224",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-7CEEDDCD4C7B85D99A1E3BD2"
+          },
+          "properties": {
+            "candidateId": "ASB-40DE86E58C72C224",
+            "fingerprint": "ASBFP-7CEEDDCD4C7B85D99A1E3BD2",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 161,
+                  "endLine": 161
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-68381D7F26E23287",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-31C89AC81C58F1945D95681C"
+          },
+          "properties": {
+            "candidateId": "ASB-68381D7F26E23287",
+            "fingerprint": "ASBFP-31C89AC81C58F1945D95681C",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 171,
+                  "endLine": 171
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-8299567F709AEC50",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-5FE89C5735E9F9D5978198BE"
+          },
+          "properties": {
+            "candidateId": "ASB-8299567F709AEC50",
+            "fingerprint": "ASBFP-5FE89C5735E9F9D5978198BE",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 176,
+                  "endLine": 176
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-36ABAC417894A4C2",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-59F72F97A8C11C729375981D"
+          },
+          "properties": {
+            "candidateId": "ASB-36ABAC417894A4C2",
+            "fingerprint": "ASBFP-59F72F97A8C11C729375981D",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 177,
+                  "endLine": 177
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-F5206267BAF9931D",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-3ADAD079ED759E11F24A350B"
+          },
+          "properties": {
+            "candidateId": "ASB-F5206267BAF9931D",
+            "fingerprint": "ASBFP-3ADAD079ED759E11F24A350B",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 179,
+                  "endLine": 179
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-9A41FE230009BF72",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-4683CC089CDEE17A82D0D087"
+          },
+          "properties": {
+            "candidateId": "ASB-9A41FE230009BF72",
+            "fingerprint": "ASBFP-4683CC089CDEE17A82D0D087",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/browser_control",
+          "level": "note",
+          "message": {
+            "text": "browser control candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/guard.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 194,
+                  "endLine": 194
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-E7443E5EC3A9ECDF",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-68C088910C01D6DDE99EF428"
+          },
+          "properties": {
+            "candidateId": "ASB-E7443E5EC3A9ECDF",
+            "fingerprint": "ASBFP-68C088910C01D6DDE99EF428",
+            "confidence": "medium",
+            "detectors": [
+              "browser_framework"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

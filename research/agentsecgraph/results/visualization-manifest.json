@@ -1,0 +1,74 @@
+[
+  {
+    "file": "html-anything-full.svg",
+    "candidate": "ASB-98B547DA6B6F8405",
+    "label": "html-anything",
+    "view": "full"
+  },
+  {
+    "file": "html-anything-security.svg",
+    "candidate": "ASB-98B547DA6B6F8405",
+    "label": "html-anything",
+    "view": "security"
+  },
+  {
+    "file": "magentic-ui-full.svg",
+    "candidate": "ASB-F8D7E421C8E3EDCD",
+    "label": "magentic-ui",
+    "view": "full"
+  },
+  {
+    "file": "magentic-ui-security.svg",
+    "candidate": "ASB-F8D7E421C8E3EDCD",
+    "label": "magentic-ui",
+    "view": "security"
+  },
+  {
+    "file": "mini-swe-agent-full.svg",
+    "candidate": "ASB-B9939207E2EA1DDA",
+    "label": "mini-swe-agent",
+    "view": "full"
+  },
+  {
+    "file": "mini-swe-agent-security.svg",
+    "candidate": "ASB-B9939207E2EA1DDA",
+    "label": "mini-swe-agent",
+    "view": "security"
+  },
+  {
+    "file": "cross_file_direct-full.svg",
+    "candidate": "ASB-3CB51E1A5A0F0455",
+    "label": "cross_file_direct",
+    "view": "full"
+  },
+  {
+    "file": "cross_file_direct-security.svg",
+    "candidate": "ASB-3CB51E1A5A0F0455",
+    "label": "cross_file_direct",
+    "view": "security"
+  },
+  {
+    "file": "small-auth-app-full.svg",
+    "candidate": "ASB-0FD132A099F898CD",
+    "label": "small-auth-app",
+    "view": "full"
+  },
+  {
+    "file": "small-auth-app-security.svg",
+    "candidate": "ASB-0FD132A099F898CD",
+    "label": "small-auth-app",
+    "view": "security"
+  },
+  {
+    "file": "parameter_overwrite-full.svg",
+    "candidate": "ASB-F312D8AF20924B26",
+    "label": "parameter_overwrite",
+    "view": "full"
+  },
+  {
+    "file": "parameter_overwrite-security.svg",
+    "candidate": "ASB-F312D8AF20924B26",
+    "label": "parameter_overwrite",
+    "view": "security"
+  }
+]

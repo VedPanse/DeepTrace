@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AgentSecBench",
+          "version": "0.2.0",
+          "informationUri": "https://github.com/A1LinLin1/AgentSecBench",
+          "rules": [
+            {
+              "id": "agentsecbench/command_execution",
+              "name": "command_execution",
+              "shortDescription": {
+                "text": "Command Execution"
+              },
+              "fullDescription": {
+                "text": "Python subprocess invocation"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "command_execution"
+                ]
+              }
+            },
+            {
+              "id": "agentsecbench/external_tool_invocation",
+              "name": "external_tool_invocation",
+              "shortDescription": {
+                "text": "External Tool Invocation"
+              },
+              "fullDescription": {
+                "text": "LangChain tool or agent-tool binding; MCP or agent tool definition"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "precision": "high",
+                "tags": [
+                  "security",
+                  "llm-agent",
+                  "static-analysis",
+                  "external_tool_invocation"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "%SRCROOT%": {
+          "uri": "./"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "agentsecbench/external_tool_invocation",
+          "level": "warning",
+          "message": {
+            "text": "external tool invocation candidate in <module>"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "agent.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "endLine": 3
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-D897AF5C062BE8F9",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-96060A2F796F0FA7B0E8F68E"
+          },
+          "properties": {
+            "candidateId": "ASB-D897AF5C062BE8F9",
+            "fingerprint": "ASBFP-96060A2F796F0FA7B0E8F68E",
+            "confidence": "high",
+            "detectors": [
+              "mcp_tool_definition"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/external_tool_invocation",
+          "level": "warning",
+          "message": {
+            "text": "external tool invocation candidate in run"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "agent.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 5,
+                  "endLine": 5
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-487CF06AE7F2C6B7",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-216BE138CB1B93E38A07DD12"
+          },
+          "properties": {
+            "candidateId": "ASB-487CF06AE7F2C6B7",
+            "fingerprint": "ASBFP-216BE138CB1B93E38A07DD12",
+            "confidence": "high",
+            "detectors": [
+              "langchain_tool_definition",
+              "mcp_tool_definition"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        },
+        {
+          "ruleId": "agentsecbench/command_execution",
+          "level": "warning",
+          "message": {
+            "text": "command execution candidate in execute"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "helper.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "agentsecbenchFindingId/v1": "ASB-3CB51E1A5A0F0455",
+            "agentsecbenchStableFingerprint/v1": "ASBFP-DCB206D80576D99B58F21410"
+          },
+          "properties": {
+            "candidateId": "ASB-3CB51E1A5A0F0455",
+            "fingerprint": "ASBFP-DCB206D80576D99B58F21410",
+            "confidence": "high",
+            "detectors": [
+              "py_subprocess"
+            ],
+            "reviewStatus": "candidate",
+            "claimBoundary": "static candidate; review required; not a vulnerability claim"
+          }
+        }
+      ],
+      "properties": {
+        "claimBoundary": "candidate discovery output; not vulnerability ground truth",
+        "sourceExecutionUsed": false
+      }
+    }
+  ]
+}

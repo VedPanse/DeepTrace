@@ -1,0 +1,49 @@
+{
+  "manifest": "/Users/vedpanse/DSC-180A/research/agentsecgraph/results/temporal-manifest.csv",
+  "scanned_at_utc": "2026-10-22T01:14:06.575457+00:00",
+  "manifest_repositories": 4,
+  "scanned_repositories": 4,
+  "skipped": [],
+  "failures": [],
+  "candidate_count": 4,
+  "candidate_granularity": "line",
+  "frozen_corpus_modified": false,
+  "execution_metrics": {
+    "wall_seconds": 0.024832,
+    "process_peak_rss_bytes": 28147712,
+    "python_peak_allocated_bytes": null,
+    "memory_metric_scope": "Python allocations in this process; not total RSS",
+    "memory_profiling_enabled": false,
+    "profiling_overhead_included": false,
+    "per_repository": [
+      {
+        "sample_id": "TEMPA",
+        "repo": "synthetic/temporal-A",
+        "status": "completed",
+        "candidate_count": 1,
+        "wall_seconds": 0.007866
+      },
+      {
+        "sample_id": "TEMPB",
+        "repo": "synthetic/temporal-B",
+        "status": "completed",
+        "candidate_count": 1,
+        "wall_seconds": 0.005748
+      },
+      {
+        "sample_id": "TEMPC",
+        "repo": "synthetic/temporal-C",
+        "status": "completed",
+        "candidate_count": 1,
+        "wall_seconds": 0.005522
+      },
+      {
+        "sample_id": "TEMPD",
+        "repo": "synthetic/temporal-D",
+        "status": "completed",
+        "candidate_count": 1,
+        "wall_seconds": 0.005318
+      }
+    ]
+  }
+}

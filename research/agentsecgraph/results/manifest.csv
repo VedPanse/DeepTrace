@@ -1,0 +1,4 @@
+sample_id,repo,git_commit,repository_path,experiment_split
+DT0001,nexu-io/html-anything,975fb3bcb98f1777781fb4c738902d36e32c8c46,/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/html-anything,development
+DT0002,SWE-agent/mini-swe-agent,04d809ceab9df28f9adaed044884180159172930,/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/mini-swe-agent,development
+DT0003,microsoft/magentic-ui,d3c9d13c39288257286a66daabf7c5b5fb72ee69,/Users/vedpanse/DSC-180A/research/agentsecgraph/targets/magentic-ui,development

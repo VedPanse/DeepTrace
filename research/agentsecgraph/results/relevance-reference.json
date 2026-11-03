@@ -1,0 +1,80 @@
+{
+  "labeling": "Analyst-authored from synthetic fixture source; not blinded or monitor-validated",
+  "facts": {
+    "cross_file_direct": [
+      {
+        "fact": "subprocess.run(value) is the process sink",
+        "source": "helper.py:4",
+        "supports": [
+          "node:n2"
+        ]
+      },
+      {
+        "fact": "command is an MCP tool parameter",
+        "source": "agent.py:5-6",
+        "supports": [
+          "node:n5"
+        ]
+      },
+      {
+        "fact": "the caller forwards command to the imported helper sink",
+        "source": "agent.py:7 and helper.py:3-4",
+        "supports": [
+          "node:n5",
+          "path:0"
+        ]
+      }
+    ],
+    "small-auth-app": [
+      {
+        "fact": "fetch POST sends payload",
+        "source": "app.ts:6",
+        "supports": [
+          "node:n2"
+        ]
+      },
+      {
+        "fact": "payload comes from the audit function parameter",
+        "source": "app.ts:3,6",
+        "supports": [
+          "node:n5",
+          "path:0"
+        ]
+      },
+      {
+        "fact": "request is blocked when requireAuth and token fails authorized",
+        "source": "app.ts:4",
+        "supports": []
+      },
+      {
+        "fact": "authorization compares token with synthetic-token",
+        "source": "auth.ts:2",
+        "supports": []
+      },
+      {
+        "fact": "requireAuth is true",
+        "source": "config.ts:1",
+        "supports": []
+      },
+      {
+        "fact": "endpoint is fixed to example.invalid/audit",
+        "source": "config.ts:1",
+        "supports": []
+      }
+    ],
+    "parameter_overwrite": [
+      {
+        "fact": "subprocess.run(command) is the process sink",
+        "source": "case.py:5",
+        "supports": [
+          "node:n2"
+        ]
+      },
+      {
+        "fact": "command is overwritten with a fixed constant before the sink",
+        "source": "case.py:4",
+        "supports": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "oracle",
+    "threshold": 320.0,
+    "tie_probability": 0,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.05,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "prose",
+    "threshold": 320.0,
+    "tie_probability": 0,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.07,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "retrieval",
+    "threshold": 300.0,
+    "tie_probability": 0,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.16,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "selected",
+    "threshold": 420.0,
+    "tie_probability": 0,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.02,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "static",
+    "threshold": 300.0,
+    "tie_probability": 0,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.07,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E1",
+    "budget": 1024,
+    "condition": "transcript",
+    "threshold": 420.0,
+    "tie_probability": 0.5,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.025,
+    "expected_test_recall": null,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "assumption",
+    "threshold": 750.0,
+    "tie_probability": 0.060000000000000005,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.034444444444444444,
+    "expected_test_recall": 0.4444444444444444,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "graph_diff",
+    "threshold": 650.0,
+    "tie_probability": 0.04,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "oracle",
+    "threshold": 800.0,
+    "tie_probability": 0.36000000000000004,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.027777777777777776,
+    "expected_test_recall": 0.1511111111111111,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "prose",
+    "threshold": 750.0,
+    "tie_probability": 0.12000000000000001,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.013333333333333334,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "static",
+    "threshold": 680.0,
+    "tie_probability": 0.04,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "static_history",
+    "threshold": 900.0,
+    "tie_probability": 0.12000000000000001,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 512,
+    "condition": "temporal",
+    "threshold": 700.0,
+    "tie_probability": 0.12000000000000001,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.05888888888888889,
+    "expected_test_recall": 0.013333333333333334,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "assumption",
+    "threshold": 750.0,
+    "tie_probability": 0.060000000000000005,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.034444444444444444,
+    "expected_test_recall": 0.4444444444444444,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "graph_diff",
+    "threshold": 650.0,
+    "tie_probability": 0.04,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "oracle",
+    "threshold": 800.0,
+    "tie_probability": 0.36000000000000004,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.027777777777777776,
+    "expected_test_recall": 0.1511111111111111,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "prose",
+    "threshold": 750.0,
+    "tie_probability": 0.12000000000000001,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.013333333333333334,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "static",
+    "threshold": 680.0,
+    "tie_probability": 0.04,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.01,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "static_history",
+    "threshold": 830.0,
+    "tie_probability": 0.36000000000000004,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.0,
+    "expected_test_recall": 0.0,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  },
+  {
+    "experiment": "E2",
+    "budget": 1024,
+    "condition": "temporal",
+    "threshold": 700.0,
+    "tie_probability": 0.12000000000000001,
+    "expected_calibration_fpr": 0.01,
+    "expected_test_fpr": 0.05888888888888889,
+    "expected_test_recall": 0.013333333333333334,
+    "analysis": "expected independent random tie-breaking, not additional inference; held-out threshold is not retuned"
+  }
+]

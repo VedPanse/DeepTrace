@@ -1,0 +1,8 @@
+{
+  "capture_hash_valid": true,
+  "capture_manifest_valid": true,
+  "frozen_synthetic_study_unchanged": true,
+  "paid_model_calls": 0,
+  "historical_replay_verified": false,
+  "per_action_capture_hook_ready": false
+}

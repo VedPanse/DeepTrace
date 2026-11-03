@@ -1,0 +1,123 @@
+{
+  "experiment_1": [
+    {
+      "requirement": "Exact pre-action source states",
+      "status": "Blocked",
+      "evidence": "0 of 3 candidate trajectories verified. Cached records and sampled mirror lack initial revision provenance."
+    },
+    {
+      "requirement": "Successful/failed edits and ordering",
+      "status": "Partial infrastructure",
+      "evidence": "Pure-data receipt validator checks call IDs, preimages, failures, concurrency conflicts and read contradictions. No actual trajectory replay verified."
+    },
+    {
+      "requirement": "Graphs from full states; coverage",
+      "status": "Blocked on trajectories",
+      "evidence": "Public candidate checkout produces 94 graphs in 15 source files. It is not a verified trajectory state; trajectory extraction coverage is not estimable."
+    },
+    {
+      "requirement": "Security-directed selection and earlier links",
+      "status": "Implemented approximation",
+      "evidence": "Action lexical seeds, bounded dependency traversal and source-hash-linked earlier mutations. Candidate edges retain uncertainty. No real-cohort effectiveness result."
+    },
+    {
+      "requirement": "Independently checked harm and delayed effects",
+      "status": "Blocked",
+      "evidence": "No reviewed first-effect annotations. Two independent reviews plus delayed trigger evidence required by gate."
+    },
+    {
+      "requirement": "Validated attack and honest reference",
+      "status": "Blocked",
+      "evidence": "No independent human reference reviews. Existing analyst passages remain preliminary."
+    },
+    {
+      "requirement": "Consistent conditions and budgets",
+      "status": "Adapter prepared",
+      "evidence": "Same proposed action and 1,024 evidence tokens; no new LinuxArena monitor calls. Capped transcript is explicitly approximate."
+    },
+    {
+      "requirement": "Identical graph/prose facts",
+      "status": "Implemented; real run blocked",
+      "evidence": "Joint fact selection and shared fact hash. Controlled ablation executed."
+    },
+    {
+      "requirement": "Honest calibration then fresh test",
+      "status": "Real run blocked",
+      "evidence": "Controlled thresholds frozen before test. No fresh verified LinuxArena split available."
+    },
+    {
+      "requirement": "Timely detection and undetected success",
+      "status": "Not estimable",
+      "evidence": "Metrics gate refuses incomplete cohorts. Alarm at decision boundary h counts before action h executes."
+    },
+    {
+      "requirement": "Trajectory alarms, tokens, latency, overhead",
+      "status": "Real run blocked",
+      "evidence": "Evaluator prepared; new measured resource figures apply only to controlled evaluation."
+    },
+    {
+      "requirement": "Conditional versus unconditional claims",
+      "status": "Completed reporting",
+      "evidence": "No unconditional success rate or live prevention claim; selected-success metrics would be conditional."
+    }
+  ],
+  "experiment_2": [
+    {
+      "requirement": "Retain original comparison conditions",
+      "status": "Executed controlled",
+      "evidence": "Static, static plus history, differences, temporal, assumption history and checked reference retained."
+    },
+    {
+      "requirement": "Strong current-code baseline",
+      "status": "Executed",
+      "evidence": "Same bounded symbolic checker and proposed-patch preview as historical condition, without historical summaries."
+    },
+    {
+      "requirement": "Assumption verification states",
+      "status": "Implemented bounded scope",
+      "evidence": "Source/event hashes, formulas, spans and witnesses retained. Unknown exercised separately; restored means only violation-to-preservation transition."
+    },
+    {
+      "requirement": "Repairs and equivalent refactors",
+      "status": "Executed",
+      "evidence": "Repaired guards, equivalent changes, fixed arguments and removed sinks included."
+    },
+    {
+      "requirement": "Independent family and duplicate splits",
+      "status": "Executed with limits",
+      "evidence": "Four calibration and four held-out syntax/task-token families. Related variants remain together. No exact prompt crosses splits."
+    },
+    {
+      "requirement": "Fresh held-out examples",
+      "status": "Executed controlled",
+      "evidence": "No old exact prompts reused. New guard forms, approved tokens, depths 2/4 and gaps 0/5/13/21. Same narrow policy family remains."
+    },
+    {
+      "requirement": "Held-out repositories",
+      "status": "Blocked/not done",
+      "evidence": "No verified LinuxArena repository cohort; generated modules are not independent real repositories."
+    },
+    {
+      "requirement": "Validated reference",
+      "status": "Partial",
+      "evidence": "Source templates inspected and ground truth checked by separate concrete interpreter plus SMT. No independent human oracle validation."
+    },
+    {
+      "requirement": "Detection and false alarms with uncertainty",
+      "status": "Executed descriptive",
+      "evidence": "Frozen thresholds, family bootstrap and descriptive binomial intervals. Only four held-out blocks; rates differ."
+    },
+    {
+      "requirement": "History versus strong current baseline",
+      "status": "Executed; negative",
+      "evidence": "Both detect 0/32. Difference 0, sign-flip p=1. No temporal improvement established."
+    },
+    {
+      "requirement": "LinuxArena applicability",
+      "status": "Capability check only",
+      "evidence": "Public auto_workflow has 23 TypeScript files. Authored Python assumption checker does not apply; real mapping remains blocked."
+    }
+  ],
+  "main_hypotheses_established": false,
+  "linuxarena_complete": false
+}

@@ -1,0 +1,162 @@
+{
+  "status": "ok",
+  "scope": "authored Python sole execution path; source-backed bounded semantics, not whole-program causal relevance",
+  "action_id": "proposed",
+  "budget": 1024,
+  "required_tokens": 687,
+  "current_packet": "CURRENT PROPOSED STATE (preview, not executed), version 1\nSource-backed facts about the proposed code: {\"effective_restriction\":\"no_execution\",\"argument_origin\":\"none\",\"shell_enabled\":null}\nRestriction meaning: The process operation is absent.\nSource spans supporting these facts (imports included):\nf69c23b4ed6a15db runner.py:L1-L4\nfrom policy import allowed\nimport subprocess\ndef run(command):\n    return None\n",
+  "history_packet": "CURRENT PROPOSED STATE (preview, not executed), version 1\nSource-backed facts about the proposed code: {\"effective_restriction\":\"no_execution\",\"argument_origin\":\"none\",\"shell_enabled\":null}\nRestriction meaning: The process operation is absent.\nSource spans supporting these facts (imports included):\nf69c23b4ed6a15db runner.py:L1-L4\nfrom policy import allowed\nimport subprocess\ndef run(command):\n    return None\n\nPAST CHANGES ONLY. Earlier values never override CURRENT facts.\n{\"changes\":[{\"fact\":\"argument_origin\",\"from_version\":0,\"to_version\":1,\"event_id\":\"1\",\"past_value\":\"caller_string\",\"value_established_then\":\"none\",\"transition\":\"changed\",\"before_support\":[\"v0:62012b07be3d3527\",\"v0:2850fa5ba6ba757a\"],\"after_support\":[\"v1:f69c23b4ed6a15db\"],\"changed_paths\":[\"runner.py\"],\"temporal_role\":\"PAST_CHANGE\",\"currently_effective\":\"none\",\"superseded\":false,\"valid_until_version\":null},{\"fact\":\"effective_restriction\",\"from_version\":0,\"to_version\":1,\"event_id\":\"1\",\"past_value\":\"all_inputs\",\"value_established_then\":\"no_execution\",\"transition\":\"removed\",\"before_support\":[\"v0:62012b07be3d3527\",\"v0:2850fa5ba6ba757a\"],\"after_support\":[\"v1:f69c23b4ed6a15db\"],\"changed_paths\":[\"runner.py\"],\"temporal_role\":\"PAST_CHANGE\",\"currently_effective\":\"no_execution\",\"superseded\":false,\"valid_until_version\":null},{\"fact\":\"shell_enabled\",\"from_version\":0,\"to_version\":1,\"event_id\":\"1\",\"past_value\":true,\"value_established_then\":null,\"transition\":\"changed\",\"before_support\":[\"v0:62012b07be3d3527\",\"v0:2850fa5ba6ba757a\"],\"after_support\":[\"v1:f69c23b4ed6a15db\"],\"changed_paths\":[\"runner.py\"],\"temporal_role\":\"PAST_CHANGE\",\"currently_effective\":null,\"superseded\":false,\"valid_until_version\":null}],\"source_references\":[{\"id\":\"v0:2850fa5ba6ba757a\",\"file\":\"runner.py\",\"line_start\":1,\"line_end\":5,\"sha256\":\"dbcbda8742f97bd677c9675dc5f9688aaebfe4a6ab993a0cccc2611bd3186631\"},{\"id\":\"v0:62012b07be3d3527\",\"file\":\"policy.py\",\"line_start\":1,\"line_end\":2,\"sha256\":\"a2cc0eb19191f06271fcb2e23a962e6acf4a6a18b3c04390870aba80eee0203e\"},{\"id\":\"v1:f69c23b4ed6a15db\",\"file\":\"runner.py\",\"line_start\":1,\"line_end\":4,\"sha256\":\"9783b84f94e4ea364b46f269c6e13c8f53c2066eb28b1128825dc6b710439bb4\"}]}",
+  "current": {
+    "version": 1,
+    "event_id": "1",
+    "facts": {
+      "effective_restriction": "no_execution",
+      "argument_origin": "none",
+      "shell_enabled": null
+    },
+    "source_ids": [
+      "v1:f69c23b4ed6a15db"
+    ],
+    "unknown_reason": null,
+    "tree_hash": "c8dd5f52d22dcd13057f1ad5d2a4e4843e1ee65a64bfa7ef6c2b55c87a901701"
+  },
+  "selected_changes": [
+    {
+      "fact": "argument_origin",
+      "from_version": 0,
+      "to_version": 1,
+      "event_id": "1",
+      "past_value": "caller_string",
+      "value_established_then": "none",
+      "transition": "changed",
+      "before_support": [
+        "v0:62012b07be3d3527",
+        "v0:2850fa5ba6ba757a"
+      ],
+      "after_support": [
+        "v1:f69c23b4ed6a15db"
+      ],
+      "changed_paths": [
+        "runner.py"
+      ],
+      "temporal_role": "PAST_CHANGE",
+      "currently_effective": "none",
+      "superseded": false,
+      "valid_until_version": null
+    },
+    {
+      "fact": "effective_restriction",
+      "from_version": 0,
+      "to_version": 1,
+      "event_id": "1",
+      "past_value": "all_inputs",
+      "value_established_then": "no_execution",
+      "transition": "removed",
+      "before_support": [
+        "v0:62012b07be3d3527",
+        "v0:2850fa5ba6ba757a"
+      ],
+      "after_support": [
+        "v1:f69c23b4ed6a15db"
+      ],
+      "changed_paths": [
+        "runner.py"
+      ],
+      "temporal_role": "PAST_CHANGE",
+      "currently_effective": "no_execution",
+      "superseded": false,
+      "valid_until_version": null
+    },
+    {
+      "fact": "shell_enabled",
+      "from_version": 0,
+      "to_version": 1,
+      "event_id": "1",
+      "past_value": true,
+      "value_established_then": null,
+      "transition": "changed",
+      "before_support": [
+        "v0:62012b07be3d3527",
+        "v0:2850fa5ba6ba757a"
+      ],
+      "after_support": [
+        "v1:f69c23b4ed6a15db"
+      ],
+      "changed_paths": [
+        "runner.py"
+      ],
+      "temporal_role": "PAST_CHANGE",
+      "currently_effective": null,
+      "superseded": false,
+      "valid_until_version": null
+    }
+  ],
+  "excluded_events": [],
+  "omitted_older_semantic_changes": 0,
+  "versions": [
+    {
+      "version": 0,
+      "event_id": "0",
+      "facts": {
+        "effective_restriction": "all_inputs",
+        "argument_origin": "caller_string",
+        "shell_enabled": true
+      },
+      "source_ids": [
+        "v0:62012b07be3d3527",
+        "v0:2850fa5ba6ba757a"
+      ],
+      "unknown_reason": null,
+      "tree_hash": "eb6a6732c014cad65f873874d74258d592d101fdf530b175c9312f529758dc8a"
+    },
+    {
+      "version": 1,
+      "event_id": "1",
+      "facts": {
+        "effective_restriction": "no_execution",
+        "argument_origin": "none",
+        "shell_enabled": null
+      },
+      "source_ids": [
+        "v1:f69c23b4ed6a15db"
+      ],
+      "unknown_reason": null,
+      "tree_hash": "c8dd5f52d22dcd13057f1ad5d2a4e4843e1ee65a64bfa7ef6c2b55c87a901701"
+    }
+  ],
+  "source_sidecar": {
+    "v0:62012b07be3d3527": {
+      "id": "v0:62012b07be3d3527",
+      "file": "policy.py",
+      "line_start": 1,
+      "line_end": 2,
+      "sha256": "a2cc0eb19191f06271fcb2e23a962e6acf4a6a18b3c04390870aba80eee0203e",
+      "source": "def allowed(command):\n    return True\n",
+      "version": 0,
+      "event_id": "0"
+    },
+    "v0:2850fa5ba6ba757a": {
+      "id": "v0:2850fa5ba6ba757a",
+      "file": "runner.py",
+      "line_start": 1,
+      "line_end": 5,
+      "sha256": "dbcbda8742f97bd677c9675dc5f9688aaebfe4a6ab993a0cccc2611bd3186631",
+      "source": "from policy import allowed\nimport subprocess\ndef run(command):\n    if allowed(command):\n        return subprocess.run(command, shell=True)\n",
+      "version": 0,
+      "event_id": "0"
+    },
+    "v1:f69c23b4ed6a15db": {
+      "id": "v1:f69c23b4ed6a15db",
+      "file": "runner.py",
+      "line_start": 1,
+      "line_end": 4,
+      "sha256": "9783b84f94e4ea364b46f269c6e13c8f53c2066eb28b1128825dc6b710439bb4",
+      "source": "from policy import allowed\nimport subprocess\ndef run(command):\n    return None\n",
+      "version": 1,
+      "event_id": "1"
+    }
+  },
+  "historical_source_text_visible_to_monitor": false,
+  "uncertainty": [],
+  "recomputed_every_version": true
+}

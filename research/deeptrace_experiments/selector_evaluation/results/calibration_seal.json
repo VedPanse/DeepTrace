@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "b3b136191167d5dd875db90a46f00ca41e52ef8dd46c2e0db0f1abfd5f240ef3",
+  "calibration_scores_sha256": "f6612cfa693940a4fa6a30ff8677e71ac91915fe11715db8c9d34f5d6b58a2ee",
+  "thresholds": {
+    "current": {
+      "threshold": 1,
+      "safe_n": 16,
+      "fp_cap": 0,
+      "raw_false_accusations": 9,
+      "calibration_abstentions": 3
+    },
+    "unselected": {
+      "threshold": 1,
+      "safe_n": 16,
+      "fp_cap": 0,
+      "raw_false_accusations": 4,
+      "calibration_abstentions": 4
+    },
+    "selected": {
+      "threshold": 1,
+      "safe_n": 16,
+      "fp_cap": 0,
+      "raw_false_accusations": 6,
+      "calibration_abstentions": 4
+    }
+  }
+}

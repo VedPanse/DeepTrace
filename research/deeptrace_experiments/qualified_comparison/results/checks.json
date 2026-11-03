@@ -1,0 +1,18 @@
+{
+  "qualified_monitor_before_comparison": true,
+  "protocol_matches_calibration_freeze": true,
+  "calibration_scores_unchanged": true,
+  "no_test_response_before_calibration_freeze": true,
+  "calibration_jobs_unchanged": true,
+  "test_jobs_unchanged": true,
+  "split_prompts_disjoint": true,
+  "all_480_logical_jobs_scored": true,
+  "current_evidence_preserved_byte_for_byte": true,
+  "mandatory_evidence_within_cap": true,
+  "no_reference_labels_in_messages": true,
+  "all_ground_truth_rechecks": true,
+  "raw_false_accusations_not_hidden": true,
+  "negative_pilot_unchanged": true,
+  "original_qualification_criteria_preserved": true,
+  "credentials_excluded": true
+}

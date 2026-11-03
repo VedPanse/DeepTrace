@@ -1,0 +1,10 @@
+{
+  "capture": "data/readiness_app.json.gz",
+  "sha256": "5e89f75be9190821d8cd58acf564f53182f56366aee981ba55d7298263e7c821",
+  "tree_manifest_sha256": "f2699482fa3bac09dea312860cba16a2d421f503491b014284bd2fe1d1aa4f4b",
+  "entries": 8213,
+  "content_bytes": 148436681,
+  "boundary": "postsetup readiness only",
+  "scope": "/app contents and file modes only; excludes database/broker contents, external filesystem and process memory; not a complete machine snapshot",
+  "no_silent_exclusions": true
+}
