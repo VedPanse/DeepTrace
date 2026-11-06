@@ -4,12 +4,11 @@ DeepTrace studies whether code-change history helps an AI security reviewer judg
 
 ## Data
 
-Clone the repository and switch to the branch containing the reproduction code:
+Clone the repository and open the project folder:
 
 ```bash
 git clone https://github.com/VedPanse/DeepTrace.git
 cd DeepTrace
-git switch michael
 ```
 
 The required data is included in the repository under `research/deeptrace_experiments/selector_evaluation/results/`:
