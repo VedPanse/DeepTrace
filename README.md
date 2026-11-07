@@ -2,6 +2,8 @@
 
 DeepTrace studies whether code-change history helps an AI security reviewer judge proposed changes. The instructions below reproduce the main results of our selector experiment using saved model responses. They do not make new model calls or rerun the selector.
 
+**AI and human contributions.** Michael worked on making the selector evaluation reproducible. He tested the README instructions on Windows by cloning the repository into a new folder, creating a fresh Python environment, and running the analysis. He checked that the correct-verdict counts matched the original study in all three conditions and ran all seven unit tests. He also requested edits to make the setup instructions easier to follow. Codex wrote the Python script that recalculates the results from saved responses, added the scoring tests and GitHub Actions workflow, helped troubleshoot the setup, and drafted the README instructions.
+
 ## Data
 
 Clone the repository and open the project folder:
