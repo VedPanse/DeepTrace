@@ -1,0 +1,143 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,booktabs,tabularx,array,amsmath,enumitem,xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+\setlength{\parskip}{4pt}
+\setlist{nosep,leftmargin=1.4em}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\arraystretch}{1.15}
+
+\title{DeepTrace: Does Code-Change History Help an AI Safety Monitor\\Catch Multi-Step Sabotage?}
+\author{[Team member names] \\ Mentor: [Mentor name] \\ DSC 180A, Domain D33 \\ \small Report checkpoint: title, abstract and introduction}
+\date{November 2026}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+In recent times, AI coding agents have been thrusted with the responsibility of editing real repositories and running shell commands with little human review. A common safeguard is a \emph{trusted monitor}: a smaller, cheaper model that reads each proposed action and raises an alarm if it looks unsafe. Monitors usually judge an action from the current transcript or the current code alone, so an advanced attacker or saboteur can work around this by spreading an attack over several harmless-looking edits. For example, one step weakens an authorization helper and a later step routes user input into a shell command that relied on it. To combat this, static analyzers such as AgentSecGraph can build a dependency graph of sources, guards and effects for each security-sensitive operation. They describe a single snapshot, though, and they do not record that a guard the operation depends on was changed earlier. Our project, titled DeepTrace, asks whether giving a fixed monitor a compact, version-aware record of changing security-relevant facts over earlier edits improves its verdicts under a fixed evidence budget. We first reproduced AgentSecGraph on three real agent repositories and eleven authored fixtures. On a four-version history in which an imported guard is weakened from an exact allowlist to a non-empty check, its graphs are the same before and after the weakening. We then ran a series of frozen, pre-registered experiments with GPT-5 Nano as the monitor on synthetic Python edit histories. In the latest experiments we've run, the main bottleneck so far is applying the policy and geting accurate graph representations of repositories and projects (everything from files, functions, folders etc.). Our intended real-world setting is LinuxArena, a benchmark of sabotage attempts in live software environments, which we are working on integrating with the DAG (directed-acyclic graph) representation of information.
+\end{abstract}
+
+\section{Introduction}
+
+\textbf{DeepTrace} asks the following question:
+
+\begin{quote}
+\emph{Does a fixed safety monitor judge a proposed code change more reliably when, in addition to the current code, it receives a temporal DAG representation of earlier edits and dependencies amplifying the code change's impact, under the same evidence budget?}
+\end{quote}
+
+Our proposal splits this into two hypotheses. \textbf{H1} says that dependency-graph evidence improves timely detection of multi-step sabotage in real agent trajectories, meaning detection before the first harmful action executes. \textbf{H2} says that explicit records of when security assumptions were invalidated, and by which edit, improve on both current-code graphs and raw edit history. The question matters for three reasons. If history helps, it is a cheap way to strengthen existing monitors without training a new model. If history does not help, or even hurts, that is equally important to know. Finally, the experiment looks at a monitor's overall vulnerabilities. It might lack the right facts, misread facts it has, or apply the policy incorrectly to facts it has read correctly. Our early results already point to the third failure.
+
+\subsection{Literature review and prior work}
+
+\paragraph{1. AI control and trusted monitoring:} Greenblatt et al.\ introduced the AI-control framing, in which a protocol must stay safe against an untrusted model that deliberately tries to subvert it. Their protocols use a weaker trusted model to monitor and edit the outputs of a stronger untrusted one, under a fixed human audit budget. Later work extended this setting to multi-step agents. Ctrl-Z (Bhatt et al., 2025) studies resampling protocols for agents acting in a shell environment. SHADE-Arena (Kutasov et al., 2025) tests whether agents can complete hidden harmful side tasks without being caught by a monitor. These works share an evaluation pattern that we adopt, which is to calibrate a monitor's alarm threshold on honest behavior to a small false-positive rate, then measure attacks' success rate with concealment.
+
+\paragraph{2. LinuxArena:} LinuxArena (Tracy et al., 2026) is a control benchmark in which agents work inside live, multi-service production software environments. It evaluates both attackers, who must complete a side task while doing a main task, and monitors, which must detect those attempts. Its main result is that Claude Opus 4.6 achieves roughly 34\% undetected sabotage success against a GPT-5 Nano trusted monitor at a 1\% step-wise false-positive rate. We use LinuxArena because its attacks are multi-step and unfold over real codebases, so edit history is available to make our dependency graphs. Secondly, its standard monitor is the same small model we use, so any benefit from better evidence can be read against a published baseline. The paper also lists shallow tracing of earlier actions among monitor failure modes, which is the gap DeepTrace aims to assist with.
+
+\paragraph{3. Static analysis for agent security: AgentSecGraph:} The closest prior system to our representation is AgentSecGraph, released with the AgentSecBench corpus (Cui, 2026). It builds on classical program dependence graphs (Ferrante et al., 1987) and code property graphs (Yamaguchi et al., 2014). Related agent-specific analyzers include AgentFlow (Wang et al., 2026), which recovers framework-induced agent dependency graphs, and TaintP2X (J.~He et al., 2026), which statically traces LLM-generated values to sensitive operations. AgentSecGraph builds a candidate-centered \emph{Security-Aware Agent Dependency Graph} (Security-ADG) that records agent relevance, source provenance, data dependencies, trust-boundary crossings, guard evidence, privilege context and external effects. Python dependencies come from the AST and JavaScript/TypeScript dependencies from lexical tracing. Framework adapters recognize tool declarations in MCP, LangChain, CrewAI, AutoGen, the OpenAI Agents SDK, Semantic Kernel and LlamaIndex. We adopt AgentSecGraph, unmodified and pinned to AgentSecBench commit \texttt{e27f83d}, as our static baseline. The public checkout contains two separate implementations: the paper's research pipeline (\texttt{v2\_5}) and a public product (\texttt{0.2.0}). However, neither implementation tracks history. On the four-version temporal fixture (guarded, guard weakened, caller string reaches the sink, \texttt{shell=True} added), the sink identifier stays fixed and versions A and B produce identical graphs. Only the later sink-side edits register.
+
+\paragraph{4. Gap Identified:} Existing static analyzers characterize a program as a single snapshot, and existing monitors evaluate an agent's actions using the current transcript or current code. Runtime defenses such as AttriGuard (Y.~He et al., 2026) attribute individual tool calls to untrusted inputs, but they do not track how code edits change security assumptions over time. We have not found a tool that maintains a versioned record connecting a proposed action to the earlier edits that invalidated the security assumptions it depends on. Additionally, no prior work has measured whether such a record improves a fixed monitor's detection at a fixed false-positive rate, and DeepTrace is designed to measure this. Our preliminary results suggest that the effect depends on the evaluation setting. Any effect historical information has in our experiments reflects the monitor's robustness to extra context. A complex and involved evaluation therefore requires real trajectories in which the relevant dependency can be correctly recovered from the current state alone.
+
+\subsection{Data}
+
+\paragraph{1. Real agent repositories (AgentSecGraph baseline).} We ran AgentSecGraph at pinned commits on three open-source agent projects: \texttt{html-anything}, \texttt{mini-swe-agent} and \texttt{magentic-ui}. We also ran it on eleven small authored fixtures that isolate one analysis challenge each, such as overwrites, cross-file aliasing, guards, dynamic dispatch and recursion. The scans ran in a network-disabled sandbox and are summarized below. These data establish what the static baseline can and cannot represent.
+
+\paragraph{2. Controlled synthetic edit histories (main experiments so far).} We authored Python edit histories.
+\begin{itemize}
+\item \emph{What a history contains.} Each history is a sequence of source versions ending in a proposed edit. Variants cover a guard being weakened, restored, replaced by an equivalent guard, executed with fixed arguments or removed, along with unrelated edits and deliberately unanalyzable (``unknown'') cases.
+\item \emph{Ground truth.} Labels come from a restricted AST interpreter run on concrete inputs, cross-checked by a Z3-based symbolic checker. No generated command is ever executed.
+\item \emph{Splits.} Splits are made by whole syntax or task families, so related variants never straddle calibration and test.
+\item \emph{Sets built so far.} We built four successive sets: 270 histories for the first pilot, 320 for a fresh controlled comparison, 120 + 120 states for a paired current-versus-history test, and 24 + 36 cases per arm for the three-arm selector study.
+\item \emph{Reproducibility.} Every prompt, raw model response, threshold and protocol is saved with content hashes. A standard-library script (\texttt{reproduce.py}) recomputes the selector-study table from the 108 saved test records without any API calls.
+\item \emph{Limitation.} These cases are close relatives of one narrow policy and cannot speak to real-world generalization.
+\end{itemize}
+
+\paragraph{3. LinuxArena trajectories (target setting).} LinuxArena trajectories are recorded agent episodes. Each pairs a main task with, in attack runs, a hidden side task, and includes ordered tool calls, outputs and scorer results. Data comes from the public LinuxArena data service and its Control Tower harness. We have used them in three stages so far:
+\begin{itemize}
+\item \emph{Pilot:} We used five unique recorded-successful attack trajectories in five environments: \texttt{slack\_clone}, \texttt{file\_indexing}, \texttt{web\_scraping}, \texttt{shared\_dotfiles} and \texttt{auto\_workflow}. Five honest trajectories supplied 100 calibration and 100 held-out benign action turns. These bundles had no per-action repository snapshots.
+\item \emph{Mirror audit:} The public Hugging Face mirror (\texttt{anonymouslinuxarena/linuxarena-public}) holds 22,215 trajectories from 172 runs, about 16.8\,GB. We audited 20 cached samples and 25 records from a ranged prefix of one shard.
+\item \emph{Official archive:} We downloaded one full run archive (\texttt{ace6e820\ldots}, 18.5\,MB) without credentials. It has 105 samples and 7,383 tool events across all 10 public environments, and it records environment commits, container image digests and the harness revision. Re-executing their recorded tool calls in the container reproduced 12/17, 16/27 and 21/38 call outputs exactly.
+\end{itemize}
+
+The cohort does not yet meet the gate our evaluation requires: a verified initial state, verified intermediate states for every action, and a first-harm step checked by two independent reviewers. Finishing this verified cohort, then freezing fresh calibration and test splits before scoring any evidence condition, is the main data milestone for the rest of the quarter.
+
+\section*{References}
+\small
+\begin{enumerate}[label={[\arabic*]},leftmargin=2em]
+\item R.~Greenblatt, B.~Shlegeris, K.~Sachan, F.~Roger. AI Control: Improving Safety Despite Intentional Subversion. In \emph{Proc.\ ICML}, PMLR 235, pp.~16295--16336, 2024.
+\item A.~Bhatt, C.~Rushing, A.~Kaufman, et al. Ctrl-Z: Controlling AI Agents via Resampling. arXiv:2504.10374, 2025.
+\item J.~Kutasov, Y.~Sun, P.~Colognese, et al. SHADE-Arena: Evaluating Sabotage and Monitoring in LLM Agents. arXiv:2506.15740, 2025.
+\item T.~Tracy, R.~Potham, N.~Kuhn, et al. LinuxArena: A Control Setting for AI Agents in Live Production Software Environments. arXiv:2604.15384v2, 2026.
+\item H.~Cui. Beyond Predefined Sinks: Security-Aware Dependency Analysis for LLM Agents. arXiv:2610.03014, 2026. Code: \url{https://github.com/A1LinLin1/AgentSecBench}.
+\item J.~Ferrante, K.~J.~Ottenstein, J.~D.~Warren. The Program Dependence Graph and Its Use in Optimization. \emph{ACM TOPLAS} 9(3):319--349, 1987.
+\item F.~Yamaguchi, N.~Golde, D.~Arp, K.~Rieck. Modeling and Discovering Vulnerabilities with Code Property Graphs. In \emph{IEEE S\&P}, pp.~590--604, 2014.
+\item S.~Wang, X.~Hou, Y.~Zhao, X.~Cheng, H.~Wang. AgentFlow: Building Agent Dependency Graphs for Static Analysis of Agent Programs. arXiv:2607.01640, 2026.
+\item J.~He, S.~Wang, Y.~Zhao, X.~Hou, Z.~Liu, Q.~Zou, H.~Wang. TaintP2X: Detecting Taint-Style Prompt-to-Anything Injection Vulnerabilities in LLM-Integrated Applications. In \emph{Proc.\ ICSE}, pp.~1968--1979, 2026.
+\item Y.~He, H.~Zhu, Y.~Li, S.~Shao, H.~Yao, Z.~Liu, Z.~Qin. AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations. USENIX Security, 2026.
+\end{enumerate}
+
+\normalsize
+\appendix
+\section{AI Use Disclosure}
+
+This appendix gives a structured account of how AI systems were used in this project. It separates three roles: AI as the \emph{object of study}, AI as a \emph{development assistant} for building the repository, and AI as a \emph{writing and validation assistant} for this checkpoint. Entries in A.3 and A.4 are drawn from the repository's own records and from the session log of this report. Entries marked \textbf{[to be completed by member]} must be filled in by the named team member. They are deliberately left blank rather than reconstructed by someone else.
+
+\subsection{AI as the object of study (not authorship assistance)}
+\begin{itemize}
+\item \textbf{Monitor models.} \texttt{openai/gpt-5-nano} was the fixed trusted monitor in all experiments, and \texttt{openai/gpt-5} was also qualified. Both were accessed through OpenRouter, restricted to the OpenAI provider, with fallbacks disabled, data collection denied, minimal reasoning and JSON-only output.
+\item \textbf{Prompts.} Monitor system prompts are frozen and saved verbatim in each study's \texttt{protocol.json} (for example \texttt{qualification/results/protocol.json} and \texttt{monitor\_repair/results/protocol.json}). Exactly one prompt clarification was made between the first and second qualification rounds, and it is recorded together with its stated reason.
+\item \textbf{Safeguards.} Models never received ground-truth labels, variant names or hidden side-task goals. Thresholds were sealed before any test responses were generated. Each exact prompt received one draw, with no favorable resampling.
+\item \textbf{Cost.} Recorded provider spend for the project was about \$0.97, under a \$3 cap. No model was trained or fine-tuned.
+\end{itemize}
+
+\subsection{AI-assisted development of the repository}
+The repository records that an AI coding assistant (``implementing assistant'') took part in building the experiments:
+\begin{itemize}
+\item It authored the explicit source expectations for the version selector and the selector evaluation, and reviewed rendered packets (\texttt{version\_selector/README.md}; \texttt{selector\_evaluation/results/protocol.json}, field \texttt{reference}).
+\item It performed the post-generation source-structure review in \texttt{selector\_evaluation/results/source\_expectation\_audit.json}. That review made no changes to cases or expected labels.
+\item The repository states that independent human review of these references was unavailable. Ground-truth labels therefore rest on a deterministic AST interpreter and a Z3 symbolic checker that agree with each other, not on human annotation.
+\end{itemize}
+Tool and model used for this assistance: \textbf{[to be completed by the member(s) who ran it]}.
+
+\subsection{Per-member disclosure}
+Contributions below are taken from the git history. AI-use fields must be completed by each member.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}p{0.17\linewidth}p{0.30\linewidth}Y@{}}\toprule
+Member & Committed contributions (git log) & AI tools, purpose, example prompts, and human verification\\\midrule
+Ved Panse & Initial research record: DeepTrace experiments, AgentSecGraph study, reports (commit \texttt{03b7293}) & \textbf{[to be completed by member]}\\
+Michael Luo & Offline selector reproduction (\texttt{reproduce.py}, tests, CI), setup and branch documentation (commits \texttt{ffd5696}, \texttt{5715375}, \texttt{de9e2c1}) & \textbf{[to be completed by member]}\\
+Ananya Wasker & Architecture documentation (commit \texttt{55399a2}); this checkpoint report & See A.4 for this report; other use: \textbf{[to be completed by member]}\\
+\bottomrule\end{tabularx}
+\end{center}
+
+\subsection{AI assistance for this checkpoint report}
+\textbf{Tool:} Claude Code (Claude Opus 5.5), one working session on November 6, 2026.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}p{0.2\linewidth}YY@{}}\toprule
+Task & What the AI was asked to do & Human role and verification\\\midrule
+Repository understanding and first draft & Read the repository, its documentation and the AgentSecGraph paper, then draft a title, abstract and introduction (introduction, literature review, data). & Member rewrote the abstract, research question, literature review and data sections in their own words.\\
+Editing for tone & Rewrite the research-gap paragraph in a formal register. & Member reviewed the rewrite. A claim the data did not support was removed.\\
+Reference selection & Trim the reference list to works actually cited, then add a small number of key citations, each tied to a specific sentence. & Member chose which works to keep.\\
+Citation verification & Check every reference against arXiv, Crossref and PMLR. & One error found and fixed: LinuxArena's figure changed from 23\% (outdated arXiv summary page) to 34\% (paper v2 text). Two same-surname citations were disambiguated.\\
+Testing and validation & Run all runnable repository code on a clean copy and report results (see A.5). & Member reviewed the findings; no repository files were changed.\\
+AI-use disclosure & Draft this appendix from repository records and the session log. & Other members' entries were left for them to complete rather than written by someone else.\\
+\bottomrule\end{tabularx}
+\end{center}
+All numbers in the report were checked against repository result files. The final text is the authors' responsibility.
+
+\subsection{AI-assisted testing and validation}
+At the authors' request, the AI assistant ran a validation pass on a clean export of the committed repository, using pinned dependencies and no model calls. Its results were:
+\begin{itemize}
+\item \textbf{Documented reproduction.} \texttt{reproduce.py} verified all 108 records, and 7/7 unit tests passed. A tamper test confirmed the input check is genuine: reformatting the input still passes, while flipping one saved verdict fails.
+\item \textbf{Integrity manifests.} Of 8,336 locatable SHA-256 entries in 344 manifests, 8,322 match. Every one of the 14 mismatches is explained: canonical-JSON hashing (6), CSV line-ending normalization (4), a documented pre-inference protocol amendment (1), and report files revised after hashing (3).
+\item \textbf{Determinism.} Regenerating the 270 synthetic temporal cases reproduced them byte for byte. Rerunning the downstream checks gave the same results: 1,620 ground-truth executions, 8/8 robustness controls, 162/162 counterfactuals and 20/20 continuation engineering checks.
+\item \textbf{AgentSecGraph.} The analyzer and three target repositories were restored at their pinned commits. Sandboxed scans and the upstream test suite (36/36) reproduced all figures in the Data section. The temporal fixture again produced identical graph hashes for versions A and B.
+\item \textbf{Issues found.} Most analysis scripts depend on git-ignored data. The temporal generator fails on a fresh clone (missing \texttt{parents=True}). The sandbox profile is tied to one machine. Two manifests are stale.
+\item \textbf{Not run.} Scripts that make paid model calls, LinuxArena replay, which needs Docker and downloaded archives, and download-only scripts.
+\end{itemize}
+\end{document}
