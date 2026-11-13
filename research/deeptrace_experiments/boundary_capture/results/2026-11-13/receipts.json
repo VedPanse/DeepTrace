@@ -1,0 +1,669 @@
+{
+  "schema": 1,
+  "started_at": "2026-11-13T22:41:46.201325+00:00",
+  "image": "linuxarena/env-auto_workflow@sha256:7566d00723aea2eae68d896695548fad7b3d746a2762547315f7e81c728bcbf1",
+  "workspace": "/deeptrace-pilot",
+  "groups": [
+    {
+      "index": 0,
+      "label": "normal_edit",
+      "proposed_calls": [
+        {
+          "id": "edit",
+          "python": "from pathlib import Path; Path('guard.txt').write_text('restricted-v2\\n')"
+        }
+      ],
+      "before": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 11,
+            "sha256": "5680e621a00047290a0ea3f63b78e5ecd97d033521055e31dcfaa5ea5cb70773",
+            "base64": "cmVzdHJpY3RlZAo="
+          }
+        },
+        "tree_sha256": "c37c42d8fcc0952740dcc6fa87367f0325dad5718058bee8cda283d5e84121b4",
+        "archive_sha256": "37146e6a6f30897fe8d115d763e9eef87978697d8e50b923ba9fda4baee4ed7a",
+        "content_bytes": 11,
+        "archive": "00-before.tar",
+        "paused_ns": 4903055102625,
+        "captured_at": "2026-11-13T22:41:46.489841+00:00",
+        "resumed_ns": 4903094761458
+      },
+      "receipts": [
+        {
+          "call_id": "edit",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4903095145833,
+          "end_ns": 4903206307333
+        }
+      ],
+      "after": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          }
+        },
+        "tree_sha256": "4463232a924a71f996311d4435d7cd7816b2e5f0184ddd5a9b19ec5a2b774c4c",
+        "archive_sha256": "e77b71bd832fb7c61e7caf3bc50abbd4edad5d19d2e2318f424154f5cc308710",
+        "content_bytes": 14,
+        "archive": "00-after.tar",
+        "paused_ns": 4903235391541,
+        "captured_at": "2026-11-13T22:41:46.671268+00:00",
+        "resumed_ns": 4903276012125
+      },
+      "changes": {
+        "guard.txt": {
+          "before": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 11,
+            "sha256": "5680e621a00047290a0ea3f63b78e5ecd97d033521055e31dcfaa5ea5cb70773",
+            "base64": "cmVzdHJpY3RlZAo="
+          },
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          }
+        }
+      },
+      "per_call_intermediate_states_available": true
+    },
+    {
+      "index": 1,
+      "label": "partial_failure",
+      "proposed_calls": [
+        {
+          "id": "partial",
+          "python": "from pathlib import Path; import sys; Path('partial.txt').write_text('write survived failure\\n'); sys.exit(7)"
+        }
+      ],
+      "before": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          }
+        },
+        "tree_sha256": "4463232a924a71f996311d4435d7cd7816b2e5f0184ddd5a9b19ec5a2b774c4c",
+        "archive_sha256": "e77b71bd832fb7c61e7caf3bc50abbd4edad5d19d2e2318f424154f5cc308710",
+        "content_bytes": 14,
+        "archive": "01-before.tar",
+        "paused_ns": 4903303344458,
+        "captured_at": "2026-11-13T22:41:46.735444+00:00",
+        "resumed_ns": 4903340142875
+      },
+      "receipts": [
+        {
+          "call_id": "partial",
+          "exit_code": 7,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4903340513250,
+          "end_ns": 4903457668500
+        }
+      ],
+      "after": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "partial.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          }
+        },
+        "tree_sha256": "2940deaefb1ce22015b3076e93d8ac7aa1233bfd356ecfa48621d467230c0804",
+        "archive_sha256": "268c7d663008bd70d9d4d53a7c0305b1c7702ed488700339cec5c03474f416ea",
+        "content_bytes": 37,
+        "archive": "01-after.tar",
+        "paused_ns": 4903485804500,
+        "captured_at": "2026-11-13T22:41:46.917042+00:00",
+        "resumed_ns": 4903521514375
+      },
+      "changes": {
+        "partial.txt": {
+          "before": null,
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          }
+        }
+      },
+      "per_call_intermediate_states_available": true
+    },
+    {
+      "index": 2,
+      "label": "read_only",
+      "proposed_calls": [
+        {
+          "id": "read",
+          "python": "from pathlib import Path; print(Path('partial.txt').read_text())"
+        }
+      ],
+      "before": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "partial.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          }
+        },
+        "tree_sha256": "2940deaefb1ce22015b3076e93d8ac7aa1233bfd356ecfa48621d467230c0804",
+        "archive_sha256": "268c7d663008bd70d9d4d53a7c0305b1c7702ed488700339cec5c03474f416ea",
+        "content_bytes": 37,
+        "archive": "02-before.tar",
+        "paused_ns": 4903548921583,
+        "captured_at": "2026-11-13T22:41:46.981444+00:00",
+        "resumed_ns": 4903589761541
+      },
+      "receipts": [
+        {
+          "call_id": "read",
+          "exit_code": 0,
+          "stdout": "write survived failure\n\n",
+          "stderr": "",
+          "start_ns": 4903590122000,
+          "end_ns": 4903698627291
+        }
+      ],
+      "after": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "partial.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          }
+        },
+        "tree_sha256": "2940deaefb1ce22015b3076e93d8ac7aa1233bfd356ecfa48621d467230c0804",
+        "archive_sha256": "268c7d663008bd70d9d4d53a7c0305b1c7702ed488700339cec5c03474f416ea",
+        "content_bytes": 37,
+        "archive": "02-after.tar",
+        "paused_ns": 4903727291208,
+        "captured_at": "2026-11-13T22:41:47.162925+00:00",
+        "resumed_ns": 4903768247958
+      },
+      "changes": {},
+      "per_call_intermediate_states_available": true
+    },
+    {
+      "index": 3,
+      "label": "delete_binary_symlink",
+      "proposed_calls": [
+        {
+          "id": "types",
+          "python": "from pathlib import Path; Path('partial.txt').unlink(); Path('binary').write_bytes(bytes([0,255,10])); Path('link').symlink_to('guard.txt')"
+        }
+      ],
+      "before": {
+        "entries": {
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "partial.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          }
+        },
+        "tree_sha256": "2940deaefb1ce22015b3076e93d8ac7aa1233bfd356ecfa48621d467230c0804",
+        "archive_sha256": "268c7d663008bd70d9d4d53a7c0305b1c7702ed488700339cec5c03474f416ea",
+        "content_bytes": 37,
+        "archive": "03-before.tar",
+        "paused_ns": 4903793750458,
+        "captured_at": "2026-11-13T22:41:47.226214+00:00",
+        "resumed_ns": 4903830763250
+      },
+      "receipts": [
+        {
+          "call_id": "types",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4903831573500,
+          "end_ns": 4903934844583
+        }
+      ],
+      "after": {
+        "entries": {
+          "binary": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          },
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "link": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          }
+        },
+        "tree_sha256": "bf6ce9b6b190471f4602567d221e1a3e7095dfc43d78067045cdf5fcb43f55a2",
+        "archive_sha256": "d9db7974499774de47099829023be458050863f5d5b71b774e6ce0e7062f668b",
+        "content_bytes": 17,
+        "archive": "03-after.tar",
+        "paused_ns": 4903962442250,
+        "captured_at": "2026-11-13T22:41:47.396070+00:00",
+        "resumed_ns": 4904000440708
+      },
+      "changes": {
+        "binary": {
+          "before": null,
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          }
+        },
+        "link": {
+          "before": null,
+          "after": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          }
+        },
+        "partial.txt": {
+          "before": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 23,
+            "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+            "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+          },
+          "after": null
+        }
+      },
+      "per_call_intermediate_states_available": true
+    },
+    {
+      "index": 4,
+      "label": "parallel_disjoint",
+      "proposed_calls": [
+        {
+          "id": "left",
+          "python": "from pathlib import Path; Path('left.txt').write_text('left')"
+        },
+        {
+          "id": "right",
+          "python": "from pathlib import Path; Path('right.txt').write_text('right')"
+        }
+      ],
+      "before": {
+        "entries": {
+          "binary": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          },
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "link": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          }
+        },
+        "tree_sha256": "bf6ce9b6b190471f4602567d221e1a3e7095dfc43d78067045cdf5fcb43f55a2",
+        "archive_sha256": "d9db7974499774de47099829023be458050863f5d5b71b774e6ce0e7062f668b",
+        "content_bytes": 17,
+        "archive": "04-before.tar",
+        "paused_ns": 4904028924541,
+        "captured_at": "2026-11-13T22:41:47.460978+00:00",
+        "resumed_ns": 4904065507250
+      },
+      "receipts": [
+        {
+          "call_id": "left",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4904065848166,
+          "end_ns": 4904200712916
+        },
+        {
+          "call_id": "right",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4904068131041,
+          "end_ns": 4904204421083
+        }
+      ],
+      "after": {
+        "entries": {
+          "binary": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          },
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "left.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 4,
+            "sha256": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+            "base64": "bGVmdA=="
+          },
+          "link": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          },
+          "right.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 5,
+            "sha256": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+            "base64": "cmlnaHQ="
+          }
+        },
+        "tree_sha256": "69d3a768c7c574dce177b2bf2cf00ba30efd32ec50666cce55b129bf3058a67d",
+        "archive_sha256": "51d9918b93f642efca81dab4f4c6481814490e9dfca1125261d37f5656446bb7",
+        "content_bytes": 26,
+        "archive": "04-after.tar",
+        "paused_ns": 4904229930375,
+        "captured_at": "2026-11-13T22:41:47.665386+00:00",
+        "resumed_ns": 4904270187708
+      },
+      "changes": {
+        "left.txt": {
+          "before": null,
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 4,
+            "sha256": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+            "base64": "bGVmdA=="
+          }
+        },
+        "right.txt": {
+          "before": null,
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 5,
+            "sha256": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+            "base64": "cmlnaHQ="
+          }
+        }
+      },
+      "per_call_intermediate_states_available": false
+    },
+    {
+      "index": 5,
+      "label": "parallel_conflict",
+      "proposed_calls": [
+        {
+          "id": "writer-a",
+          "python": "from pathlib import Path; Path('shared.txt').write_text('A')"
+        },
+        {
+          "id": "writer-b",
+          "python": "from pathlib import Path; Path('shared.txt').write_text('B')"
+        }
+      ],
+      "before": {
+        "entries": {
+          "binary": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          },
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "left.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 4,
+            "sha256": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+            "base64": "bGVmdA=="
+          },
+          "link": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          },
+          "right.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 5,
+            "sha256": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+            "base64": "cmlnaHQ="
+          }
+        },
+        "tree_sha256": "69d3a768c7c574dce177b2bf2cf00ba30efd32ec50666cce55b129bf3058a67d",
+        "archive_sha256": "51d9918b93f642efca81dab4f4c6481814490e9dfca1125261d37f5656446bb7",
+        "content_bytes": 26,
+        "archive": "05-before.tar",
+        "paused_ns": 4904296703458,
+        "captured_at": "2026-11-13T22:41:47.728445+00:00",
+        "resumed_ns": 4904332410916
+      },
+      "receipts": [
+        {
+          "call_id": "writer-a",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4904332776041,
+          "end_ns": 4904506447000
+        },
+        {
+          "call_id": "writer-b",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "start_ns": 4904333399291,
+          "end_ns": 4904505988375
+        }
+      ],
+      "after": {
+        "entries": {
+          "binary": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 3,
+            "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+            "base64": "AP8K"
+          },
+          "empty": {
+            "mode": 493,
+            "kind": "directory"
+          },
+          "guard.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 14,
+            "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+            "base64": "cmVzdHJpY3RlZC12Mgo="
+          },
+          "left.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 4,
+            "sha256": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+            "base64": "bGVmdA=="
+          },
+          "link": {
+            "mode": 511,
+            "kind": "symlink",
+            "target": "guard.txt"
+          },
+          "right.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 5,
+            "sha256": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+            "base64": "cmlnaHQ="
+          },
+          "shared.txt": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 1,
+            "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+            "base64": "QQ=="
+          }
+        },
+        "tree_sha256": "96050f5e6cb49555c1a001990cd482ed6d9980aadb4ef0ef0c2602d1f56d388d",
+        "archive_sha256": "3e74c05d4593b9f3ff9c9acc69675514be02e1c89c93c2d12121c0a86c339bdc",
+        "content_bytes": 27,
+        "archive": "05-after.tar",
+        "paused_ns": 4904540718125,
+        "captured_at": "2026-11-13T22:41:47.982536+00:00",
+        "resumed_ns": 4904588505916
+      },
+      "changes": {
+        "shared.txt": {
+          "before": null,
+          "after": {
+            "mode": 420,
+            "kind": "file",
+            "bytes": 1,
+            "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+            "base64": "QQ=="
+          }
+        }
+      },
+      "per_call_intermediate_states_available": false
+    }
+  ],
+  "scope": {
+    "captured": "file bytes, modes, directories and symlinks under /deeptrace-pilot",
+    "excluded": "services, databases, process memory and all other filesystem paths",
+    "background_completion_verified": false,
+    "independent_harm_review": false,
+    "linuxarena_harness_integrated": false,
+    "purpose": "controlled infrastructure pilot; no detection score"
+  },
+  "container_id": "4f61db3528af237b2610290e6e26890c1f2d8763e70e711c6ced3f18ff815af4",
+  "image_id": "sha256:87e4f58e09c94f4e54e4ecd02691a53bba1ac65b0a6269b74fc728749830ad64",
+  "docker_version": "29.3.1",
+  "receipt_integrity_passed": true,
+  "fixture_checks_passed": true,
+  "finished_at": "2026-11-13T22:41:48.028928+00:00",
+  "producer_sha256": "a6a8e0986557d27c13ba8f0e34cd2c99465f5a094cde038ec5891821a7f4f0b4"
+}

@@ -1,0 +1,32 @@
+{
+  "index": 0,
+  "label": "normal_edit",
+  "proposed_calls": [
+    {
+      "id": "edit",
+      "python": "from pathlib import Path; Path('guard.txt').write_text('restricted-v2\\n')"
+    }
+  ],
+  "before": {
+    "entries": {
+      "empty": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "guard.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 11,
+        "sha256": "5680e621a00047290a0ea3f63b78e5ecd97d033521055e31dcfaa5ea5cb70773",
+        "base64": "cmVzdHJpY3RlZAo="
+      }
+    },
+    "tree_sha256": "c37c42d8fcc0952740dcc6fa87367f0325dad5718058bee8cda283d5e84121b4",
+    "archive_sha256": "37146e6a6f30897fe8d115d763e9eef87978697d8e50b923ba9fda4baee4ed7a",
+    "content_bytes": 11,
+    "archive": "00-before.tar",
+    "paused_ns": 4903055102625,
+    "captured_at": "2026-11-13T22:41:46.489841+00:00",
+    "resumed_ns": 4903094761458
+  }
+}

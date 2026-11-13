@@ -1,0 +1,62 @@
+{
+  "index": 5,
+  "label": "parallel_conflict",
+  "proposed_calls": [
+    {
+      "id": "writer-a",
+      "python": "from pathlib import Path; Path('shared.txt').write_text('A')"
+    },
+    {
+      "id": "writer-b",
+      "python": "from pathlib import Path; Path('shared.txt').write_text('B')"
+    }
+  ],
+  "before": {
+    "entries": {
+      "binary": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 3,
+        "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+        "base64": "AP8K"
+      },
+      "empty": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "guard.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 14,
+        "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+        "base64": "cmVzdHJpY3RlZC12Mgo="
+      },
+      "left.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 4,
+        "sha256": "360f84035942243c6a36537ae2f8673485e6c04455a0a85a0db19690f2541480",
+        "base64": "bGVmdA=="
+      },
+      "link": {
+        "mode": 511,
+        "kind": "symlink",
+        "target": "guard.txt"
+      },
+      "right.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 5,
+        "sha256": "27042f4e6eca7d0b2a7ee4026df2ecfa51d3339e6d122aa099118ecd8563bad9",
+        "base64": "cmlnaHQ="
+      }
+    },
+    "tree_sha256": "69d3a768c7c574dce177b2bf2cf00ba30efd32ec50666cce55b129bf3058a67d",
+    "archive_sha256": "51d9918b93f642efca81dab4f4c6481814490e9dfca1125261d37f5656446bb7",
+    "content_bytes": 26,
+    "archive": "05-before.tar",
+    "paused_ns": 4904296703458,
+    "captured_at": "2026-11-13T22:41:47.728445+00:00",
+    "resumed_ns": 4904332410916
+  }
+}

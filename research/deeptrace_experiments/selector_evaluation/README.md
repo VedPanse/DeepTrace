@@ -91,7 +91,9 @@ Complete current facts already determine this rule. History cannot supply missin
 policy information here. The study tests robustness and confusion, not the proposed
 retrieval benefit in large repositories. That benefit still needs verified real
 cases with equal current-state access, evidence/compute caps, and a strong search
-baseline. LinuxArena access remains blocked; no fragment-only rerun was substituted.
+baseline. LinuxArena access was blocked at the time of this study; the subsequent
+`../linuxarena_reassessment/README.md` records successful public access. No
+fragment-only rerun was substituted and no real-cohort detection result is claimed.
 
 ## Reproduce and artifacts
 

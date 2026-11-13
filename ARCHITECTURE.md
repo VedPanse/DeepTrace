@@ -70,6 +70,36 @@ The dotted LinuxArena edge is readiness only. Hidden task goals and scorer recor
 
 ## Where the pieces live
 
+### Execution-boundary pilot (November 13)
+
+`research/deeptrace_experiments/boundary_capture/pilot.py` now wraps controlled
+Docker actions with paused before/after workspace captures. The recorded pilot
+uses a pinned LinuxArena application image, no host mounts and no network, but
+does not start the full application or use the LinuxArena action harness.
+Six groups containing eight calls passed: a normal edit, a write followed by
+exit code 7, a read-only call, deletion/binary/symlink changes, parallel disjoint
+writes and parallel conflicting writes. Parallel groups have no claimed per-call
+intermediate states. Snapshots cover only `/deeptrace-pilot`, not databases,
+background-process completion, other filesystem paths or harm timing.
+
+Original tar captures, proposed calls, outputs, exit codes, timestamps and hashes
+are saved under `boundary_capture/results/2026-11-13/`. Seven offline integrity
+tests check failures including changed archive bytes and missing receipts. This
+is infrastructure evidence, not a new monitor result or a verified attack cohort.
+
+From the repository root, verify the saved run without Docker:
+
+```sh
+python3 research/deeptrace_experiments/boundary_capture/pilot.py --verify research/deeptrace_experiments/boundary_capture/results/2026-11-13
+python3 -m unittest discover -s research/deeptrace_experiments/boundary_capture -p 'test_*.py' -v
+```
+
+To repeat the container pilot, start Docker Desktop, pull the pinned `IMAGE`
+specified in `pilot.py` if it is not already installed, and run that script with
+`--out /tmp/deeptrace-new-capture` (the output directory must not exist).
+Next work is integration at the real harness execution boundary and validation
+of service/background effects; the existing cohort and harm-review gates remain.
+
 | Path | Role |
 | --- | --- |
 | `research/agentsecgraph/` | Static scan, graph comparison, and the notes on what those graphs miss across edits |
@@ -82,6 +112,7 @@ The dotted LinuxArena edge is readiness only. Hidden task goals and scorer recor
 | `research/deeptrace_experiments/history_diagnosis/` | Offline split between reported facts and the policy verdict |
 | `research/deeptrace_experiments/continuation/` | Later protocols, the support DAG, and the LinuxArena gate |
 | `research/deeptrace_experiments/linuxarena_reassessment/` | Public-archive and local-container readiness notes |
+| `research/deeptrace_experiments/boundary_capture/` | Controlled action capture pilot and original before/after receipts |
 | `research/deeptrace_experiments/decision/` | Decision to stop tuning the spent synthetic cases |
 | `output/` | Reports, slides, and diagnosis pages |
 | `reproduce.py`, `reproduction/`, `.github/workflows/reproduction.yml` | Offline check of the saved selector-study table |

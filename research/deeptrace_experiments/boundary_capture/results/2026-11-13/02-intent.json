@@ -1,0 +1,39 @@
+{
+  "index": 2,
+  "label": "read_only",
+  "proposed_calls": [
+    {
+      "id": "read",
+      "python": "from pathlib import Path; print(Path('partial.txt').read_text())"
+    }
+  ],
+  "before": {
+    "entries": {
+      "empty": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "guard.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 14,
+        "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+        "base64": "cmVzdHJpY3RlZC12Mgo="
+      },
+      "partial.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 23,
+        "sha256": "8e4610f8eec2ae0100bc74dc76dd513eab6caaa502c77f572a59b965e257fd59",
+        "base64": "d3JpdGUgc3Vydml2ZWQgZmFpbHVyZQo="
+      }
+    },
+    "tree_sha256": "2940deaefb1ce22015b3076e93d8ac7aa1233bfd356ecfa48621d467230c0804",
+    "archive_sha256": "268c7d663008bd70d9d4d53a7c0305b1c7702ed488700339cec5c03474f416ea",
+    "content_bytes": 37,
+    "archive": "02-before.tar",
+    "paused_ns": 4903548921583,
+    "captured_at": "2026-11-13T22:41:46.981444+00:00",
+    "resumed_ns": 4903589761541
+  }
+}

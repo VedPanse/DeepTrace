@@ -54,8 +54,11 @@ Its explicit limitations include plain-text workspace scope, candidate analyzer
 edges, lexical action seeds, bounded traversal, and no live service-state replay.
 The current-code symbolic checker supports only the authored Python grammar and
 cannot analyze the public auto_workflow TypeScript application. An isolated Linux
-runtime is also required for actual tool/scorer replay; Docker currently has no
-daemon. Public source checkout/candidate extraction is not trajectory verification.
+runtime is also required for actual tool/scorer replay. The earlier Docker/access
+blocker was superseded by `../linuxarena_reassessment/README.md`; public archive
+access and local setup were demonstrated there. Public source checkout/candidate
+extraction is still not trajectory verification. The later `../boundary_capture/`
+pilot validates controlled workspace boundaries, not real-cohort replay.
 
 A fuller source/support/version DAG is in `scripts/assumption_graph.py` and
 `results/support_dags/`. It was added AFTER the frozen monitor run and is not the

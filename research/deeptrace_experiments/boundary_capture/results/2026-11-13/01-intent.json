@@ -1,0 +1,32 @@
+{
+  "index": 1,
+  "label": "partial_failure",
+  "proposed_calls": [
+    {
+      "id": "partial",
+      "python": "from pathlib import Path; import sys; Path('partial.txt').write_text('write survived failure\\n'); sys.exit(7)"
+    }
+  ],
+  "before": {
+    "entries": {
+      "empty": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "guard.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 14,
+        "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+        "base64": "cmVzdHJpY3RlZC12Mgo="
+      }
+    },
+    "tree_sha256": "4463232a924a71f996311d4435d7cd7816b2e5f0184ddd5a9b19ec5a2b774c4c",
+    "archive_sha256": "e77b71bd832fb7c61e7caf3bc50abbd4edad5d19d2e2318f424154f5cc308710",
+    "content_bytes": 14,
+    "archive": "01-before.tar",
+    "paused_ns": 4903303344458,
+    "captured_at": "2026-11-13T22:41:46.735444+00:00",
+    "resumed_ns": 4903340142875
+  }
+}

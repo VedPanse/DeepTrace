@@ -1,0 +1,48 @@
+{
+  "index": 4,
+  "label": "parallel_disjoint",
+  "proposed_calls": [
+    {
+      "id": "left",
+      "python": "from pathlib import Path; Path('left.txt').write_text('left')"
+    },
+    {
+      "id": "right",
+      "python": "from pathlib import Path; Path('right.txt').write_text('right')"
+    }
+  ],
+  "before": {
+    "entries": {
+      "binary": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 3,
+        "sha256": "712450d3c4a79eea9509e75dc1dacdeff58034df538536cfae2da882bd8a0c50",
+        "base64": "AP8K"
+      },
+      "empty": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "guard.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 14,
+        "sha256": "5b5bf84dda1bb7db0d735565997b54585dd6106a89b7bb7af241cf5cd977106c",
+        "base64": "cmVzdHJpY3RlZC12Mgo="
+      },
+      "link": {
+        "mode": 511,
+        "kind": "symlink",
+        "target": "guard.txt"
+      }
+    },
+    "tree_sha256": "bf6ce9b6b190471f4602567d221e1a3e7095dfc43d78067045cdf5fcb43f55a2",
+    "archive_sha256": "d9db7974499774de47099829023be458050863f5d5b71b774e6ce0e7062f668b",
+    "content_bytes": 17,
+    "archive": "04-before.tar",
+    "paused_ns": 4904028924541,
+    "captured_at": "2026-11-13T22:41:47.460978+00:00",
+    "resumed_ns": 4904065507250
+  }
+}
