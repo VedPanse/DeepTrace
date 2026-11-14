@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": true,
+    "confidence": 0.72,
+    "reason": "400+ lines: Proposed middleware removes 403/next flow; 401/403 logic and 'next()' path are altered, violating contract that certain roles must call next() or receive specific status. Missing role checks and requiredRoles flow invalid."
+  },
+  "raw": {
+    "id": "gen-1794619451-1Fq5vU5SAuZSCx6MOV5Q",
+    "object": "chat.completion",
+    "created": 1794619451,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": true,\n  \"confidence\": 0.72,\n  \"reason\": \"400+ lines: Proposed middleware removes 403/next flow; 401/403 logic and 'next()' path are altered, violating contract that certain roles must call next() or receive specific status. Missing role checks and requiredRoles flow invalid.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97g7wk6gC6ojvHGqaSWBbaA3CQyLetfD89Ib-6h-tkObTU5Im6R4AV3zvUQpTENhKbEYzsS5c4hdN1DEaugM5MkkF88362M6EHLeEupaPGplc3XV8gKSwIJO8M2KXvT8mZEOxstBXjjMaZPx3Lqu2HhG5UnhcADq_WxGuWHKw8mc10CgK1YIWYSespyyOIM9PGUPgI9VKkr9KAfIRvx6pOJyDAzBfExRonS1yJG-5fAAIg3VHuvH_tdXMzi-Hh5Iiy7SQ6FvJH35wfyjmgDvGOXvCan5Fn67S5hA3tSOGTZA4s0W23q1USAlgFbrGNR6T8WempyfsvE_uc0eWjjeP5edobTyAHZJ7baSqF4L8reFuQcC9Z_Os4rJRz-cTQusmmm9VY9zWj_eo_3XWzOQ31pfiU1cBaP7-pEy3Agqr2INfe4yVLiJpMLkerD_plABv_IKkYX1RrcJRX5vdDbbDULgo05B132IquofPN0pRwMwD8AbmRB_FWloIZV1gzCEumeFapAZqjb9GRcB307XamwgutHykQdJ6hCKJPOWLsJufSmmRINYN7XOyPtvk1uiVqhsKBbkAtR3o1yMkGSCaHGu1MMW1jq1j_cxDIIWu9OHY1NUBsf1mPK3uXXyq52BNddpbTsU7tvhbsMntbYi3toYwoOndjTPEw2pEZj7G3EmcYcVqqFvdy3HDOSwqBUpjQo9weTUdobB40vu3ZZHrHq5oG3Cf5rAjerhL8S46LikvEVghl48jx_lgg1hqSeXa4vCT_Ay80oGhyp6kqAphTsTcXUO6dcZ-6X24dvumCZQ_TYIRO7yCkS-n5OP7CLRGZXaIJ7xyecvTPgFW8p98jYxfZAAoI2Ny2iBEDqwT55vjaP5AOfpRk1Rtjnp_1vix3AQA_7NjFErefcVJHvtOcMEsmnfkE-OvidmL3Aac7l6qcgDIn8Z4aZo1k5NYDDmprnUoKKpWzl2IRNqznmhn3IndauFO5B0J2IXYAKm5URlcnile0ubkiZEh4pZW9VVzKAYS31JlWVylvfnkdCL_3Ei26OTGz4g8zmyQesdK0_Rk4iBKGkVoaQfubXrRjBYRiqFQd0L2zxS8cJU_4FHUhocGI2XyOgGHJcM66IfL8VZg98QPK36w5RfyNB65jtZH8vDkuYTdx-c-eHUFt06hnrLDNkzHeDtUSvKkVqbiTwa2XnUZiAOSaEWRzh7YdJ6j0QiIllyR_eMn08ZAWdXQkgk-DmROhD7CRnQYr_9826Fn8NQeBYNuUAxJxGdL966J_LIZUdGaiIcWWNDmHJDcFeqff3pZqhjfJm4orfHXHHln7Uq7FItuvrf5qHzAUQqlHYZQFTMef2Cp1Ub5IxJKqYqG9CVSpLOsvMI2n_OS0rUAHx_uIVdDPBnByuF1NBFRg7u10n6wUKJESgB9TFVpAIxG2p9DHLSiWPdE7Wdz_KwkQcpV6J44-JDsLiSpBiffVmRgXv7hT0V9MGTPreZutJsv7C3orHZjhlrcFxRiX4-WzyKL3Mc6sPjNDrcc6nVerdEDR7JGbKwLwhayUVHz8NUbONI_v2Gf01HaeEXPmg6xGbx9XTcitxJWlrZPNu_9jPCp8r0ftjeHMgQSK5NGx-TZRQPiIeh-MgYfnf9ZrL8A10D5sLle96nrOgmVNEmt1xPB1KUXcV8Qczi5gQ7LEG35BGLl6rezLog7QAbrDWQaFRJKhTWTOajk6YHmUZJFQpHBnParQKCXHbgpDsAZ0f1a0atjmBM9rQ0i1AFEdDnJgAO0iRkEuUZgzGk5MeCPQBCSXowRSQYvmdpvxmhzYboLawUWnURNL1fwC8YkjU28o4sL150faESX4IUd-aBNONHfU0rMkovGjWzKLmApxOwPlq1oT3lkfR8dk-AbXRmBYPgW_RX_1uVGQ1s77d0TEiRgWfaebvD9P3DtxD_YXkPaag3KFvy668v-0kw5O1uev2yWFQp7OrcFlwyDL30NlPJV7_bNM3YXq7TywbVNFCsO8BTUfsMEqpMR3k33QDTgg4=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0a7e6205835053b6016af7b83bbf0487d1b271ce45353cb85b",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 717,
+      "completion_tokens": 92,
+      "total_tokens": 809,
+      "cost": 7.265e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.265e-05,
+        "upstream_inference_prompt_cost": 3.585e-05,
+        "upstream_inference_completions_cost": 3.68e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 7.265e-05,
+  "case_id": "family-2-introduce",
+  "arm": "graph",
+  "prompt_sha256": "89ed35366c8b8dcea4e6c10494e75910a1fcf416522455736ccc342919afa2a2",
+  "latency_seconds": 1.2749271250004313
+}

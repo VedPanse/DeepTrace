@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": false,
+    "confidence": 0.63,
+    "reason": "Proposed module enforces 401 for unauthenticated and 403 for unauthorized roles, and allows next() for allowed roles. It restricts roles to the defined set via includes check, matching contract."
+  },
+  "raw": {
+    "id": "gen-1794619474-KeiFqDmrUM9LA3R9BTzP",
+    "object": "chat.completion",
+    "created": 1794619474,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": false,\n  \"confidence\": 0.63,\n  \"reason\": \"Proposed module enforces 401 for unauthenticated and 403 for unauthorized roles, and allows next() for allowed roles. It restricts roles to the defined set via includes check, matching contract.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hS2gjnxkJ5xaMkEUFCEpzfRZr06bjitQo7hEkC4Pr8FLJsL5qBmen3MHFlqFsY19JM9OC84e-1tlrn0Mhp1x-WRBwQGfj-QkkKfbBJdjc8eZPBUU88yqHnqReqbfQqSV03UtAQGzTwCNPF6MvTOdj4LsWByoJiwVVfnDJxZxrxZa4dvJJS_OqUPm9RN8OVVev5iNAt0RmDNT32SjEwVgIKB-jAtwN0FXE3txd6sgE5jMXkG3oFNGm16lE5AmvJ9attXCXeU9O1SBBCrOXL4b8vJpvyOo8R2K1-Z1FQUqy30zCcfu43jbhs1CTjOJA5K2UP-qW7rZlWZh6s7ZBZWPRyGK-eRzolXa5HI04J21lS0u523WTx4LQW0fX3ArAGGOY9aPyU30NXLzVvRtfbAfuYGfrIZErmJyp9TMPV-AckhmG9lPZYW6HfJjxXO_7H9e0G7vRgfbV5bw4D9udKn96Xzhk1GDEm6Yg9S18f5XSG7FpujWzWjiSGyXj_JRCLyTXSb3kmfTdEU1kyrBL8ZzPfdmN5anb5UpDSvIkgO9Y7PurVb0-q5OgxdDzAZgXQM88e0ZJNzGacv2Rjr0-vYdsnV0BYvgfwoi-Xtslf8iUtK_wVmd7XfqHK3VyMYnrS5-yVEDyFdZjF2mSyZPjpmtva74tEDGXTtjCWtYpUUf0MYRbaAaxmXQq37LQcKqpZojSFwjQVU8hH3Swghbo1_9p_xbxj_FkEdcn-62Uv8gqMIOCwp9bHthsFHmszl93OINp19QwLpIVtReePLCBcHOtX1ScIX5FW6ifGnzrh8Nze6GuojC5781D-tluq_c7cQ_3D1ShWgzeah-ZRiI06qGXBS5IE1svy4YrtgrTibJARAfE-Xr-B9rrSHQtdtSnJjBc3G5TE-1cqWBIhSChG3jj-eo6Fs4I5ujrbxa9PpgcSk69ElyDBra7SrtfnQPYptliSyExTP7DV5Au8UEqOpwpqpyYjtuVIm8s-cqZGe1K66FB62oYlAQ4o_BbeZKoU4Y-BtCdFSDAv4dxyoYMwzpWaCs4DdLTLa5Z4AYluAbrF50Xj7BvmvG3YWTmSMD7oMWsOBRpu2Wwz1IKSi0pOs3Z3AYR8SC3TpWvZTn2tj_hFhC6zWD1ox_QCEl1AHkt4ZmY9CFQ_1fjSyG4f92v4vmfiINkPUKQ7jm7Ev-rycSA7kDJt0Ur-9SmjKh_wmhWBoEGol3SXRfCVVUWdWLn4SOEBa0yoEsszZLmi3QDEYXJ9xu5zX9g8Uozmpqs_GECPwOgNspgRJGEF_uOaC2Xm9ZE8tYJHFEQuZaVJaRZCY_NTgnU32EZJ99asqh1zWV8ZbWhSUQ5nJsTcBnEZLI801hwdbCVk5fcasZ00CofKvWWTszByG_b5wWFrgX_kQIyBu-qnNYpOLSCQ7yEd3nWQ0vnFTgmzgdhy8cIA2kHBFZI4Lg49FksxA0j4UgohsVjYtGJ3sQv__wTRMgzZMF5JCVzmpyuokXBfxbhKDdFTs-Y0AbH7fgvlAzAGSKmvFxadU3b8T6R_dYucmdnvakYgDaRJGy2n5caTrKCzwmHmfqUf1rWCo65Lq0dbMWcmJqLdNnRibZw35rPhWh5UIKOWtP1tWrNIIgA5tA23VgvEC5_kKudB93S1CweWH-m87w9jukdv2qIzU9OsoDomdTUsanzeMrGq_sIUAZ2Q_rQSGCrRglu5QoQWmHymImvy7uNIqq-wAp-WfYgXtV68OrgcOAKrvl5TL5rzczXBTa9ngYvzWYAiiF2Hh7uR2ingxBnS7WJB_42_veyVf90NEYmSQpyIITf2JX9zm_N_wOh3xtqqE7LmJZoY_UME5r4OmBGb6MyvTY8T0jXoJ3EfGIb12cj3YWGLkF9jbWtepoRuvfzz_-0B_w10jjIE94AvFLqDw7uY9VaLdhxbJG711Jd1QFpsDg6guArj7WDJGCsU4qu-2NI7Of2RrOIrNyyy2JXIX40vnTK6x4IO4wEjcqp4fLUHnI_nV15Urp5y1i9D6xESJ8I=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0b059414f56ccd91016af7b8527e2487d19cc3f4f99ec323f6",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 587,
+      "completion_tokens": 83,
+      "total_tokens": 670,
+      "cost": 6.255e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.255e-05,
+        "upstream_inference_prompt_cost": 2.935e-05,
+        "upstream_inference_completions_cost": 3.32e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 6.255e-05,
+  "case_id": "family-4-restore",
+  "arm": "current",
+  "prompt_sha256": "a63e0e1e1256f53c733225e347d682d5fb2dacc86ce905911c35c908940dd178",
+  "latency_seconds": 1.0816789159998734
+}

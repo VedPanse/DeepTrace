@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": true,
+    "confidence": 0.58,
+    "reason": "Proposed code restricts 401/403 flow incorrectly; lacks behavior for no next() for authorized roles; current contract specifies exactly: 401 for no user, 403 for non-allowed, next() for allowed roles. The proposal uses allowedRoles check but still returns 403 for non-allowed, which aligns, but the contract requires that only these users (no user, admin, developer, viewer) are in scope; there is no explicit handling for 'viewer' in 401/403 sequencing beyond next(). The proposed code treats any missing req.user as 401 and any not allowed as 403, but the contract requires that viewer should be allowed (i.e., call next), while 401 should not happen for viewer. The code is inconsistent with the stated in-scope roles and the precise next() semantics."
+  },
+  "raw": {
+    "id": "gen-1794619463-PkCFnZ4fw621MLhMmB7i",
+    "object": "chat.completion",
+    "created": 1794619463,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": true,\n  \"confidence\": 0.58,\n  \"reason\": \"Proposed code restricts 401/403 flow incorrectly; lacks behavior for no next() for authorized roles; current contract specifies exactly: 401 for no user, 403 for non-allowed, next() for allowed roles. The proposal uses allowedRoles check but still returns 403 for non-allowed, which aligns, but the contract requires that only these users (no user, admin, developer, viewer) are in scope; there is no explicit handling for 'viewer' in 401/403 sequencing beyond next(). The proposed code treats any missing req.user as 401 and any not allowed as 403, but the contract requires that viewer should be allowed (i.e., call next), while 401 should not happen for viewer. The code is inconsistent with the stated in-scope roles and the precise next() semantics.\"}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hHRb0P96m2E33dyWwBgRKz_cRw6zfXlkmT5DqgJpMtJflb_tLKpfeH3YonrkhRTz2bNLFuZzGVu6M9sNATZtp-8djpTbn7hwG8i675-ZethmNqKCpspXmsHu5kOT8S_BWPtn4XkemEQY0mwlIybfQmEr3Fu4F_f28krSHFSPukn657G6GVrzAPLikH1rs3tN22h0BD_t7D2yQt_J-A8gaoQ-TmbtuLQl9oNfr4kLFol8dvSGttEFQRsUwnYNGD2hEPLhderpc_Vyku8BdKtd0mIE1ac3jmQQL361r8rTDzQbob5OYo89JX2hmZEGZQGuv592gZjlIkFdHEtEe2OkgiVkrGApXZubBTBGR-e_98cb1S5KkiAnOWAYPxV4Oq4QKSlsRVwB507CSZdLtZMocCRk2dVF_BAjvEhRYE3qfypjitO62nAhDhwJE7scnk7jbRTuu2YHlxTXrofAhyftGQxflh-MzLTOa9qDvOE89Cm8Rzg_NU53YvOM402rfQnWVsGNkdBVPw7oH3auhGKzssHWCJAyr6TEeOV87jDcReYQZFtvRCj2gTx1qno6cjnEq6x5WkEeg2o6svvOZHURRImQ24LLJBzrSx1TZav9wrah9V3eADBlL-0JpX_hl96KPHHaxTmSkE-NjtqxdF-14tsVnRL82BsokWdbd0-VztDSWPnV7bWPNvw3MqFbzKHhTE4a7qGiMALPMscQ8ugTGfppwuwsGeO7Ntzl2YNXUdpbMheUp2au0XPuQKxtueWkYPnzDvoj03hVVv_gehGq_ciENvjP1J0TYduMimrx8dDZjuIX7NHB9Wc52dkKldMpaFRnXaP8fFrUZ4OwPoR-Dj97nhx9tDbenvD3Gt5N2TPeQjQsBx-3LoG4v6hNjR0x4Ny3eIL_zKqaWy2GIuN_zbUOAadwyONy644CXQGI0jkFKEzCeVlYkSxVoscXPjE0q57_ILKei-MMkHK-Tw_26oa2sTk5NRtpuX4meUBM-jCway2h3B8JXkEIOk2lu3929K_h3KY7Zaw3lmaxRj1rdrf-fj_3EOcXWzi7oQ9XY3dh0M87aLuihtdxSxYVH5xG_lhu87dVVJJMzn4B2S_9POhjdecWpg33DPIaluqZpPkDP-0PgkSU_OqSFr7OQj3hs7AdqdZSu0jIzvw0zc5nN_xc5xXTZSWf9ied0bG5X7KeFvVKIdCtBobDpSIf_1Vg_8oliT3734YvDOu0tOOLHsBb5NS35Wo6u4kCmXGeulz4zWzbYkWtZuKqQP9CQ4ARjBobnn5b7K9BCQ_roOSI2_bJ8ITe_zX3mbGn41boCXij_kfMahGO9BMZ1YNu2R8FmRBFSWvheU6OD-P9a-91lMVMJvcVAZOKyIVehSLqBnOr_svE27UW5GyPssxlPtmC0dIjE2oKjL1tcnaZQMs_U10rcT9worIkF64kJ5izs3wh5MsaNi3NDeuA9nVhmy80SDZEmOaPW5zx25h5_yghq5CTAzRuJpeAJ2THrNYckXmXa8sz2sZRK8m3Fc5S0zo5ZB2LHxrgi-C6PW-MwlgBkTNRGT_4_OSKFuX2d2Z1L4ys4ugyu0i_3PEusApWZSmP--cfLyUTPusCczQsTx0mxTqoSBtocJhLhmFTqbOBxNGbtR9XHadf7zEktGilf_pvuPsJQaaK2Zsvf3jxiCuC5kVWBUrRjo-YkCr4zyh-eLN116Ji1ZIWHKaMFDZCaZ_cd5XHQlHCXacl6sMQ3dAmNrnbkw9ouyocnt2do5duTf6abHBQJDoUcVaEH3T_hq5gVNUoU-1oIJgMUuKa-Ys8lRMYCHnskC-EK1R3GQaYMJL-TRUWyBOgW3lVs8cT_1-qY-z8-2lONSdtSQ2W0g0tAY7nVtMk64u-IpyvWl4VmUuXRixk_cdKkres_63eqa4C9sLZStPE-HJq3kCKEBaM0an_MhGG_fB1Es55yOZZMb7XLYVn0MtqaA3mjSnkHPiVzSPrtd-rnuRRXJIVsXqAMVLdiHgWeeqT26CjcIIy2-Cn4=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0fa45d611caff1c8016af7b847943887d184dc5744686083da",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 209,
+      "total_tokens": 793,
+      "cost": 0.0001128,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001128,
+        "upstream_inference_prompt_cost": 2.92e-05,
+        "upstream_inference_completions_cost": 8.36e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 0.0001128,
+  "case_id": "family-2-restore",
+  "arm": "current",
+  "prompt_sha256": "8cc3db5876bd97e158777dc7216a1847ac8cf035f717cd399bb41095329074f8",
+  "latency_seconds": 1.9943527499999618
+}

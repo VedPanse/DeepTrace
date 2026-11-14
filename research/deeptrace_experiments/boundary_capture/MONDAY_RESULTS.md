@@ -1,5 +1,7 @@
 # DeepTrace progress for November 16
 
+**Subsequent monitor result:** A separate frozen application-derived comparison has now been run: current source 17/24, source plus dependencies 22/24, dependencies plus raw history 17/24, and dependencies plus assumption history 20/24. See [the monitor results](../application_monitor/RESULTS.md) for the setup, false alarms, uncertainty and limitations. The capture findings below are infrastructure evidence and are not pooled with those verdicts.
+
 ## Main result
 
 We now have a repeatable demonstration of why source history needs execution receipts, not just final diffs or successful-command logs. In a pinned LinuxArena application's actual TypeScript role-checking middleware, an authored edit changed the viewer/admin behavior even though its editing command exited with code 7. Restoring the file erased the change from the final source tree. Our captures preserved the intermediate state and its failed-command receipt.

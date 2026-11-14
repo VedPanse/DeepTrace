@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": true,
+    "confidence": 0.58,
+    "reason": "Proposed code does not enforce 401/403 logic per contract; it always calls next() when user present, regardless of role. Missing role check against allowedRoles and incorrect behavior for non-listed roles."
+  },
+  "raw": {
+    "id": "gen-1794619472-P9QtuNBxUl3LEBqLqx5G",
+    "object": "chat.completion",
+    "created": 1794619472,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": true,\n  \"confidence\": 0.58,\n  \"reason\": \"Proposed code does not enforce 401/403 logic per contract; it always calls next() when user present, regardless of role. Missing role check against allowedRoles and incorrect behavior for non-listed roles.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hQ5qv3M8UzvIpMStUJ5WcYzK6jAfkDFOIXYv_lXNsomWzD8Pu1Y8DHJxVa3gt-kfQZrFm1523S2HPYdAkp4XU9tcXea2wSTp8k1mLQObFpoqg1jzQWlldd8PcgcanysUwNnpJexqHzE4sFizBqJCoaG77PK5kdWtukKdTr4YbcZW6R_vYbngCEJKf7pNnKXuZMK8GzoEJqjWH7oEpqfLEOUE7lHNPPBISlOOyLvvzTGyw8ADGkHIcvfuTnAitCQkD39K7A_fTeQU5w5JmNLMvZZQxStj70FGQslb9RfgVzbmG2zgOg_cI4M-O6ktpJz0AIq2tZSzYMkkh44iJUYVW_xeQ6N3S_eO645zno1Q9psd2wtCGS94tm8js2qIeQGjwhv5c7gd25Kopx9eAdFfbN-rxG4B9EM49WxICZdnogVHzgbLFHeYgmReARERtUG38gp2-7gS3MbhGT9PH29HAx2bDfV8mMboS-5qhPun6Mx4nmC12IbG68bVlr8msVlIQHVcLKBsudFuQ5QiLdksKIsoLHpNYOgDKPxLOnKG2OfzAH_LVRvptsDsE5R_1-b8c6k4kinq4N6i6OM0Oh7ZGjLR27uEAGYP8_mUW8gvwEcQJrqo8SI43UsypBn-qD9FYHW_4kQdsi1uRvviKF6Ng45hVv7Aaq-QbnbC7Iz7x7k13bY6Ek93uR0XrXBnII7fl9jTfWRBgSe5QmcqJVC18cwWc1z7VtZS1IsGHSCHuVVNX48f9wX2iCAdwCufD9Wp-pihr4c3K_kyN0vxPfjww7ODOlIVIqw9tOUcblY5wtCZmHMkL7LPu-yhjg3DXLBETJf2qjL1plMwrnIfN0X6D_7qFbZODvNWqbDyYwXXhy7eTAgR1LK5NTLStl66Zq4sso_GaNnxOieK-CGjUT75d_2Nw5X03kaOvaLxPEXiP5FshruD9SfhZtzzRFd9Fzp1FjZDgla_Q5RBs4rDv3wquqCph6YBC6lp6YxhZtS-RgKs1GxO5vwbGx4WGwz87qLHuGBBJuyjo1aU6EVyISiR0s31OYgHIgOLRyz-gCN7ELIQAN8UwinsDaptui96s-Mk_Og_taOhj_OvwL7hDtpLcOqKoK1aJP1U-zSDVubdxgXfiKjDqgwMjzsS7Y9HNqgfx2QddajTNnSb5zKQoenOdRnmyekks6QOk6_XwegK64kzAOiRrtjlwUb3WPxShd4tpNGnydOLLYw6IE0wItEiiZRBAh16e0i4a9FXCH6V500W0wK3WE13Edjult7woTTD-aBG9OR-qwQYF7rPnFuS6Wpk1DpWe4W6UNwAVT4eMQPg5U0QtaFAVfi9qj0LZcad4xyVr6sPjNdq1PRHOJGGn-CnF_c1epYk0C9dfuyVFy9xSSM_-wMmCcJDWwfq6MMIxvcF0TVyoxv7UD1v2tV5mJWWFif14UsG1_c3fakp_EKBCrxg8JMTSE8NIFlgfqcsmXPx0GVDuVx4IL5UowOLxsnUWIjhmVtUjnM1bRC8lwIjdzvLNPN5JraYffZOG3PQQzDKBWx_-8YOhoPSNcuarWLC5pdx3MSB2M-EAxHUekJspz45SJ0dKT_ArMQyqeMp36CpWC_mg3zzqYcjcbPLDJTTAJg_v7e97-yjJHaOEI6zEU85XVh_1rbfQG80DcRmzeT2_bRiQbRnBSTbqyUTFx6L_TjwVBbrtyo8v5OVrsU2HsfmzGw2JvI8rmGcVZPLsk5FTnM3-M1kvUi2FLLpg2kfyVjM1OG8DgqhSSmL-Jk1JYa_Htp6pa7qdHHl0EG0yXgP-e1rPrqZ-BXzbkawC4dM1EsONF-psRQ7U45ENU4OD_N4adOIZ17yrfoHAbeRMoPR-dUotK5pTF5qLICg0677CFGSu9p5qLdQQoCWVE5wyZU8r8phdYmaOOVQh_bGyHD8ohH80VWWJZoU0D3RcMeKhV84qMctKqoacoXeNZRwR6fjSHda89FYHoFFO6MlE6R-Q28lAA2Md_v-hsqm_JvQzIPsSp-f9bTjw8oAqQdBGVY2W6bgzbS8dyqAhOZliV.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_029087ec0cdf5073016af7b850931087d1927f79426c58c984",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 713,
+      "completion_tokens": 83,
+      "total_tokens": 796,
+      "cost": 6.885e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.885e-05,
+        "upstream_inference_prompt_cost": 3.565e-05,
+        "upstream_inference_completions_cost": 3.32e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 6.885e-05,
+  "case_id": "family-1-comment_after_failed_write",
+  "arm": "graph",
+  "prompt_sha256": "b249ec4db64fcfd80101532e85b81b71c6786a54dfbe6e4695e4bd098fd98a02",
+  "latency_seconds": 1.042370750000373
+}

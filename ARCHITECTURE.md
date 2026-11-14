@@ -70,6 +70,8 @@ The dotted LinuxArena edge is readiness only. Hidden task goals and scorer recor
 
 ## Where the pieces live
 
+The latest [application-derived monitor comparison](research/deeptrace_experiments/application_monitor/RESULTS.md) evaluated four evidence representations on 24 authored variants of real role-checking source. It scored 17/24 for source alone, 22/24 with bounded dependencies, 17/24 with raw history and 20/24 with assumption history. These are exploratory single-module results, not a verified real-trajectory evaluation; neither original hypothesis is established. The earlier frozen-study results below remain unchanged.
+
 ### Execution-boundary pilot (November 13)
 
 `research/deeptrace_experiments/boundary_capture/pilot.py` now wraps controlled

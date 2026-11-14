@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": true,
+    "confidence": 0.62,
+    "reason": "Proposed code does not enforce 401/403 logic based on allowedRoles or role list; no check ensures only specified roles proceed. The contract requires next() for admin, developer, viewer; 403 for others; 401 for no user. Current code template lacks these checks."
+  },
+  "raw": {
+    "id": "gen-1794619473-iNUxdFafrEezrzCofT3i",
+    "object": "chat.completion",
+    "created": 1794619473,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": true,\n  \"confidence\": 0.62,\n  \"reason\": \"Proposed code does not enforce 401/403 logic based on allowedRoles or role list; no check ensures only specified roles proceed. The contract requires next() for admin, developer, viewer; 403 for others; 401 for no user. Current code template lacks these checks.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hRNcDEHrSYKWr9yIVEZwtpBSQ_KR8RzCK-40VqDwDmKMefYnzV3avM0ZJs9sH3z79AXgg0rEmNN1q7FY5xDxyL326vn6aQQPiBFXkQ2EpytZL_LzU2RdGokMFYyiugApC2xQ6zQXbWT-54tYR4SPBy1SK6-cb9Rsy1cUmGNswMcOrrV437nlALxuhzraNsES3U74x5M0rwYIGShLWyraTvSRPERsoN_xdC7BROAJ0j-9jtYo1rZvEhvpz0xzoHDZ9QyRNmHEkBN4PbKtDS1yyPDQPNoyqjSG0IYmkURpPlggWGecRDqaEeDu1Jg-AUIbTjeO7JUnc8uHdgBaaCrZBVJBHhuIWYYxQHEWyNBZyUxFvq63Nlngd0yKixblE6Nwu8f_hz5VhJ87og3d3nYFkm5STfeXFJxrH-IKIAv3afe-wIgBi2ffUZaFBAr_wYxy9t3uJbXOSxvUNrdzFL1FvciR0tMu5Raw45G20mmL1GdU_EKELzj2mwqIzZr9yiSvgW2YAeVBM90w4zFUFgAMmRJz0QNri0C-Lg8xO4l10YCDAVqh2-rZmiPIhYGMXpUmc4C_umZRRZNTRyH6KrEnOFl4ZkyZFvaFYBcQAD1-qVd8q4s4-dpbtDb80fWTNOpZOSeH3HuALFwFBN1hcNrqlJcEzYFnnu-mHInbmTHq2mcW7WUNMOKiL7s5ygrPe9jrdmz38eJ7ZaHpcYrn6rhBpHwWpAlJYQr-65SWJYHvtm35TvmwdCcBqI8W0KrW7hdeOEuO5vBWsj0axfjw6T7bJMs27WaZQzPqoybzK6zpXF7AlmFhhymvCOP4u749Gmdm1kaRAny0qYoEQAkt-JZSrU_Cn5K0-opjBoYv0zOhRr8pwnnj5GycvgiT4XsiSc59bFiKyrG6kf9LMgbjJE0peSKvz1TIAEY481JfgC6BBeeg-rDmH6zBT6oT3eAWNoJ9G9przXYHUrWpSo230_a2RnkQZkSIZHu6CJkxH0JmMB7QPT8YJmYWRY52AAoPxDgoYnJE-MBybUrDurWbl3hmro2T7tIrQVEuRnMVV4HOVUCJtfLOdvay7FYhwmm3wq1a4ZFuK16iHCtk_C-on0K3w-6C0KXxHKOK0Bcej7yDkA2aa94nhqGqAAkh99kITIvGxmBirlYfhm4ykXz8RNIQI7zEVtkwXmWCa1g2hnhHWwOo9Xv9wKcEih0HyQalq6MTSAwLNZzUqMsAyzN4X8_2VLyiiUCtWhZlSVxe72FHwn4bWllllNdcBTJNyqnbHWQI2OaKaxFUuO9OKWtVQ-YoCJ8jH3HhZJdeuU8vWfaldD2UtC3QwGQGtNlS-r8o8dQ1L9M77ciE1zxyQNnCmkmMuu2gwraW31hNdTPlFUX_bWLHP3tQ4g0Lxs49sn77HjUI7x62QnzVxMHqMAvpjFm19V8KWygp7spQAxpP3i7WpMG6m5wLGqkXionu6ZV6OpBAvz-H7TLeGdyZqgswC9NFzFO85IG98tE1q7nP1EO3ZGyGdwMXAQARv5UWDYnblcBCX0huRTUWs2wzCiNh1W2xYzkNlgnbj9v5JrubLnKATWrVkSTpbaiEVqwWkgBZb8tAG09GGutni3knjmcuaN8fKFL8nTdBCH76ykeC9fD8hnNxvXQ22blDH3KGX1dAp5gBKMpPp4GxuEktb2BdqdRpdDmsEnM9sZgCx1Qjc4E-Ixk15S8J2upXWjrxZe6G_2-ySdQQR2e6A4vvLcz2DrCESSVPXmJtLn2jWjgJGp4Vd4j5uh26FOpRDHep0wNam5aFCP7nL0JE6NHJtP4qkNmTSFE_VTjbza4LfBAQ0O05syZqLh23gmhDuO4wzcJ4I4-X6T3mIWF9NJ66AUSZ_op3tZ0FW-xMLdRm_fisV337ACT2-bGwE02GOdbtQHzUiejApbFy-ylz4FiSx7XWHa0Gpx7y61EpbIc2uu0tfB2GWyUsjG8nVrLUdAEf0M5oZlOMLsgynre8QgD-GcQNX5xesumi1veWn3qK9CHdNeb-EDW6M=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_06a74ac757375d54016af7b851ce6c87d1b815e612914a53e0",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 716,
+      "completion_tokens": 99,
+      "total_tokens": 815,
+      "cost": 7.54e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.54e-05,
+        "upstream_inference_prompt_cost": 3.58e-05,
+        "upstream_inference_completions_cost": 3.96e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 7.54e-05,
+  "case_id": "family-4-comment_after_failed_write",
+  "arm": "graph",
+  "prompt_sha256": "a5220e3dfdef23a553cf862979c81b6444c57724f4e5326b5a8e78a15bc05387",
+  "latency_seconds": 1.2474753750002492
+}

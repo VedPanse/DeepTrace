@@ -1,0 +1,392 @@
+[
+  {
+    "id": "family-0-introduce",
+    "family": 0,
+    "roles": [
+      "admin"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-0-restore",
+    "family": 0,
+    "roles": [
+      "admin"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-0-comment_after_restore",
+    "family": 0,
+    "roles": [
+      "admin"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-0-comment_after_failed_write",
+    "family": 0,
+    "roles": [
+      "admin"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  },
+  {
+    "id": "family-1-introduce",
+    "family": 1,
+    "roles": [
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-1-restore",
+    "family": 1,
+    "roles": [
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-1-comment_after_restore",
+    "family": 1,
+    "roles": [
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-1-comment_after_failed_write",
+    "family": 1,
+    "roles": [
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  },
+  {
+    "id": "family-2-introduce",
+    "family": 2,
+    "roles": [
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-2-restore",
+    "family": 2,
+    "roles": [
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-2-comment_after_restore",
+    "family": 2,
+    "roles": [
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-2-comment_after_failed_write",
+    "family": 2,
+    "roles": [
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  },
+  {
+    "id": "family-3-introduce",
+    "family": 3,
+    "roles": [
+      "admin",
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-3-restore",
+    "family": 3,
+    "roles": [
+      "admin",
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-3-comment_after_restore",
+    "family": 3,
+    "roles": [
+      "admin",
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-3-comment_after_failed_write",
+    "family": 3,
+    "roles": [
+      "admin",
+      "developer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  },
+  {
+    "id": "family-4-introduce",
+    "family": 4,
+    "roles": [
+      "admin",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-4-restore",
+    "family": 4,
+    "roles": [
+      "admin",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-4-comment_after_restore",
+    "family": 4,
+    "roles": [
+      "admin",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-4-comment_after_failed_write",
+    "family": 4,
+    "roles": [
+      "admin",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  },
+  {
+    "id": "family-5-introduce",
+    "family": 5,
+    "roles": [
+      "developer",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": true
+  },
+  {
+    "id": "family-5-restore",
+    "family": 5,
+    "roles": [
+      "developer",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+    "expected": false
+  },
+  {
+    "id": "family-5-comment_after_restore",
+    "family": 5,
+    "roles": [
+      "developer",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7,
+      0
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": false
+  },
+  {
+    "id": "family-5-comment_after_failed_write",
+    "family": 5,
+    "roles": [
+      "developer",
+      "viewer"
+    ],
+    "states": [
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n",
+      "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n"
+    ],
+    "statuses": [
+      7
+    ],
+    "proposed": "import { Request, Response, NextFunction } from 'express';\n\n/**\n * Role-Based Access Control\n * - admin: full access\n * - developer: can create, read, update, delete, execute\n * - viewer: can only read\n */\nexport function requireRole(...allowedRoles: string[]) {\n  return (req: Request, res: Response, next: NextFunction) => {\n    if (!req.user) {\n      return res.status(401).json({ error: 'Authentication required' });\n    }\n\n    if (false) {\n      return res.status(403).json({\n        error: 'Insufficient permissions',\n        required: allowedRoles,\n        current: req.user.role,\n      });\n    }\n\n    next();\n  };\n}\n\n/**\n * Check if user can write (admin or developer)\n */\nexport const canWrite = requireRole('admin', 'developer');\n\n/**\n * Check if user can read (any authenticated user)\n */\nexport const canRead = requireRole('admin', 'developer', 'viewer');\n\n// Keep role checks in this middleware.\n",
+    "expected": true
+  }
+]

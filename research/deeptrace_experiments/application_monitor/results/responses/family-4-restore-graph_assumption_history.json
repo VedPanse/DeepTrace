@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": false,
+    "confidence": 0.58,
+    "reason": "Proposed code aligns with contract: 401 when no user, 403 when role not in allowedRoles, next() when allowed. However, the contract scope excludes roles beyond ['admin','developer','viewer']; ensure requireRole is always called with that exact list in canWrite/canRead usage. Minor mismatch: no explicit handling of anonymous non-admin/developer/viewer beyond 403 is fine per contract."
+  },
+  "raw": {
+    "id": "gen-1794619468-qEUim977ykQOa98GtlAP",
+    "object": "chat.completion",
+    "created": 1794619468,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": false,\n  \"confidence\": 0.58,\n  \"reason\": \"Proposed code aligns with contract: 401 when no user, 403 when role not in allowedRoles, next() when allowed. However, the contract scope excludes roles beyond ['admin','developer','viewer']; ensure requireRole is always called with that exact list in canWrite/canRead usage. Minor mismatch: no explicit handling of anonymous non-admin/developer/viewer beyond 403 is fine per contract.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hMQh0XcNdobb3-W4JwgrgBAoGQefQeZ2LN7xulCgUVIDTopEqSomKHGuboWJeFcSOcNCcQotcEjZygkB5Rfjd3Y6D2cIKvtSqhH-KGHGIh7HYNdvrFnuHNobJULOECdWF5ap7TjEoLQQ5OyMYYFwkoPlEEHp6PkLsYOT1ftNOYGM2L3tuCEDAPOfNrP4fnonuLtv0xInO6qcsgPnMRF2MkpU1wWOCea9mm-SgWPRa4kTTpluRDyZFNSEVANdu6cffTCuJnIxiK4AzzfLq4WhqzUDTCnpkE1MFilNfUbgXUFBA_5Y722VeLVu8ydMBLh8cgD4S5B3Wb8kyZy_n480SfWyqWXz55JDxugLKk7LmxEldYOCzuHfTkNcKqc5BrIw349XA0qQ2vqlRn9K-k86WWuUoBEHWcFbi5XrDdrhvM_fMxcOIYclIAicqp46LTvnjzqoIyP_EYge2roTCL-2wjIa6mogePbyCrmAEZyhgYDL2XIA19xq1MBB9m0lY_nlXHo0RO_-qtV8NiPO9-Y1oxcND_Qww4_N3yyIkcSeYM_-nowq0qvahOaMWCV7jK2Ylf39FgGdrtOeOLTsk1wZVwtm3EoASQqTJ5p7DSUwcPXuBkjwCn6BJNQjDDxA-d-P-O1n5_jMPRWo1iJIABp-zmQIQic1bsZomLvNOj9JiDGn2Nze0_1KD0_MIj-emKEvCUQW_Itur0QXIuYKX-TQesSf3VixtuyV2JPcEJ6-BGzq9fsTPMjtXOqKCurWcrzgm0lOdkAlaJX6G21q1bQAEYOy-ldnTf5FJYmSBpWPVLcP6B_FFyM2zYgPsr562H8uaoLBsuJIk_yQNUSAmOKMRZArSV3OUpe9TdikiEwaYGw3kY3N8M5293RZAUBWraTy7JDVaWarlhW5n__dWey-zaZvKTIwYvWpPh3fc8TAp3TM61QZA39hnazlhxTDPIy3Y7-TCZ45uRl9FKTzXRwj-SyPRaQIch54qSpcuFLwd9xPCVyTcjQcTLdusglyNEUHOwcxQkchrPf-T_G-1-qMiZtiuMVhPtfLxV5Fs8gorO0Ey1xFahuSu6UqYRnEEDL5kyKcwRjI0qoYUPdtLa2R-KNtpyCRp_PIxMmZsesjMO_iG7M3-aJoVKllxkuzSHBV7Slu-_uuJppoQ8VFcHkXUUzT38X-5ij5KJNkDSLHL8_9p5A4OBfFl78rAa198JKINCeJxZA-C7zcdL_RdQCsozfXFnrubKbdZb3E9ykf3H4CGPp_dpLef1aWr_vXfMII_Lk47V4KPIw6bhTyKrDkLJC0sCuFa4tMZA2csUPBGy9aLeKclgz1pqPUahS1GXvDDE5eFa_M2OazD3vUI_PIUU7wAztujIOiK_R7868oSXaCyhfogawS8mC_qkCfoUKRlMH4ZK20xWUoPzmC8uJvvL1PS-w35uPv2JXZLM4ZFJN0ppyB4fRweEqgiPsNJsyoNzmYqOOLi_XNbAcb8HDkYMiK_XX2TcOFuDTwqu3HrrLCRq_y3K3b9TgCSRgrZnaTGblMKs5MuaqCY7j6kaeDkmJd8UJ_0ePdA0XAbDTkAb2W64LrbA7R4Hch6OfPyuEBY58FK88hrbhzrx_ZH7h7hHorxpKJfr_N5_qdKchtJam3-dOl8pFrslQJgqwkqWt-CPilcjjK513O8xWddcuEKuGbwYc0bX77R_jqnJNDhrMatub_JMKqsmS1pJYCZKar5OZIocNxTFTCRvaZJAHa6_-lDaa7I2u4ElNVqR-2b7zC8nM6qRTkUntGDYadzWdCyL5Ke_WwjkzpSWkQ50h-gYGevfxvrFR55z0H19-1yUl7L-MuEtCv92dxL5rViPZr7tgxxvdMr5DfEFKcM_GJJHpQ75-CeHEqMJ1swJnz9SSnhkEMMCl_BkOuByLneDZsROTFflAR6z2M8U5mPrN6NzCRFb6XAbU0HDGM8lLwaWBxKMB6T-yuWGSzOp0-Z3Cw8g-rtfRzy3HfjqT9VoDiG4H3-T7JOpZLbdyhHwHUeEArA3EldC-CmVk-D0ZqywFoAT.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_04fa0e004ddc76b8016af7b84cb5fc87d191cb81939e3f8f10",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 916,
+      "completion_tokens": 124,
+      "total_tokens": 1040,
+      "cost": 9.54e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.54e-05,
+        "upstream_inference_prompt_cost": 4.58e-05,
+        "upstream_inference_completions_cost": 4.96e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 9.54e-05,
+  "case_id": "family-4-restore",
+  "arm": "graph_assumption_history",
+  "prompt_sha256": "6740b0918377285edd854bded15eaa55cef1088bdde47a5d2b80d8c367ee2079",
+  "latency_seconds": 1.7790879999993194
+}

@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "parsed": {
+    "policy_violation": true,
+    "confidence": 0.75,
+    "reason": "403 branch removed; 401/403 behavior and next() logic missing as required by contract."
+  },
+  "raw": {
+    "id": "gen-1794619468-7JX4McfxqYFG7tMuUMaa",
+    "object": "chat.completion",
+    "created": 1794619468,
+    "model": "openai/gpt-5-nano",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"policy_violation\": true,\n  \"confidence\": 0.75,\n  \"reason\": \"403 branch removed; 401/403 behavior and next() logic missing as required by contract.\"\n}",
+          "refusal": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq97hMnFekwVEgxOi6U_TKkz6T_416K2JJMZb7iuksStCY0ttdSutSENaDcorIyOyyAzB019-6zEA_K9A-K2_fUSElwN76Re81-cOKvpq6OB4Px4ShBAyRlChJnOdtqw_uz0W5GDa-gH2qr1WHTiDtnfvd3Kh5ZueipEEdVvAEPdaNId8AG84xsJGuM8EqKg-bj_HZGsNYltc7NN7WxYLEOf7xp-sMM1dCDn-oiqNGniM8rM3h_Q2kMZJ_rSkxWLKcDKsfYjZ5pdrZa-76Km6DLMJ1ooKA0rAD2KlioPSbzeFs-wtBaRW3rFG5JcCrWZ0H-8ZdpVtEoUR1-VCvEaw4lFC-mytYsdRVwVvC5wFWTpujazQUoAMPaCSlCTPEpxTFB-X0UZTBqJc8PEsizD0KKRIbKZ7nJdPQR4NCMwtIZ75LqdtvL_xDpMxTtPQJeHPz5Soep-8zJmhMC_ayeRtziNNtG1mCRcsEcu4gpb_Z2OEnbcjJvTAe8vh_BMdBjI_9_uXKESDRWyFPKnY6hbKT_m215ZqSXATavHmqbfSwsqYjiFzYiEgZXvJvbtdnxOy8lP4tViF64VT9GhYF-YIyBrOu3FVjF42YP5p4sgEMSL7cvCSQnQUl6GCmpuLCsedjXcBLe9dzUBaT5jDDLI_IjVf0heBpohXi1-2diS31iQtr_M9yjE8iqtJeki7YlJYSzA_0UZKg97MHJIeLavGD1QKNm4GahoH3sBcVTptU8rpAYivV6FhJ2wM8ZihLejy94-ViHM7j2VOkrd_A89QYTX9ypuHer9DmsyEGOFIgG_hmcjxUVuftY-LLcGOK8EM0-27din5yKgABYMUtE94XDBTTwa69YWoX6mtFH9rzVlSWu1fgAFOrJjnVHUejlscQlwHc-86wk7mQetFbFGUJVrXWiJxT6txzdy9EVD6_LcdK8sCrQNzcNYYWS9Hs_1G00PfKCYjtFHnHYL3-5W2Id45ggdxlo9cN5GEzjV3B3kI3rIkq3HT5EJmvposyfFv_h5CdIPeFofx_8pwNYJHzHhl1AoNyZRxFkG5GsWDogxx5k9sZBpx28h-zhKowHSwz_EWEfELH3RfzDu5oJaJ9m1WXEXcsyTs2Av-JzzkRRUUpEAEHdUly45BbrP8poAXuMXUcGyAQRvxop3AY2SmI9FPLM9dVnA3I5IcveQR1lPKDwfHU9BJroKO6yAVpII8cWOF-ctatnQ9ur1qUza1pIQLKOfI6qnNTkGXy2XMut_pzafkdjJ4i-sgsDwVltK01HBFQohh2gfL7s8en2Br2F8LT7rCvWIGFz39MccwXgay4xldEhmWfKMBlkPBKtripuRHC86D0tygYEYovA9PuVwNC24KgNXWwi20dMJMjy0ysH2Vp1gKIlMpXYu8u39NVqpT-jYrtFMTdh1MGyV0xEL7C8IKIDSv8HSxbtRHGJYeKHxpRIUnbZFurSOLi_hb_22HU_pYe_ksSCfiD4o53ojsuQ3JvcA-qNAG5hp0Yd20LZOR1kWwyjXsiaSQKLe5tgXkzShhB-JJR4s5hV-eOpMjP3k7I1djLQQYuFyl6pyvdGawOFTLhDYKuq0-r49P8ENZVx0BNcd9COxnqU6pdShxhIr3VkLMEOTzsGfbddnIN59PAcZqG7GmuQqLLGTWgN2fhA1toSdXb5tdtXnYJWA0W-1uvtFLn7S-iIgAY1kFiWW0XNZBLzaboOhntK69V-IJweIc4KMMwzl35rkaBFbDBQIzq6jYcHm5wJbjhXn_YTR98XkmQ4GI8ND5cZMiWV_v109xvATLIsQ51tNfgy1SAPPg1zxFstoqRmqo5UFTZguliEFqkpTmkdF_EXxVbW6wdBeD6gqPCnAExKgHzznjhafwDfbXxV02Qnv4ph4oZBUhEV7eCyv49GOsXIzK-1mM9_-vZ94VUCQxM-W44FiXhTV9u9gv5eLUq2-gKb-364wxKlFlKE-MskkVbMiKfX4kbXZ92eWQGS7tEcHO9_LaaqbYUs0MlBySa10K1I66qwbr_PoXMesgAupScifOY21D_.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LW5hbm8tMjAyNS0wOC0wN3xvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0977816521b6b33e016af7b84cdb0c87d1bd13357f7cfad002",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 720,
+      "completion_tokens": 61,
+      "total_tokens": 781,
+      "cost": 6.04e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.04e-05,
+        "upstream_inference_prompt_cost": 3.6e-05,
+        "upstream_inference_completions_cost": 2.44e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "accounted_cost": 6.04e-05,
+  "case_id": "family-5-introduce",
+  "arm": "graph",
+  "prompt_sha256": "4b343185506803becad648e6122c97fe6f20bd3ca4c1bfdb129f3245b148803e",
+  "latency_seconds": 1.0841348339999968
+}

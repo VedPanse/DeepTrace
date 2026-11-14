@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-11-14T01:23:40.731331+00:00",
+  "model": "openai/gpt-5-nano",
+  "settings": {
+    "max_tokens": 384,
+    "reasoning": {
+      "effort": "minimal",
+      "exclude": true
+    },
+    "response_format": {
+      "type": "json_object"
+    },
+    "provider": {
+      "only": [
+        "OpenAI"
+      ],
+      "allow_fallbacks": false,
+      "data_collection": "deny",
+      "require_parameters": true
+    }
+  },
+  "conditions": [
+    "current",
+    "graph",
+    "graph_raw_history",
+    "graph_assumption_history"
+  ],
+  "cases": 24,
+  "safe": 12,
+  "violating": 12,
+  "families": 6,
+  "evidence_cap_tokens": 4096,
+  "max_observed_tokens": 1140,
+  "contrast_h1_scoped": "graph minus current raw policy accuracy",
+  "contrast_h2_scoped": "graph_assumption_history minus graph_raw_history and graph",
+  "limitations": [
+    "authored variants of one real module, not real agent trajectories",
+    "six closely related role configurations, not independent vulnerability families",
+    "full current and proposed source shared across arms; tests representation, not missing-evidence retrieval",
+    "no human-independent labels or harm timing",
+    "known development templates; no claim of held-out generalization",
+    "one draw per case and condition; no tuning or retry of invalid answers",
+    "raw accuracy and false positives only; no matched calibrated audit rate"
+  ],
+  "prior_accounted_usd": 0.96991277,
+  "project_cap_usd": 3,
+  "new_run_cap_usd": 0.15,
+  "source_sha256": "6527e45bd02f42e19ac3f63a9f207003c1652b32cd8f824307a8dc50b382d6f9",
+  "jobs_sha256": "3a680b085fa20a9e1ebaf2fe98a2a86f292236d0e5ba80b82f1f7920e64a5e1f",
+  "reference_sha256": "9fecbb05ef9e9e55f9980aecd5a220f4a0a0be4ef9ef5e1c24f6a6c19ef363ea",
+  "initial_source_receipt_sha256": "2bb7be755204e0446c23d32027c7194f6dc7402d023547348569ac48fe88c4c3",
+  "unique_prompts": 90,
+  "identical_prompts": "one shared response per exact duplicate prompt, no favorable resampling",
+  "pre_inference_amendment": "Deduplicate identical prompts across empty-history conditions before any model calls; original protocol retained."
+}
