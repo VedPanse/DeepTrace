@@ -100,6 +100,8 @@ specified in `pilot.py` if it is not already installed, and run that script with
 Next work is integration at the real harness execution boundary and validation
 of service/background effects; the existing cohort and harm-review gates remain.
 
+A subsequent [application-source study](research/deeptrace_experiments/boundary_capture/MONDAY_RESULTS.md) ran three fresh repetitions against the pinned application's real role-checking middleware. It demonstrated a persistent write despite command failure, temporary permission weakening erased by restoration, and a pre-dispatch block after an unexplained background source change. All 36 captures verify offline. The behavior probe uses mock requests/responses; this remains controlled infrastructure evidence, not a full LinuxArena evaluation or a model-detection result.
+
 | Path | Role |
 | --- | --- |
 | `research/agentsecgraph/` | Static scan, graph comparison, and the notes on what those graphs miss across edits |

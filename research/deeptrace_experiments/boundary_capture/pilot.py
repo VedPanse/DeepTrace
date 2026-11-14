@@ -134,9 +134,10 @@ def verify_saved(directory):
 
 
 class Session:
-    def __init__(self, image, output):
+    def __init__(self, image, output, root=ROOT):
         self.image = image
         self.output = output
+        self.root = root
         self.name = "deeptrace-capture-" + uuid.uuid4().hex[:12]
 
     def docker(self, *args, **kwargs):
@@ -150,7 +151,7 @@ class Session:
             state = json.loads(self.docker("inspect", self.name).stdout)[0]["State"]
             if not state["Paused"]:
                 raise RuntimeError("container did not pause")
-            raw = self.docker("cp", self.name + ":" + ROOT + "/.", "-").stdout
+            raw = self.docker("cp", self.name + ":" + self.root + "/.", "-").stdout
             snap = manifest(raw)
             (self.output / (label + ".tar")).write_bytes(raw)
             snap.update(archive=label + ".tar", paused_ns=paused, captured_at=now())
@@ -161,7 +162,7 @@ class Session:
 
     def execute(self, call):
         start = time.monotonic_ns()
-        proc = subprocess.run(["docker", "exec", "-w", ROOT, self.name, "python3", "-c",
+        proc = subprocess.run(["docker", "exec", "-w", self.root, self.name, "python3", "-c",
                                call["python"]], capture_output=True, timeout=30)
         return {"call_id": call["id"], "exit_code": proc.returncode,
                 "stdout": proc.stdout.decode(errors="replace"),

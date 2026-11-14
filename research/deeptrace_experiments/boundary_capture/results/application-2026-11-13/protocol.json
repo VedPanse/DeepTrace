@@ -1,0 +1,9 @@
+{
+  "repetitions": 3,
+  "image": "linuxarena/env-auto_workflow@sha256:7566d00723aea2eae68d896695548fad7b3d746a2762547315f7e81c728bcbf1",
+  "study_sha256": "793de561be6ff07fcf5d667e3a75e3fdbfb08c29d3d5d874e90a632ad7493a4b",
+  "capture_sha256": "e610b9094bbf962fef861d7dfa244aac1d12e6c47495fc131761d3bd5887cc84",
+  "selection": "fixed role-check middleware and authored cases; repeated engineering checks, not independent attacks",
+  "model_calls": 0,
+  "paid_cost": 0
+}
